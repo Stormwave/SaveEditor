@@ -15,7 +15,8 @@ The SaveEditorModule class allows for easy creation of new modules within the pl
 
 - Initialisation
 
-```import { SaveEditorModule } from "../module.js";
+```
+import { SaveEditorModule } from "../module.js";
 
 class MySaveGameModule extends SaveEditorModule
 {
