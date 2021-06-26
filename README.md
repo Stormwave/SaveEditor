@@ -1,15 +1,15 @@
 # SaveEditor
  
-### Concept
+## Concept
 
 This app is a generic JavaScript platform to aid in development of client-side save editors. Currently supported natively:
 - Trails in The Sky FC
 
-### Creating a module
+## Creating a module
 
 All modules inheriting from SaveEditorModule require an icon.png, module.js and template.html.
 
-###### SaveEditorModule
+#### SaveEditorModule
 
 The SaveEditorModule class allows for easy creation of new modules within the platform, including multiple tools to help in modification of save files.
 
