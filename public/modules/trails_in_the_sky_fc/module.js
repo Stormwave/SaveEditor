@@ -9,7 +9,7 @@ class TrailsInTheSkyFC extends SaveEditorModule
         this.icon = "icon.png";
         this.template_file = "./template.html";
         this.data = m.data;
-        this.data.page = "inventory";
+        this.data.page = "general";
         this.data.inventory = [];
         this.data.line_up = [];
         this.data.characters = [];
@@ -36,8 +36,9 @@ class TrailsInTheSkyFC extends SaveEditorModule
         return {
             switchPage(page)
             {
+                const newId = Math.ceil(Math.random() * 1000) + 100;
+                this.$vnode.key = newId;
                 this.page = page;
-                $('.ui.accordion').accordion();
             },
             save()
             {

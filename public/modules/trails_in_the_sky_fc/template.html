@@ -13,7 +13,7 @@
         <button class="ui button" style="margin-top:10px;margin-left:10px;" v-on:click="save()">Save</button>
     </div>
     <div class='game-panel' v-if="page=='general'">
-        <form class="ui inverted form">
+        <form class="ui inverted form" :key="page">
             <h4 class="ui inverted dividing header">Stats</h4>
             <div class="field">
                 <div class="four fields">
@@ -83,7 +83,7 @@
         </form>
     </div>
     <div class='game-panel' v-if="page=='characters'">
-        <form class="ui inverted form">
+        <form class="ui inverted form" :key="page">
             <h4 class="ui inverted dividing header">Line-up</h4>
             <div class="field">
                 <div class="four fields">
@@ -107,7 +107,7 @@
         </form>
     </div>
     <div class='game-panel' v-if="page=='inventory'">
-        <form class="ui form">
+        <form class="ui form" :key="page">
             <h4 class="ui inverted dividing header">Inventory</h4>
             <div class="ui">
                 <div class="ui inverted accordion" v-for="(category, index) in inventory" :key="category.name">

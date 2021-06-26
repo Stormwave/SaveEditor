@@ -235,6 +235,7 @@ class SaveEditorModule
     {
         console.log(this.name+" loaded...");
         $(".ui.accordion").accordion();
+        $('.ui.dropdown').dropdown();
     }
 
     getUpdated()
