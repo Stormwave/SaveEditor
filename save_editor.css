@@ -44,6 +44,15 @@ body
     cursor:pointer;
 }
 
+.topbar .ui.button
+{
+    right: 0px;
+    position: absolute;
+    height:30px;
+    margin-top:4px;
+    padding-top:8px;
+}
+
 .container
 {
     position:absolute;
@@ -114,6 +123,25 @@ body
     margin:5px;
 }
 
+.ui.button
+{
+    background-color:rgba(50, 50, 50);
+    color:white;
+}
+
+.ui.button:hover
+{
+    background-color:rgba(70, 70, 70);
+    color:white;
+}
+
+.ui.button:focus
+{
+    background-color:rgba(50, 50, 50);
+    color:white;
+}
+
+
 .ui.inverted.accordion
 {
     background-color:rgba(100, 100, 100, 0.1);
@@ -125,4 +153,17 @@ body
 {
     padding-top:12px;
     padding-left:10px;
+}
+
+.ui.inverted.modal
+{
+    background-color:rgba(50, 50, 50);
+
+}
+
+.ui.inverted.modal .header, .ui.inverted.modal .content
+{
+    border-color:rgba(255, 255, 255, 0.2);
+    background-color:transparent;
+    color:white;
 }

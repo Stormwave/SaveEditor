@@ -6,7 +6,8 @@
                 <div v-if="active_module!=null">
                     <a v-on:click='unloadGameModule();'>Home</a>
                 </div>
-                <label>Save Editor v0.1</label>
+                <label>Save Editor (Alpha test version)</label>
+                <button class="ui button" v-on:click="showAbout()">About</button>
             </div>
             <div class='container'>
                 <div class='game-selector' v-if="active_module==null">
@@ -18,6 +19,21 @@
                 <component v-bind:is="active_module">
                 </component>
             </div>
+            <div class="ui inverted modal">
+                <div class="header">About Save Editor</div>
+                <div class="content">
+                    <p>Universal Save Editor for JavaScript Clients</p>
+                    <p>Created by: <a href='https://stormwave.uk/'>Andrew Cornforth (Stormwave Digital Design)</a></p>
+                    <p>Any issues or ideas, please email <a href='mailto:andy@stormwave.uk'>andy@stormwave.uk</a>. I hope you enjoy this tool :)</p>
+                    <p><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="float:right;">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="C9377MUA4QDF6">
+                        <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1" hidden="" style="display: none !important;">
+                        </form></p>
+                    <p>Copyright (Stormwave Digital Design) 2021</p>
+                </div>
+            </div>            
         </div>
     `,
     data: {
@@ -27,6 +43,10 @@
     },
     methods:
     {
+        showAbout()
+        {
+            $('.ui.modal').modal('show');
+        },
         unloadGameModule()
         {
             this.active_module = null;            
