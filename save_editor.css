@@ -1,0 +1,128 @@
+body
+{
+    background-color:#2a2f3a;
+}
+
+.topbar
+{
+    background-color:#1b1c1d;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:40px;
+    display:flex;
+}
+
+.game-panel
+{
+    position:absolute;
+    left:210px;
+    top:0px;
+    width:calc(100% - 210px);
+    height:100%;
+    padding:20px;
+}
+
+.topbar a
+{
+    color:white;
+    font-size:18px;
+    position:absolute;
+    left:20px;
+    top:10px;
+    cursor:pointer;
+}
+
+.topbar label
+{
+    color:white;
+    font-size:20px;
+    position:absolute;
+    left:220px;
+    top:10px;
+    cursor:pointer;
+}
+
+.container
+{
+    position:absolute;
+    top:40px;
+    width:100%;
+}
+
+.ui.sidebar
+{
+    top:41px !important;
+}
+
+.ui.sidebar .label
+{
+    color:white;
+    width:100%;
+    text-align:center;
+    height:40px;
+    padding-top: 10px;
+    background-color: rgba(200, 200, 255, 0.05);
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip:before {
+    content: attr(data-text);
+    position:absolute;
+    z-index:100000;
+    top:-24px;
+    font-size:13px;
+    padding: 2px;
+    padding-left:5px;
+    padding-right:5px;
+    border-radius: 10px;
+    white-space:nowrap;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    float:right;
+    display: none;
+}
+.game.tooltip:before
+{
+    top:unset;
+    width:100%;
+    height:40px;
+    padding-top:8px;
+    bottom:0px;
+    border-radius:0px;
+}
+.tooltip:hover:before {
+    display: block;
+}
+
+.game-selector
+{
+    position:relative;
+    padding:20px;
+    margin:5px;
+    display:flex;
+    flex-direction:row;
+}
+
+.game-selector > .game
+{
+    margin:5px;
+}
+
+.ui.inverted.accordion
+{
+    background-color:rgba(100, 100, 100, 0.1);
+    border-radius:5px;
+    margin-bottom:5px;
+}
+
+.ui.inverted.accordion .title
+{
+    padding-top:12px;
+    padding-left:10px;
+}

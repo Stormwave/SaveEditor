@@ -1,0 +1,136 @@
+<div style='width:100%'>
+    <div class="ui sidebar inverted visible vertical menu">
+        <div class='label'>{{ name }}</div>
+        <a v-bind:class="page=='general'?'active':''" class="item" v-on:click="switchPage('general');">
+        General
+        </a>
+        <a v-bind:class="page=='characters'?'active':''" class="item" v-on:click="switchPage('characters');">
+        Characters
+        </a>
+        <a v-bind:class="page=='inventory'?'active':''" class="item" v-on:click="switchPage('inventory');">
+        Inventory
+        </a>
+        <button class="ui button" style="margin-top:10px;margin-left:10px;" v-on:click="save()">Save</button>
+    </div>
+    <div class='game-panel' v-if="page=='general'">
+        <form class="ui inverted form">
+            <h4 class="ui inverted dividing header">Stats</h4>
+            <div class="field">
+                <div class="four fields">
+                    <div class="field">
+                        <label>Mira</label>
+                        <input type="text" placeholder="Mira" v-model="mira">
+                    </div>
+                    <div class="field">
+                        <label>Bracer Rank</label>
+                        <input type="text" placeholder="Mira" v-model="bracer_rank">
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="four fields">
+                    <div class="field">
+                        <label>Battles</label>
+                        <input type="text" placeholder="Battles" v-model="battles.count">
+                    </div>
+                    <div class="field">
+                        <label>Battles Lost</label>
+                        <input type="text" placeholder="Battles Lost" v-model="battles.lost">
+                    </div>
+                    <div class="field">
+                        <label>Battles Won</label>
+                        <input type="text" placeholder="Battles Won" v-model="battles.won">
+                    </div>
+                    <div class="field">
+                        <label>Battles Fled</label>
+                        <input type="text" placeholder="Battles Fled" v-model="battles.fled">
+                    </div>
+                </div>
+            </div>
+            <h4 class="ui inverted dividing header">Seriph</h4>
+            <div class="field">
+                <div class="seven fields">
+                    <div class="field">
+                        <label>Earth</label>
+                        <input type="text" placeholder="Earth" v-model="seriph.earth">
+                    </div>
+                    <div class="field">
+                        <label>Water</label>
+                        <input type="text" placeholder="Water" v-model="seriph.water">
+                    </div>
+                    <div class="field">
+                        <label>Fire</label>
+                        <input type="text" placeholder="Fire" v-model="seriph.fire">
+                    </div>
+                    <div class="field">
+                        <label>Wind</label>
+                        <input type="text" placeholder="Wind" v-model="seriph.wind">
+                    </div>
+                    <div class="field">
+                        <label>Time</label>
+                        <input type="text" placeholder="Time" v-model="seriph.time">
+                    </div>
+                    <div class="field">
+                        <label>Space</label>
+                        <input type="text" placeholder="Space" v-model="seriph.space">
+                    </div>
+                    <div class="field">
+                        <label>Mirage</label>
+                        <input type="text" placeholder="Mirage" v-model="seriph.mirage">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class='game-panel' v-if="page=='characters'">
+        <form class="ui inverted form">
+            <h4 class="ui inverted dividing header">Line-up</h4>
+            <div class="field">
+                <div class="four fields">
+                    <div class="field" v-for="(member, index) in line_up">
+                        <label>Party Member {{ index+1 }}</label>
+                        <select class="ui dropdown" :key="index" v-model="member.id">
+                            <option v-for="(ref_name, ref_id) in refs.character_id" v-bind:value="ref_id">{{ ref_name }}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <h4 class="ui inverted dividing header">Levels</h4>
+            <div class="field">
+                <div class="eight fields">
+                    <div class="field" v-for="char in characters">
+                        <label>{{ char.name }}'s Level</label>
+                        <input type="text" v-model="char.level"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class='game-panel' v-if="page=='inventory'">
+        <form class="ui form">
+            <h4 class="ui inverted dividing header">Inventory</h4>
+            <div class="ui">
+                <div class="ui inverted accordion" v-for="(category, index) in inventory" :key="category.name">
+                    <div v-bind:class="index==0?'active':''" class="title">
+                        <i class="dropdown icon"></i>
+                        {{ category.name }}
+                    </div>
+                    <div v-bind:class="index==0?'active':''" class="content">
+                        <div class="transition visible" style="display: block !important;">
+                            <div class="field">
+                                <div class="eight fields" style='flex-wrap: wrap;padding:20px;'>
+                                    <div v-for="item in category.items" class="field" style="margin-bottom:10px;">
+                                        <span style="color:white">{{ item.name }}</span>
+                                        <div class="ui inverted input">
+                                            <input type="text" placeholder="Quantity..."  v-model="item.count">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
