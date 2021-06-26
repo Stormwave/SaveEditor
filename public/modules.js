@@ -1,5 +1,5 @@
 import { TrailsInTheSkyFC } from './modules/trails_in_the_sky_fc/module.js';
-import { TrailsInTheSkySC } from './modules/trails_in_the_sky_sc/module.js';
+//import { TrailsInTheSkySC } from './modules/trails_in_the_sky_sc/module.js';
 
 var modules = [];
 
@@ -18,4 +18,4 @@ function loadModule(path, Module)
     })
 }
 loadModule("trails_in_the_sky_fc", TrailsInTheSkyFC);
-loadModule("trails_in_the_sky_sc", TrailsInTheSkySC);
+//loadModule("trails_in_the_sky_sc", TrailsInTheSkySC);
