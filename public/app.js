@@ -54,6 +54,7 @@
         uploadGameModuleFile(module)
         {
             this.selected_module = module;
+            $("#upload_file").val("");
             $("#upload_file").trigger("click");
         },
         loadGameModule(module)
@@ -118,7 +119,6 @@ function handleUploadEvent(e)
 function uploadFile(file)
 {
     let reader = new FileReader();
-
     reader.file = file;
     reader.removeEventListener('loadstart', handleUploadEvent);
     reader.removeEventListener('load', handleUploadEvent);
