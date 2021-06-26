@@ -11,7 +11,7 @@ var modules = [];
 function loadModule(path, Module)
 {
     let mod = new Module();
-    mod.setPath("./modules/"+path+"/").then(()=>
+    mod.setPath("modules/"+path+"/").then(()=>
     {
         modules.push(mod);
         if (modules.length==load_modules.length)
