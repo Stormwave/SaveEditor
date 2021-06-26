@@ -25,7 +25,8 @@ class MySaveGameModule extends SaveEditorModule
         this.icon = "./icon.png";
         this.template_file = "./template.html";
 	}
-}```
+}
+```
 
 This initialisation code will create a very basic plugin. Please see the included modules for more details on functionality.
 
