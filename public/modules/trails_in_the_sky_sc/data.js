@@ -13,1572 +13,718 @@ let data = {
             "5":"Agate",
             "6":"Tita",
             "7":"Zin",
+            "8":"Kevin",
+            "9":"Anelace",
+            "10":"Josette",
+            "11":"Richard",
+            "12":"Kanone",
+            "13":"Kurt",
+            "14":"Julia",
+            "15":"Mueller",
             "255":"None"
         },
-        "inventory":
-        {
-            "Staves": [{
-                    "key": 1,
-                    "name": "Birch Staff"
-                },
-                {
-                    "key": 2,
-                    "name": "Pile Rod"
-                },
-                {
-                    "key": 3,
-                    "name": "Stun Rod"
-                },
-                {
-                    "key": 4,
-                    "name": "Hex Stave"
-                },
-                {
-                    "key": 5,
-                    "name": "Spike Rod"
-                },
-                {
-                    "key": 6,
-                    "name": "Tin Stagg"
-                },
-                {
-                    "key": 7,
-                    "name": "Octavian Stave"
-                },
-                {
-                    "key": 8,
-                    "name": "Battle Staff"
-                },
-                {
-                    "key": 10,
-                    "name": "Arc Rod"
-                },
-                {
-                    "key": 16,
-                    "name": "Laundry Pole"
-                },
-                {
-                    "key": 17,
-                    "name": "Mystic Stave"
-                },
-                {
-                    "key": 1000,
-                    "name": "Practice Staff"
-                }
-        
-            ],
-            "Daggers": [{
-                    "key": 31,
-                    "name": "Twin Dirks"
-                },
-                {
-                    "key": 32,
-                    "name": "Kunai"
-                },
-                {
-                    "key": 33,
-                    "name": "Dual Razors"
-                },
-                {
-                    "key": 34,
-                    "name": "Katars"
-                },
-                {
-                    "key": 35,
-                    "name": "Baselards"
-                },
-                {
-                    "key": 36,
-                    "name": "Schneiders"
-                },
-                {
-                    "key": 39,
-                    "name": "Gurkha Knives"
-                },
-                {
-                    "key": 40,
-                    "name": "Demi-Handers"
-                },
-                {
-                    "key": 41,
-                    "name": "Erbe Blades"
-                },
-                {
-                    "key": 45,
-                    "name": "Skull Daggers"
-                },
-                {
-                    "key": 47,
-                    "name": "Paring Knives"
-                },
-                {
-                    "key": 48,
-                    "name": "Twin Plovers"
-                }
-        
-            ],
-            "Whips": [{
-                    "key": 61,
-                    "name": "Viper"
-                },
-                {
-                    "key": 62,
-                    "name": "Blitz"
-                },
-                {
-                    "key": 63,
-                    "name": "Scorpion"
-                },
-                {
-                    "key": 64,
-                    "name": "Sidewinder"
-                },
-                {
-                    "key": 65,
-                    "name": "Nine Tails"
-                }
-        
-            ],
-            "Guns": [{
-                    "key": 92,
-                    "name": "Needler"
-                },
-                {
-                    "key": 93,
-                    "name": "Hawkeye"
-                },
-                {
-                    "key": 94,
-                    "name": "Stinger"
-                },
-                {
-                    "key": 95,
-                    "name": "Silver Star"
-                },
-                {
-                    "key": 96,
-                    "name": "Bear Assault"
-                },
-                {
-                    "key": 98,
-                    "name": "Magesta"
-                },
-                {
-                    "key": 103,
-                    "name": "Zero Shot (X)"
-                }
-        
-            ],
-            "Rapiers": [{
-                    "key": 121,
-                    "name": "Rapier"
-                },
-                {
-                    "key": 122,
-                    "name": "Sabre"
-                },
-                {
-                    "key": 123,
-                    "name": "Flamberge"
-                },
-                {
-                    "key": 124,
-                    "name": "Estoc"
-                },
-                {
-                    "key": 128,
-                    "name": "Hauteclere"
-                }
-        
-            ],
-            "Broad Swords": [{
-                    "key": 151,
-                    "name": "Broad Edge"
-                },
-                {
-                    "key": 152,
-                    "name": "Claymore"
-                },
-                {
-                    "key": 153,
-                    "name": "Bastard Edge"
-                },
-                {
-                    "key": 154,
-                    "name": "Zweihaender"
-                },
-                {
-                    "key": 155,
-                    "name": "Rhomphaia"
-                },
-                {
-                    "key": 156,
-                    "name": "Cavalier Killer"
-                },
-                {
-                    "key": 157,
-                    "name": "Berserker"
-                }
-        
-            ],
-            "Cannons": [{
-                    "key": 181,
-                    "name": "P-03"
-                },
-                {
-                    "key": 183,
-                    "name": "Craft Cannon"
-                },
-                {
-                    "key": 184,
-                    "name": "P-05"
-                },
-                {
-                    "key": 185,
-                    "name": "G-Impact"
-                },
-                {
-                    "key": 187,
-                    "name": "Thor's Hammer"
-                }
-        
-            ],
-            "Knuckles": [{
-                    "key": 211,
-                    "name": "Brass Knuckles"
-                },
-                {
-                    "key": 212,
-                    "name": "Hide Gauntlet"
-                },
-                {
-                    "key": 213,
-                    "name": "Cestus"
-                },
-                {
-                    "key": 214,
-                    "name": "Steel Gauntlet"
-                },
-                {
-                    "key": 217,
-                    "name": "Daedlus Arm"
-                }
-        
-            ],
-            "Chest": [{
-                    "key": 241,
-                    "name": "Leather Vest"
-                },
-                {
-                    "key": 242,
-                    "name": "Armor Vest"
-                },
-                {
-                    "key": 243,
-                    "name": "Leather Jacket"
-                },
-                {
-                    "key": 244,
-                    "name": "Shield Vest"
-                },
-                {
-                    "key": 245,
-                    "name": "Metal Jacket"
-                },
-                {
-                    "key": 246,
-                    "name": "Shield Coat"
-                },
-                {
-                    "key": 247,
-                    "name": "Hide Jumpsuit"
-                },
-                {
-                    "key": 248,
-                    "name": "Chain Mail"
-                },
-                {
-                    "key": 249,
-                    "name": "Battle Suit"
-                },
-                {
-                    "key": 250,
-                    "name": "Black Coat"
-                },
-                {
-                    "key": 251,
-                    "name": "Reflector"
-                },
-                {
-                    "key": 252,
-                    "name": "Work Jumpsuit"
-                },
-                {
-                    "key": 253,
-                    "name": "Royal Guard"
-                },
-                {
-                    "key": 254,
-                    "name": "Valkyrie Dress"
-                }
-        
-            ],
-            "Boots": [{
-                    "key": 271,
-                    "name": "Leather Boots"
-                },
-                {
-                    "key": 272,
-                    "name": "Spikes"
-                },
-                {
-                    "key": 273,
-                    "name": "Work Boots"
-                },
-                {
-                    "key": 274,
-                    "name": "Double Spikes"
-                },
-                {
-                    "key": 275,
-                    "name": "Craft Shoes"
-                },
-                {
-                    "key": 276,
-                    "name": "Composites"
-                },
-                {
-                    "key": 277,
-                    "name": "Knitted Shoes"
-                },
-                {
-                    "key": 278,
-                    "name": "Strega-R"
-                },
-                {
-                    "key": 279,
-                    "name": "Army Boots"
-                },
-                {
-                    "key": 280,
-                    "name": "Strega-G"
-                },
-                {
-                    "key": 281,
-                    "name": "Atlas Gear"
-                },
-                {
-                    "key": 282,
-                    "name": "Sylphen Boots"
-                },
-                {
-                    "key": 283,
-                    "name": "Holey Boots"
-                },
-                {
-                    "key": 284,
-                    "name": "(Alpha) Strega"
-                },
-                {
-                    "key": 285,
-                    "name": "(Beta) Strega"
-                },
-                {
-                    "key": 286,
-                    "name": "Strega-J"
-                },
-                {
-                    "key": 287,
-                    "name": "Steel-Toed Boots"
-                }
-        
-            ],
-            "Accessories": [{
-                    "key": 301,
-                    "name": "Silver Earring"
-                },
-                {
-                    "key": 302,
-                    "name": "Lighter"
-                },
-                {
-                    "key": 303,
-                    "name": "Mirage Ring"
-                },
-                {
-                    "key": 304,
-                    "name": "Black Bangle"
-                },
-                {
-                    "key": 305,
-                    "name": "Glam Choker"
-                },
-                {
-                    "key": 306,
-                    "name": "White Bracelet"
-                },
-                {
-                    "key": 307,
-                    "name": "Pearl Earring"
-                },
-                {
-                    "key": 308,
-                    "name": "Lily Necklace"
-                },
-                {
-                    "key": 309,
-                    "name": "Feather Brooch"
-                },
-                {
-                    "key": 310,
-                    "name": "Skull Pendant"
-                },
-                {
-                    "key": 311,
-                    "name": "T-Anklet"
-                },
-                {
-                    "key": 312,
-                    "name": "Crest Charm"
-                },
-                {
-                    "key": 313,
-                    "name": "Grail Locket"
-                },
-                {
-                    "key": 321,
-                    "name": "Topaz Talisman"
-                },
-                {
-                    "key": 322,
-                    "name": "Sapphire Talisman"
-                },
-                {
-                    "key": 323,
-                    "name": "Ruby Talisman"
-                },
-                {
-                    "key": 324,
-                    "name": "Emerald Talisman"
-                },
-                {
-                    "key": 325,
-                    "name": "Proxy Puppet"
-                },
-                {
-                    "key": 326,
-                    "name": "Gladiator Headband"
-                },
-                {
-                    "key": 327,
-                    "name": "Gladiator Belt"
-                },
-                {
-                    "key": 328,
-                    "name": "Work Helmet"
-                },
-                {
-                    "key": 329,
-                    "name": "Red Scarf"
-                },
-                {
-                    "key": 330,
-                    "name": "Woolly Knit-Hat"
-                },
-                {
-                    "key": 333,
-                    "name": "Work Gloves"
-                },
-                {
-                    "key": 334,
-                    "name": "Jeweled Ring"
-                },
-                {
-                    "key": 335,
-                    "name": "Long Barrel"
-                }
-        
-            ],
-            "Meals": [{
-                    "key": 401,
-                    "name": "Maple Cookie"
-                },
-                {
-                    "key": 402,
-                    "name": "Sweet Sponge Cake"
-                },
-                {
-                    "key": 403,
-                    "name": "Vegetable Sandwich"
-                },
-                {
-                    "key": 404,
-                    "name": "Briny Delight"
-                },
-                {
-                    "key": 405,
-                    "name": "Milk Crepe"
-                },
-                {
-                    "key": 406,
-                    "name": "Refreshing Pie"
-                },
-                {
-                    "key": 407,
-                    "name": "Coffee Ice Cream"
-                },
-                {
-                    "key": 408,
-                    "name": "French Fries"
-                },
-                {
-                    "key": 409,
-                    "name": "Tomato Sandwich"
-                },
-                {
-                    "key": 410,
-                    "name": "Azelia Rose"
-                },
-                {
-                    "key": 411,
-                    "name": "Flowery Soda"
-                },
-                {
-                    "key": 412,
-                    "name": "Rich Espresso"
-                },
-                {
-                    "key": 413,
-                    "name": "Mouthful Soup"
-                },
-                {
-                    "key": 414,
-                    "name": "Carmine Eye"
-                },
-                {
-                    "key": 415,
-                    "name": "Pluched Herb Tea"
-                },
-                {
-                    "key": 416,
-                    "name": "Red Tail Soup"
-                },
-                {
-                    "key": 417,
-                    "name": "Specialty Eggnog"
-                },
-                {
-                    "key": 418,
-                    "name": "Fresh Juice"
-                },
-                {
-                    "key": 419,
-                    "name": "Black Pepper Souip"
-                },
-                {
-                    "key": 420,
-                    "name": "Mixed Cocktail"
-                },
-                {
-                    "key": 421,
-                    "name": "Drill Meatball"
-                },
-                {
-                    "key": 422,
-                    "name": "Rotini Pasta"
-                },
-                {
-                    "key": 423,
-                    "name": "Fried Eyes & Eggs"
-                },
-                {
-                    "key": 424,
-                    "name": "Chomping Spare Rib"
-                },
-                {
-                    "key": 425,
-                    "name": "Potluck in a Shell"
-                },
-                {
-                    "key": 426,
-                    "name": "Beast Steak"
-                },
-                {
-                    "key": 427,
-                    "name": "Monster Sushi"
-                },
-                {
-                    "key": 428,
-                    "name": "Hot Fried Chicken"
-                },
-                {
-                    "key": 429,
-                    "name": "Rainbow Jellybeans"
-                },
-                {
-                    "key": 430,
-                    "name": "Floral Jelly"
-                },
-                {
-                    "key": 431,
-                    "name": "Hellfire Eggs"
-                },
-                {
-                    "key": 432,
-                    "name": "Wine-Streamed Egg"
-                },
-                {
-                    "key": 433,
-                    "name": "Holey Popcorn"
-                },
-                {
-                    "key": 434,
-                    "name": "Seasonal Tart"
-                },
-                {
-                    "key": 435,
-                    "name": "Deep-Fried Smelt"
-                },
-                {
-                    "key": 436,
-                    "name": "Boiled Miso Carp"
-                },
-                {
-                    "key": 437,
-                    "name": "Grilled Rainbow"
-                },
-                {
-                    "key": 438,
-                    "name": "Rockfish Skewer"
-                },
-                {
-                    "key": 439,
-                    "name": "Salmon Meuniere"
-                },
-                {
-                    "key": 440,
-                    "name": "Bouillabaisse Plus"
-                },
-                {
-                    "key": 441,
-                    "name": "Fluffy Spring Egg"
-                },
-                {
-                    "key": 442,
-                    "name": "Orange Ice Cream"
-                },
-                {
-                    "key": 443,
-                    "name": "Apple Ice Cream"
-                },
-                {
-                    "key": 444,
-                    "name": "Royal Crepe"
-                },
-                {
-                    "key": 445,
-                    "name": "Gorgeous Crepe"
-                },
-                {
-                    "key": 446,
-                    "name": "Special Ice Cream"
-                },
-                {
-                    "key": 447,
-                    "name": "Fruity Milk"
-                }
-        
-            ],
-            "Ingredients": [{
-                    "key": 900,
-                    "name": "Firefly Fungus"
-                },
-                {
-                    "key": 901,
-                    "name": "Averbic Tomato"
-                },
-                {
-                    "key": 902,
-                    "name": "Bear Claw"
-                },
-                {
-                    "key": 903,
-                    "name": "Tri-Colored Rice"
-                },
-                {
-                    "key": 904,
-                    "name": "Aged Miso"
-                },
-                {
-                    "key": 905,
-                    "name": "Vintage Wine"
-                },
-                {
-                    "key": 906,
-                    "name": "Fresh Milk"
-                },
-                {
-                    "key": 907,
-                    "name": "Fresh Eggs"
-                },
-                {
-                    "key": 908,
-                    "name": "Sharp Cheese"
-                },
-                {
-                    "key": 909,
-                    "name": "Luscious Oranmge"
-                },
-                {
-                    "key": 910,
-                    "name": "Ripe Apple"
-                },
-                {
-                    "key": 911,
-                    "name": "Azelia  Fruit"
-                },
-                {
-                    "key": 912,
-                    "name": "Milled Flour"
-                },
-                {
-                    "key": 913,
-                    "name": "Salted Anmchovy"
-                },
-                {
-                    "key": 914,
-                    "name": "Marbled Steak"
-                },
-                {
-                    "key": 915,
-                    "name": "Flaky Potato"
-                },
-                {
-                    "key": 916,
-                    "name": "Crisp Onion"
-                },
-                {
-                    "key": 917,
-                    "name": "Dirty Carrot"
-                },
-                {
-                    "key": 918,
-                    "name": "Maple Sugar"
-                },
-                {
-                    "key": 919,
-                    "name": "Kibbled Salt"
-                },
-                {
-                    "key": 920,
-                    "name": "Olive Oil"
-                },
-                {
-                    "key": 921,
-                    "name": "Fresh Herb"
-                },
-                {
-                    "key": 922,
-                    "name": "Dragon Beans"
-                },
-                {
-                    "key": 923,
-                    "name": "Royal Leaf"
-                },
-                {
-                    "key": 924,
-                    "name": "Black Pepper"
-                },
-                {
-                    "key": 925,
-                    "name": "Red Pepper"
-                },
-                {
-                    "key": 926,
-                    "name": "Curative Horn"
-                },
-                {
-                    "key": 927,
-                    "name": "Savory Pinon"
-                },
-                {
-                    "key": 928,
-                    "name": "Leathery Tail"
-                },
-                {
-                    "key": 929,
-                    "name": "Juicy Bone"
-                },
-                {
-                    "key": 930,
-                    "name": "Gummy Eyeball"
-                },
-                {
-                    "key": 931,
-                    "name": "Lucky Fanmg"
-                },
-                {
-                    "key": 932,
-                    "name": "Monster Carapace"
-                },
-                {
-                    "key": 933,
-                    "name": "Beast Flesh"
-                },
-                {
-                    "key": 934,
-                    "name": "Fish Fillet"
-                },
-                {
-                    "key": 935,
-                    "name": "Tender Poultry"
-                },
-                {
-                    "key": 936,
-                    "name": "Clear Gelatin"
-                },
-                {
-                    "key": 937,
-                    "name": "Bird Egg"
-                },
-                {
-                    "key": 938,
-                    "name": "Fish Egg"
-                },
-                {
-                    "key": 939,
-                    "name": "Prickly Seed"
-                },
-                {
-                    "key": 940,
-                    "name": "Smelt"
-                },
-                {
-                    "key": 941,
-                    "name": "Liberl Carp"
-                },
-                {
-                    "key": 942,
-                    "name": "Rainbow Trout"
-                },
-                {
-                    "key": 943,
-                    "name": "Tiger Tockfish"
-                },
-                {
-                    "key": 944,
-                    "name": "Salmon"
-                }
-        
-            ],
-            "Items": [{
-                    "key": 501,
-                    "name": "Tear Balm"
-                },
-                {
-                    "key": 502,
-                    "name": "Teara Balm"
-                },
-                {
-                    "key": 503,
-                    "name": "Tear All Balm"
-                },
-                {
-                    "key": 504,
-                    "name": "Purging Balm"
-                },
-                {
-                    "key": 505,
-                    "name": "Softening Balm"
-                },
-                {
-                    "key": 506,
-                    "name": "Insulating Tape"
-                },
-                {
-                    "key": 507,
-                    "name": "Cura Balm"
-                },
-                {
-                    "key": 508,
-                    "name": "Reviving Balm"
-                },
-                {
-                    "key": 509,
-                    "name": "Celestial Balm"
-                },
-                {
-                    "key": 510,
-                    "name": "EP Charge"
-                },
-                {
-                    "key": 511,
-                    "name": "EP Charge Ex"
-                },
-                {
-                    "key": 512,
-                    "name": "Smelling Salts"
-                }
-        
-            ],
-            "Books": [{
-                    "key": 520,
-                    "name": "Bracer Notebook"
-                },
-                {
-                    "key": 525,
-                    "name": "Recipe Book"
-                },
-                {
-                    "key": 527,
-                    "name": "Monster Guide"
-                },
-                {
-                    "key": 530,
-                    "name": "Carnelia - Chapter 1"
-                },
-                {
-                    "key": 531,
-                    "name": "Carnelia - Chapter 2"
-                },
-                {
-                    "key": 532,
-                    "name": "Carnelia - Chapter 3"
-                },
-                {
-                    "key": 533,
-                    "name": "Carnelia - Chapter 4"
-                },
-                {
-                    "key": 534,
-                    "name": "Carnelia - Chapter 5"
-                },
-                {
-                    "key": 535,
-                    "name": "Carnelia - Chapter 6"
-                },
-                {
-                    "key": 536,
-                    "name": "Carnelia - Chapter 7"
-                },
-                {
-                    "key": 537,
-                    "name": "Carnelia - Chapter 8"
-                },
-                {
-                    "key": 538,
-                    "name": "Carnelia - Chapter 9"
-                },
-                {
-                    "key": 539,
-                    "name": "Carnelia - Chapter 10"
-                },
-                {
-                    "key": 540,
-                    "name": "Carnelia - Finale"
-                },
-                {
-                    "key": 863,
-                    "name": "Liberl Kingdom Map"
-                },
-                {
-                    "key": 839,
-                    "name": "Liberl News - Issue 1"
-                },
-                {
-                    "key": 840,
-                    "name": "Liberl News - Issue 2"
-                },
-                {
-                    "key": 841,
-                    "name": "Liberl News - Issue 3"
-                },
-                {
-                    "key": 842,
-                    "name": "Liberl News - Issue 4"
-                },
-                {
-                    "key": 843,
-                    "name": "Liberl News - Issue 5"
-                },
-                {
-                    "key": 844,
-                    "name": "Liberl News - Issue 6"
-                },
-                {
-                    "key": 845,
-                    "name": "Liberl News - Issue 7"
-                },
-                {
-                    "key": 846,
-                    "name": "Liberl News - Issue 8"
-                },
-                {
-                    "key": 847,
-                    "name": "Liberl News - Issue 9"
-                },
-                {
-                    "key": 848,
-                    "name": "Liberl News - Special"
-                },
-                {
-                    "key": 817,
-                    "name": "Hundred Days War"
-                },
-                {
-                    "key": 829,
-                    "name": "Ruan Economics I"
-                },
-                {
-                    "key": 830,
-                    "name": "Ruan Economics II"
-                },
-                {
-                    "key": 831,
-                    "name": "Ruan Economics III"
-                },
-                {
-                    "key": 832,
-                    "name": "Kitty-Talk for Dummies"
-                },
-                {
-                    "key": 833,
-                    "name": "Tomorrow's Cooking"
-                },
-                {
-                    "key": 834,
-                    "name": "Septium Optic Annals"
-                },
-                {
-                    "key": 835,
-                    "name": "The Erbe Woodpecker"
-                },
-                {
-                    "key": 884,
-                    "name": "Kertz's Adventure I"
-                },
-                {
-                    "key": 836,
-                    "name": "Hertz's Adventure II"
-                },
-                {
-                    "key": 837,
-                    "name": "31 Cypress Trees"
-                },
-                {
-                    "key": 886,
-                    "name": "Luke's Journal"
-                }
-        
-            ],
-            "Quartz": [{
-                    "key": 600,
-                    "name": "HP 1"
-                },
-                {
-                    "key": 601,
-                    "name": "HP 2"
-                },
-                {
-                    "key": 602,
-                    "name": "HP 3"
-                },
-                {
-                    "key": 603,
-                    "name": "EP 1"
-                },
-                {
-                    "key": 604,
-                    "name": "EP 2"
-                },
-                {
-                    "key": 605,
-                    "name": "EP 3"
-                },
-                {
-                    "key": 606,
-                    "name": "Attack 1"
-                },
-                {
-                    "key": 607,
-                    "name": "Attack 2"
-                },
-                {
-                    "key": 608,
-                    "name": "Attack 3"
-                },
-                {
-                    "key": 609,
-                    "name": "Defense 1"
-                },
-                {
-                    "key": 610,
-                    "name": "Defense 2"
-                },
-                {
-                    "key": 611,
-                    "name": "Defense 3"
-                },
-                {
-                    "key": 612,
-                    "name": "Mind 1"
-                },
-                {
-                    "key": 613,
-                    "name": "Mind 2"
-                },
-                {
-                    "key": 614,
-                    "name": "Mind 3"
-                },
-                {
-                    "key": 615,
-                    "name": "Shield 1"
-                },
-                {
-                    "key": 616,
-                    "name": "Shield 2"
-                },
-                {
-                    "key": 617,
-                    "name": "Shield 3"
-                },
-                {
-                    "key": 618,
-                    "name": "Hit 1"
-                },
-                {
-                    "key": 619,
-                    "name": "Hit 2"
-                },
-                {
-                    "key": 620,
-                    "name": "Hit 3"
-                },
-                {
-                    "key": 621,
-                    "name": "Evade 1"
-                },
-                {
-                    "key": 622,
-                    "name": "Evade 2"
-                },
-                {
-                    "key": 623,
-                    "name": "Evade 3"
-                },
-                {
-                    "key": 624,
-                    "name": "Move 1"
-                },
-                {
-                    "key": 625,
-                    "name": "Move 2"
-                },
-                {
-                    "key": 626,
-                    "name": "Move 3"
-                },
-                {
-                    "key": 627,
-                    "name": "Action 1"
-                },
-                {
-                    "key": 628,
-                    "name": "Action 2"
-                },
-                {
-                    "key": 629,
-                    "name": "Action 3"
-                },
-                {
-                    "key": 630,
-                    "name": "Range 1"
-                },
-                {
-                    "key": 637,
-                    "name": "Poison"
-                },
-                {
-                    "key": 638,
-                    "name": "Freeze"
-                },
-                {
-                    "key": 639,
-                    "name": "Petrify"
-                },
-                {
-                    "key": 640,
-                    "name": "Sleep"
-                },
-                {
-                    "key": 641,
-                    "name": "Mute"
-                },
-                {
-                    "key": 642,
-                    "name": "Blind"
-                },
-                {
-                    "key": 643,
-                    "name": "Seal"
-                },
-                {
-                    "key": 644,
-                    "name": "Confuse"
-                },
-                {
-                    "key": 645,
-                    "name": "Strike"
-                },
-                {
-                    "key": 646,
-                    "name": "Deathblow 1"
-                },
-                {
-                    "key": 647,
-                    "name": "Deathblow 2"
-                },
-                {
-                    "key": 650,
-                    "name": "???"
-                },
-                {
-                    "key": 651,
-                    "name": "???"
-                },
-                {
-                    "key": 654,
-                    "name": "???"
-                },
-                {
-                    "key": 655,
-                    "name": "???"
-                },
-                {
-                    "key": 657,
-                    "name": "Information"
-                },
-                {
-                    "key": 705,
-                    "name": "Impede 1"
-                },
-                {
-                    "key": 706,
-                    "name": "Impede 2"
-                },
-                {
-                    "key": 707,
-                    "name": "Impede 3"
-                },
-                {
-                    "key": 710,
-                    "name": "Cast 1"
-                },
-                {
-                    "key": 711,
-                    "name": "Cast 2"
-                },
-                {
-                    "key": 712,
-                    "name": "EP Cut 1"
-                },
-                {
-                    "key": 713,
-                    "name": "EP Cut 2"
-                },
-                {
-                    "key": 714,
-                    "name": "EP Cut 3"
-                },
-                {
-                    "key": 720,
-                    "name": "Scent"
-                },
-                {
-                    "key": 721,
-                    "name": "Eagle Eye"
-                },
-                {
-                    "key": 722,
-                    "name": "Haze"
-                },
-                {
-                    "key": 723,
-                    "name": "Cloak"
-                },
-                {
-                    "key": 724,
-                    "name": "Heal"
-                },
-                {
-                    "key": 789,
-                    "name": "???"
-                },
-                {
-                    "key": 789,
-                    "name": "???"
-                },
-                {
-                    "key": 790,
-                    "name": "???"
-                },
-                {
-                    "key": 791,
-                    "name": "???"
-                },
-                {
-                    "key": 792,
-                    "name": "???"
-                },
-                {
-                    "key": 793,
-                    "name": "???"
-                },
-                {
-                    "key": 794,
-                    "name": "???"
-                },
-                {
-                    "key": 795,
-                    "name": "???"
-                },
-                {
-                    "key": 796,
-                    "name": "???"
-                },
-                {
-                    "key": 797,
-                    "name": "???"
-                },
-                {
-                    "key": 798,
-                    "name": "???"
-                },
-                {
-                    "key": 799,
-                    "name": "???"
-                }
-        
-            ],
-            "Quest Items": [{
-                    "key": 800,
-                    "name": "Guild Referral"
-                },
-                {
-                    "key": 801,
-                    "name": "Mayor's Referral"
-                },
-                {
-                    "key": 802,
-                    "name": "Elavtor Key"
-                },
-                {
-                    "key": 803,
-                    "name": "Septium Crystal"
-                },
-                {
-                    "key": 804,
-                    "name": "Guild Referral"
-                },
-                {
-                    "key": 805,
-                    "name": "Quartz Fragment"
-                },
-                {
-                    "key": 806,
-                    "name": "Maintenance Kit"
-                },
-                {
-                    "key": 807,
-                    "name": "Orbment Kit"
-                },
-                {
-                    "key": 809,
-                    "name": "Father Fivine's Letter"
-                },
-                {
-                    "key": 810,
-                    "name": "Servais Leaf"
-                },
-                {
-                    "key": 813,
-                    "name": "The Mayor's Letter"
-                },
-                {
-                    "key": 814,
-                    "name": "Abandoned Mine Key"
-                },
-                {
-                    "key": 815,
-                    "name": "Gate Pass"
-                },
-                {
-                    "key": 816,
-                    "name": "Recommendation"
-                },
-                {
-                    "key": 818,
-                    "name": "Progressive Rod"
-                },
-                {
-                    "key": 819,
-                    "name": "Recommendation"
-                },
-                {
-                    "key": 820,
-                    "name": "Warehouse Key"
-                },
-                {
-                    "key": 821,
-                    "name": "Torn Map"
-                },
-                {
-                    "key": 822,
-                    "name": "Letter to Cassius"
-                },
-                {
-                    "key": 823,
-                    "name": "Bouquet"
-                },
-                {
-                    "key": 824,
-                    "name": "Black Notebook"
-                },
-                {
-                    "key": 825,
-                    "name": "Recommendation"
-                },
-                {
-                    "key": 826,
-                    "name": "Recommendation"
-                },
-                {
-                    "key": 827,
-                    "name": "Recommendation"
-                },
-                {
-                    "key": 828,
-                    "name": "Special Boxed Lunch"
-                },
-                {
-                    "key": 838,
-                    "name": "Drive Orbment"
-                },
-                {
-                    "key": 854,
-                    "name": "Back Room Key"
-                },
-                {
-                    "key": 855,
-                    "name": "Grancel Sewer Map"
-                },
-                {
-                    "key": 856,
-                    "name": "Dorothy's Photograph"
-                },
-                {
-                    "key": 857,
-                    "name": "Leiston Fortress Map"
-                },
-                {
-                    "key": 858,
-                    "name": "Leiston Fortress Map"
-                },
-                {
-                    "key": 859,
-                    "name": "Black Orbment"
-                },
-                {
-                    "key": 860,
-                    "name": "Junior Bracer Emblem"
-                },
-                {
-                    "key": 861,
-                    "name": "Bracer Emblem"
-                },
-                {
-                    "key": 862,
-                    "name": "Letter to Faye"
-                },
-                {
-                    "key": 864,
-                    "name": "Attn. Factory Chief"
-                },
-                {
-                    "key": 866,
-                    "name": "Detector Jammer"
-                },
-                {
-                    "key": 868,
-                    "name": "Orbal Calculator"
-                },
-                {
-                    "key": 869,
-                    "name": "Zemuria Moss"
-                },
-                {
-                    "key": 870,
-                    "name": "Arve Sovereign Serum"
-                },
-                {
-                    "key": 871,
-                    "name": "Gasoline Tank"
-                },
-                {
-                    "key": 872,
-                    "name": "Combustion Engine"
-                },
-                {
-                    "key": 873,
-                    "name": "Pump Shed Key"
-                },
-                {
-                    "key": 874,
-                    "name": "Boarding Pass"
-                },
-                {
-                    "key": 875,
-                    "name": "Grand Arena Ticket"
-                },
-                {
-                    "key": 876,
-                    "name": "Julia's Letter"
-                },
-                {
-                    "key": 877,
-                    "name": "Grancel Sewer Key A"
-                },
-                {
-                    "key": 878,
-                    "name": "Grancel Sewer Key B"
-                },
-                {
-                    "key": 879,
-                    "name": "Spare Key"
-                },
-                {
-                    "key": 880,
-                    "name": "Boarding Pass"
-                },
-                {
-                    "key": 881,
-                    "name": "Invitation"
-                },
-                {
-                    "key": 882,
-                    "name": "Registry Card"
-                },
-                {
-                    "key": 883,
-                    "name": "Small Box"
-                },
-                {
-                    "key": 885,
-                    "name": "Room 202 Key"
-                }
-            ]
-        }
+        "inventory":{
+            "Staves":[
+            { "key":9, "name":"Break Rod" },
+            { "key":11, "name":"Fiber Rod" },
+            { "key":12, "name":"Impact Rod" },
+            { "key":13, "name":"Pole Weapon" },
+            { "key":14, "name":"Ceramic Rod" },
+            { "key":15, "name":"Edel Staff" },
+            { "key":18, "name":"Laundry Pole+" },
+            { "key":19, "name":"Spiral Rod" },
+            { "key":20, "name":"Valkyrie Rod" },
+            { "key":21, "name":"Brave Staff" },
+            { "key":22, "name":"Ebony Staff" },
+            { "key":23, "name":"Five Rings Cane" },
+            { "key":24, "name":"Diamond Staff" },
+            { "key":25, "name":"Seven Rings Cane" },
+            { "key":26, "name":"Arhat's Staff" },
+            { "key":27, "name":"Qilin Horn" },
+            { "key":1000, "name":"Practice Weapon" },
+            
+            ],"Daggers":[
+            { "key":37, "name":"Folder" },
+            { "key":38, "name":"Karambit" },
+            { "key":42, "name":"Strider" },
+            { "key":43, "name":"Aura Fencer" },
+            { "key":44, "name":"Skinner" },
+            { "key":46, "name":"Avenger" },
+            { "key":49, "name":"Phoenix Blades" },
+            { "key":50, "name":"All-Purpose Knife" },
+            
+            ],"Whips":[
+            { "key":68, "name":"Python" },
+            { "key":69, "name":"Air Glaive" },
+            { "key":70, "name":"Chain Gear" },
+            { "key":71, "name":"Eclair" },
+            { "key":72, "name":"Sturm" },
+            { "key":73, "name":"Chain Belt" },
+            { "key":74, "name":"Galient Sword" },
+            { "key":75, "name":"Dendrobium" },
+            { "key":76, "name":"Rosenkrantz" },
+            { "key":77, "name":"Wolf's Fang Whip" },
+            { "key":78, "name":"Dragon's Fang Whip" },
+            { "key":79, "name":"Sirius Whip" },
+            
+            ],"Guns":[
+            { "key":91, "name":"0-Type Orbal Gun Alpha" },
+            { "key":97, "name":"Phantom" },
+            { "key":99, "name":"Gray Wolf" },
+            { "key":100, "name":"Salamander" },
+            { "key":101, "name":"Dragoon" },
+            { "key":102, "name":"0-Type Orbal Gun" },
+            { "key":103, "name":"0-Type Test Model" },
+            { "key":104, "name":"Eternity" },
+            { "key":106, "name":"Cyclops" },
+            { "key":107, "name":"Revolter" },
+            { "key":108, "name":"Stinger II" },
+            { "key":109, "name":"Trickster" },
+            { "key":110, "name":"Phantom II" },
+            
+            ],"Rapiers":[
+            { "key":127, "name":"Saber" },
+            { "key":129, "name":"Sinclair" },
+            { "key":130, "name":"Long Saber" },
+            { "key":131, "name":"Vierge" },
+            { "key":132, "name":"Rune Blade" },
+            { "key":133, "name":"Moon Singer" },
+            { "key":134, "name":"Battle Saber" },
+            { "key":135, "name":"Celestial" },
+            { "key":136, "name":"Seven Star Sword" },
+            { "key":139, "name":"Aerondight" },
+            { "key":140, "name":"Caledfwlch" },
+            { "key":207, "name":"Fencer" },
+            { "key":208, "name":"Seiryuu Sword" },
+            
+            ],"Broad Swords":[
+            { "key":158, "name":"Claymore" },
+            { "key":159, "name":"Schweitzer" },
+            { "key":160, "name":"Dynast Edge" },
+            { "key":161, "name":"Blade Gear" },
+            { "key":162, "name":"Ogre Buster" },
+            { "key":163, "name":"Cleaver" },
+            { "key":164, "name":"Grambringer" },
+            { "key":165, "name":"Zeno Breaker" },
+            { "key":166, "name":"Lion King's Sword" },
+            { "key":167, "name":"Roaring Thunder" },
+            { "key":168, "name":"Nohval Blade" },
+            { "key":169, "name":"Demon Eater" },
+            
+            ],"Cannons":[
+            { "key":188, "name":"P-07" },
+            { "key":189, "name":"S Launcher" },
+            { "key":190, "name":"G-01" },
+            { "key":191, "name":"T Launcher" },
+            { "key":192, "name":"Kowloon" },
+            { "key":193, "name":"G-02" },
+            { "key":194, "name":"Meteo Buster" },
+            { "key":195, "name":"Omega Craft" },
+            { "key":196, "name":"Machine Planker" },
+            { "key":197, "name":"Buster Gear" },
+            { "key":198, "name":"Tempest Cannon" },
+            
+            ],"Knuckles":[
+            { "key":218, "name":"Heavy Cestus" },
+            { "key":219, "name":"Knuckle Gear" },
+            { "key":220, "name":"Blast Arm" },
+            { "key":221, "name":"Avalokiteshvara" },
+            { "key":222, "name":"Gigant Arm" },
+            { "key":223, "name":"Hecatonchire" },
+            { "key":224, "name":"Briarios" },
+            { "key":225, "name":"Silver Gauntlets" },
+            { "key":226, "name":"Byakko's Claws" },
+            { "key":227, "name":"Genbu Shell" },
+            
+            ],"Crossbows":[
+            { "key":230, "name":"Cross Gear" },
+            { "key":231, "name":"Glittering Stars" },
+            { "key":233, "name":"Air Shooter" },
+            { "key":234, "name":"Arbalest" },
+            { "key":235, "name":"Windlass" },
+            { "key":237, "name":"Composite Gear" },
+            { "key":238, "name":"Sylphid" },
+            { "key":239, "name":"Dominion" },
+            { "key":240, "name":"Suzaku Bow" },
+            
+            ],"Spears":[
+            { "key":170, "name":"Fujin-Raijin" },
+            
+            ],"Chest":[
+            { "key":241, "name":"Leather Vest" },
+            { "key":242, "name":"Armor Vest" },
+            { "key":243, "name":"Leather Jacket" },
+            { "key":244, "name":"Shield Vest" },
+            { "key":245, "name":"Metal Jacket" },
+            { "key":246, "name":"Shield Coat" },
+            { "key":247, "name":"Hide Jumpsuit" },
+            { "key":248, "name":"Chain Mail" },
+            { "key":249, "name":"Battle Suit" },
+            { "key":250, "name":"Black Coat" },
+            { "key":251, "name":"Reflector" },
+            { "key":252, "name":"Work Jumpsuit" },
+            { "key":253, "name":"Royal Guard" },
+            { "key":254, "name":"Valkyrie Dress" },
+            { "key":255, "name":"Fiber Vest" },
+            { "key":256, "name":"Enchanced Jacket" },
+            { "key":257, "name":"Fiber Suit" },
+            { "key":258, "name":"Ceram Coat" },
+            { "key":259, "name":"Protect Gear" },
+            { "key":260, "name":"Enhanced Leather" },
+            { "key":261, "name":"Ceram Armor" },
+            { "key":262, "name":"Dragon Skin Jumpsuit" },
+            { "key":263, "name":"Reflector II" },
+            { "key":264, "name":"Gaia Suit" },
+            { "key":265, "name":"Jagd Panzer" },
+            { "key":268, "name":"Cat Suit" },
+            { "key":270, "name":"Aura Guard" },
+            { "key":350, "name":"Jenis Blazer" },
+            { "key":351, "name":"Red Jacket" },
+            { "key":352, "name":"Edel Armor" },
+            { "key":353, "name":"Survival Vest" },
+            { "key":354, "name":"Ebony Suit" },
+            { "key":356, "name":"Taiji Garb" },
+            { "key":358, "name":"Dark Messiah" },
+            { "key":359, "name":"Armored Barbarossa" },
+            { "key":360, "name":"Jenis Blouse" },
+            { "key":361, "name":"Blue Cashmere" },
+            { "key":362, "name":"Holy Cloth" },
+            { "key":363, "name":"Gypsy Queen" },
+            { "key":364, "name":"Misty Veil" },
+            { "key":366, "name":"8 Divinations Garb" },
+            { "key":368, "name":"Aurelia Dress" },
+            { "key":369, "name":"Armored Sieglinde" },
+            { "key":370, "name":"Jormungandr" },
+            
+            ],"Boots":[
+            { "key":271, "name":"Leather Boots" },
+            { "key":272, "name":"Spikes" },
+            { "key":273, "name":"Work Boots" },
+            { "key":274, "name":"Double Spikes" },
+            { "key":275, "name":"Craft Shoes" },
+            { "key":276, "name":"Composites" },
+            { "key":277, "name":"Knitted Shoes" },
+            { "key":278, "name":"Strega-R" },
+            { "key":279, "name":"Army Boots" },
+            { "key":281, "name":"Atlas Gear" },
+            { "key":282, "name":"Sylphen Boots" },
+            { "key":283, "name":"Holey Boots" },
+            { "key":284, "name":"(Alpha) Strega" },
+            { "key":285, "name":"(Beta) Strega" },
+            { "key":286, "name":"Strega-J" },
+            { "key":287, "name":"Steel-Toed Boots" },
+            { "key":288, "name":"Metal Spikes" },
+            { "key":289, "name":"Fiber Boots" },
+            { "key":290, "name":"Strega-F" },
+            { "key":291, "name":"Spike Gear" },
+            { "key":292, "name":"Ceramic Spikes" },
+            { "key":293, "name":"Reinforced Boots" },
+            { "key":294, "name":"Strega-G" },
+            { "key":295, "name":"Dragon Skin Shoes" },
+            { "key":296, "name":"Composites II" },
+            { "key":297, "name":"Prometheus" },
+            { "key":298, "name":"Jagd Guarders" },
+            { "key":299, "name":"Cat Foot Slippers" },
+            { "key":300, "name":"Strega B1" },
+            { "key":375, "name":"Clog Boots" },
+            { "key":376, "name":"Accel Gear" },
+            { "key":377, "name":"Edel Guarders" },
+            { "key":378, "name":"Haken Boots" },
+            { "key":379, "name":"Ebony Shoes" },
+            { "key":381, "name":"Blue Falcons" },
+            { "key":383, "name":"Hermes Gear" },
+            { "key":384, "name":"Spiegel Shoes" },
+            { "key":385, "name":"Hard Loafers" },
+            { "key":386, "name":"Gemini Boots" },
+            { "key":387, "name":"Crystal Heels" },
+            { "key":388, "name":"Duende Slippers" },
+            { "key":389, "name":"Star Rabbits" },
+            { "key":391, "name":"Regina Guarder" },
+            { "key":393, "name":"Persetear" },
+            { "key":394, "name":"Parthenon Gear" },
+            { "key":399, "name":"Strega MAX" },
+            
+            ],"Accessories":[
+            { "key":301, "name":"Silver Earring" },
+            { "key":302, "name":"Lighter" },
+            { "key":303, "name":"Mirage Ring" },
+            { "key":304, "name":"Black Bangle" },
+            { "key":305, "name":"Glam Choker" },
+            { "key":306, "name":"White Braclet" },
+            { "key":307, "name":"Pearl Earring" },
+            { "key":308, "name":"Lily Necklace" },
+            { "key":309, "name":"Feather Brooch" },
+            { "key":310, "name":"Skull Pendant" },
+            { "key":311, "name":"T-Anklet" },
+            { "key":312, "name":"Crest Charm" },
+            { "key":313, "name":"Grail Locket" },
+            { "key":314, "name":"Silver Chain" },
+            { "key":315, "name":"Shine Sphere" },
+            { "key":316, "name":"Eisenritter's Medal" },
+            { "key":317, "name":"Cat Ears Band" },
+            { "key":318, "name":"Cat Tail" },
+            { "key":319, "name":"Soft Knit Cap" },
+            { "key":320, "name":"Emergency Puppet" },
+            { "key":321, "name":"Topaz Talisman" },
+            { "key":322, "name":"Sapphire Talisman" },
+            { "key":323, "name":"Ruby Talisman" },
+            { "key":324, "name":"Emerald Talisman" },
+            { "key":325, "name":"Proxy Puppet" },
+            { "key":326, "name":"Gladiator headband" },
+            { "key":327, "name":"Gladiator Belt" },
+            { "key":328, "name":"Work Helmet" },
+            { "key":329, "name":"Red Scarf" },
+            { "key":330, "name":"Woolly Knit Hat" },
+            { "key":331, "name":"Anti-Cold Helmet" },
+            { "key":332, "name":"Cotton-Stuffed Vest" },
+            { "key":333, "name":"Work Gloves" },
+            { "key":334, "name":"Jeweled Ring" },
+            { "key":335, "name":"Glove Gear" },
+            { "key":336, "name":"Night Goggles" },
+            { "key":337, "name":"Zero Field Generator" },
+            { "key":338, "name":"Long Barrel" },
+            { "key":339, "name":"Long Barrel II" },
+            { "key":340, "name":"Long Barrel III" },
+            { "key":341, "name":"Moonglasses" },
+            { "key":342, "name":"Buzzer" },
+            { "key":343, "name":"Master Beads" },
+            { "key":344, "name":"Tornado Fan" },
+            { "key":345, "name":"Vajra" },
+            { "key":346, "name":"Lebensborn" },
+            { "key":347, "name":"Tiger Heart" },
+            { "key":348, "name":"Crimson Eye" },
+            { "key":349, "name":"Divine Cross" },
+            { "key":470, "name":"Power Orb" },
+            { "key":471, "name":"Shield Orb" },
+            { "key":472, "name":"Mind Orb" },
+            { "key":473, "name":"Soul Orb" },
+            { "key":564, "name":"Silver Ring" },
+            
+            ],"Meals":[
+            { "key":402, "name":"Corner Castella" },
+            { "key":403, "name":"Herb Sandwich" },
+            { "key":404, "name":"Salt-Toasted Fish" },
+            { "key":405, "name":"Ten-Stack Crepe" },
+            { "key":406, "name":"Mocking Pie" },
+            { "key":407, "name":"Royal Gelato" },
+            { "key":408, "name":"Hot-Hot Potato Fry" },
+            { "key":409, "name":"Tomatrio Sandwich" },
+            { "key":410, "name":"Azelia Kiss" },
+            { "key":411, "name":"Nature's Bounty" },
+            { "key":412, "name":"Nap Killer" },
+            { "key":413, "name":"Pepper Pottage" },
+            { "key":414, "name":"Bone Bouillon" },
+            { "key":415, "name":"Premium Herb Tea" },
+            { "key":416, "name":"Flame Tongue Stew" },
+            { "key":417, "name":"Mystery Paste" },
+            { "key":418, "name":"Mighty Juice" },
+            { "key":419, "name":"Anarchy Soup" },
+            { "key":420, "name":"Paradise Cooler" },
+            { "key":422, "name":"Spiral Noodles" },
+            { "key":423, "name":"Fevered Gaze" },
+            { "key":424, "name":"Got Some Spine" },
+            { "key":425, "name":"Shellful Dish" },
+            { "key":426, "name":"100 Victories Steak" },
+            { "key":427, "name":"Crimson Platter" },
+            { "key":428, "name":"Fowl Magma Roast" },
+            { "key":430, "name":"Refresh Jelly" },
+            { "key":431, "name":"Passion Omelet" },
+            { "key":432, "name":"Sea 'Bubbles'" },
+            { "key":433, "name":"Mobility Popcorn" },
+            { "key":434, "name":"Fruit Kingdom" },
+            { "key":435, "name":"Turnin' Tempura" },
+            { "key":436, "name":"Miso-Stewed Fish" },
+            { "key":437, "name":"Roast Fish" },
+            { "key":438, "name":"Rampage Fish" },
+            { "key":439, "name":"Prime Salmon Grill" },
+            { "key":440, "name":"Seafood Jelly" },
+            { "key":441, "name":"Ambrosial Egg" },
+            { "key":442, "name":"Sunshine Ice" },
+            { "key":443, "name":"Moonlight Ice" },
+            { "key":444, "name":"Sweeeeet Crepe" },
+            { "key":445, "name":"Mystery Crepe" },
+            { "key":446, "name":"Ultima Ice Cream" },
+            { "key":447, "name":"Flower Milkshake" },
+            { "key":451, "name":"Mystery Paste Plus" },
+            { "key":452, "name":"Mighty Essence" },
+            { "key":453, "name":"Rustic Bone" },
+            { "key":454, "name":"Heavenly Tempura" },
+            { "key":455, "name":"Worldy Stew" },
+            { "key":456, "name":"Resurrect Jelly" },
+            { "key":457, "name":"Nirvana Tea" },
+            { "key":480, "name":"Surprise Cookie" },
+            { "key":483, "name":"Rainbow Surprise" },
+            { "key":486, "name":"Aurora Ball" },
+            { "key":489, "name":"Naptime Cookie" },
+            { "key":492, "name":"Perilous Meatballs" },
+            { "key":495, "name":"Knockout Meatball" },
+            
+            ],"Ingredients":[
+            { "key":900, "name":"Firefly Fungus" },
+            { "key":901, "name":"Acerbic Tomato" },
+            { "key":902, "name":"Bear Claw" },
+            { "key":903, "name":"Tri-Colored Rice" },
+            { "key":904, "name":"Aged Miso" },
+            { "key":905, "name":"Vintage Win" },
+            { "key":906, "name":"Fresh Milk" },
+            { "key":907, "name":"Fresh Eggs" },
+            { "key":908, "name":"Sharp Cheese" },
+            { "key":909, "name":"Luscious Orange" },
+            { "key":910, "name":"Ripe Apple" },
+            { "key":911, "name":"Azelia Fruit" },
+            { "key":912, "name":"Milled Flower" },
+            { "key":913, "name":"Ironbone Fish" },
+            { "key":914, "name":"Marbled Steak" },
+            { "key":915, "name":"Flaky Potato" },
+            { "key":916, "name":"Crisp Onion" },
+            { "key":917, "name":"Dirty Carrot" },
+            { "key":918, "name":"Maple Sugar" },
+            { "key":919, "name":"Kibbled Salt" },
+            { "key":920, "name":"Olive Oil" },
+            { "key":921, "name":"Fresh Herb" },
+            { "key":922, "name":"Dragon beans" },
+            { "key":923, "name":"Royal Leaf" },
+            { "key":924, "name":"Black Pepper" },
+            { "key":925, "name":"Red Pepper" },
+            { "key":926, "name":"Curative Horn" },
+            { "key":927, "name":"Savory Pinion" },
+            { "key":928, "name":"Leathery Tail" },
+            { "key":929, "name":"Juicy Bone" },
+            { "key":930, "name":"Gummy Eyeball" },
+            { "key":931, "name":"Lucky Fang" },
+            { "key":932, "name":"Monster Carapace" },
+            { "key":933, "name":"Beast Flesh" },
+            { "key":934, "name":"Fish Fillet" },
+            { "key":935, "name":"Tender Poultry" },
+            { "key":936, "name":"Clear Gelatin" },
+            { "key":937, "name":"Bird Egg" },
+            { "key":938, "name":"Fish Egg" },
+            { "key":939, "name":"Prickly Seed" },
+            { "key":940, "name":"Tender Whitefish" },
+            
+            ],"Items":[
+            { "key":501, "name":"Tear Balm" },
+            { "key":502, "name":"Teara Balm" },
+            { "key":503, "name":"Tear All Balm" },
+            { "key":504, "name":"Purging Balm" },
+            { "key":505, "name":"Softening Blam" },
+            { "key":506, "name":"Insulating Tape" },
+            { "key":507, "name":"Curia Balm" },
+            { "key":508, "name":"Reviving Balm" },
+            { "key":509, "name":"Celestial Balm" },
+            { "key":510, "name":"EP Charge" },
+            { "key":511, "name":"EP Charge II" },
+            { "key":512, "name":"Smelling Salts" },
+            { "key":513, "name":"EP Charge III" },
+            { "key":514, "name":"Tearal Balm" },
+            { "key":516, "name":"Zeram Capsule" },
+            { "key":517, "name":"Zeram Powder" },
+            { "key":518, "name":"S-Tablet" },
+            
+            ],"Books":[
+            { "key":520, "name":"Junior Bracer Book" },
+            { "key":522, "name":"Bracer Notebook" },
+            { "key":525, "name":"Recipe Book" },
+            { "key":526, "name":"Fishing Book" },
+            { "key":527, "name":"Monster Guide" },
+            { "key":530, "name":"Carnelia - Chapter 1" },
+            { "key":531, "name":"Carnelia - Chapter 2" },
+            { "key":532, "name":"Carnelia - Chapter 3" },
+            { "key":533, "name":"Carnelia - Chapter 4" },
+            { "key":534, "name":"Carnelia - Chapter 5" },
+            { "key":535, "name":"Carnelia - Chapter 6" },
+            { "key":536, "name":"Carnelia - Chapter 7" },
+            { "key":537, "name":"Carnelia - Chapter 8" },
+            { "key":538, "name":"Carnelia - Chapter 9" },
+            { "key":539, "name":"Carnelia - Chapter 10" },
+            { "key":540, "name":"Carnelia - Finale" },
+            { "key":541, "name":"Liberl News - Issue 1" },
+            { "key":542, "name":"Liberl News - Issue 2" },
+            { "key":543, "name":"Liberl News - Issue 3" },
+            { "key":544, "name":"Liberl News - Issue 4" },
+            { "key":545, "name":"Liberl News - Issue 5" },
+            { "key":546, "name":"Liberl News - Issue 6" },
+            { "key":547, "name":"Liberl News - Issue 7" },
+            { "key":548, "name":"Liberl News - Special" },
+            { "key":549, "name":"Liberl News - Issue 8" },
+            { "key":550, "name":"Liberl News - Issue 9" },
+            { "key":551, "name":"Liberl News - Issue 10" },
+            { "key":552, "name":"Liberl News - Issue 11" },
+            { "key":561, "name":"Lighthouse Manual" },
+            { "key":566, "name":"Recipe Copy" },
+            { "key":570, "name":"Gambler Jack - Vol 1" },
+            { "key":571, "name":"Gambler Jack - Vol 2" },
+            { "key":572, "name":"Gambler Jack - Vol 3" },
+            { "key":573, "name":"Gambler Jack - Vol 4" },
+            { "key":574, "name":"Gambler Jack - Vol 5" },
+            { "key":575, "name":"Gambler Jack - Vol 6" },
+            { "key":576, "name":"Gambler Jack - Vol 7" },
+            { "key":577, "name":"Gambler Jack - Vol 8" },
+            { "key":578, "name":"Gambler Jack - Vol 9" },
+            { "key":579, "name":"Gambler Jack - Vol 10" },
+            { "key":580, "name":"Gambler Jack - Vol 11" },
+            { "key":581, "name":"Gambler Jack - Vol 12" },
+            { "key":582, "name":"Gambler Jack - Vol 13" },
+            { "key":583, "name":"Gambler Jack - Vol 14" },
+            { "key":817, "name":"Hundred Days War" },
+            { "key":829, "name":"Ruan Economics I" },
+            { "key":830, "name":"Ruan Economics II" },
+            { "key":831, "name":"Ruan Economics III" },
+            { "key":832, "name":"Kitty-Talk for Dummies" },
+            { "key":833, "name":"Tomorrow's Cooking" },
+            { "key":834, "name":"Septium Optic Annals" },
+            { "key":835, "name":"The Erbe Woodpecker" },
+            { "key":836, "name":"Hertz's Adventure II" },
+            { "key":837, "name":"31 Cypress Trees" },
+            { "key":855, "name":"Grancel Sewer Map" },
+            { "key":857, "name":"Leiston Fortress Map" },
+            { "key":858, "name":"Leiston Fortress Map" },
+            { "key":863, "name":"Liberl Kingdom Map" },
+            { "key":867, "name":"Map of Le Locle" },
+            { "key":884, "name":"Hertz's Adventure" },
+            { "key":886, "name":"Luke's Journal" },
+            
+            ],"Quartz":[
+            { "key":600, "name":"HP 1" },
+            { "key":601, "name":"HP 2" },
+            { "key":602, "name":"HP 3" },
+            { "key":603, "name":"EP 1" },
+            { "key":604, "name":"EP 2" },
+            { "key":605, "name":"EP 3" },
+            { "key":606, "name":"Attack 1" },
+            { "key":607, "name":"Attack 2" },
+            { "key":608, "name":"Attack 3" },
+            { "key":609, "name":"Defense 1" },
+            { "key":610, "name":"Defense 2" },
+            { "key":611, "name":"Defense 3" },
+            { "key":612, "name":"Mind 1" },
+            { "key":613, "name":"Mind 2" },
+            { "key":614, "name":"Mind 3" },
+            { "key":615, "name":"Shield 1" },
+            { "key":616, "name":"Shield 2" },
+            { "key":617, "name":"Shield 3" },
+            { "key":618, "name":"Hit 1" },
+            { "key":619, "name":"Hit 2" },
+            { "key":620, "name":"Hit 3" },
+            { "key":621, "name":"Evade 1" },
+            { "key":622, "name":"Evade 2" },
+            { "key":623, "name":"Evade 3" },
+            { "key":624, "name":"Move 1" },
+            { "key":625, "name":"Move 2" },
+            { "key":626, "name":"Move 3" },
+            { "key":627, "name":"Action 1" },
+            { "key":628, "name":"Action 2" },
+            { "key":629, "name":"Action 3" },
+            { "key":630, "name":"Range 1" },
+            { "key":637, "name":"Poison" },
+            { "key":639, "name":"Freeze" },
+            { "key":639, "name":"Petrify" },
+            { "key":640, "name":"Sleep" },
+            { "key":641, "name":"Mute" },
+            { "key":642, "name":"Blind" },
+            { "key":643, "name":"Seal" },
+            { "key":644, "name":"Confuse" },
+            { "key":645, "name":"Strike" },
+            { "key":646, "name":"Deathblow 1" },
+            { "key":647, "name":"Deathblow 2" },
+            { "key":657, "name":"Information" },
+            { "key":660, "name":"HP 4" },
+            { "key":661, "name":"Water Gem" },
+            { "key":662, "name":"EP 4" },
+            { "key":663, "name":"Silver Gem" },
+            { "key":664, "name":"Attack 4" },
+            { "key":665, "name":"Ruby Gem" },
+            { "key":666, "name":"Defense 4" },
+            { "key":667, "name":"Topaz Gem" },
+            { "key":668, "name":"Mind 4" },
+            { "key":669, "name":"Sapphire Gem" },
+            { "key":670, "name":"Shield 4" },
+            { "key":671, "name":"Emerald Gem" },
+            { "key":672, "name":"Hit 4" },
+            { "key":673, "name":"Mirage Gem" },
+            { "key":674, "name":"Evade 4" },
+            { "key":675, "name":"Wind Gem" },
+            { "key":678, "name":"Action 4" },
+            { "key":679, "name":"Onyx Gem" },
+            { "key":705, "name":"Impede 1" },
+            { "key":706, "name":"Impede 2" },
+            { "key":707, "name":"Impede 3" },
+            { "key":708, "name":"Impede 4" },
+            { "key":709, "name":"Wood Gem" },
+            { "key":710, "name":"Cast 1" },
+            { "key":711, "name":"Cast 2" },
+            { "key":712, "name":"EP Cut 1" },
+            { "key":713, "name":"EP Cut 2" },
+            { "key":714, "name":"EP Cut 3" },
+            { "key":715, "name":"EP Cut 4" },
+            { "key":716, "name":"Gold Gem" },
+            { "key":717, "name":"Time Gem" },
+            { "key":720, "name":"Scent" },
+            { "key":721, "name":"Eagle Eye" },
+            { "key":722, "name":"Haze" },
+            { "key":723, "name":"Cloak" },
+            { "key":724, "name":"Heal" },
+            { "key":725, "name":"Septium Vein" },
+            { "key":726, "name":"Heaven's Eye" },
+            { "key":727, "name":"Yin-Yang" },
+            { "key":728, "name":"Absorb" },
+            { "key":729, "name":"Luck" },
+            { "key":730, "name":"Ingenuity" },
+            { "key":731, "name":"Poison 2" },
+            { "key":732, "name":"Freeze 2" },
+            { "key":733, "name":"Petrify 2" },
+            { "key":734, "name":"Sleep 2" },
+            { "key":735, "name":"Mute 2" },
+            { "key":736, "name":"Blind 2" },
+            { "key":737, "name":"Seal 2" },
+            { "key":738, "name":"Confuse 2" },
+            { "key":739, "name":"Strike 2" },
+            { "key":740, "name":"Death" },
+            
+            ],"Fish":[
+            { "key":590, "name":"Bamboo Fishing Rod" },
+            { "key":591, "name":"Progress Rod" },
+            { "key":592, "name":"Piscis Heart" },
+            { "key":593, "name":"Lakelord II" },
+            { "key":594, "name":"Marine Star" },
+            { "key":595, "name":"Metal Rod Trident" },
+            { "key":596, "name":"Aqua Master" },
+            { "key":950, "name":"Rockeater" },
+            { "key":951, "name":"Yamany" },
+            { "key":952, "name":"Rainbow Trout" },
+            { "key":953, "name":"Tiger Rockfish" },
+            { "key":954, "name":"Pearlglass" },
+            { "key":955, "name":"Dace" },
+            { "key":956, "name":"Trout" },
+            { "key":957, "name":"Valleria Bass" },
+            { "key":958, "name":"Snakehead" },
+            { "key":959, "name":"Garvelze" },
+            { "key":960, "name":"Liberl Carp" },
+            { "key":961, "name":"Eel" },
+            { "key":962, "name":"Carp" },
+            { "key":963, "name":"Salmon" },
+            { "key":964, "name":"Granakor" },
+            { "key":965, "name":"Gold Angelfish" },
+            { "key":966, "name":"Octopus" },
+            { "key":967, "name":"Mahi-mahi" },
+            { "key":968, "name":"Sea Bass" },
+            { "key":969, "name":"Blue Marlin" },
+            { "key":970, "name":"Kasago" },
+            { "key":971, "name":"Great Blackfish" },
+            { "key":972, "name":"Crab" },
+            { "key":973, "name":"Claudine" },
+            { "key":974, "name":"Gigangora" },
+            { "key":975, "name":"Dynatrad" },
+            { "key":980, "name":"Earthworm" },
+            { "key":981, "name":"River Bug" },
+            { "key":982, "name":"Dumplings" },
+            { "key":983, "name":"Roe" },
+            { "key":984, "name":"River Snail" },
+            { "key":985, "name":"Frog" },
+            { "key":986, "name":"Red Flies" },
+            { "key":987, "name":"Polychaete" },
+            { "key":988, "name":"Shrimplet" },
+            
+            ],"Quest Items":[
+            { "key":562, "name":"Orbal Camera" },
+            { "key":563, "name":"Orbment Pats" },
+            { "key":565, "name":"Rusted Key" },
+            { "key":800, "name":"Guild Referral" },
+            { "key":801, "name":"Mayor's Referral" },
+            { "key":802, "name":"Elevator Key" },
+            { "key":803, "name":"Septium Crystal" },
+            { "key":804, "name":"Guild Referral" },
+            { "key":805, "name":"Quartz Fragment" },
+            { "key":806, "name":"Maintenance Kit" },
+            { "key":807, "name":"Orbment Light" },
+            { "key":809, "name":"Father Divine's Letter" },
+            { "key":810, "name":"Servais Leaf" },
+            { "key":813, "name":"The Mayor's Letter" },
+            { "key":814, "name":"Abandoned Mine Key" },
+            { "key":815, "name":"Gate Pass" },
+            { "key":816, "name":"Recommendation" },
+            { "key":818, "name":"Progressive Rod" },
+            { "key":819, "name":"Recommendation" },
+            { "key":820, "name":"Warehouse Key" },
+            { "key":821, "name":"Torn Map" },
+            { "key":822, "name":"Letter to Cassius" },
+            { "key":823, "name":"Bouquet" },
+            { "key":824, "name":"Black Notebook" },
+            { "key":825, "name":"Recommendation" },
+            { "key":826, "name":"Recommendation" },
+            { "key":827, "name":"Recommendation" },
+            { "key":828, "name":"Special Boxed Lunch" },
+            { "key":838, "name":"Drive Orbment" },
+            { "key":854, "name":"Back Room Key" },
+            { "key":856, "name":"Dorothy's Photograph" },
+            { "key":859, "name":"Black Orbment" },
+            { "key":860, "name":"Junior Bracer Emblem" },
+            { "key":861, "name":"Bracer Emblem" },
+            { "key":862, "name":"Letter to Faye" },
+            { "key":864, "name":"Attn. Factory Chief" },
+            { "key":866, "name":"Detector Jammer" },
+            { "key":868, "name":"Orbal Calculator" },
+            { "key":869, "name":"Zemuria Moss" },
+            { "key":870, "name":"Arve Sovereign Serum" },
+            { "key":871, "name":"Gasoline Tank" },
+            { "key":872, "name":"Combustion Engine" },
+            { "key":873, "name":"Pump Shed Key" },
+            { "key":874, "name":"Boarding Pass" },
+            { "key":875, "name":"Grand Arena Ticket" },
+            { "key":876, "name":"Julia's Letter" },
+            { "key":877, "name":"Grancel Sewer Key A" },
+            { "key":878, "name":"Grancel Sewer Key B" },
+            { "key":879, "name":"Spare Key" },
+            { "key":880, "name":"Boarding Pass" },
+            { "key":881, "name":"Invitation" },
+            { "key":882, "name":"Registry Card" },
+            { "key":883, "name":"Small Box" },
+            { "key":885, "name":"Room 202 Key" },
+            { "key":897, "name":"Phtograph of Raini" },
+            { "key":898, "name":"Metal Detector" },
+            { "key":1041, "name":"Joshua's Harmonica" },
+            { "key":1010, "name":"Boarding Pass" },
+            { "key":1011, "name":"Back Gate Key" },
+            { "key":1012, "name":"Rusted Key" },
+            { "key":1013, "name":"Wooden Gate Key" },
+            { "key":1014, "name":"Bobcat Ignition Key" },
+            { "key":1015, "name":"Dark Chocolate" },
+            { "key":1016, "name":"Storage Room Key" },
+            { "key":1017, "name":"Harmonica" },
+            { "key":1018, "name":"Red Cardkey" },
+            { "key":1019, "name":"Green Cardkey" },
+            { "key":1020, "name":"Blue Cardkey" },
+            { "key":1021, "name":"Data Crystal 0" },
+            { "key":1022, "name":"Data Crystal 1" },
+            { "key":1023, "name":"Data Crystal 2" },
+            { "key":1024, "name":"Data Crystal 3" },
+            { "key":1025, "name":"Data Crystal 4" },
+            { "key":1026, "name":"Data Crystal 5" },
+            { "key":1027, "name":"Data Crystal 6" },
+            { "key":1028, "name":"Data Crystal 7" },
+            { "key":1029, "name":"Data Crystal 8" },
+            { "key":1030, "name":"Data Crystal 9" },
+            { "key":1031, "name":"Data Crystal 10" },
+            { "key":1032, "name":"Data Crystal 11" },
+            { "key":1033, "name":"Data Crystal 12" },
+            { "key":1034, "name":"Pump Shed Key" },
+            { "key":1035, "name":"Murdock's Letter" },
+            { "key":1036, "name":"Gasoline Tank" },
+            { "key":1037, "name":"Combustion Engine" },
+            { "key":1038, "name":"Hostage List" },
+            { "key":1039, "name":"Original Gospel" },
+            { "key":1040, "name":"Security Card" },
+            { "key":1042, "name":"Data Crystal 13" },
+            { "key":1043, "name":"Data Crystal 14" },
+            { "key":1044, "name":"Data Crystal 15" },
+            { "key":1045, "name":"Master Fisher Card" },
+            { "key":1046, "name":"ID Unit" },
+            { "key":1047, "name":"Zemurian Ore" },
+            { "key":1048, "name":"Data Crystal Z" },
+            { "key":1049, "name":"Overnight Ticket" },
+            { "key":1050, "name":"Photo of Joshua" },
+            { "key":1051, "name":"Photograph of Raini" }
+        ]}
     }
 };
 

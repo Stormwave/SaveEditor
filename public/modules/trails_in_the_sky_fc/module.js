@@ -6,7 +6,7 @@ class TrailsInTheSkyFC extends SaveEditorModule
     constructor()
     {
         super();
-        this.icon = "icon.png";
+        this.icon = "icon.jpg";
         this.template_file = "./template.html";
         this.data = m.data;
         this.data.page = "general";

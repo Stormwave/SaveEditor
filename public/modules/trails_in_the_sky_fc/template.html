@@ -21,9 +21,13 @@
                         <label>Mira</label>
                         <input type="text" placeholder="Mira" v-model="mira">
                     </div>
-                    <div class="field">
+                    <div class="field" v-if="this.bp!=undefined">
+                        <label>BP</label>
+                        <input type="text" placeholder="BP" v-model="bp">
+                    </div>
+                    <div class="field" v-if="this.bracer_rank!=undefined">
                         <label>Bracer Rank</label>
-                        <input type="text" placeholder="Mira" v-model="bracer_rank">
+                        <input type="text" placeholder="Bracer Rank" v-model="bracer_rank">
                     </div>
                 </div>
             </div>
@@ -97,8 +101,8 @@
             </div>
             <h4 class="ui inverted dividing header">Levels</h4>
             <div class="field">
-                <div class="eight fields">
-                    <div class="field" v-for="char in characters">
+                <div class="eight fields" style='flex-wrap: wrap;'>
+                    <div class="field" v-for="char in characters" style="margin-bottom:10px;">
                         <label>{{ char.name }}'s Level</label>
                         <input type="text" v-model="char.level"/>
                     </div>

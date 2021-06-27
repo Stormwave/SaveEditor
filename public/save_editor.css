@@ -121,7 +121,14 @@ body
 .game-selector > .game
 {
     margin:5px;
+    width:25%;
 }
+
+.game-selector > .game img
+{
+    width:100%;
+}
+
 
 .ui.button
 {
