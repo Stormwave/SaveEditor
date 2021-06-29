@@ -23,7 +23,7 @@ class TrailsInTheSkyFC extends SaveEditorModule
                          battle_count:0x266B4,
                          battles_lost:0x266B4+0x02,
                          battles_won:0x266B4+0x04,
-                         battles_fled:0x266B4+0x06,
+                         battles_fled:0x266B4+0x8,
                          seriph:0x025C90,
                          line_up:0x23E38,
                          char_data:0x023E58,

@@ -40,7 +40,7 @@ let data = {
                 },
                 {
                     "key": 6,
-                    "name": "Tin Stagg"
+                    "name": "Tin Staff"
                 },
                 {
                     "key": 7,
