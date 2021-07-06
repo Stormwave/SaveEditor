@@ -105,7 +105,7 @@ class SaveEditorModule
         }
     }
 
-    ungroupArrays(link_array, keys, values, data)
+    ungroupArrays(link_array, data)
     {
         let groups = Object.keys(link_array);
         let out = { keys:[], values:[] }
@@ -116,14 +116,8 @@ class SaveEditorModule
             let d = data.filter(e=>e.name==groups[i].name)[0];
             d.items.filter(e=>e.count>0).forEach(item=>
             {
-                let k = link_array[groups[i].name];
-                let key = k.filter(e=>e.name==item.name)[0];
-                if (key!=undefined)
-                {
-                    key = key.key;
-                    out.keys.push(key);
-                    out.values.push(parseInt(item.count));
-                }
+                out.keys.push(item.key);
+                out.values.push(parseInt(item.count));
             });
         }
         return out;
@@ -144,7 +138,7 @@ class SaveEditorModule
                 {
                     count = values[index];
                 }
-                groups[i].items.push({ name:link_array[key][n].name, count:count });
+                groups[i].items.push({ name:link_array[key][n].name, count:count, key:link_array[key][n].key });
             }
         }
         return groups;
