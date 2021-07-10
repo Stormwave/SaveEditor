@@ -1,4 +1,6 @@
-﻿var core = new Vue({
+﻿const version = 0.21;
+
+var core = new Vue({
     el: "#core",
     template:`
         <div class='app'>
@@ -6,7 +8,7 @@
                 <div v-if="active_module!=null">
                     <a v-on:click='unloadGameModule();'>Home</a>
                 </div>
-                <label>Save Editor (Alpha test version)</label>
+                <label>Save Editor v${version}</label>
                 <button class="ui button" v-on:click="showAbout()">About</button>
             </div>
             <div class='container'>

@@ -99,9 +99,9 @@ class SaveEditorModule
 
     fillData(offset, length, value)
     {
-        for (let i=offset;i<offset-length;i++)
+        for (let i=offset;i<offset+length;i++)
         {
-            this.file_data[i] = value;
+            this.data.file_data[i] = value;
         }
     }
 
