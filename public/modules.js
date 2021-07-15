@@ -1,5 +1,5 @@
-import { TrailsInTheSkyFC } from './modules/trails_in_the_sky_fc/module.js?v0.21';
-import { TrailsInTheSkySC } from './modules/trails_in_the_sky_sc/module.js?v0.21';
+import { TrailsInTheSkyFC } from './modules/trails_in_the_sky_fc/module.js?v0.22';
+import { TrailsInTheSkySC } from './modules/trails_in_the_sky_sc/module.js?v0.22';
 //import { TrailsInTheSkyTC } from './modules/trails_in_the_sky_tc/module.js';
 
 let load_modules = 

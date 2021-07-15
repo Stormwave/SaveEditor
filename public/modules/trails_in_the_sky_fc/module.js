@@ -17,6 +17,7 @@ class TrailsInTheSkyFC extends SaveEditorModule
         this.data.bracer_rank = 0;
         this.data.battles = { count:0, lost:0, won:0, fled:0 };
         this.data.seriph = [];
+        this.data.char_exp = [];
         //this.debugFile = "SVDAT004.SAV";
         this.offsets = { mira:0x25C88, 
                          bracer_rank:0x25C8C,
@@ -66,8 +67,10 @@ class TrailsInTheSkyFC extends SaveEditorModule
                 data.module_obj.writeShort(data.module_obj.offsets.battles_fled, data.battles.fled);
                 data.module_obj.writeMapArray(data.module_obj.offsets.seriph, [ "earth", "water", "fire", "wind", "time", "space", "mirage" ], 0x04, data.seriph);
                 data.module_obj.writeArray(data.module_obj.offsets.line_up, 4, 4, data.module_obj.unmapDataArray(data.line_up, "id", data.refs.character_id));
-                data.module_obj.writeArray(data.module_obj.offsets.char_data, 0x34, 2, data.char_levels);
-                data.module_obj.writeArray(data.module_obj.offsets.char_data, 0x34, 2, data.module_obj.unmapDataArray(data.characters, "level", data.refs.character_id));
+                let levels = data.module_obj.unmapDataArray(data.characters, "level", data.refs.character_id);
+                data.module_obj.writeArray(data.module_obj.offsets.char_data, 0x34, 2, levels);
+                for (let i=0;i<levels.length;i++) { levels[i] = (10*((levels[i]+1)*(levels[i]+1)))-1; }
+                data.module_obj.writeArray(data.module_obj.offsets.char_data+0xC, 0x34, 2, levels);
                 let inv_data = data.module_obj.ungroupArrays(data.refs.inventory, data.inventory);
                 data.module_obj.fillData(data.module_obj.offsets.inventory, 0x1000, 0);
                 data.module_obj.writeArray(data.module_obj.offsets.inventory, 0x4, 2, inv_data.keys);
@@ -90,16 +93,18 @@ class TrailsInTheSkyFC extends SaveEditorModule
         this.data.seriph = this.mapArray(this.offsets.seriph, [ "earth", "water", "fire", "wind", "time", "space", "mirage" ], 0x04);
         this.data.line_up = this.mapDataArray(this.readArray(this.offsets.line_up, 4, 4), "name", this.data.refs.character_id);
         this.data.char_levels = this.readArray(this.offsets.char_data, 8, 0x34, 2);
+        this.data.char_exp = this.readArray(this.offsets.char_data+0xC, 8, 0x34, 4);
         this.data.characters = [];
         let keys = Object.keys(this.data.refs.character_id);
         for (let i=0;i<keys.length;i++)
         {
             if (keys[i]!="255")
             {
-                let char = { name:this.data.refs.character_id[keys[i]], id:parseInt(keys[i]), level:this.data.char_levels[i] };
+                let char = { name:this.data.refs.character_id[keys[i]], id:parseInt(keys[i]), level:this.data.char_levels[i], exp:this.data.char_exp[i] };
                 this.data.characters.push(char);
             }
         }
+        console.log(this.data.characters);
         this.data.inventory_keys = this.readArray(this.offsets.inventory, -1, 0x4, 2);
         this.data.inventory_counts = this.readArray(this.offsets.inventory+0x2, -1, 0x4, 2);
         this.data.inventory = this.groupArrays(this.data.refs.inventory, this.data.inventory_keys, this.data.inventory_counts);
