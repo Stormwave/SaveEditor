@@ -1,7 +1,7 @@
 import { SaveEditorModule } from "../module.js";
 import * as m from "./data.js";
 
-class TrailsInTheSkyFC extends SaveEditorModule
+class TrailsOfColdSteel extends SaveEditorModule
 {
     constructor()
     {
@@ -9,7 +9,7 @@ class TrailsInTheSkyFC extends SaveEditorModule
         this.icon = "icon.jpg";
         this.template_file = "./template.html";
         this.data = m.data;
-        this.data.page = "general";
+        this.data.page = "characters";
         this.data.inventory = [];
         this.data.line_up = [];
         this.data.characters = [];
@@ -18,16 +18,16 @@ class TrailsInTheSkyFC extends SaveEditorModule
         this.data.battles = { count:0, lost:0, won:0, fled:0 };
         this.data.seriph = [];
         this.data.char_exp = [];
-        //this.debugFile = "SVDAT004.SAV";
-        this.offsets = { mira:0x25C88, 
+        this.debugFile = "tocs.dat";
+        this.offsets = { mira:0x65814, 
                          bracer_rank:0x25C8C,
                          battle_count:0x266B4,
                          battles_lost:0x266B4+0x02,
                          battles_won:0x266B4+0x04,
                          battles_fled:0x266B4+0x8,
-                         seriph:0x025C90,
-                         line_up:0x23E38,
-                         char_data:0x023E58,
+                         seriph:0x657D4,
+                         line_up:0x466,
+                         char_data:0x480,
                          inventory:0x40C24
                        };
     }
@@ -83,31 +83,38 @@ class TrailsInTheSkyFC extends SaveEditorModule
     loadFileData(file_data, file_name)
     {
         super.loadFileData(file_data, file_name);
+        // File type
+        if (file_data[0]==0x8) // PS4 save data
+        {
+            this.offset_adjustment = 0x10;
+        }
         this.data.mira = this.readInt(this.offsets.mira);
-        this.data.bracer_rank = this.readInt(this.offsets.bracer_rank);
+        /*this.data.bracer_rank = this.readInt(this.offsets.bracer_rank);
         this.data.battles = { count:this.readShort(this.offsets.battle_count),
                               lost:this.readShort(this.offsets.battles_lost),
                               won:this.readShort(this.offsets.battles_won),
                               fled:this.readShort(this.offsets.battles_fled),
-                            };
-        this.data.seriph = this.mapArray(this.offsets.seriph, [ "earth", "water", "fire", "wind", "time", "space", "mirage" ], 0x04);
-        this.data.line_up = this.mapDataArray(this.readArray(this.offsets.line_up, 4, 4), "name", this.data.refs.character_id);
-        this.data.char_levels = this.readArray(this.offsets.char_data, 8, 0x34, 2);
-        this.data.char_exp = this.readArray(this.offsets.char_data+0xC, 8, 0x34, 4);
+                            };*/
+        this.data.seriph = this.mapArray(this.offsets.seriph, [ "earth", "water", "fire", "wind", "time", "space", "mirage", "mass" ], 0x04);
+        this.data.line_up = this.mapDataArray(this.readArray(this.offsets.line_up, 4, 2), "name", this.data.refs.character_id);
+        this.data.char_levels = this.readArray(this.offsets.char_data+0x24, 13, 0x50, 2);
+        this.data.char_hp = this.readArray(this.offsets.char_data+0x0, 13, 0x50, 4);
+        this.data.char_ep = this.readArray(this.offsets.char_data+0x08, 13, 0x50, 2);
+        this.data.char_cp = this.readArray(this.offsets.char_data+0x0C, 13, 0x50, 2);
         this.data.characters = [];
         let keys = Object.keys(this.data.refs.character_id);
         for (let i=0;i<keys.length;i++)
         {
             if (keys[i]!="255")
             {
-                let char = { name:this.data.refs.character_id[keys[i]], id:parseInt(keys[i]), level:this.data.char_levels[i], exp:this.data.char_exp[i] };
+                let char = { name:this.data.refs.character_id[keys[i]], id:parseInt(keys[i]), level:this.data.char_levels[i], exp:this.data.char_exp[i], hp:this.data.char_hp[i], ep:this.data.char_ep[i], cp:this.data.char_cp[i]  };
                 this.data.characters.push(char);
             }
         }
-        this.data.inventory_keys = this.readArray(this.offsets.inventory, -1, 0x4, 2);
-        this.data.inventory_counts = this.readArray(this.offsets.inventory+0x2, -1, 0x4, 2);
+        this.data.inventory_keys = this.readArray(this.offsets.inventory, 1000, 0x24, 2);
+        this.data.inventory_counts = this.readArray(this.offsets.inventory+0x2, 1000, 0x24, 2);
         this.data.inventory = this.groupArrays(this.data.refs.inventory, this.data.inventory_keys, this.data.inventory_counts);
     }
 }
 
-export { TrailsInTheSkyFC };
+export { TrailsOfColdSteel };

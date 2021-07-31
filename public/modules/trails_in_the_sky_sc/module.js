@@ -53,6 +53,8 @@ class TrailsInTheSkySC extends SaveEditorModule
                 data.module_obj.writeArray(data.module_obj.offsets.line_up, 4, 4, data.module_obj.unmapDataArray(data.line_up, "id", data.refs.character_id));
                 data.module_obj.writeArray(data.module_obj.offsets.char_data, 0x3C, 2, data.char_levels);
                 data.module_obj.writeArray(data.module_obj.offsets.char_data, 0x3C, 2, data.module_obj.unmapDataArray(data.characters, "level", data.refs.character_id));
+                console.log(data.refs.inventory);
+                console.log(data);
                 let inv_data = data.module_obj.ungroupArrays(data.refs.inventory, data.inventory_keys, data.inventory_counts, data.inventory);
                 data.module_obj.fillData(data.module_obj.offsets.inventory, 0x1000, 0);
                 data.module_obj.writeArray(data.module_obj.offsets.inventory, 0x4, 2, inv_data.keys);
@@ -75,6 +77,7 @@ class TrailsInTheSkySC extends SaveEditorModule
         this.data.seriph = this.mapArray(this.offsets.seriph, [ "earth", "water", "fire", "wind", "time", "space", "mirage" ], 0x04);
         this.data.line_up = this.mapDataArray(this.readArray(this.offsets.line_up, 4, 4), "name", this.data.refs.character_id);
         this.data.char_levels = this.readArray(this.offsets.char_data, Object.keys(this.data.refs.character_id).length-1, 0x3C, 2);
+        //this.data.char_exp = this.readArray(this.offsets.char_data+0xC, 8, 0x34, 4);
         this.data.characters = [];
         let keys = Object.keys(this.data.refs.character_id);
         for (let i=0;i<keys.length;i++)

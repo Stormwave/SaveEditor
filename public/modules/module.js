@@ -8,6 +8,7 @@ class SaveEditorModule
     {
         this.data.file_name = file_name;
         this.data.file_data = file_data;
+        this.offset_adjustment = 0;
     }
 
     setPath(path)
@@ -44,6 +45,7 @@ class SaveEditorModule
 
     readInt(offset, length=4)
     {
+        offset += this.offset_adjustment;
         let val = 0;
         for (let i=0;i<length;i++)
         {
@@ -62,6 +64,7 @@ class SaveEditorModule
         {
             console.log("Warning, writing to offset 0: "+value);
         }
+        offset += this.offset_adjustment;
         for (let i=0;i<length;i++)
         {
             this.data.file_data[offset+i] = (value>>(8*i))&0xFF;
@@ -99,6 +102,7 @@ class SaveEditorModule
 
     fillData(offset, length, value)
     {
+        offset += this.offset_adjustment;
         for (let i=offset;i<offset+length;i++)
         {
             this.data.file_data[i] = value;

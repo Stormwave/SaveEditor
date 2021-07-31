@@ -1,11 +1,13 @@
-import { TrailsInTheSkyFC } from './modules/trails_in_the_sky_fc/module.js?v0.22';
-import { TrailsInTheSkySC } from './modules/trails_in_the_sky_sc/module.js?v0.22';
+import { TrailsInTheSkyFC } from './modules/trails_in_the_sky_fc/module.js?v0.31';
+import { TrailsInTheSkySC } from './modules/trails_in_the_sky_sc/module.js?v0.31';
+//import { TrailsOfColdSteel } from './modules/trails_of_cold_steel/module.js?v0.31';
 //import { TrailsInTheSkyTC } from './modules/trails_in_the_sky_tc/module.js';
 
 let load_modules = 
 [ 
     { class:TrailsInTheSkyFC, path:"trails_in_the_sky_fc" },
     { class:TrailsInTheSkySC, path:"trails_in_the_sky_sc" },
+    //{ class:TrailsOfColdSteel, path:"trails_of_cold_steel" },
 //    { class:TrailsInTheSkyTC, path:"trails_in_the_sky_tc" } 
 ];
 var modules = [];

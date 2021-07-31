@@ -148,7 +148,6 @@ body
     color:white;
 }
 
-
 .ui.inverted.accordion
 {
     background-color:rgba(100, 100, 100, 0.1);
@@ -173,4 +172,24 @@ body
     border-color:rgba(255, 255, 255, 0.2);
     background-color:transparent;
     color:white;
+}
+
+.field.box
+{
+    width: calc(25% - 20px);
+    margin-right: 20px !important;
+    border: 1px solid white;
+    padding: 10px;
+    padding-bottom: 0px;
+    float: left;
+    clear: none !important;
+    border-radius: 6px;
+    border-color: gray;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.field.box > label
+{
+    font-size: 16px !important;
+    margin-bottom: 10px !important;
 }
