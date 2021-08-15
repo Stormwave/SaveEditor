@@ -1,6 +1,6 @@
-import { TrailsInTheSkyFC } from './modules/trails_in_the_sky_fc/module.js?v0.31';
-import { TrailsInTheSkySC } from './modules/trails_in_the_sky_sc/module.js?v0.31';
-//import { TrailsOfColdSteel } from './modules/trails_of_cold_steel/module.js?v0.31';
+import { TrailsInTheSkyFC } from './modules/trails_in_the_sky_fc/module.js?v0.32';
+import { TrailsInTheSkySC } from './modules/trails_in_the_sky_sc/module.js?v0.32';
+//import { TrailsOfColdSteel } from './modules/trails_of_cold_steel/module.js?v0.32';
 //import { TrailsInTheSkyTC } from './modules/trails_in_the_sky_tc/module.js';
 
 let load_modules = 

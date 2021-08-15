@@ -1,4 +1,4 @@
-﻿const version = 0.31;
+﻿const version = 0.32;
 
 var core = new Vue({
     el: "#core",
@@ -168,5 +168,5 @@ document.addEventListener("modules_loaded", (e)=>
 {
     console.log("Modules loaded");
     core.modules = e.detail;
-    //core.loadGameModule(core.modules[2]);
+    //core.loadGameModule(core.modules[1]);
 });

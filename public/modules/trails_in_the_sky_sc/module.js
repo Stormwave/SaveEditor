@@ -17,9 +17,9 @@ class TrailsInTheSkySC extends SaveEditorModule
         this.data.bp = 0;
         this.data.battles = { count:0, lost:0, won:0, fled:0 };
         this.data.seriph = [];
-        //this.debugFile = "sc2.SAV";
+        //this.debugFile = "SC2_3.SAV";
         this.offsets = { mira:0x2534C, 
-            bp:0x025D44,
+                         bp:0x025D44,
                          battle_count:0x26722,
                          battles_lost:0x26722+0x02,
                          battles_won:0x26722+0x04,
@@ -53,9 +53,7 @@ class TrailsInTheSkySC extends SaveEditorModule
                 data.module_obj.writeArray(data.module_obj.offsets.line_up, 4, 4, data.module_obj.unmapDataArray(data.line_up, "id", data.refs.character_id));
                 data.module_obj.writeArray(data.module_obj.offsets.char_data, 0x3C, 2, data.char_levels);
                 data.module_obj.writeArray(data.module_obj.offsets.char_data, 0x3C, 2, data.module_obj.unmapDataArray(data.characters, "level", data.refs.character_id));
-                console.log(data.refs.inventory);
-                console.log(data);
-                let inv_data = data.module_obj.ungroupArrays(data.refs.inventory, data.inventory_keys, data.inventory_counts, data.inventory);
+                let inv_data = data.module_obj.ungroupArrays(data.refs.inventory, data.inventory);
                 data.module_obj.fillData(data.module_obj.offsets.inventory, 0x1000, 0);
                 data.module_obj.writeArray(data.module_obj.offsets.inventory, 0x4, 2, inv_data.keys);
                 data.module_obj.writeArray(data.module_obj.offsets.inventory+0x2, 0x4, 2, inv_data.values);

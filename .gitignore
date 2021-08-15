@@ -9,6 +9,7 @@ firebase-debug.*.log*
 .firebaserc
 .old
 *.SAV
+*.dat
 
 # Firebase cache
 .firebase/
