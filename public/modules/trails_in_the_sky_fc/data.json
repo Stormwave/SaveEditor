@@ -1,0 +1,2263 @@
+{
+    "name":"Trails In The Sky",
+    "version":0.1,
+    "image":"img/trails_in_the_sky_fc.jpg",
+    "refs":
+    {
+        "data":
+        {
+            "mira":         { "offset":"0x25C88", "type":"int" }, 
+            "bracer_rank":  { "offset":"0x25C8C", "type":"short" },
+            "battles":      { "offset":"0x266B4", "type":"struct", "stride":-1, "length":1, "keys":
+                                {
+                                    "count": { "type":"short", "offset":0 },
+                                    "lost": { "type":"short", "offset":2 },
+                                    "won": { "type":"short", "offset":4 },
+                                    "fled": { "type":"short", "offset":6 }
+                                }
+                            },
+            "seriph":       { "offset":"0x025C90", "type":"mapArray", "size":4, "maps":[ "earth", "water", "fire", "wind", "time", "space", "mirage" ] },
+            "line_up":      { "offset":"0x23E38", "type":"mapDataArray", "step":4, "size":4, "map":"name", "ref":"character_id" },
+            "characters":   { "offset":"0x023E58", "type":"struct", "stride":52, "length":8, "keys":
+                                {
+                                    "name": { "type":"map", "ref":"character_id", "key":"index" },
+                                    "id":   { "type":"index" },
+                                    "level": { "type":"short", "offset":0 },
+                                    "exp":   { "type":"short", "offset":12 }
+                                }
+                            },
+            "inventory_data": { "offset":"0x024C88", "type":"struct", "stride":4, "length":-1, "max-length":366, "keys":
+                                {
+                                    "key": { "type":"short", "offset":0 },
+                                    "value": { "type":"short", "offset":2 }
+                                }
+                            },
+            "inventory":    {
+                                "offset":"0x024C88", "type":"group", "data":"inventory_data", "ref":"inventory"
+                            }
+        },
+        "character_id":
+        {
+            "0":"Estelle",
+            "1":"Joshua",
+            "2":"Scherazard",
+            "3":"Olivier",
+            "4":"Kloe",
+            "5":"Agate",
+            "6":"Tita",
+            "7":"Zin",
+            "255":"None"
+        },
+        "inventory":
+        {
+            "Weapons":[
+                {
+                    "key":1,
+                    "icon":1,
+                    "name":"Birch Staff",
+                    "description":"[STR+3/RNG+1]\nA light wooden staff polished to a fine finish."
+                },
+                {
+                    "key":2,
+                    "icon":1,
+                    "name":"Pile Rod",
+                    "description":"[STR+7/RNG+1]\nA battle staff reinforced with metal rings at each end."
+                },
+                {
+                    "key":3,
+                    "icon":1,
+                    "name":"Stun Rod",
+                    "description":"[STR+20/RNG+1]\nA full-blown fighting staff with a heavy metallic core."
+                },
+                {
+                    "key":4,
+                    "icon":1,
+                    "name":"Hex Stave",
+                    "description":"[STR+40/RNG+1]\nA staff made of ultra-hard wood. Plain, but packs a wallop."
+                },
+                {
+                    "key":5,
+                    "icon":1,
+                    "name":"Spike Rod",
+                    "description":"[STR+65/RNG+1]\nA staff with sharp ends. Great for making a point."
+                },
+                {
+                    "key":6,
+                    "icon":1,
+                    "name":"Tin Staff",
+                    "description":"[STR+10/RNG+1]\nA thin metallic staff said to be used by monks in the East."
+                },
+                {
+                    "key":7,
+                    "icon":1,
+                    "name":"Octavian Stave",
+                    "description":"[STR+80/RNG+1]\nAn Eastern-style staff coated with a hardened resin."
+                },
+                {
+                    "key":8,
+                    "icon":1,
+                    "name":"Battle Staff",
+                    "description":"[STR+90/RNG+1]\nA large staff that requires a lot of training to wield."
+                },
+                {
+                    "key":10,
+                    "icon":1,
+                    "name":"Arc Rod",
+                    "description":"[STR+120/RNG+1]\nA staff crafted out of a mysterious, unidentified alloy."
+                },
+                {
+                    "key":16,
+                    "icon":1,
+                    "name":"Laundry Pole",
+                    "description":"[STR+7/RNG+2]\nLaundry pole turned weapon. Ingenious or pathetic?"
+                },
+                {
+                    "key":17,
+                    "icon":1,
+                    "name":"Mystic Stave",
+                    "description":"[STR+130/RNG+1]\nAn Eastern staff with designs depicting universal axioms."
+                },
+                {
+                    "key":31,
+                    "icon":2,
+                    "name":"Twin Dirks",
+                    "description":"[STR+4]\nDirks with sharp blades. Small and easy to conceal."
+                },
+                {
+                    "key":32,
+                    "icon":2,
+                    "name":"Kunai",
+                    "description":"[STR+7]\nUnique multi-purpose weapons of Eastern legacy."
+                },
+                {
+                    "key":33,
+                    "icon":2,
+                    "name":"Dual Razors",
+                    "description":"[STR+21]\nSmall daggers with ultra-thin blades made for cutting."
+                },
+                {
+                    "key":34,
+                    "icon":2,
+                    "name":"Katars",
+                    "description":"[STR+30]\nShort swords with a peculiar shape suitable for stabbing."
+                },
+                {
+                    "key":35,
+                    "icon":2,
+                    "name":"Baselards",
+                    "description":"[STR+42]\nDistinctive, sturdy short swords with curved hand-guards."
+                },
+                {
+                    "key":36,
+                    "icon":2,
+                    "name":"Schneiders",
+                    "description":"[STR+90]\nSmall, lightweight daggers with double-edged tips."
+                },
+                {
+                    "key":39,
+                    "icon":2,
+                    "name":"Gurkha Knives",
+                    "description":"[STR+66]\nSword with fierce edges on their curved inner blades."
+                },
+                {
+                    "key":40,
+                    "icon":2,
+                    "name":"Demi-Handers",
+                    "description":"[STR+80]\nDirks used for covert ops. Subtle with a matte surface."
+                },
+                {
+                    "key":41,
+                    "icon":2,
+                    "name":"Erbe Blades",
+                    "description":"[STR+120]\nAncient black knives made of unknown materials."
+                },
+                {
+                    "key":45,
+                    "icon":2,
+                    "name":"Skull Daggers",
+                    "description":"[STR+45/ATS-10]\nRoguish short swords with skulls carved into them."
+                },
+                {
+                    "key":47,
+                    "icon":2,
+                    "name":"Paring Knives",
+                    "description":"[STR+10]\nUsed by pro chefs...and sometimes in domestic disputes..."
+                },
+                {
+                    "key":48,
+                    "icon":2,
+                    "name":"Twin Plovers",
+                    "description":"[STR+130]\nEastern-forged swords sheathed in checkered scabbards."
+                },
+                {
+                    "key":61,
+                    "icon":3,
+                    "name":"Viper",
+                    "description":"[STR+12/RNG+2]\nA light, easy to handle leather whip."
+                },
+                {
+                    "key":62,
+                    "icon":3,
+                    "name":"Blitz",
+                    "description":"[STR+22/RNG+2]\nA leather whip interwoven with a thin chain for more power."
+                },
+                {
+                    "key":63,
+                    "icon":3,
+                    "name":"Scorpion",
+                    "description":"[STR+35/RNG+2]\nA battle whip with a steel claw attached to the fall."
+                },
+                {
+                    "key":64,
+                    "icon":3,
+                    "name":"Sidewinder",
+                    "description":"[STR+90/RNG+2]\nA serpentine-like whip confected with sleek metal fittings."
+                },
+                {
+                    "key":65,
+                    "icon":3,
+                    "name":"Nine Tails",
+                    "description":"[STR+120/RNG+2]\nA whip made of ancient beast hide with a mysterious shine."
+                },
+                {
+                    "key":92,
+                    "icon":4,
+                    "name":"Needler",
+                    "description":"[STR+20/RNG+4]\nA popular orbal gun made by the Empire?fs Reinford Company."
+                },
+                {
+                    "key":93,
+                    "icon":4,
+                    "name":"Hawkeye",
+                    "description":"[STR+100/RNG+4]\nAn orbal gun by the Verne Corporation for sport shooting."
+                },
+                {
+                    "key":94,
+                    "icon":4,
+                    "name":"Stinger",
+                    "description":"[STR+80/RNG+4]\nAn orbal gun made by the Reinford Co. Uses spicular rounds."
+                },
+                {
+                    "key":95,
+                    "icon":4,
+                    "name":"Silver Star",
+                    "description":"[STR+90/RNG+4]\nA luxury model by the Reinford Co. Has a high output."
+                },
+                {
+                    "key":96,
+                    "icon":4,
+                    "name":"Bear Assault",
+                    "description":"[STR+35/RNG+4]\nA large caliber hunting gun made by the Verne Corporation."
+                },
+                {
+                    "key":98,
+                    "icon":4,
+                    "name":"Magesta",
+                    "description":"[STR+120/RNG+4]\nAn ancient orbal weapon that fires powerful energy bursts."
+                },
+                {
+                    "key":103,
+                    "icon":4,
+                    "name":"Zero Shot (X)",
+                    "description":"[STR+95/SPD-2/RNG+3]\nAn experimental gun from the central factory. Slow to fire."
+                },
+                {
+                    "key":121,
+                    "icon":5,
+                    "name":"Rapier",
+                    "description":"[STR+30]\nA thin needle-like sword for piercing."
+                },
+                {
+                    "key":122,
+                    "icon":5,
+                    "name":"Sabre",
+                    "description":"[STR+40]\nAn ornate long-sword used for formal occasions."
+                },
+                {
+                    "key":123,
+                    "icon":5,
+                    "name":"Flamberge",
+                    "description":"[STR+50]\nA long sword with an exquisite undulating wave-like blade."
+                },
+                {
+                    "key":124,
+                    "icon":5,
+                    "name":"Estoc",
+                    "description":"[STR+90]\nA staunch sword which can easily pierce metallic armor."
+                },
+                {
+                    "key":128,
+                    "icon":5,
+                    "name":"Hauteclere",
+                    "description":"[STR+120]\nAn ethereal sword of platinum formerly used by knights."
+                },
+                {
+                    "key":151,
+                    "icon":6,
+                    "name":"Broad Edge",
+                    "description":"[STR+35]\nA rugged broadsword with a wide blade."
+                },
+                {
+                    "key":152,
+                    "icon":6,
+                    "name":"Claymore",
+                    "description":"[STR+45]\nA two-handed sword with a cross-shaped hilt. Big and sharp."
+                },
+                {
+                    "key":153,
+                    "icon":6,
+                    "name":"Bastard Edge",
+                    "description":"[STR+70]\nA heavy two-handed sword used for duels in the dark ages."
+                },
+                {
+                    "key":154,
+                    "icon":6,
+                    "name":"Zweihaender",
+                    "description":"[STR+90]\nA giant two-handed sword used to take down mounted foes."
+                },
+                {
+                    "key":155,
+                    "icon":6,
+                    "name":"Rhomphaia",
+                    "description":"[STR+60]\nA large weapon with a curved blade attached to a long hilt."
+                },
+                {
+                    "key":156,
+                    "icon":6,
+                    "name":"Cavalier Killer",
+                    "description":"[STR+80]\nAn Eastern sword the height of a man, used against horses."
+                },
+                {
+                    "key":157,
+                    "icon":6,
+                    "name":"Berserker",
+                    "description":"[STR+120]\nAn ancient black sword forged from unknown materials."
+                },
+                {
+                    "key":181,
+                    "icon":7,
+                    "name":"P-03",
+                    "description":"[STR+50/RNG+3/Area (S)]\nA low recoil orbal cannon made by the Zeiss Central Factory."
+                },
+                {
+                    "key":183,
+                    "icon":7,
+                    "name":"Craft Cannon",
+                    "description":"[STR+60/RNG+4/Area (S)]\nA revamped model of the P-03 with an enhanced drive orbment."
+                },
+                {
+                    "key":184,
+                    "icon":7,
+                    "name":"P-05",
+                    "description":"[STR+90/RNG+4/Area (S)]\nA new type of orbal cannon from the Zeiss Central Factory."
+                },
+                {
+                    "key":185,
+                    "icon":7,
+                    "name":"G-Impact",
+                    "description":"[STR+75/RNG+4/Area (M)]\nA forgotten experimental high-output orbal cannon."
+                },
+                {
+                    "key":187,
+                    "icon":7,
+                    "name":"Thor's Hammer",
+                    "description":"[STR+120/RNG+4/Area (M)]\nAn ancient orbal weapon that fires powerful energy bursts."
+                },
+                {
+                    "key":211,
+                    "icon":11,
+                    "name":"Brass Knuckles",
+                    "description":"[STR+65]\nA reinforced glove made of soft metal."
+                },
+                {
+                    "key":212,
+                    "icon":11,
+                    "name":"Hide Gauntlet",
+                    "description":"[STR+70]\nA specially treated leather gauntlet. Flexible and tough."
+                },
+                {
+                    "key":213,
+                    "icon":11,
+                    "name":"Cestus",
+                    "description":"[STR+100]\nA battle gauntlet with rivets implanted in the knuckles."
+                },
+                {
+                    "key":214,
+                    "icon":11,
+                    "name":"Steel Gauntlet",
+                    "description":"[STR+85]\nAn Eastern steel gauntlet. Reinforced with a hardened resin."
+                },
+                {
+                    "key":217,
+                    "icon":11,
+                    "name":"Daedalus Arm",
+                    "description":"[STR+120]\nAn arcane gauntlet which transforms according to need."
+                }
+            ],
+            "Armor":[
+                {
+                    "key":241,
+                    "icon":10,
+                    "name":"Leather Vest",
+                    "description":"[DEF+5]\nA vest made of nice, soft leather."
+                },
+                {
+                    "key":242,
+                    "icon":10,
+                    "name":"Armor Vest",
+                    "description":"[DEF+10/ADF+2]\nA vest with an iron plate in the chest for more protection."
+                },
+                {
+                    "key":243,
+                    "icon":10,
+                    "name":"Leather Jacket",
+                    "description":"[DEF+25/ADF+2]\nA robust, tailored jacket made of thick leather."
+                },
+                {
+                    "key":244,
+                    "icon":10,
+                    "name":"Shield Vest",
+                    "description":"[DEF+45/ADF+4]\nA protective vest embedded with numerous small iron plates."
+                },
+                {
+                    "key":245,
+                    "icon":10,
+                    "name":"Metal Jacket",
+                    "description":"[DEF+75/ADF+4]\nA protective jacket made of woven metallic fibers."
+                },
+                {
+                    "key":246,
+                    "icon":10,
+                    "name":"Shield Coat",
+                    "description":"[DEF+100/ADF+6]\nA protective coat made of a specially processed material."
+                },
+                {
+                    "key":247,
+                    "icon":10,
+                    "name":"Hide Jumpsuit",
+                    "description":"[DEF+12/ADF+2]\nA jumpsuit made of inexpensive beast hide."
+                },
+                {
+                    "key":248,
+                    "icon":10,
+                    "name":"Chain Mail",
+                    "description":"[DEF+30/ADF+4]\nSheer protective clothing made of interwoven metal chains."
+                },
+                {
+                    "key":249,
+                    "icon":10,
+                    "name":"Battle Suit",
+                    "description":"[DEF+50/ADF+6]\nArmor padded in various places to absorb shock."
+                },
+                {
+                    "key":250,
+                    "icon":10,
+                    "name":"Black Coat",
+                    "description":"[DEF+80/ADF+8]\nA central factory product. Can repel edged weapons."
+                },
+                {
+                    "key":251,
+                    "icon":10,
+                    "name":"Reflector",
+                    "description":"[DEF+105/ADF+10]\nA protective coat reinforced with a special anti-art layer."
+                },
+                {
+                    "key":252,
+                    "icon":10,
+                    "name":"Work Jumpsuit",
+                    "description":"[DEF+50]\nA thick cloth worksuit that doesn't shrink in the wash."
+                },
+                {
+                    "key":253,
+                    "icon":10,
+                    "name":"Royal Guard",
+                    "description":"[DEF+120/ADF+10/Men Only]\nArmor worn by knights of old. Lauded for its total defense."
+                },
+                {
+                    "key":254,
+                    "icon":10,
+                    "name":"Valkyrie Dress",
+                    "description":"[DEF+120/ADF+10/Women Only]\nA female warrior's gown for battle alongside the knights."
+                },
+                {
+                    "key":271,
+                    "icon":12,
+                    "name":"Leather Boots",
+                    "description":"[DEF+2]\nA pair of tanned leather boots. Light and flexible."
+                },
+                {
+                    "key":272,
+                    "icon":12,
+                    "name":"Spikes",
+                    "description":"[DEF+5]\nA pair of shoes with pointy, non-skid soles."
+                },
+                {
+                    "key":273,
+                    "icon":12,
+                    "name":"Work Boots",
+                    "description":"[DEF+8/MOV+1]\nRugged boots for laborers with top-rated craftsmanship."
+                },
+                {
+                    "key":274,
+                    "icon":12,
+                    "name":"Double Spikes",
+                    "description":"[DEF+12/MOV+1]\nA pair of shoes with spiky, non-skid soles."
+                },
+                {
+                    "key":275,
+                    "icon":12,
+                    "name":"Craft Shoes",
+                    "description":"[DEF+20/MOV+2]\nA new type of training shoe developed for rigorous workouts."
+                },
+                {
+                    "key":276,
+                    "icon":12,
+                    "name":"Composites",
+                    "description":"[DEF+30/MOV+2]\nProtective boots for professionals. Made of tough materials."
+                },
+                {
+                    "key":277,
+                    "icon":12,
+                    "name":"Knitted Shoes",
+                    "description":"[DEF+7/MOV+1]\nSimple shoes knitted from natural materials. Light & tough."
+                },
+                {
+                    "key":278,
+                    "icon":12,
+                    "name":"Strega-R",
+                    "description":"[DEF+10/MOV+1]\nThe regular model of Strega-brand sneakers."
+                },
+                {
+                    "key":279,
+                    "icon":12,
+                    "name":"Army Boots",
+                    "description":"[DEF+15/MOV+2]\nThe formal wear of the Royal Army and popular with soldiers."
+                },
+                {
+                    "key":280,
+                    "icon":12,
+                    "name":"Strega-G",
+                    "description":"[DEF+23/MOV+2]\nThe high-end model of Strega-brand sneakers."
+                },
+                {
+                    "key":281,
+                    "icon":12,
+                    "name":"Atlas Gear",
+                    "description":"[DEF+35/MOV+3/Men Only]\nBoots made of metallic-fibers which feel nearly weightless."
+                },
+                {
+                    "key":282,
+                    "icon":12,
+                    "name":"Sylphen Boots",
+                    "description":"[DEF+35/MOV+3/Women Only]\nMysterious boots that make your feet feel lighter than air."
+                },
+                {
+                    "key":283,
+                    "icon":12,
+                    "name":"Holey Boots",
+                    "description":"[DEF+1/MOV+3]\nOften the catch of the day at fishing spots. Light and airy."
+                },
+                {
+                    "key":284,
+                    "icon":12,
+                    "name":"(Alpha) Strega",
+                    "description":"[DEF+10/MOV+2]\nA pair of test shoes made for Estelle."
+                },
+                {
+                    "key":285,
+                    "icon":12,
+                    "name":"(Beta) Strega",
+                    "description":"[DEF+25/MOV+2]\nThe newest model of upcoming Strega-brand sneakers."
+                },
+                {
+                    "key":286,
+                    "icon":12,
+                    "name":"Strega-J",
+                    "description":"[DEF+6/MOV+1]\nThe junior model of Strega-brand sneakers."
+                },
+                {
+                    "key":287,
+                    "icon":12,
+                    "name":"Steel-Toed Boots",
+                    "description":"[DEF+12]\nHeavy-duty boots great for heavy-duty labor."
+                },
+                {
+                    "key":301,
+                    "icon":13,
+                    "name":"Silver Earring",
+                    "description":"[Prevents poison]\nA silver accessory blessed by the Goddess, Aidios."
+                },
+                {
+                    "key":302,
+                    "icon":13,
+                    "name":"Lighter",
+                    "description":"[Prevents freeze]\nA good-luck charm carried by hikers to combat the cold."
+                },
+                {
+                    "key":303,
+                    "icon":13,
+                    "name":"Mirage Ring",
+                    "description":"[Prevents petrify]\nA ring set with a mysterious rainbow-colored gem."
+                },
+                {
+                    "key":304,
+                    "icon":13,
+                    "name":"Black Bangle",
+                    "description":"[Prevents sleep]\nA leather wristband that stimulates a pressure point."
+                },
+                {
+                    "key":305,
+                    "icon":13,
+                    "name":"Glam Choker",
+                    "description":"[Prevents mute]\nA special necklace that diverts the effects of anti-sept."
+                },
+                {
+                    "key":306,
+                    "icon":13,
+                    "name":"White Bracelet",
+                    "description":"[Prevents blind]\nA bangle that emits pure white light to prevent blindness."
+                },
+                {
+                    "key":307,
+                    "icon":13,
+                    "name":"Pearl Earring",
+                    "description":"[Prevents seal]\nAn earring with a precious pearl imported from the East."
+                },
+                {
+                    "key":308,
+                    "icon":13,
+                    "name":"Lily Necklace",
+                    "description":"[Prevents confuse]\nA necklace that gives off a calming floral fragrance."
+                },
+                {
+                    "key":309,
+                    "icon":13,
+                    "name":"Feather Brooch",
+                    "description":"[Prevents faint]\nA brooch featuring a vivid blue feather."
+                },
+                {
+                    "key":310,
+                    "icon":13,
+                    "name":"Skull Pendant",
+                    "description":"[Prevents deathblows]\nA bone pendant with a skull carved into its surface."
+                },
+                {
+                    "key":311,
+                    "icon":13,
+                    "name":"T-Anklet",
+                    "description":"[Prevents freeze/petrify]\nAn anklet which repels hindrances to movement."
+                },
+                {
+                    "key":312,
+                    "icon":13,
+                    "name":"Crest Charm",
+                    "description":"[Prevents sleep/faint]\nA crescent amulet that protects the wearer's consciousness."
+                },
+                {
+                    "key":313,
+                    "icon":13,
+                    "name":"Grail Locket",
+                    "description":"[Prevents all abnormal status (except K.O.)]\nAn ornament modeled after a holy Septian artifact."
+                },
+                {
+                    "key":321,
+                    "icon":13,
+                    "name":"Topaz Talisman",
+                    "description":"A talisman crafted from a type of septium.\nThe wearer's attack and defense will become earth-based."
+                },
+                {
+                    "key":322,
+                    "icon":13,
+                    "name":"Sapphire Talisman",
+                    "description":"A talisman crafted from a type of septium.\nThe wearer's attack and defense will become water-based."
+                },
+                {
+                    "key":323,
+                    "icon":13,
+                    "name":"Ruby Talisman",
+                    "description":"A talisman crafted from a type of septium.\nThe wearer's attack and defense will become fire-based."
+                },
+                {
+                    "key":324,
+                    "icon":13,
+                    "name":"Emerald Talisman",
+                    "description":"A talisman crafted from a type of septium.\nThe wearer's attack and defense will become wind-based."
+                },
+                {
+                    "key":325,
+                    "icon":13,
+                    "name":"Proxy Puppet",
+                    "description":"[Prevents K.O.]\nDefends against K.O. one time but breaks afterwards."
+                },
+                {
+                    "key":326,
+                    "icon":13,
+                    "name":"Gladiator Headband",
+                    "description":"[STR+5/DEF-5/CP Up+10%]\nA motivating headband. CP recovery rate rises in battle."
+                },
+                {
+                    "key":327,
+                    "icon":13,
+                    "name":"Gladiator Belt",
+                    "description":"[STR+10/DEF-10/Auto-CP Up]\nA motivating belt. CP automatically recovers during battle."
+                },
+                {
+                    "key":328,
+                    "icon":13,
+                    "name":"Work Helmet",
+                    "description":"[DEF+3]\nAn essential piece of headgear for laborers."
+                },
+                {
+                    "key":329,
+                    "icon":13,
+                    "name":"Red Scarf",
+                    "description":"[DEF+2]\nGaudy neckwear to accent the collar. Painfully bright."
+                },
+                {
+                    "key":330,
+                    "icon":13,
+                    "name":"Woolly Knit-Hat     ",
+                    "description":"[DEF+3]\nA cute, fluffy yarn cap. A great gift for a young girl."
+                },
+                {
+                    "key":333,
+                    "icon":13,
+                    "name":"Work Gloves",
+                    "description":"[DEF+3]\nExtra thick gloves. A standard gift for utility workers."
+                },
+                {
+                    "key":334,
+                    "icon":13,
+                    "name":"Jeweled Ring",
+                    "description":"[DEF+2]\nAn expensive ring fitted with an incandescent gem."
+                },
+                {
+                    "key":335,
+                    "icon":13,
+                    "name":"Long Barrel",
+                    "description":"[RNG+2]\nIncreases the firing range of orbal guns and cannons."
+                }
+            ],
+            "Healing":[
+                {
+                    "key":401,
+                    "icon":19,
+                    "name":"Maple Cookie",
+                    "description":"[Heals 80HP]\nA readily-made aromatic cookie. It's great for snacks."
+                },
+                {
+                    "key":402,
+                    "icon":19,
+                    "name":"Sweet Sponge Cake",
+                    "description":"[Heals 200HP/SPD+15%]\nA fluffy, fresh-baked cake that sweetly melts in the mouth."
+                },
+                {
+                    "key":403,
+                    "icon":19,
+                    "name":"Vegetable Sandwich",
+                    "description":"[Heals 150HP]\nA sandwich packed with greens. For the health-conscious."
+                },
+                {
+                    "key":404,
+                    "icon":19,
+                    "name":"Briny Delight",
+                    "description":"[Heals 450HP/DEF+10%]\nA steamed fish specialty in a rock salt-filled carapace."
+                },
+                {
+                    "key":405,
+                    "icon":19,
+                    "name":"Milk Crepe",
+                    "description":"[Heals 200HP]\nA luxurious cake of layered crepes with cream in between."
+                },
+                {
+                    "key":406,
+                    "icon":19,
+                    "name":"Refreshing Pie",
+                    "description":"[Heals 800HP]\nPie chock-full of fruit and infused with zesty sweet herbs."
+                },
+                {
+                    "key":407,
+                    "icon":19,
+                    "name":"Coffee Ice Cream",
+                    "description":"[Heals 400HP/Cures sleep]\nIce cream with a bittersweet flavor more for adults."
+                },
+                {
+                    "key":408,
+                    "icon":19,
+                    "name":"French Fries",
+                    "description":"[Heals 100HP/MOV+1]\nFried in olive oil and lightly salted. Very popular."
+                },
+                {
+                    "key":409,
+                    "icon":19,
+                    "name":"Tomato Sandwich",
+                    "description":"[Heals 100HP/Restores 40CP]\nA bitter assault on the tongue. Favored by adults."
+                },
+                {
+                    "key":410,
+                    "icon":19,
+                    "name":"Azelia Rose",
+                    "description":"[Heals 500HP/Cures K.O.]\nA refreshing cocktail made from a pungent fruit juice."
+                },
+                {
+                    "key":411,
+                    "icon":19,
+                    "name":"Flowery Soda",
+                    "description":"[Heals 250HP/Cures poison]\nA healthy soda flavored with the astringency of herbs."
+                },
+                {
+                    "key":412,
+                    "icon":19,
+                    "name":"Rich Espresso   ",
+                    "description":"[Heals 500HP/Cures sleep]\nA cup of coffee that will even wake a hibernating bear."
+                },
+                {
+                    "key":413,
+                    "icon":19,
+                    "name":"Mouthful Soup",
+                    "description":"[Heals 300HP/Cures mute]\nA jaw-dropping, shockingly flavorful soup."
+                },
+                {
+                    "key":414,
+                    "icon":19,
+                    "name":"Carmine Eye",
+                    "description":"[Heals 100HP/Cures blind]\nAn herbal-flavored soup with ingredients good for the eyes."
+                },
+                {
+                    "key":415,
+                    "icon":19,
+                    "name":"Plucked Herb Tea",
+                    "description":"[Heals 200HP/Cures confuse]\nSteaming herb-scented tea. A single sip is revitalizing."
+                },
+                {
+                    "key":416,
+                    "icon":19,
+                    "name":"Red Tail Soup",
+                    "description":"[Heals 250HP/Cures seal]\nA spicy soup crammed full of energizing nutrients."
+                },
+                {
+                    "key":417,
+                    "icon":19,
+                    "name":"Specialty Eggnog",
+                    "description":"[Heals 1000HP/Cures K.O.]\nAn Eastern world hot cocktail. Warms the body to the core."
+                },
+                {
+                    "key":418,
+                    "icon":19,
+                    "name":"Fresh Juice",
+                    "description":"[Heals 300HP/Cures petrify]\nFruit juice with thoroughly squeezed fruit extracts."
+                },
+                {
+                    "key":419,
+                    "icon":19,
+                    "name":"Black Pepper Soup",
+                    "description":"[Heals 550HP/Cures faint]\nA favorite among researchers. Piquantly peppery to taste."
+                },
+                {
+                    "key":420,
+                    "icon":19,
+                    "name":"Mixed Cocktail",
+                    "description":"[Heals 1400HP/Cures all abnormal status]\nThe ultimate cocktail; crammed with condensed food extracts."
+                },
+                {
+                    "key":421,
+                    "icon":19,
+                    "name":"Drill Meatball",
+                    "description":"[Heals 120HP/STR+5%]\nA nourishing meatball. Uses curative horn powder for flavor."
+                },
+                {
+                    "key":422,
+                    "icon":19,
+                    "name":"Rotini Pasta",
+                    "description":"[Heals 600HP/Cures confuse]\nPasta which lavishly employs flavorful herbs."
+                },
+                {
+                    "key":423,
+                    "icon":19,
+                    "name":"Fried Eyes & Eggs",
+                    "description":"[Heals 350HP/Cures blind]\nTerrifying at first 'glance'. Eye-Caramba! Ripe for puns."
+                },
+                {
+                    "key":424,
+                    "icon":19,
+                    "name":"Chomping Spare Rib",
+                    "description":"[Heals 800HP/STR&DEF+15%]\nFlame-grilled meat. Its spicy flavor grips the senses."
+                },
+                {
+                    "key":425,
+                    "icon":19,
+                    "name":"Potluck in a Shell",
+                    "description":"[Heals 50HP/Cures K.O.]\nA dish made over a campfire. Lovely in the night air."
+                },
+                {
+                    "key":426,
+                    "icon":19,
+                    "name":"Beast Steak",
+                    "description":"[Heals 180HP/Restores 20CP]\nA dish easily made over a campfire. A real outdoors treat."
+                },
+                {
+                    "key":427,
+                    "icon":19,
+                    "name":"Monster Sushi",
+                    "description":"[Heals 800HP/STR+10%]\nEastern food eaten raw. Be sure to check the freshness date."
+                },
+                {
+                    "key":428,
+                    "icon":19,
+                    "name":"Hot Fried Chicken",
+                    "description":"[Heals 700HP/Cures seal]\nFried chicken seasoned with a spicy marinade."
+                },
+                {
+                    "key":429,
+                    "icon":19,
+                    "name":"Rainbow Jellybeans",
+                    "description":"[Heals 350HP/Restores 25CP]\nA fancy sweet found in all colors. Surprisingly nutritious."
+                },
+                {
+                    "key":430,
+                    "icon":19,
+                    "name":"Floral Jelly",
+                    "description":"[Heals 550HP/Cures poison]\nA refreshing herbal jelly. Best when chilled."
+                },
+                {
+                    "key":431,
+                    "icon":19,
+                    "name":"Hellfire Eggs",
+                    "description":"[Heals 500HP/Cures confuse/sleep/faint]\nA picante egg dish with a restorative effect."
+                },
+                {
+                    "key":432,
+                    "icon":19,
+                    "name":"Wine-Steamed Egg",
+                    "description":"[Heals 600HP/Cures freeze]\nA popular dish skillfully cooked with spirited ingredients."
+                },
+                {
+                    "key":433,
+                    "icon":19,
+                    "name":"Holey Popcorn",
+                    "description":"[Heals 400HP/MOV+2]\nThe epitome of crunchiness. A holey natural snack."
+                },
+                {
+                    "key":434,
+                    "icon":19,
+                    "name":"Seasonal Tart",
+                    "description":"[Heals 400HP]\nThe king of sweets. A perfect gift for that special someone."
+                },
+                {
+                    "key":435,
+                    "icon":19,
+                    "name":"Deep-Fried Smelt",
+                    "description":"[Heals 200HP]\nA small, lightly battered, Eastern-style fried fish."
+                },
+                {
+                    "key":436,
+                    "icon":19,
+                    "name":"Boiled Miso Carp",
+                    "description":"[Heals 300HP]\nAn Eastern-style river fish boiled in sweet and spicy miso."
+                },
+                {
+                    "key":437,
+                    "icon":19,
+                    "name":"Grilled Rainbow",
+                    "description":"[Heals 400HP]\nA salted, grilled fish. It?fs simple, but a true delicacy."
+                },
+                {
+                    "key":438,
+                    "icon":19,
+                    "name":"Rockfish Skewer",
+                    "description":"[Heals 500HP]\nA river fish cooked over an open fire. Scrumptiously firm."
+                },
+                {
+                    "key":439,
+                    "icon":19,
+                    "name":"Salmon Meuniere",
+                    "description":"[Heals 600HP]\nA fish dish rich in flavor, locked in with a buttery glaze."
+                },
+                {
+                    "key":440,
+                    "icon":19,
+                    "name":"Bouillabaisse Plus",
+                    "description":"[Heals 600HP/Restores 30CP]\nA futuristic menu item boldly jellifying a famous dish."
+                },
+                {
+                    "key":441,
+                    "icon":19,
+                    "name":"Fluffy Spring Egg",
+                    "description":"[Heals 450HP]\nA boiled egg cooked over low heat. Soft and rubbery."
+                },
+                {
+                    "key":442,
+                    "icon":19,
+                    "name":"Orange Ice Cream",
+                    "description":"[Heals 300HP]\nA refreshing dessert that uses freshly squeezed juice."
+                },
+                {
+                    "key":443,
+                    "icon":19,
+                    "name":"Apple Ice Cream",
+                    "description":"[Heals 300HP]\nFruity ice cream with the tartness of fresh apples."
+                },
+                {
+                    "key":444,
+                    "icon":19,
+                    "name":"Royal Crepe",
+                    "description":"[Heals 400HP/Cures poison/confuse]\nAn elegant crepe brimming with sweet herb-infused cream."
+                },
+                {
+                    "key":445,
+                    "icon":19,
+                    "name":"Gorgeous Crepe",
+                    "description":"[Heals 700HP]\nA hearty dessert nearly overflowing with cream."
+                },
+                {
+                    "key":446,
+                    "icon":19,
+                    "name":"Special Ice Cream",
+                    "description":"[Heals 1000HP/Restores 25CP]\nAn iced sweet with a mysterious glow. Special indeed!"
+                },
+                {
+                    "key":447,
+                    "icon":19,
+                    "name":"Fruity Milk",
+                    "description":"[Heals 600HP/SPD+30%]\nA fruit-flavored lactic treat. Perfect for after a bath."
+                },
+                {
+                    "key":501,
+                    "icon":8,
+                    "name":"Tear Balm",
+                    "description":"[Heals 200HP]\nA healing salve formulated by the Septian Church."
+                },
+                {
+                    "key":502,
+                    "icon":8,
+                    "name":"Teara Balm",
+                    "description":"[Heals 1000HP]\nA healing salve formulated by the Septian Church."
+                },
+                {
+                    "key":503,
+                    "icon":8,
+                    "name":"Tear All Balm",
+                    "description":"[Heals all HP]\nA healing salve formulated by the Septian Church."
+                },
+                {
+                    "key":504,
+                    "icon":8,
+                    "name":"Purging Balm",
+                    "description":"[Cures poison/seal/blind]\nA salve from the Septian Church to treat abnormalities."
+                },
+                {
+                    "key":505,
+                    "icon":8,
+                    "name":"Softening Balm",
+                    "description":"[Cures freeze/petrify]\nA salve from the Septian Church to repair movement."
+                },
+                {
+                    "key":506,
+                    "icon":8,
+                    "name":"Insulating Tape",
+                    "description":"[Cures mute]\nQuick-fix tape to repair a neutralized orbment."
+                },
+                {
+                    "key":507,
+                    "icon":8,
+                    "name":"Curia Balm",
+                    "description":"[Cures abnormal status]\nA salve which cures all status abnormalities except K.O."
+                },
+                {
+                    "key":508,
+                    "icon":8,
+                    "name":"Reviving Balm",
+                    "description":"[Cures K.O./Heals 100HP]\nA salve which cures K.O. and heals 100HP."
+                },
+                {
+                    "key":509,
+                    "icon":8,
+                    "name":"Celestial Balm",
+                    "description":"[Cures K.O./Heals all HP]\nA salve which cures K.O. and heals all HP."
+                },
+                {
+                    "key":510,
+                    "icon":8,
+                    "name":"EP Charge",
+                    "description":"[Restores 100EP]\nAn orbal energy-filled capsule."
+                },
+                {
+                    "key":511,
+                    "icon":8,
+                    "name":"EP Charge EX",
+                    "description":"[Restores 300EP]\nAn enhanced orbal energy-filled capsule."
+                },
+                {
+                    "key":512,
+                    "icon":8,
+                    "name":"Smelling Salts",
+                    "description":"[Cures confuse/sleep/faint]\nA salve from the Septian Church to stimulate the senses."
+                }
+            ],
+            "Books":[
+                {
+                    "key":520,
+                    "icon":21,
+                    "name":"Bracer Notebook",
+                    "description":"A notebook given to all bracers for investigative purposes.\nKeeping detailed records is an important part of the job."
+                },
+                {
+                    "key":525,
+                    "icon":21,
+                    "name":"Recipe Book",
+                    "description":"A book used to record the recipes of eaten food. Food can\nalso be made from recipes if you have the right ingredients."
+                },
+                {
+                    "key":527,
+                    "icon":21,
+                    "name":"Monster Guide",
+                    "description":"A notebook used to record information gathered from enemy\nencounters."
+                },
+                {
+                    "key":530,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 1",
+                    "description":"[The Imperial Chronicle]\nPart 1 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":531,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 2",
+                    "description":"[The Train Station]\nPart 2 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":532,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 3",
+                    "description":"[Representative of the Septian Church]\nPart 3 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":533,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 4",
+                    "description":"[Human Fodder]\nPart 4 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":534,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 5",
+                    "description":"[Emissary of the Sabbath]\nPart 5 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":535,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 6",
+                    "description":"[Ascertaining the Inner Workings]\nPart 6 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":536,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 7",
+                    "description":"[The Death of a Friend]\nPart 7 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":537,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 8",
+                    "description":"[In the Bowels of the Imperial City]\nPart 8 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":538,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 9",
+                    "description":"[Carnelia]\nPart 9 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":539,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 10",
+                    "description":"[The Last Stand]\nPart 10 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":540,
+                    "icon":21,
+                    "name":"Carnelia - Finale",
+                    "description":"[A Legacy Never to be Forgotten]\nThe finale to a fictional novel published in Liberl."
+                }
+            ],
+            "Quartz":[
+                {
+                    "key":600,
+                    "icon":90,
+                    "name":"HP 1",
+                    "description":"[Elemental: #90IWater?@Elemental Value: #186I1]\nMax HP+5%"
+                },
+                {
+                    "key":601,
+                    "icon":90,
+                    "name":"HP 2",
+                    "description":"[Elemental: #90IWater?@Elemental Value: #186I3]\nMax HP+10%"
+                },
+                {
+                    "key":602,
+                    "icon":90,
+                    "name":"HP 3",
+                    "description":"[Elemental: #90IWater?@Elemental Value: #186I5]\nMax HP+15%"
+                },
+                {
+                    "key":603,
+                    "icon":95,
+                    "name":"EP 1",
+                    "description":"[Elemental: #95IMirage?@Elemental Value: #189I1 #190I1 #191I2]\nMax EP+5%"
+                },
+                {
+                    "key":604,
+                    "icon":95,
+                    "name":"EP 2",
+                    "description":"[Elemental: #95IMirage?@Elemental Value: #189I2 #190I2 #191I3]\nMax EP+10%"
+                },
+                {
+                    "key":605,
+                    "icon":95,
+                    "name":"EP 3",
+                    "description":"[Elemental: #95IMirage?@Elemental Value: #189I3 #190I3 #191I5]\nMax EP+15%"
+                },
+                {
+                    "key":606,
+                    "icon":91,
+                    "name":"Attack 1",
+                    "description":"[Elemental: #91IFire?@Elemental Value: #187I1]\nSTR+5%/DEF-5%"
+                },
+                {
+                    "key":607,
+                    "icon":91,
+                    "name":"Attack 2",
+                    "description":"[Elemental: #91IFire?@Elemental Value: #187I3]\nSTR+10%/DEF-10%"
+                },
+                {
+                    "key":608,
+                    "icon":91,
+                    "name":"Attack 3",
+                    "description":"[Elemental: #91IFire?@Elemental Value: #187I5]\nSTR+15%/DEF-15%"
+                },
+                {
+                    "key":609,
+                    "icon":89,
+                    "name":"Defense 1",
+                    "description":"[Elemental: #89IEarth?@Elemental Value: #185I1]\nDEF+5%"
+                },
+                {
+                    "key":610,
+                    "icon":89,
+                    "name":"Defense 2",
+                    "description":"[Elemental: #89IEarth?@Elemental Value: #185I3]\nDEF+10%"
+                },
+                {
+                    "key":611,
+                    "icon":89,
+                    "name":"Defense 3",
+                    "description":"[Elemental: #89IEarth?@Elemental Value: #185I5]\nDEF+15%"
+                },
+                {
+                    "key":612,
+                    "icon":90,
+                    "name":"Mind 1",
+                    "description":"[Elemental: #90IWater?@Elemental Value: #186I1]\nATS+5%"
+                },
+                {
+                    "key":613,
+                    "icon":90,
+                    "name":"Mind 2",
+                    "description":"[Elemental: #90IWater?@Elemental Value: #186I3]\nATS+10%"
+                },
+                {
+                    "key":614,
+                    "icon":90,
+                    "name":"Mind 3",
+                    "description":"[Elemental: #90IWater?@Elemental Value: #186I5]\nATS+15%"
+                },
+                {
+                    "key":615,
+                    "icon":92,
+                    "name":"Shield 1",
+                    "description":"[Elemental: #92IWind?@Elemental Value: #188I1]\nADF+5"
+                },
+                {
+                    "key":616,
+                    "icon":92,
+                    "name":"Shield 2",
+                    "description":"[Elemental: #92IWind?@Elemental Value: #188I3]\nADF+15"
+                },
+                {
+                    "key":617,
+                    "icon":92,
+                    "name":"Shield 3",
+                    "description":"[Elemental: #92IWind?@Elemental Value: #188I5]\nADF+30"
+                },
+                {
+                    "key":618,
+                    "icon":95,
+                    "name":"Hit 1",
+                    "description":"[Elemental: #95IMirage?@Elemental Value: #191I1]\nDEX+5"
+                },
+                {
+                    "key":619,
+                    "icon":95,
+                    "name":"Hit 2",
+                    "description":"[Elemental: #95IMirage?@Elemental Value: #191I3]\nDEX+10"
+                },
+                {
+                    "key":620,
+                    "icon":95,
+                    "name":"Hit 3",
+                    "description":"[Elemental: #95IMirage?@Elemental Value: #191I5]\nDEX+15"
+                },
+                {
+                    "key":621,
+                    "icon":92,
+                    "name":"Evade 1",
+                    "description":"[Elemental: #92IWind?@Elemental Value: #188I1]\nAGL+1"
+                },
+                {
+                    "key":622,
+                    "icon":92,
+                    "name":"Evade 2",
+                    "description":"[Elemental: #92IWind?@Elemental Value: #188I3]\nAGL+2"
+                },
+                {
+                    "key":623,
+                    "icon":92,
+                    "name":"Evade 3",
+                    "description":"[Elemental: #92IWind?@Elemental Value: #188I5]\nAGL+3"
+                },
+                {
+                    "key":624,
+                    "icon":94,
+                    "name":"Move 1",
+                    "description":"[Elemental: #94ISpace?@Elemental Value: #190I1]\nMOV+1"
+                },
+                {
+                    "key":625,
+                    "icon":94,
+                    "name":"Move 2",
+                    "description":"[Elemental: #94ISpace?@Elemental Value: #190I3]\nMOV+2"
+                },
+                {
+                    "key":626,
+                    "icon":94,
+                    "name":"Move 3",
+                    "description":"[Elemental: #94ISpace?@Elemental Value: #190I5]\nMOV+3"
+                },
+                {
+                    "key":627,
+                    "icon":93,
+                    "name":"Action 1",
+                    "description":"[Elemental: #93ITime?@Elemental Value: #189I1]\nSPD+10%"
+                },
+                {
+                    "key":628,
+                    "icon":93,
+                    "name":"Action 2",
+                    "description":"[Elemental: #93ITime?@Elemental Value: #189I3]\nSPD+20%"
+                },
+                {
+                    "key":629,
+                    "icon":93,
+                    "name":"Action 3",
+                    "description":"[Elemental: #93ITime?@Elemental Value: #189I5]\nSPD+30%"
+                },
+                {
+                    "key":630,
+                    "icon":94,
+                    "name":"Range 1",
+                    "description":"[Elemental: #94ISpace?@Elemental Value: #190I3]\nArts' effect range +1"
+                },
+                {
+                    "key":637,
+                    "icon":89,
+                    "name":"Poison",
+                    "description":"[Elemental: #89IEarth?@Elemental Value: #185I3]\nPoison enemy with 10% success."
+                },
+                {
+                    "key":638,
+                    "icon":90,
+                    "name":"Freeze",
+                    "description":"[Elemental: #90IWater?@Elemental Value: #186I3]\nFreeze enemy with 10% success."
+                },
+                {
+                    "key":639,
+                    "icon":89,
+                    "name":"Petrify",
+                    "description":"[Elemental: #89IEarth?@Elemental Value: #185I3]\nPetrify enemy with 10% success."
+                },
+                {
+                    "key":640,
+                    "icon":92,
+                    "name":"Sleep",
+                    "description":"[Elemental: #92IWind?@Elemental Value: #188I3]\nPut enemy to sleep with 10% success."
+                },
+                {
+                    "key":641,
+                    "icon":89,
+                    "name":"Mute",
+                    "description":"[Elemental: #89IEarth?@Elemental Value: #185I3]\nMute enemy with 10% success."
+                },
+                {
+                    "key":642,
+                    "icon":93,
+                    "name":"Blind",
+                    "description":"[Elemental: #93ITime?@Elemental Value: #189I3]\nBlind enemy with 10% success."
+                },
+                {
+                    "key":643,
+                    "icon":91,
+                    "name":"Seal",
+                    "description":"[Elemental: #91IFire?@Elemental Value: #187I3]\nSeal enemy crafts with 10% success."
+                },
+                {
+                    "key":644,
+                    "icon":91,
+                    "name":"Confuse",
+                    "description":"[Elemental: #91IFire?@Elemental Value: #187I3]\nConfuse enemy with 10% success."
+                },
+                {
+                    "key":645,
+                    "icon":91,
+                    "name":"Strike",
+                    "description":"[Elemental: #91IFire?@Elemental Value: #187I3]\nCritically strike with 10% success."
+                },
+                {
+                    "key":646,
+                    "icon":93,
+                    "name":"Deathblow 1",
+                    "description":"[Elemental: #93ITime?@Elemental Value: #189I3]\nKill enemy with 10% success."
+                },
+                {
+                    "key":647,
+                    "icon":93,
+                    "name":"Deathblow 2",
+                    "description":"[Elemental: #93ITime?@Elemental Value: None]\n100% kills enemy but quartz breaks."
+                },
+                {
+                    "key":657,
+                    "icon":95,
+                    "name":"Information",
+                    "description":"[Elemental: #95IMirage?@Elemental Value: #191I2]\nBe able to perceive enemy status."
+                },
+                {
+                    "key":705,
+                    "icon":92,
+                    "name":"Impede 1",
+                    "description":"[Elemental: #92IWind?@Elemental Value: #188I1]\nPrevent enemy arts with 20% success."
+                },
+                {
+                    "key":706,
+                    "icon":92,
+                    "name":"Impede 2",
+                    "description":"[Elemental: #92IWind?@Elemental Value: #188I3]\nPrevent enemy arts with 50% success."
+                },
+                {
+                    "key":707,
+                    "icon":92,
+                    "name":"Impede 3",
+                    "description":"[Elemental: #92IWind?@Elemental Value: #188I5]\nPrevent enemy arts with 80% success."
+                },
+                {
+                    "key":710,
+                    "icon":93,
+                    "name":"Cast 1",
+                    "description":"[Elemental: #93ITime?@Elemental Value: #189I1]\nTime to cast arts is cut."
+                },
+                {
+                    "key":711,
+                    "icon":93,
+                    "name":"Cast 2",
+                    "description":"[Elemental: #93ITime?@Elemental Value: #189I3]\nTime to cast arts is greatly cut."
+                },
+                {
+                    "key":712,
+                    "icon":94,
+                    "name":"EP Cut 1",
+                    "description":"[Elemental: #94ISpace?@Elemental Value: #189I1 #190I2 #191I1]\nArts' EP cost -10%."
+                },
+                {
+                    "key":713,
+                    "icon":94,
+                    "name":"EP Cut 2",
+                    "description":"[Elemental: #94ISpace?@Elemental Value: #189I2 #190I3 #191I2]\nArts' EP cost -25%."
+                },
+                {
+                    "key":714,
+                    "icon":94,
+                    "name":"EP Cut 3",
+                    "description":"[Elemental: #94ISpace?@Elemental Value: #189I3 #190I5 #191I3]\nArts' EP cost -50%."
+                },
+                {
+                    "key":720,
+                    "icon":92,
+                    "name":"Scent",
+                    "description":"[Elemental: #92IWind?@Elemental Value: #188I3 #190I2]\nEnemies become aware of presence."
+                },
+                {
+                    "key":721,
+                    "icon":94,
+                    "name":"Eagle Eye",
+                    "description":"[Elemental: #94ISpace?@Elemental Value: #190I3 #191I2]\nCan see enemies from a distance."
+                },
+                {
+                    "key":722,
+                    "icon":95,
+                    "name":"Haze",
+                    "description":"[Elemental: #95IMirage?@Elemental Value: #185I2 #191I3]\nEnemies become unaware of presence."
+                },
+                {
+                    "key":723,
+                    "icon":95,
+                    "name":"Cloak",
+                    "description":"[Elemental: #95IMirage?@Elemental Value: #187I2 #191I3]\nNo encounters."
+                },
+                {
+                    "key":724,
+                    "icon":90,
+                    "name":"Heal",
+                    "description":"[Elemental: #90IWater?@Elemental Value: #186I3 #189I2]\nHP slowly recovers by walking."
+                }
+            ],
+            "Quest Items":[
+                {
+                    "key":800,
+                    "icon":15,
+                    "name":"Guild Referral",
+                    "description":"A referral from the guild addressed to the owner of the\nPerzel Farm."
+                },
+                {
+                    "key":801,
+                    "icon":15,
+                    "name":"Mayor's Referral",
+                    "description":"A referral from Mayor Klaus addressed to the mine chief at\nthe Malga Mine."
+                },
+                {
+                    "key":802,
+                    "icon":15,
+                    "name":"Elevator Key",
+                    "description":"A key borrowed from one of the mine workers at the\nMalga Mine to activate the elevator."
+                },
+                {
+                    "key":803,
+                    "icon":15,
+                    "name":"Septium Crystal",
+                    "description":"A septium crystal received from the mine chief."
+                },
+                {
+                    "key":804,
+                    "icon":15,
+                    "name":"Guild Referral",
+                    "description":"A referral from the guild addressed to a Liberl News\nreporter."
+                },
+                {
+                    "key":805,
+                    "icon":15,
+                    "name":"Quartz Fragment",
+                    "description":"A broken piece of quartz.\nIt glows just like a nonfunctional piece of sepith."
+                },
+                {
+                    "key":806,
+                    "icon":15,
+                    "name":"Maintenance Kit",
+                    "description":"A case of tools used to service lighthouses.\nInside is a complete set of tools and replacement parts."
+                },
+                {
+                    "key":807,
+                    "icon":15,
+                    "name":"Orbment Light",
+                    "description":"A large orbment light used to replace burned out ones in\nroad lamps."
+                },
+                {
+                    "key":809,
+                    "icon":15,
+                    "name":"Father Divine's Letter",
+                    "description":"A letter from Father Divine addressed to Father Holstein\nin Bose."
+                },
+                {
+                    "key":810,
+                    "icon":15,
+                    "name":"Servais Leaf",
+                    "description":"A tree leaf found in the attic of the mayor's residence."
+                },
+                {
+                    "key":813,
+                    "icon":15,
+                    "name":"The Mayor's Letter",
+                    "description":"A letter from Mayor Maybelle addressed to General Morgan\nat the Haken Gate."
+                },
+                {
+                    "key":814,
+                    "icon":15,
+                    "name":"Abandoned Mine Key",
+                    "description":"A key for the abandoned mine borrowed from Reisen,\nthe elder of Ravennue Village."
+                },
+                {
+                    "key":815,
+                    "icon":15,
+                    "name":"Gate Pass",
+                    "description":"A pass to enter the Bose region."
+                },
+                {
+                    "key":816,
+                    "icon":15,
+                    "name":"Recommendation",
+                    "description":"A document awarded by the Rolent Bracer Guild recommending\nadvancement to bracer status."
+                },
+                {
+                    "key":817,
+                    "icon":15,
+                    "name":"Hundred Days War",
+                    "description":"A book about the hidden truth behind the Hundred Days War\ncampaign."
+                },
+                {
+                    "key":818,
+                    "icon":15,
+                    "name":"Progressive Rod",
+                    "description":"A normal fishing pole which can be found anywhere."
+                },
+                {
+                    "key":819,
+                    "icon":15,
+                    "name":"Recommendation",
+                    "description":"A document awarded by the Bose Bracer Guild recommending\nadvancement to bracer status."
+                },
+                {
+                    "key":820,
+                    "icon":15,
+                    "name":"Warehouse Key",
+                    "description":"A key found in Ruan's south block."
+                },
+                {
+                    "key":821,
+                    "icon":15,
+                    "name":"Torn Map",
+                    "description":"A piece of an old sea chart found in a barrel washed up on\nthe beach of the Gull Seaside Way."
+                },
+                {
+                    "key":822,
+                    "icon":15,
+                    "name":"Letter to Cassius",
+                    "description":"A letter received from the guild addressed to Cassius Bright.\n"
+                },
+                {
+                    "key":823,
+                    "icon":15,
+                    "name":"Bouquet",
+                    "description":"A standard present."
+                },
+                {
+                    "key":824,
+                    "icon":15,
+                    "name":"Black Notebook",
+                    "description":"A notebook found inside a vacuum in the sky bandits'\nhideout. Nonsensical rows of numbers are written inside."
+                },
+                {
+                    "key":825,
+                    "icon":15,
+                    "name":"Recommendation",
+                    "description":"A document awarded by the Ruan Bracer Guild recommending\nadvancement to bracer status."
+                },
+                {
+                    "key":826,
+                    "icon":15,
+                    "name":"Recommendation",
+                    "description":"A document awarded by the Zeiss Bracer Guild recommending\nadvancement to bracer status."
+                },
+                {
+                    "key":827,
+                    "icon":15,
+                    "name":"Recommendation",
+                    "description":"A document awarded by the Grancel Bracer Guild recommending\nadvancement to bracer status."
+                },
+                {
+                    "key":828,
+                    "icon":15,
+                    "name":"Special Boxed Lunch",
+                    "description":"A sandwich and paella set with a free herbal tea included.\n"
+                },
+                {
+                    "key":829,
+                    "icon":15,
+                    "name":"Ruan Economics I",
+                    "description":"A book taken from the Material Archives at the royal\nacademy. The 1st volume in a trilogy."
+                },
+                {
+                    "key":830,
+                    "icon":15,
+                    "name":"Ruan Economics II",
+                    "description":"A book taken from the Material Archives at the royal\nacademy. The 2nd volume in a trilogy."
+                },
+                {
+                    "key":831,
+                    "icon":15,
+                    "name":"Ruan Economics III",
+                    "description":"A book taken from the Material Archives at the royal\nacademy. The 3rd volume in a trilogy."
+                },
+                {
+                    "key":832,
+                    "icon":15,
+                    "name":"Kitty-Talk for Dummies",
+                    "description":"A book taken from the Material Archives at Zeiss Central\nFactory. Contains candid kitty conversations. Meow."
+                },
+                {
+                    "key":833,
+                    "icon":15,
+                    "name":"Tomorrow's Cooking",
+                    "description":"A book taken from the Material Archives at Zeiss Central\nFactory. It mainly speculates about the future of cooking."
+                },
+                {
+                    "key":834,
+                    "icon":15,
+                    "name":"Septium Optic Annals",
+                    "description":"A book taken from the Material Archives at Zeiss Central\nFactory. Collections of these are routinely published."
+                },
+                {
+                    "key":835,
+                    "icon":15,
+                    "name":"The Erbe Woodpecker",
+                    "description":"A book found inside the stone lantern in the pond at Elmo\nVillage. From the Zeiss Central Factory Material Archives."
+                },
+                {
+                    "key":836,
+                    "icon":15,
+                    "name":"Hertz's Adventure II",
+                    "description":"A book found near the strange stone pillars on Tratt Plains\nRoad. From the Zeiss Central Factory Material Archives."
+                },
+                {
+                    "key":837,
+                    "icon":15,
+                    "name":"31 Cypress Trees",
+                    "description":"A book found behind a barrel on the 3rd floor of the\nSanktheim Gate. From the Zeiss Central Factory Archives."
+                },
+                {
+                    "key":838,
+                    "icon":15,
+                    "name":"Drive Orbment",
+                    "description":"A drive orbment which could be said to be the heart of a\nhaulage vehicle."
+                },
+                {
+                    "key":839,
+                    "icon":15,
+                    "name":"Liberl News - Issue 1",
+                    "description":"S.C. 1202 [The Queen's Birthday is Approaching]\nThe 60th Anniversary - Preparations are Underway!"
+                },
+                {
+                    "key":840,
+                    "icon":15,
+                    "name":"Liberl News - Issue 2",
+                    "description":"S.C. 1202 [The Airliner 'Linde' has Vanished!]\nAccident? Incident? Details Inside!"
+                },
+                {
+                    "key":841,
+                    "icon":15,
+                    "name":"Liberl News - Issue 3",
+                    "description":"S.C. 1202 [Update! Disappearance of the Linde]\nRansom Note from Capua Family a.k.a. the Sky Bandits!"
+                },
+                {
+                    "key":842,
+                    "icon":15,
+                    "name":"Liberl News - Issue 4",
+                    "description":"S.C. 1202 [Sky Bandits Arrested! Missing Linde Case Solved!]\nA First-Hand Account of the Foray!"
+                },
+                {
+                    "key":843,
+                    "icon":15,
+                    "name":"Liberl News - Issue 5",
+                    "description":"S.C. 1202 [Exclusive Interview with Colonel Richard]\nThe Royal Army's Rising Star! Personal Details Revealed!"
+                },
+                {
+                    "key":844,
+                    "icon":15,
+                    "name":"Liberl News - Issue 6",
+                    "description":"S.C. 1202 [Ruan City Mayor Arrested on Suspicion of Arson!]\nRampage of Incumbent Mayor! Motive Brought to Light!"
+                },
+                {
+                    "key":845,
+                    "icon":15,
+                    "name":"Liberl News - Issue 7",
+                    "description":"S.C. 1202 [Shock Over Incident at Zeiss Central Factory]\nDaylight Attack - Terrorist a Member of the Royal Guard?!"
+                },
+                {
+                    "key":846,
+                    "icon":15,
+                    "name":"Liberl News - Issue 8",
+                    "description":"S.C. 1202 [City Shaken Over Possible Sedition Conspiracy!]\nSudden Mistrust Falls on Elite Group!"
+                },
+                {
+                    "key":847,
+                    "icon":15,
+                    "name":"Liberl News - Issue 9",
+                    "description":"S.C. 1202 [Victors Decided in Martial Arts Competition!]\nThe Fight is Over! - Crown Goes to an Unlikely Team!"
+                },
+                {
+                    "key":848,
+                    "icon":15,
+                    "name":"Liberl News - Special",
+                    "description":"S.C. 1202 [Intel's Coup D'etat Plot Thwarted!]\nFull Report! Rescue Operation for Her Highness, the Queen!"
+                },
+                {
+                    "key":854,
+                    "icon":15,
+                    "name":"Back Room Key",
+                    "description":"A key found in the Factory Chief's office of the Zeiss\nCentral Factory."
+                },
+                {
+                    "key":855,
+                    "icon":15,
+                    "name":"Grancel Sewer Map",
+                    "description":"A blueprint of the sewers running beneath the Royal City of\nGrancel."
+                },
+                {
+                    "key":856,
+                    "icon":15,
+                    "name":"Dorothy's Photograph",
+                    "description":"A picture Dorothy took of the Leiston Fortress."
+                },
+                {
+                    "key":857,
+                    "icon":15,
+                    "name":"Leiston Fortress Map",
+                    "description":"The schematics for Leiston Fortress.\n(Obtained by secret means.)"
+                },
+                {
+                    "key":858,
+                    "icon":15,
+                    "name":"Leiston Fortress Map",
+                    "description":"The schematics for Leiston Fortress.\n(Obtained by secret means.)"
+                },
+                {
+                    "key":859,
+                    "icon":15,
+                    "name":"Black Orbment",
+                    "description":"An obsidian-black orbment found in a package addressed to\nCassius."
+                },
+                {
+                    "key":860,
+                    "icon":15,
+                    "name":"Junior Bracer Emblem",
+                    "description":"A junior bracer emblem awarded by the guild.\nIdentification of one's junior bracer status."
+                },
+                {
+                    "key":861,
+                    "icon":15,
+                    "name":"Bracer Emblem",
+                    "description":"An emblem verifying bracer status awarded by the guild.\nHas the official Bracer Guild symbol on its surface."
+                },
+                {
+                    "key":862,
+                    "icon":15,
+                    "name":"Letter to Faye",
+                    "description":"A letter received from Private Brahm at the Wolf Fort\nwritten with words of equivocal love."
+                },
+                {
+                    "key":863,
+                    "icon":15,
+                    "name":"Liberl Kingdom Map",
+                    "description":"A map of the Liberl Kingdom.\nIt can be used to confirm one's current whereabouts."
+                },
+                {
+                    "key":864,
+                    "icon":15,
+                    "name":"Attn. Factory Chief",
+                    "description":"A referral from the guild addressed to the head of\nthe central factory."
+                },
+                {
+                    "key":866,
+                    "icon":15,
+                    "name":"Detector Jammer",
+                    "description":"A device invented by Professor Russell.\nCapable of jamming detection sensors."
+                },
+                {
+                    "key":868,
+                    "icon":15,
+                    "name":"Orbal Calculator",
+                    "description":"The orbal calculator, Capel, which was stolen from the\ncentral factory."
+                },
+                {
+                    "key":869,
+                    "icon":15,
+                    "name":"Zemuria Moss",
+                    "description":"A glowing moss gathered from the Kaldia Limestone Cave. It?fs\nneeded to make a remedy developed by the Septian Church."
+                },
+                {
+                    "key":870,
+                    "icon":15,
+                    "name":"Arve Sovereign Serum",
+                    "description":"A remedy formulated from Zemuria moss.\nIt boosts the immune system to fight off toxic agents."
+                },
+                {
+                    "key":871,
+                    "icon":15,
+                    "name":"Gasoline Tank",
+                    "description":"A tank filled with combustible liquid produced by the\nRepublic."
+                },
+                {
+                    "key":872,
+                    "icon":15,
+                    "name":"Combustion Engine",
+                    "description":"A complex machine which changes thermal energy into kinetic\nenergy by burning fuel inside a metallic pipe."
+                },
+                {
+                    "key":873,
+                    "icon":15,
+                    "name":"Pump Shed Key",
+                    "description":"A key borrowed from Mrs. Mao to the pump shed in Elmo\nVillage."
+                },
+                {
+                    "key":874,
+                    "icon":15,
+                    "name":"Boarding Pass",
+                    "description":"A ticket for the airliner and a reserved seat to the Royal\nCity of Grancel."
+                },
+                {
+                    "key":875,
+                    "icon":15,
+                    "name":"Grand Arena Ticket",
+                    "description":"A spectator ticket for the Martial Arts Competition."
+                },
+                {
+                    "key":876,
+                    "icon":15,
+                    "name":"Julia's Letter",
+                    "description":"A letter from 1st Lieutenant Schwarz addressed to Hilda,\nthe head maid at Grancel Castle."
+                },
+                {
+                    "key":877,
+                    "icon":15,
+                    "name":"Grancel Sewer Key A",
+                    "description":"A key to the sewer entrance in Grancel's west block."
+                },
+                {
+                    "key":878,
+                    "icon":15,
+                    "name":"Grancel Sewer Key B",
+                    "description":"A key to the sewer entrance in Grancel's east block."
+                },
+                {
+                    "key":879,
+                    "icon":15,
+                    "name":"Spare Key",
+                    "description":"A key to the main hall hidden in the gallery of the Erbe Royal Villa."
+                },
+                {
+                    "key":880,
+                    "icon":15,
+                    "name":"Boarding Pass",
+                    "description":"A ticket for the airliner and a reserved seat to the Royal\nCity of Grancel."
+                },
+                {
+                    "key":881,
+                    "icon":15,
+                    "name":"Invitation",
+                    "description":"An invitation to the royal banquet awarded by Duke von\nAuslese as a prize for winning the Martial Arts Competition."
+                },
+                {
+                    "key":882,
+                    "icon":15,
+                    "name":"Registry Card",
+                    "description":"A card indicating participation in the Martial Arts\nCompetition."
+                },
+                {
+                    "key":883,
+                    "icon":15,
+                    "name":"Small Box",
+                    "description":"The item required to complete bracer practical training.\nIt is tightly sealed."
+                },
+                {
+                    "key":884,
+                    "icon":15,
+                    "name":"Hertz's Adventure I",
+                    "description":"A book which can be read in the central factory Material\nArchives but not taken."
+                },
+                {
+                    "key":885,
+                    "icon":15,
+                    "name":"Room 202 Key",
+                    "description":"A key to room 202 at Hotel Roenbaum."
+                },
+                {
+                    "key":886,
+                    "icon":15,
+                    "name":"Luke's Journal",
+                    "description":"An account of Luke's day to day life as a bracer.\nShocking twist ending! Sadly, it can?ft be taken."
+                }
+            ],
+            "Ingredients":[
+                {
+                    "key":900,
+                    "icon":20,
+                    "name":"Firefly Fungus",
+                    "description":"A suspiciously green, glowing mushroom.\nIt is rumored to be delectable if prepared right."
+                },
+                {
+                    "key":901,
+                    "icon":20,
+                    "name":"Acerbic Tomato",
+                    "description":"A new species that arose as a byproduct of experimentation.\nIt is unimaginably bitter."
+                },
+                {
+                    "key":902,
+                    "icon":20,
+                    "name":"Bear Claw",
+                    "description":"A thorny medicinal herb that looks like a bear?fs claw.\nOften used in food and medicine."
+                },
+                {
+                    "key":903,
+                    "icon":20,
+                    "name":"Tri-Colored Rice",
+                    "description":"A blend of red, yellow, and black husked rice.\nDelightfully crunchy and often used in dishes in Liberl."
+                },
+                {
+                    "key":904,
+                    "icon":20,
+                    "name":"Aged Miso",
+                    "description":"An Eastern seasoning made by fermenting steamed grains.\nHas a pungent flavor and is great for health."
+                },
+                {
+                    "key":905,
+                    "icon":20,
+                    "name":"Vintage Wine",
+                    "description":"A thoroughly aged, potent liquor.\nIt is highly regarded as a cooking wine for its rich aroma."
+                },
+                {
+                    "key":906,
+                    "icon":20,
+                    "name":"Fresh Milk",
+                    "description":"Freshly drawn milk delivered daily from the farm.\nRolent?fs local brand is said to be especially tasty."
+                },
+                {
+                    "key":907,
+                    "icon":20,
+                    "name":"Fresh Eggs",
+                    "description":"Newly laid eggs from free-range chickens.\nA basic ingredient essential for cooking."
+                },
+                {
+                    "key":908,
+                    "icon":20,
+                    "name":"Sharp Cheese",
+                    "description":"Ripened cheese made from freshly drawn milk."
+                },
+                {
+                    "key":909,
+                    "icon":20,
+                    "name":"Luscious Orange",
+                    "description":"A hand-picked fruit from a farming village.\nVivid orange like the setting sun."
+                },
+                {
+                    "key":910,
+                    "icon":20,
+                    "name":"Ripe Apple",
+                    "description":"A succulent treat harvested after it has grown to maturity.\nFrom the famous fruit orchards of the Village of Ravennue."
+                },
+                {
+                    "key":911,
+                    "icon":20,
+                    "name":"Azelia Fruit",
+                    "description":"A fruit with a tough rind indigenous to the Ruan region.\nIt is mainly enjoyed in the form of juice."
+                },
+                {
+                    "key":912,
+                    "icon":20,
+                    "name":"Milled Flour",
+                    "description":"The most basic of ingredients.\nNeither pasta nor bread can be made without it."
+                },
+                {
+                    "key":913,
+                    "icon":20,
+                    "name":"Salted Anchovy",
+                    "description":"A nonperishable rustic fish in a salty sauce. The ones from\nManoria Village are said to be top-quality."
+                },
+                {
+                    "key":914,
+                    "icon":20,
+                    "name":"Marbled Steak",
+                    "description":"A mouthwatering cut of meat, tender and marbled with fat.\nGreat in dishes from stew to steak."
+                },
+                {
+                    "key":915,
+                    "icon":20,
+                    "name":"Flaky Potato",
+                    "description":"A small succulent potato.\nGreat in boiled foods since it keeps its firmness."
+                },
+                {
+                    "key":916,
+                    "icon":20,
+                    "name":"Crisp Onion",
+                    "description":"A large onion with a nice crunchy texture.\nWith almost no acrid taste, it can be eaten like an apple."
+                },
+                {
+                    "key":917,
+                    "icon":20,
+                    "name":"Dirty Carrot",
+                    "description":"A sweet carrot great for cooking.\nThe dirt is used to keep it fresh."
+                },
+                {
+                    "key":918,
+                    "icon":20,
+                    "name":"Maple Sugar",
+                    "description":"A natural sweetener made from boiled-down tree sap.\nIts faint aroma can be used as an accent for foods."
+                },
+                {
+                    "key":919,
+                    "icon":20,
+                    "name":"Kibbled Salt",
+                    "description":"Coarsely ground rock salt.\nRich in minerals, it carries a profound flavor."
+                },
+                {
+                    "key":920,
+                    "icon":20,
+                    "name":"Olive Oil",
+                    "description":"Oil taken from the olives of a tree laden with fruit.\nEssential to give that special touch to dishes."
+                },
+                {
+                    "key":921,
+                    "icon":20,
+                    "name":"Fresh Herb",
+                    "description":"A sweet herb with a pleasant fragrance.\nIts use varies from tea to even ridding meats of odors."
+                },
+                {
+                    "key":922,
+                    "icon":20,
+                    "name":"Dragon Beans",
+                    "description":"Flavorful coffee beans native to Liberl.\nThe raw beans are used as a condiment."
+                },
+                {
+                    "key":923,
+                    "icon":20,
+                    "name":"Royal Leaf",
+                    "description":"A popular tree leaf used as an extract since old times.\nIt?fs even used to flavor candy."
+                },
+                {
+                    "key":924,
+                    "icon":20,
+                    "name":"Black Pepper",
+                    "description":"Whole black pepper.\nAn essential spice in meat dishes."
+                },
+                {
+                    "key":925,
+                    "icon":20,
+                    "name":"Red Pepper",
+                    "description":"A discernibly red hot pepper.\nDried ones are often ground into powder."
+                },
+                {
+                    "key":926,
+                    "icon":20,
+                    "name":"Curative Horn",
+                    "description":"A health food full of minerals.\nFiguring out how to eat it requires some ingenuity."
+                },
+                {
+                    "key":927,
+                    "icon":20,
+                    "name":"Savory Pinion",
+                    "description":"A thin, clear membranous wing.\nIt is mainly used to flavor dishes."
+                },
+                {
+                    "key":928,
+                    "icon":20,
+                    "name":"Leathery Tail",
+                    "description":"A well-developed muscular tail.\nThough troublesome to cook, it has an excellent flavor."
+                },
+                {
+                    "key":929,
+                    "icon":20,
+                    "name":"Juicy Bone",
+                    "description":"An essential ingredient for soup broth.\nIt is used in numerous dishes."
+                },
+                {
+                    "key":930,
+                    "icon":20,
+                    "name":"Gummy Eyeball",
+                    "description":"A large gelatinous ball of...meat.\nA healthy food most people wouldn?ft poke with a stick."
+                },
+                {
+                    "key":931,
+                    "icon":20,
+                    "name":"Lucky Fang",
+                    "description":"A sharp, jagged, saw-like fang. Once ground into a fine\npowder, it is used to spice up dishes."
+                },
+                {
+                    "key":932,
+                    "icon":20,
+                    "name":"Monster Carapace",
+                    "description":"The tender meat inside the shell is a real prize.\nBeing quite lean, the flesh has a light taste."
+                },
+                {
+                    "key":933,
+                    "icon":20,
+                    "name":"Beast Flesh",
+                    "description":"Monster flesh with a slight odor.\nThe more you chew it the better it tastes."
+                },
+                {
+                    "key":934,
+                    "icon":20,
+                    "name":"Fish Fillet",
+                    "description":"Fish with a rather sinewy texture.\nIt?fs quite tough to chew for being light white meat."
+                },
+                {
+                    "key":935,
+                    "icon":20,
+                    "name":"Tender Poultry",
+                    "description":"Monster meat with a rather ordinary flavor. Its leanness\nmakes it a popular ingredient among women, however."
+                },
+                {
+                    "key":936,
+                    "icon":20,
+                    "name":"Clear Gelatin",
+                    "description":"A tasteless, scentless gelatinous strand.\nIt melts in the mouth like a smooth froth."
+                },
+                {
+                    "key":937,
+                    "icon":20,
+                    "name":"Bird Egg",
+                    "description":"A giant egg the size of a child?fs head.\nPrized in the East as a revitalizing agent."
+                },
+                {
+                    "key":938,
+                    "icon":20,
+                    "name":"Fish Egg",
+                    "description":"A fun food that pops in the mouth.\nIt is a popular ingredient in Eastern cooking."
+                },
+                {
+                    "key":939,
+                    "icon":20,
+                    "name":"Prickly Seed",
+                    "description":"A seed covered by a host of tiny thorns.\nSaut?ing it in a frying pan really brings out the flavor."
+                },
+                {
+                    "key":940,
+                    "icon":20,
+                    "name":"Smelt",
+                    "description":"A small freshwater fish easily caught for sport.\nIf battered and deep-fried, it can be eaten head and all."
+                },
+                {
+                    "key":941,
+                    "icon":20,
+                    "name":"Liberl Carp",
+                    "description":"An omnivorous whiskered fish living in lakes.\nAlthough it has a peculiar smell it is great in many foods."
+                },
+                {
+                    "key":942,
+                    "icon":20,
+                    "name":"Rainbow Trout",
+                    "description":"A medium-sized fish with iridescent lines on the sides of\nits body. Best cooked while it's fresh!"
+                },
+                {
+                    "key":943,
+                    "icon":20,
+                    "name":"Tiger Rockfish",
+                    "description":"A beautiful fish with a vivid orange belly.\nIt tastes best if salted and grilled on a stick."
+                },
+                {
+                    "key":944,
+                    "icon":20,
+                    "name":"Salmon",
+                    "description":"A fish that goes upstream to lay its eggs.\nIt is a well-known edible fish with flavorful pink meat."
+                },
+                {
+                    "key":1000,
+                    "icon":20,
+                    "name":"Practice Weapon",
+                    "description":"Lacking in the power department,\nbut better than nothing."
+                }	]
+        }    }
+}

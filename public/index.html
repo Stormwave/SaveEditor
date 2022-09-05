@@ -1,20 +1,92 @@
 <html>
     <head>
-        <base href=".">
-        <link rel="icon" type="image/png" href="favicon.png" />
-        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-        <script
-            src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
-        <link rel="stylesheet" href="./save_editor.css?v0.32">
+        <link rel="stylesheet" href="./semantic.min.css">
+        <script src="./jquery.min.js"></script>
+        <script src="./semantic.min.js"></script>
+        <script src="anime.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <div id="core">
-        </div>
-        <script src='app.js?v0.32'></script>
-        <script src='modules.js?v0.32' type="module"></script>
+        <app>
+        </app>
+        <modal-close></modal-close>
+        <hex-viewer>
+        </hex-viewer>
+        <templates>
+            <game-list>
+                {{ game-items }}
+                <input type="file" id="fileElem" onchange="handleFiles(this.files, event)">
+            </game-list>
+            <game-item>
+                <div class="drop-area" game="{{ details.name }}" onmouseover="moveUpload(event);" onclick="uploadClick(event);">
+                    <form class="game-form">
+                        <span class='title'>{{ details.name }}</span>
+                        <img src="{{ details.icon }}"/>
+                    </form>
+                </div>
+            </game-item>
+            <uploader>
+                <div class="drop-area">
+                    <form class="my-form">
+                      <p>Upload your save file with the file dialog or by dragging and dropping it onto the dashed region</p>
+                      <input type="file" id="fileElem" onchange="handleFiles(this.files)">
+                      <label class="button" for="fileElem">Select some files</label>
+                    </form>
+                  </div>
+            </uploader>
+            <hex-viewer>
+                <div class="header">{{ details.name }}</div>
+                <div class="hex-row">
+                    <div class="hex-grid">
+                        <div class='top'>{{ hex-viewer.top }}</div>
+                        <div class='scroller'><div class='body'>{{ hex-viewer.body }}</div></div>
+                    </div>
+                    <div class="hex-tools">
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s8">
+                                        <input id="offset" type="text">
+                                        <label for="offset">Go To Offset</label>
+                                    </div>
+                                    <div class="input-field col s4">
+                                        <a class="waves-effect waves-light btn">Go To</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row small">
+                                    <div class="input-field col s8">
+                                        <input id="search" type="text" value="7368756100000000">
+                                        <label for="search">Search...</label>
+                                    </div>
+                                </div>
+                                <div class="row small">
+                                    <div class="input-field col s2">
+                                        <a class="waves-effect waves-light btn" onclick="hexviewer.search('hex')">Hex</a>
+                                    </div>
+                                    <div class="input-field col s2">
+                                        <a class="waves-effect waves-light btn" onclick="hexviewer.search('dec')">Dec</a>
+                                    </div>
+                                    <div class="input-field col s2">
+                                        <a class="waves-effect waves-light btn" onclick="hexviewer.search('txt')">Txt</a>
+                                    </div>
+                                </div>
+                                <div class="row small search-results" style="display:none;"><div class="input-field col s8">0 results</div></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </hex-viewer>
+        </templates>
+        <active-templates>
+        </active-templates>
+        <script src="./modules/base.js"></script>
+        <script src="./templates.js"></script>
+        <script src="./hexviewer.js"></script>
+        <script src="./loader.js"></script>
     </body>
 </html>

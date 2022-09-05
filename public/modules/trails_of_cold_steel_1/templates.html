@@ -1,0 +1,234 @@
+<main>
+    <div class="row">
+        <div class="">
+            <ul class="tabs">
+                <li class="tab col s3" tab=0><a onclick="active_game.changeTab(event)">General</a></li>
+                <li class="tab col s3" tab=1><a onclick="active_game.changeTab(event)">Characters</a></li>
+                <li class="tab col s3 active" tab=2><a onclick="active_game.changeTab(event)">Inventory</a></li>
+            </ul>
+        </div>
+        <div id="tab_1" class="col s12 tab-item">
+            <div class='game-panel'>
+                <form class="ui inverted form">
+                    <h4 class="ui inverted dividing header">Stats</h4>
+                    <div class="field">
+                        <div class="seven fields">
+                            <div class="field">
+                                <label>Mira</label>
+                                <input type="text" placeholder="Mira" field="mira">
+                            </div>
+                            <div class="field">
+                                <label>New Game</label>
+                                <input type="text" placeholder="New Game" field="new_game">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="seven fields">
+                            <div class="field">
+                                <label>Battles</label>
+                                <input type="text" placeholder="Battles" field="battles.count">
+                            </div>
+                            <div class="field">
+                                <label>Battles Lost</label>
+                                <input type="text" placeholder="Battles Lost" field="battles.lost">
+                            </div>
+                            <div class="field">
+                                <label>Battles Won</label>
+                                <input type="text" placeholder="Battles Won" field="battles.won">
+                            </div>
+                            <div class="field">
+                                <label>Battles Fled</label>
+                                <input type="text" placeholder="Battles Fled" field="battles.fled">
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="ui inverted dividing header">Seriph</h4>
+                    <div class="field">
+                        <div class="seven fields">
+                            <div class="field">
+                                <label>Earth</label>
+                                <input type="text" placeholder="Earth" field="seriph|0.earth">
+                            </div>
+                            <div class="field">
+                                <label>Water</label>
+                                <input type="text" placeholder="Water" field="seriph|4.water">
+                            </div>
+                            <div class="field">
+                                <label>Fire</label>
+                                <input type="text" placeholder="Fire" field="seriph|8.fire">
+                            </div>
+                            <div class="field">
+                                <label>Wind</label>
+                                <input type="text" placeholder="Wind" field="seriph|12.wind">
+                            </div>
+                            <div class="field">
+                                <label>Time</label>
+                                <input type="text" placeholder="Time" field="seriph|16.time">
+                            </div>
+                            <div class="field">
+                                <label>Space</label>
+                                <input type="text" placeholder="Space" field="seriph|20.space">
+                            </div>
+                            <div class="field">
+                                <label>Mirage</label>
+                                <input type="text" placeholder="Mirage" field="seriph|24.mirage">
+                            </div>
+                            <div class="field">
+                                <label>Mass</label>
+                                <input type="text" placeholder="Mirage" field="seriph|28.mass">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>            
+        </div>
+        <div id="tab_2" class="col s12 tab-item">
+            {{ template.characters }}
+        </div>
+        <div id="tab_3" class="col s12 tab-item">
+            {{ template.inventory }}
+        </div>
+    </div>
+</main>
+
+<characters>
+    <div class='game-panel'>
+        <form class="ui inverted form vertical-split">
+            <div style="width:200px">
+                <h4 class="ui inverted header">Line-up</h4>
+                <div class="box top-margin left-margin">
+                    <div class="field">
+                        {{ custom.character-selector }}
+                    </div>
+                </div>
+            </div>
+            <div style="width: calc(100% - 300px);">
+                <h4 class="ui inverted header">Stats</h4>
+                <div class="field">
+                    {{ template.character-group }}
+                </div>
+            </div>
+        </form>
+    </div>
+</characters>
+
+<character-selector class="field">
+    <label>Party Member {{ eval.index+1 }}</label>
+    <select class="ui dropdown" data-index="{{ index }}">
+        <option value="65535" selected>None</option>
+        {{ custom.character-dropdown }}
+    </select>
+</character-selector>
+
+<character-dropdown>
+    <option if="id!=65535" value="{{ id }}" selected>{{ name }}</option>
+</character-dropdown>
+
+<character-group class="ui form">
+    <div class='game-panel'>
+        <form class="ui inverted form">
+            <ul class="sub-tabs"  style="position:relative;top:-20px">
+                {{ custom.character-tabs }}
+            </ul>
+            <div class="category-panel" style="top:130px">{{ custom.character-panel }}</div>
+            <div class="category-panel-secondary"></div>
+        </form>
+    </div>
+</character-group>
+
+<character-tabs inner="true">
+    <li name="{{ name }}" class="sub-tab {{ eval.(data.id==active_game.data.character.id?'active':'') }}" onclick="active_game.changeCharacter('{{ name }}')">
+        {{ name }}
+    </li>
+</character-tabs>
+
+<character-panel inner="true">
+    <div class="transition visible" style="display: block !important;" data-id="{{ id }}"">
+        <div class="eight fields" style='flex-wrap: wrap;padding:10px;'>
+            {{ custom.character-field.level }}
+            {{ custom.character-field.exp }}
+        </div>
+        <div class="eight fields" style='flex-wrap: wrap;padding:10px;'>
+            {{ custom.character-field.hp }}
+            {{ custom.character-field.hp_max }}
+            {{ custom.character-field.ep }}
+            {{ custom.character-field.ep_max }}
+            {{ custom.character-field.cp }}
+            {{ custom.character-field.cp_max }}
+        </div>
+        <div class="nine fields" style='flex-wrap: wrap;padding:10px;'>
+            {{ custom.character-field.str }}
+            {{ custom.character-field.def }}
+            {{ custom.character-field.ats }}
+            {{ custom.character-field.adf }}
+            {{ custom.character-field.spd }}
+            {{ custom.character-field.dex }}
+            {{ custom.character-field.agl }}
+            {{ custom.character-field.mov }}
+            {{ custom.character-field.rng }}
+        </div>
+        <div class="seven fields" style='flex-wrap: wrap;padding:10px;'>
+            {{ custom.character-equip.weapon }}
+            {{ custom.character-equip.armor }}
+            {{ custom.character-equip.shoes }}
+            {{ custom.character-equip.accessory_1 }}
+            {{ custom.character-equip.accessory_2 }}
+            {{ custom.character-equip.costume_1 }}
+            {{ custom.character-equip.costume_2 }}
+        </div>
+    </div>
+</character-panel>
+
+<character-field inner="true">
+    <div class="field">
+        <span style="color:white">{{ title }}</span>
+        <div class="ui inverted input">
+            <input name="{{ name }}" type="text" placeholder="{{ title }}" field="{{ field }}">
+        </div>
+    </div>
+</character-field>
+
+<character-equip class="field">
+    <label>{{ title }}</label>
+    <select class="ui dropdown" name="{{ field }}">
+        <option type="none" value="65535" selected>None</option>
+        {{ options }}
+    </select>
+</character-equip>
+
+<inventory class="ui form">
+    <div class='game-panel'>
+        <form class="ui inverted form">
+            <h4 class="ui inverted dividing header">Inventory</h4>
+            <ul class="sub-tabs">
+                {{ custom.category-tabs }}
+            </ul>
+            <div class="category-panel inventory-panel" style="top:180px">{{ custom.category-panel }}</div>
+            <div class="category-panel-secondary"></div>
+        </form>
+    </div>
+</inventory>
+
+<category-tabs inner="true">
+    <li name="{{ name }}" class="sub-tab {{ eval.(data.name==active_game.data.category.name?'active':'') }}" onclick="active_game.changeCategory('{{ name }}')">
+        {{ name }}
+    </li>
+</category-tabs>
+
+<category-panel inner="true" >
+    <div class="transition visible">
+        <div class="field">
+            <div class="eight fields" style='flex-wrap: wrap;padding:20px;'>
+                {{ custom.category-item }}
+            </div>
+        </div>
+    </div>
+</category-panel>
+
+<category-item class="field tooltipped" style="margin-bottom:10px;" data-position="top" data-tooltip="{{ description }}" data-enter-delay="5000">
+    <span style="color:white"><span class="item-{{ group }} type-{{ sub }}"></span> {{ name }}</span>
+    <div class="ui inverted input">
+        <input key="{{ key }}" type="text" placeholder="Quantity..." value="{{ count }}">
+    </div>
+</category-item>
