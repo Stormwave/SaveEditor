@@ -18,7 +18,7 @@
                             },
             "seriph":       { "offset":"0x25354", "type":"mapArray", "size":4, "maps":[ "earth", "water", "fire", "wind", "time", "space", "mirage" ] },
             "line_up":      { "offset":"0x01F42C", "type":"mapDataArray", "step":4, "size":4, "map":"name", "ref":"character_id" },
-            "characters":   { "offset":"0x01F44C", "type":"struct", "stride":60, "length":8, "keys":
+            "characters":   { "offset":"0x01F44C", "type":"struct", "stride":60, "length":16, "keys":
                                 {
                                     "name": { "type":"map", "ref":"character_id", "key":"index" },
                                     "id":   { "type":"index" },
