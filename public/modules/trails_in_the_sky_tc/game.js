@@ -4,9 +4,16 @@ class TrailsInTheSkyTC extends SaveEditorGame
     {
         super({
             name:"Trails In The Sky TC",
+            sort_name:"trails_in_the_sky_3",
+            group:"Trails In The Sky",
             version:0.1,
             author:"Andrew Cornforth",
-            data:true
+            data:true,
+            file_extension:"sav",
+            paths:
+            [
+                "%UserProfile%/Saved Games/FALCOM/ED_SORA3"
+            ]
         });
         this.data = {};
         this.offset_adjustment = 0;

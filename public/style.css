@@ -1,6 +1,6 @@
 :root
 {
-    --title-overlay:rgba(0, 0, 0, 0.8);
+    --title-overlay:rgba(0, 0, 0, 0.3);
     --stroke:rgba(255, 255, 255, 0.05);
     --stroke-light:rgba(255, 255, 255, 0.02);
     --stroke-strong:rgba(255, 255, 255, 0.3);
@@ -32,6 +32,14 @@
     --gold-glow:rgb(253, 230, 125);
     --white:rgb(190, 190, 190);
     --white-glow:rgb(255, 255, 255);
+}
+
+.field-panel
+{
+    border:1px solid var(--stroke);
+    background-color:var(--background-tint);
+    border-radius:5px;
+    padding:20px !important;
 }
 
 body
@@ -158,6 +166,7 @@ img.input_prefix
 
 game-list
 {
+    margin-top:50px;
     display:flex;
     flex-flow: wrap;
     padding:10px;
@@ -167,7 +176,7 @@ game-item
     cursor:hand;
     position:relative;
     padding:10px;
-    height:192px;
+    height:186px;
     z-index:10;
     position:relative;
 }

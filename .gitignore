@@ -14,6 +14,7 @@ firebase-debug.*.log*
 # Firebase cache
 .firebase/
 dev/
+UI/
 
 # Firebase config
 

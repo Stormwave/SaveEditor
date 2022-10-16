@@ -4,9 +4,16 @@ class TrailsInTheSkySC extends SaveEditorGame
     {
         super({
             name:"Trails In The Sky SC",
+            sort_name:"trails_in_the_sky_2",
+            group:"Trails In The Sky",
             version:0.1,
             author:"Andrew Cornforth",
-            data:true
+            data:true,
+            file_extension:"sav",
+            paths:
+            [
+                "%SteamUserProfile%/251150/remote/SC"
+            ]
         });
         this.data = {};
         this.offset_adjustment = 0;

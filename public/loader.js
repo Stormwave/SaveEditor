@@ -21,6 +21,7 @@ let game_list = [
     { path:"trails_in_the_sky_fc", class:"TrailsInTheSkyFC" },
     { path:"trails_in_the_sky_sc", class:"TrailsInTheSkySC" },
     { path:"trails_in_the_sky_tc", class:"TrailsInTheSkyTC" }
+//    { path:"trails_of_cold_steel_1", class:"TrailsOfColdSteel1" }
  ];
 let waiting_list = game_list.length;
 
@@ -56,38 +57,59 @@ function moveUpload(event)
 
 function uploadClick(event)
 {
-    let uploader = document.querySelector("#fileElem");
-    uploader.click();
+    if (window.electronAPI)
+    {
+        let uploader = document.querySelector("#fileElem");
+        let _game = games.filter(e=>e.details.name==uploader.getAttribute("game"))[0];
+        window.electronAPI.uploadFile(_game.details.paths, _game.details.file_extension);
+    }
+    else
+    {
+        let uploader = document.querySelector("#fileElem");
+        uploader.click();
+    }
 }
 
 function load_complete()
 {
-    console.log("Loaded modules.");
-/*    debugLoad("TrailsInTheSkyTC", "TV_SAV3.SAV", ()=>
+    if (location.hash.length>5 && location.hash.substr(0, 6)=="#debug")
     {
-    });
-    return;*/
-    
-    if (location.hash=="")
-    {
-        location.hash = "#games"
+        let p = location.hash.split("=");
+        if (p.length==2)
+        {
+            let d = p[1].split("/");
+            if (d.length==2)
+            {
+                debugLoad(d[0], d[1], ()=>
+                { 
+                    active_game.render();  
+                });
+            }
+        }
     }
     else
     {
-        if (active_game!=null)
+        if (location.hash=="")
         {
-            if (location.hash.substr(1)!=active_game.details.name.replace(/ /g, ""))
+            location.hash = "#games"
+        }
+        else
+        {
+            if (active_game!=null)
             {
-                location.hash = active_game.details.name.replace(/ /g, "");
+                if (location.hash.substr(1)!=active_game.details.name.replace(/ /g, ""))
+                {
+                    location.hash = active_game.details.name.replace(/ /g, "");
+                }
+                else
+                {
+                    loadPage();
+                }
             }
             else
             {
                 loadPage();
             }
-        }
-        else
-        {
-            loadPage();
         }
     }
 }
@@ -110,8 +132,16 @@ function loadPage()
                     let main_tpl = templates.find("game-list");
                     let tpl = templates.find("game-item");
                     let out = "";
+                    games.sort((a, b)=>{ a.details.sort_name.localeCompare(b.details.sort_name); });
+                    games.sort((a, b)=>{ a.details.group.localeCompare(b.details.group); });
+                    let last_group = null;
                     games.forEach(game=>
                         {
+                            if (game.details.group!=last_group)
+                            {
+                                out += templates.render(templates.find("game-seperator"), game);
+                                last_group = game.details.group;
+                            }
                             out += templates.render(tpl, game);
                         });
                     document.querySelector("app").innerHTML = templates.render(main_tpl, { "game-items":out });
@@ -226,6 +256,11 @@ function handleFiles(files, e)
     }
 }
 
+function findGame(name)
+{
+    return games.filter(e=>e.details.name.replace(/ /g, "")==name)[0];
+}
+
 function debugLoad(game, filename, callback)
 {
     active_game = games.filter(e=>e.details.name.replace(/ /g, "")==game)[0];
@@ -240,7 +275,12 @@ function debugLoad(game, filename, callback)
                 active_game.loadData(xhttp.response, filename);
                 hexviewer.load(active_game.data.file_data);
                 //location.hash = active_game.data.name.replace(/ /g, "");
-                loadPage();
+                if (callback!=null)
+                {
+                    callback();
+                }
+                else
+                    loadPage();
             }
         };
         xhttp.open("GET", filename, true);

@@ -160,6 +160,15 @@ class SaveEditorGame
                                         let val_o = null;
                                         switch (_o.keys[_k].type)
                                         {
+                                            case "array":
+                                                {
+                                                    let _offs = _o.offset+(n*_no.stride)+_o.keys[_k].offset;
+                                                    val_o = this.readArray(_offs, _o.keys[_k].length, 1, _o.keys[_k].size);
+                                                    val_o.forEach(_v=>
+                                                        {
+                                                            _v["type"] = this.returnTypeSize(_o.keys[_k].size);
+                                                        });
+                                                } break;
                                             case "double": _s = 8; break;
                                             case "int": _s = 4; break;
                                             case "short": _s = 2; break;
@@ -187,7 +196,6 @@ class SaveEditorGame
                                                 _nk[_k] = { offset:_offs, size:_s, value:val, type:_o.keys[_k].type }
                                             else if (!null_break && null_end)
                                                 _nk[_k] = val;
-                                            console.log(_nk[_k]);
                                         }
                                         else
                                         {
@@ -718,7 +726,6 @@ class SaveEditorGame
                 _s = _s.substr(0, _s.indexOf("["));
                 if (!isNaN(_v))
                 {
-                    console.log(_v, p[n]);
                     _obj = _obj[_s];
                     if (_obj==undefined) { return undefined; }
                     _obj = _obj[_v];
@@ -805,6 +812,17 @@ class SaveEditorGame
             case "byte": return 1;
             case "short": return 2;
             case "double": return 8;
+        }
+    }
+
+    returnTypeSize(size)
+    {
+        switch (size)
+        {
+            case 4: return "int";
+            case 2: return "short";
+            case 1: return "byte";
+            case 8: return "double";
         }
     }
 

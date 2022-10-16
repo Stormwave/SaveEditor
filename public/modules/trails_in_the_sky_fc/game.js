@@ -6,7 +6,13 @@ class TrailsInTheSkyFC extends SaveEditorGame
             name:"Trails In The Sky FC",
             version:0.1,
             author:"Andrew Cornforth",
-            data:true
+            data:true,
+            file_extension:"sav",
+            group:"Trails In The Sky",
+            paths:
+            [
+                "%SteamUserProfile%/251150/remote/FC"
+            ]
         });
         this.data = {};
         this.offset_adjustment = 0;

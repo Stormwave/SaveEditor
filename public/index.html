@@ -15,9 +15,21 @@
         </hex-viewer>
         <templates>
             <game-list>
+                <div style="right:100px;font-size:12px;position:absolute;top:9px;width:360px;">
+                    <div style="float:left;">I hope you enjoy my save editors. If you want to<br> buy me a cup of coffee, feel free to donate.</div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="float:right;position:relative;left:10px;top:8px;">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="C9377MUA4QDF6">
+                        <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1" m8n6g70ib="">
+                    </form>
+                </div>
                 {{ game-items }}
                 <input type="file" id="fileElem" onchange="handleFiles(this.files, event)">
             </game-list>
+            <game-seperator style="width:100%">
+                <h4 class="ui inverted dividing header">{{ details.group }}</h4>
+            </game-seperator>
             <game-item>
                 <div class="drop-area" game="{{ details.name }}" onmouseover="moveUpload(event);" onclick="uploadClick(event);">
                     <form class="game-form">
