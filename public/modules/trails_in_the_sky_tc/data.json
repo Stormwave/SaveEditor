@@ -60,6 +60,1425 @@
         },
         "inventory":
         {
+            "Staff":[
+                {
+                    "key":1008,
+                    "icon":1,
+                    "name":"Amanomadra",
+                    "max":99,
+                    "description":"[STR+1200/RNG+3/DEX+10/AGL+10]\nA mystical staff that shakes the very existence of targets."
+                },
+                {
+                    "key":1004,
+                    "icon":1,
+                    "name":"Calamites Rod",
+                    "max":99,
+                    "description":"[STR+800/RNG+2]\nA staff cut from a fossilized ancient tree."
+                },
+                {
+                    "key":1005,
+                    "icon":1,
+                    "name":"Corkswain",
+                    "max":99,
+                    "description":"[STR+900/RNG+2]\nA flexible staff made from seven sticks bound together."
+                },
+                {
+                    "key":1006,
+                    "icon":1,
+                    "name":"Force Flag",
+                    "max":99,
+                    "description":"[STR+1000/RNG+3/DEX+10/AGL+10/SPD+5]\nA staff with a flag symbolic of power on it. Has wide reach."
+                },
+                {
+                    "key":1007,
+                    "icon":1,
+                    "name":"Hercule",
+                    "max":99,
+                    "description":"[STR+1100/RNG+2]\nA highly resistant staff made in ancient times."
+                },
+                {
+                    "key":1001,
+                    "icon":1,
+                    "name":"Linear Grip",
+                    "max":99,
+                    "description":"[STR+500/RNG+2]\nA simple staff for returning to basics."
+                },
+                {
+                    "key":1002,
+                    "icon":1,
+                    "name":"Nohval Staff",
+                    "max":99,
+                    "description":"[STR+600/RNG+2]\nJet-black staff that sucks in light. Processed with nohval."
+                },
+                {
+                    "key":1003,
+                    "icon":1,
+                    "name":"NON_ITEM",
+                    "max":99,
+                    "description":"[STR+700/RNG+3]\nUnused."
+                },
+                {
+                    "key":1000,
+                    "icon":1,
+                    "name":"Practice Weapon",
+                    "max":99,
+                    "description":"Lacking in the power department, but better than nothing."
+                },
+                {
+                    "key":1012,
+                    "icon":1,
+                    "name":"Sphere Soleil",
+                    "max":99,
+                    "description":"[STR+1500/RNG+3/DEX+25/AGL+25/SPD+5]\nA staff that radiates a warm glow. Made from strange ore."
+                },
+                {
+                    "key":1010,
+                    "icon":1,
+                    "name":"Umegae",
+                    "max":99,
+                    "description":"[STR+950/RNG+3/DEX+5/AGL+15/SPD+5]\nOnce a traveler's. Red petals dance in its wake."
+                },
+                {
+                    "key":1011,
+                    "icon":1,
+                    "name":"Umegae+1",
+                    "max":99,
+                    "description":"[STR+1300/RNG+3/DEX+15/AGL+25/SPD+5]\nOnce a traveler's. Red petals dance in its wake."
+                }
+            ],
+            "Knives":[
+                {
+                    "key":1055,
+                    "icon":2,
+                    "name":"Catacombs",
+                    "max":99,
+                    "description":"[STR+1100/DEX+20/AGL+20]\nTwin swords made from the fragments of an ancient blade."
+                },
+                {
+                    "key":1050,
+                    "icon":2,
+                    "name":"Hatchets",
+                    "max":99,
+                    "description":"[STR+600]\nHatchets with oval-shaped blades. Designed to be swung rapidly."
+                },
+                {
+                    "key":1051,
+                    "icon":2,
+                    "name":"Kidney Daggers",
+                    "max":99,
+                    "description":"[STR+700/DEX+10/AGL+10]\nTwin swords so sharp, foes won't even feel them."
+                },
+                {
+                    "key":1053,
+                    "icon":2,
+                    "name":"Kusanagi Blades",
+                    "max":99,
+                    "description":"[STR+900]\nOdd blades that can be joined at the hilt and used as a staff."
+                },
+                {
+                    "key":1047,
+                    "icon":2,
+                    "name":"Main-Gauche",
+                    "max":99,
+                    "description":"[STR+300]\nA sword for the left hand. Comes with one for the right, too."
+                },
+                {
+                    "key":1046,
+                    "icon":2,
+                    "name":"Misericordes",
+                    "max":99,
+                    "description":"[STR+200]\nNarrow swords made for getting through narrow gaps in armor."
+                },
+                {
+                    "key":1054,
+                    "icon":2,
+                    "name":"NON_ITEM",
+                    "max":99,
+                    "description":"[STR+1000]\nUnused."
+                },
+                {
+                    "key":1052,
+                    "icon":2,
+                    "name":"Oddeyes",
+                    "max":99,
+                    "description":"[STR+800]\nFor pros. Different sizes and give off different light."
+                },
+                {
+                    "key":1060,
+                    "icon":2,
+                    "name":"Serenity Blades",
+                    "max":99,
+                    "description":"[STR+1500/DEX+30/AGL+25]\nTwin swords with a symbol on them. Made from strange ore."
+                },
+                {
+                    "key":1048,
+                    "icon":2,
+                    "name":"Shadow Stitchers",
+                    "max":99,
+                    "description":"[STR+400/DEX+5/AGL+5]\nKnives that blend into shadows. Used for stealth operations."
+                },
+                {
+                    "key":1058,
+                    "icon":2,
+                    "name":"Snow & Rain",
+                    "max":99,
+                    "description":"[STR+950/ADF+25/DEX+25]\nOnce a traveler's. Said to have fallen from the sky."
+                },
+                {
+                    "key":1059,
+                    "icon":2,
+                    "name":"Snow & Rain+1",
+                    "max":99,
+                    "description":"[STR+1300/ADF+75/DEX+25]\nOnce a traveler's. Said to have fallen from the sky."
+                },
+                {
+                    "key":1049,
+                    "icon":2,
+                    "name":"Sting Edges",
+                    "max":99,
+                    "description":"[STR+500]\nTwin swords designed to be easy to throw for killing blows."
+                },
+                {
+                    "key":1056,
+                    "icon":2,
+                    "name":"Swallow Tails",
+                    "max":99,
+                    "description":"[STR+1200/DEX+25/AGL+25]\nSwords from old legend. Compared to birds on a battlefield."
+                }
+            ],
+            "Whips":[
+                {
+                    "key":1103,
+                    "icon":3,
+                    "name":"Arc en Ciel",
+                    "max":99,
+                    "description":"[STR+1500/RNG+4/ATS+150/ADF+150/DEX+20]\nA whip made of strange ore that glows in seven colors."
+                },
+                {
+                    "key":1091,
+                    "icon":3,
+                    "name":"Chain Whip",
+                    "max":99,
+                    "description":"[STR+500/RNG+3]\nA whip made from fine metal chains."
+                },
+                {
+                    "key":1098,
+                    "icon":3,
+                    "name":"Gorgon's Terror",
+                    "max":99,
+                    "description":"[STR+1200/RNG+4/ATS+35/ADF+35/DEX+10]\nA whip with multiple scale-covered tails."
+                },
+                {
+                    "key":1097,
+                    "icon":3,
+                    "name":"Iron Whip",
+                    "max":99,
+                    "description":"[STR+1100/RNG+3/ATS+30/ADF+30/DEX+5]\nA long, narrow iron whip made using ancient technology."
+                },
+                {
+                    "key":1095,
+                    "icon":3,
+                    "name":"Myrrh Thorns",
+                    "max":99,
+                    "description":"[STR+900/RNG+3]\nWhip made from entwining thorns from a resin-producing tree."
+                },
+                {
+                    "key":1092,
+                    "icon":3,
+                    "name":"Needle Whip",
+                    "max":99,
+                    "description":"[STR+600/RNG+3]\nA whip with thorns on its end. Steals the will to fight."
+                },
+                {
+                    "key":1093,
+                    "icon":3,
+                    "name":"NON_ITEM",
+                    "max":99,
+                    "description":"[STR+700/RNG+4]\nUnused."
+                },
+                {
+                    "key":1096,
+                    "icon":3,
+                    "name":"NON_ITEM",
+                    "max":99,
+                    "description":"[STR+1000/RNG+4]\nUnused."
+                },
+                {
+                    "key":1094,
+                    "icon":3,
+                    "name":"Severance Whip",
+                    "max":99,
+                    "description":"[STR+800/RNG+3/DEX+5]\nA whip that wraps round and tears off enemy parts."
+                },
+                {
+                    "key":1102,
+                    "icon":3,
+                    "name":"Viper",
+                    "max":99,
+                    "description":"[STR+12/RNG+3]\nA light, easy-to-use leather whip."
+                },
+                {
+                    "key":1100,
+                    "icon":3,
+                    "name":"Zigeuner",
+                    "max":99,
+                    "description":"[STR+950/RNG+4/ATS+50/ADF+50/DEX+10]\nOnce a traveler's. A common whip used by cowboys."
+                },
+                {
+                    "key":1101,
+                    "icon":3,
+                    "name":"Zigeuner+1",
+                    "max":99,
+                    "description":"[STR+1300/RNG+4/ATS+100/ADF+100/DEX+20]\nOnce a traveler's. A common whip used by cowboys."
+                }
+            ],
+            "Orbal Guns":[
+                {
+                    "key":1140,
+                    "icon":4,
+                    "name":"0-Type Orbal Gun 2",
+                    "max":99,
+                    "description":"[STR+600/RNG+5]\nA gun made by ZCF that allows you to adjust its output."
+                },
+                {
+                    "key":1146,
+                    "icon":4,
+                    "name":"Akashic R",
+                    "max":99,
+                    "description":"[STR+1200/RNG+6/DEX+25]\nAn ancient revolver that fires septium as bullets."
+                },
+                {
+                    "key":1145,
+                    "icon":4,
+                    "name":"Desperado",
+                    "max":99,
+                    "description":"[STR+1100/RNG+5/DEX+20]\nAn ancient gun with exchangeable parts."
+                },
+                {
+                    "key":1136,
+                    "icon":4,
+                    "name":"Dual Star",
+                    "max":99,
+                    "description":"[STR+200/RNG+5]\nA consumer-grade orbal gun made by the Reinford Company."
+                },
+                {
+                    "key":1148,
+                    "icon":4,
+                    "name":"Eine Kleine",
+                    "max":99,
+                    "description":"[STR+750/RNG+6/DEX+30/SPD+5]\nOnce a traveler's. Reflects bullets inside before firing."
+                },
+                {
+                    "key":1149,
+                    "icon":4,
+                    "name":"Eine Kleine+1",
+                    "max":99,
+                    "description":"[STR+950/RNG+6/DEX+35/SPD+5]\nOnce a traveler's. Reflects bullets inside before firing."
+                },
+                {
+                    "key":1150,
+                    "icon":4,
+                    "name":"Eine Kleine+2",
+                    "max":99,
+                    "description":"[STR+1300/RNG+6/DEX+40/SPD+5]\nOnce a traveler's. Reflects bullets inside before firing."
+                },
+                {
+                    "key":1138,
+                    "icon":4,
+                    "name":"Juggernaut",
+                    "max":99,
+                    "description":"[STR+400/RNG+6/DEX+5]\nThe latest high-powered orbal gun from the Verne Company."
+                },
+                {
+                    "key":1151,
+                    "icon":4,
+                    "name":"Masquerader",
+                    "max":99,
+                    "description":"[STR+1500/RNG+6/DEX+50]\nMade from strange ore. Bullets automatically pursue foes."
+                },
+                {
+                    "key":1141,
+                    "icon":4,
+                    "name":"Moby Dick",
+                    "max":99,
+                    "description":"[STR+700/RNG+6/DEX+10]\nVerne-made, with a bayonet attached. Also used in the army."
+                },
+                {
+                    "key":1144,
+                    "icon":4,
+                    "name":"Olibanum Ray",
+                    "max":99,
+                    "description":"[STR+1000/RNG+6/DEX+15]\nA gun made of fragrant wood. Full of Eastern technology."
+                },
+                {
+                    "key":1143,
+                    "icon":4,
+                    "name":"Peace Breaker",
+                    "max":99,
+                    "description":"[STR+900/RNG+5]\nAn orbal gun of unknown origin popular in the underworld."
+                },
+                {
+                    "key":1142,
+                    "icon":4,
+                    "name":"Phantom S",
+                    "max":99,
+                    "description":"[STR+800/RNG+5]\nThe Reinford Company's latest model of gun. Has a silencer."
+                },
+                {
+                    "key":1137,
+                    "icon":4,
+                    "name":"Skyfish",
+                    "max":99,
+                    "description":"[STR+300/RNG+5]\nA powerful orbal gun that fires bullets in rapid succession."
+                },
+                {
+                    "key":1139,
+                    "icon":4,
+                    "name":"Stinger-M",
+                    "max":99,
+                    "description":"[STR+500/RNG+5]\nA military-grade orbal gun from Reinford. Small in size."
+                }
+            ],
+            "Swords":[
+                {
+                    "key":1184,
+                    "icon":5,
+                    "name":"Akashic Heart",
+                    "max":99,
+                    "description":"[STR+400/ATS+25/AGL+5]\nA sharp one-handed sword with a twisting blade."
+                },
+                {
+                    "key":1187,
+                    "icon":5,
+                    "name":"Calvary Cross",
+                    "max":99,
+                    "description":"[STR+700/ATS+30/AGL+10]\nA sword made in Arteria, with a grail design on the guard."
+                },
+                {
+                    "key":1192,
+                    "icon":5,
+                    "name":"Celeste Blue",
+                    "max":99,
+                    "description":"[STR+1200/ATS+45/AGL+25]\nHas a see-through blade that changes color based on the sky."
+                },
+                {
+                    "key":1185,
+                    "icon":5,
+                    "name":"Damascus Sword",
+                    "max":99,
+                    "description":"[STR+500]\nA high-quality Imperial longsword that doesn't chip easily."
+                },
+                {
+                    "key":1197,
+                    "icon":5,
+                    "name":"Divine Nova",
+                    "max":99,
+                    "description":"[STR+1550/ATS+80/DEX+10/AGL+25]\nA sword made of strange ore. Cannot be broken."
+                },
+                {
+                    "key":1182,
+                    "icon":5,
+                    "name":"Epee",
+                    "max":99,
+                    "description":"[STR+200]\nA slim weapon that repels much larger ones. For the skilled."
+                },
+                {
+                    "key":1211,
+                    "icon":5,
+                    "name":"Epee+",
+                    "max":99,
+                    "description":"[STR+200]\nA slim weapon that repels much larger ones. For the skilled."
+                },
+                {
+                    "key":1188,
+                    "icon":5,
+                    "name":"Fealty Sword",
+                    "max":99,
+                    "description":"[STR+800]\nA knight's sword given by Liberl's royalty to loyal subjects."
+                },
+                {
+                    "key":1181,
+                    "icon":5,
+                    "name":"Foil",
+                    "max":99,
+                    "description":"[STR+100]\nA narrow weapon designed for thrusting attacks."
+                },
+                {
+                    "key":1210,
+                    "icon":5,
+                    "name":"Foil+",
+                    "max":99,
+                    "description":"[STR+100]\nA narrow weapon designed for thrusting attacks."
+                },
+                {
+                    "key":1191,
+                    "icon":5,
+                    "name":"Mistilteinn",
+                    "max":99,
+                    "description":"[STR+1100/ATS+40/AGL+20]\nA wooden sword that repairs itself. Made from an ancient tree."
+                },
+                {
+                    "key":1183,
+                    "icon":5,
+                    "name":"Scramasax",
+                    "max":99,
+                    "description":"[STR+300]\nA one-handed sword for those who fight for a living."
+                },
+                {
+                    "key":1186,
+                    "icon":5,
+                    "name":"Sempre Verde",
+                    "max":99,
+                    "description":"[STR+600]\nA beautiful one-handed sword that radiates pale green light."
+                },
+                {
+                    "key":1190,
+                    "icon":5,
+                    "name":"Sigrdrifa",
+                    "max":99,
+                    "description":"[STR+1000/ATS+35/AGL+15]\nA sword belonging to Liberl's Royal Family. Brings victory."
+                },
+                {
+                    "key":1194,
+                    "icon":5,
+                    "name":"Vorpal Sword",
+                    "max":99,
+                    "description":"[STR+850/ATS+20/DEX+5/AGL+5]\nOnce a traveler's. Destroys fiends from the world of words."
+                },
+                {
+                    "key":1195,
+                    "icon":5,
+                    "name":"Vorpal Sword+1",
+                    "max":99,
+                    "description":"[STR+950/ATS+40/DEX+5/AGL+15]\nOnce a traveler's. Destroys fiends from the world of words."
+                },
+                {
+                    "key":1196,
+                    "icon":5,
+                    "name":"Vorpal Sword+2",
+                    "max":99,
+                    "description":"[STR+1300/ATS+60/DEX+5/AGL+20]\nOnce a traveler's. Destroys fiends from the world of words."
+                },
+                {
+                    "key":1189,
+                    "icon":5,
+                    "name":"Wing Blade",
+                    "max":99,
+                    "description":"[STR+900]\nA sword designed to resemble wings."
+                }
+            ],
+            "Greatswords":[
+                {
+                    "key":1227,
+                    "icon":6,
+                    "name":"Antler Sword",
+                    "max":99,
+                    "description":"[STR+350]\nA rare two-handed sword made using a giant monster horn."
+                },
+                {
+                    "key":1233,
+                    "icon":6,
+                    "name":"Apeiron",
+                    "max":99,
+                    "description":"[STR+950/DEX-15]\nA two-handed sword with a transparent edge to confuse foes."
+                },
+                {
+                    "key":1236,
+                    "icon":6,
+                    "name":"Apocrypha",
+                    "max":99,
+                    "description":"[STR+1250/DEX-20]\nA monstrous, red two-handed sword with a dragon emblem on it."
+                },
+                {
+                    "key":1241,
+                    "icon":6,
+                    "name":"Dino Fossil",
+                    "max":99,
+                    "description":"[STR+1550/DEX+20/AGL+25]\nA two-handed sword with a distorted blade. Made of strange ore."
+                },
+                {
+                    "key":1232,
+                    "icon":6,
+                    "name":"Dragonsbane",
+                    "max":99,
+                    "description":"[STR+850]\nA sword loved by a mercenary who lived during the Middle Ages."
+                },
+                {
+                    "key":1234,
+                    "icon":6,
+                    "name":"Galatyn",
+                    "max":99,
+                    "description":"[STR+1050]\nA mysterious sword that converts sunlight into power."
+                },
+                {
+                    "key":1231,
+                    "icon":6,
+                    "name":"Hard Rock",
+                    "max":99,
+                    "description":"[STR+750]\nA giant two-handed sword made painstakingly from hard rock."
+                },
+                {
+                    "key":1235,
+                    "icon":6,
+                    "name":"Hihiirokane Sword",
+                    "max":99,
+                    "description":"[STR+1150]\nAn ancient scarlet blade that can no longer be made."
+                },
+                {
+                    "key":1230,
+                    "icon":6,
+                    "name":"Kumo no Tachi",
+                    "max":99,
+                    "description":"[STR+650/DEX-10]\nA longsword with a long, narrow blade."
+                },
+                {
+                    "key":1228,
+                    "icon":6,
+                    "name":"NON_ITEM",
+                    "max":99,
+                    "description":"[STR+450]\nUnused"
+                },
+                {
+                    "key":1238,
+                    "icon":6,
+                    "name":"Pendragon",
+                    "max":99,
+                    "description":"[STR+900/DEX+5/AGL+10]\nOnce a traveler's. A broken holy sword that is still huge."
+                },
+                {
+                    "key":1239,
+                    "icon":6,
+                    "name":"Pendragon+1",
+                    "max":99,
+                    "description":"[STR+1100/DEX+10/AGL+15]\nOnce a traveler's. A broken holy sword that is still huge."
+                },
+                {
+                    "key":1240,
+                    "icon":6,
+                    "name":"Pendragon+2",
+                    "max":99,
+                    "description":"[STR+1350/DEX+15/AGL+20]\nOnce a traveler's. A broken holy sword that is still huge."
+                },
+                {
+                    "key":1229,
+                    "icon":6,
+                    "name":"Rustic Sword",
+                    "max":99,
+                    "description":"[STR+550]\nA two-handed sword favored by the military. Crude but strong."
+                },
+                {
+                    "key":1226,
+                    "icon":6,
+                    "name":"Two-Handed Sword",
+                    "max":99,
+                    "description":"[STR+250]\nA broadsword made from scratch using an ancient method."
+                }
+            ],
+            "Orbal Cannons":[
+                {
+                    "key":1281,
+                    "icon":7,
+                    "name":"Disaster Cannon",
+                    "max":99,
+                    "description":"[STR+1100/RNG+4/Area (S)]\nLeft by the ancients. One shot bores several holes."
+                },
+                {
+                    "key":1272,
+                    "icon":7,
+                    "name":"G-03",
+                    "max":99,
+                    "description":"[STR+200/RNG+4/Area (S)]\nA low-recoil orbal cannon developed at ZCF."
+                },
+                {
+                    "key":1277,
+                    "icon":7,
+                    "name":"Gatling Gear",
+                    "max":99,
+                    "description":"[STR+700/RNG+5/Area (S)]\nA prototype orbal cannon made by Reinford for suppression."
+                },
+                {
+                    "key":1280,
+                    "icon":7,
+                    "name":"Grand Slam",
+                    "max":99,
+                    "description":"[STR+1000/RNG+5/Area (S)]\nAn antique cannon made using a combustion engine."
+                },
+                {
+                    "key":1271,
+                    "icon":7,
+                    "name":"Hybrid-D",
+                    "max":99,
+                    "description":"[STR+100/RNG+4/Area (S)]\nA tool used by ZCF engineers customized as an orbal cannon."
+                },
+                {
+                    "key":1287,
+                    "icon":7,
+                    "name":"Meltdown Buster",
+                    "max":99,
+                    "description":"[STR+1500/RNG+5/DEF/ATS/SPD+10/ADF+20/DEX+50/Area (M)]\nA deadly orbal cannon made from strange ore that melts space."
+                },
+                {
+                    "key":1284,
+                    "icon":7,
+                    "name":"Merciless Rocket",
+                    "max":99,
+                    "description":"[STR+850/RNG+5/ADF+5/DEX+20/SPD+5/Area (M)\nOnce a traveler's. An orbal cannon for all situations."
+                },
+                {
+                    "key":1285,
+                    "icon":7,
+                    "name":"Merciless Rocket+1",
+                    "max":99,
+                    "description":"[STR+950/RNG+5/ADF+10/DEX+30/SPD+5/Area (M)]\nOnce a traveler's. An orbal cannon for all situations."
+                },
+                {
+                    "key":1286,
+                    "icon":7,
+                    "name":"Merciless Rocket+2",
+                    "max":99,
+                    "description":"[STR+1300/RNG+5/ADF+15/DEX+40/SPD+5/Area (M)\nOnce a traveler's. An orbal cannon for all situations."
+                },
+                {
+                    "key":1273,
+                    "icon":7,
+                    "name":"Parabola Cannon",
+                    "max":99,
+                    "description":"[STR+300/RNG+4/Area (S)]\nA laser-like orbal cannon developed as a prototype at ZCF."
+                },
+                {
+                    "key":1276,
+                    "icon":7,
+                    "name":"R-Launcher",
+                    "max":99,
+                    "description":"[STR+600/RNG+4/Area (S)]\nA mid-size orbal cannon with high power and instant charging."
+                },
+                {
+                    "key":1279,
+                    "icon":7,
+                    "name":"Sentinel",
+                    "max":99,
+                    "description":"[STR+900/RNG+4/Area (S)]\nA restoration of a weapon found inside an ancient ruin."
+                },
+                {
+                    "key":1274,
+                    "icon":7,
+                    "name":"Stun GB",
+                    "max":99,
+                    "description":"[STR+400/RNG+5/Area (S)]\nA small orbal cannon made by Reinford. Marketed toward civilians."
+                },
+                {
+                    "key":1275,
+                    "icon":7,
+                    "name":"UG-01",
+                    "max":99,
+                    "description":"[STR+500/RNG+4/Area (S)]\nA next-generation ZCF product that builds on the G-Series."
+                },
+                {
+                    "key":1278,
+                    "icon":7,
+                    "name":"UG-02",
+                    "max":99,
+                    "description":"[STR+800/RNG+4/Area (S)]\nThe latest model in the UG series. Can be mounted."
+                },
+                {
+                    "key":1282,
+                    "icon":7,
+                    "name":"Vritra-han",
+                    "max":99,
+                    "description":"[STR+1200/RNG+5/Area (S)]\nA destructive weapon meaning 'destroyer of Vritra.'"
+                }
+            ],
+            "Gauntlets":[
+                {
+                    "key":1324,
+                    "icon":8,
+                    "name":"Acalanatha",
+                    "max":99,
+                    "description":"[STR+1250/DEX+20/SPD+15]\nGauntlets made from the earth of a sacred mountain in Calvard."
+                },
+                {
+                    "key":1322,
+                    "icon":8,
+                    "name":"Gold Crests",
+                    "max":99,
+                    "description":"[STR+1050/DEX+10/SPD+5]\nGolden gauntlets from the East. Ornamental yet strong."
+                },
+                {
+                    "key":1326,
+                    "icon":8,
+                    "name":"Iron Arms",
+                    "max":99,
+                    "description":"[STR+1000/DEX+30/SPD+10]\nOnce a traveler's. The arms of a lost Goddess statue."
+                },
+                {
+                    "key":1327,
+                    "icon":8,
+                    "name":"Iron Arms+1",
+                    "max":99,
+                    "description":"[STR+1350/DEX+35/SPD+20]\nOnce a traveler's. The arms of a lost Goddess statue."
+                },
+                {
+                    "key":1319,
+                    "icon":8,
+                    "name":"Kaiser Knuckles",
+                    "max":99,
+                    "description":"[STR+750/DEX+5/SPD+5]\nGloves that draw out the user's power with a special seal."
+                },
+                {
+                    "key":1321,
+                    "icon":8,
+                    "name":"Moon Claws",
+                    "max":99,
+                    "description":"[STR+950]\nClaws modeled on bear arms. Black fur covers up to the elbow."
+                },
+                {
+                    "key":1317,
+                    "icon":8,
+                    "name":"NON_ITEM",
+                    "max":99,
+                    "description":"[STR+550]\nUnused."
+                },
+                {
+                    "key":1323,
+                    "icon":8,
+                    "name":"Omen Breakers",
+                    "max":99,
+                    "description":"[STR+1150/DEX+15/SPD+10]\nAncient gauntlets that destroy foes from within."
+                },
+                {
+                    "key":1320,
+                    "icon":8,
+                    "name":"Purity Fists",
+                    "max":99,
+                    "description":"[STR+850]\nPure-white gauntlets that forbid the shedding of blood."
+                },
+                {
+                    "key":1316,
+                    "icon":8,
+                    "name":"Steel Arms",
+                    "max":99,
+                    "description":"[STR+450]\nSteel gauntlets made with thick metal plating."
+                },
+                {
+                    "key":1328,
+                    "icon":8,
+                    "name":"Tetra Monsters",
+                    "max":99,
+                    "description":"[STR+1550/DEX+40/SPD+25]\nMade from strange ore. Give off four colors of light."
+                },
+                {
+                    "key":1318,
+                    "icon":8,
+                    "name":"Tiger Knuckles",
+                    "max":99,
+                    "description":"[STR+650]\nClaws modeled on a tiger's. The back of them is deadly, too."
+                }
+            ],
+            "Bows":[
+                {
+                    "key":1365,
+                    "icon":9,
+                    "name":"Aion Bow",
+                    "max":99,
+                    "description":"[STR+500/RNG+6/ATS+25/DEX+15]\nA well-used, jet-black bow. Clearly well maintained."
+                },
+                {
+                    "key":1362,
+                    "icon":9,
+                    "name":"Aqua Bow",
+                    "max":99,
+                    "description":"[STR+200/RNG+4]\nA prototype bow by Verne that shoots pressurized water."
+                },
+                {
+                    "key":1374,
+                    "icon":9,
+                    "name":"Aster",
+                    "max":99,
+                    "description":"[STR+850/RNG+6/ATS+30/ADF+30/DEX+10]\nOnce a traveler's. A bow used by mountain dwellers."
+                },
+                {
+                    "key":1375,
+                    "icon":9,
+                    "name":"Aster+1",
+                    "max":99,
+                    "description":"[STR+950/RNG+7/ATS+40/ADF+40/DEX+20]\nOnce a traveler's. A bow used by mountain dwellers."
+                },
+                {
+                    "key":1376,
+                    "icon":9,
+                    "name":"Aster+2",
+                    "max":99,
+                    "description":"[STR+1300/RNG+8/ATS+50/ADF+50/DEX+30]\nOnce a traveler's. A bow used by mountain dwellers."
+                },
+                {
+                    "key":1372,
+                    "icon":9,
+                    "name":"Cherished Bow",
+                    "max":99,
+                    "description":"[STR+1200/RNG+8/ATS+125/DEX+35]\nA bow treasured by the church. Hits weak points without fail."
+                },
+                {
+                    "key":1369,
+                    "icon":9,
+                    "name":"Eclipse Gear",
+                    "max":99,
+                    "description":"[STR+900/RNG+6]\nBowgun that leaves wounds shaped to be difficult to heal."
+                },
+                {
+                    "key":1363,
+                    "icon":9,
+                    "name":"Hound Bow",
+                    "max":99,
+                    "description":"[STR+300/RNG+5]\nA mass-market bowgun popular with jaegers."
+                },
+                {
+                    "key":1366,
+                    "icon":9,
+                    "name":"Invisible Bow",
+                    "max":99,
+                    "description":"[STR+600/RNG+5]\nFor assassinations. Can be easily concealed in one's coat."
+                },
+                {
+                    "key":1367,
+                    "icon":9,
+                    "name":"Juggernaut",
+                    "max":99,
+                    "description":"[STR+700/RNG+6/ATS+50/DEX+20]\nA giant bow from the end of the Middle Ages."
+                },
+                {
+                    "key":1370,
+                    "icon":9,
+                    "name":"Punisher",
+                    "max":99,
+                    "description":"[STR+1000/RNG+7/ATS+75/DEX+25]\nMade by traditional Arterian methods using processed septium."
+                },
+                {
+                    "key":1371,
+                    "icon":9,
+                    "name":"Purgatorio",
+                    "max":99,
+                    "description":"[STR+1100/RNG+7/ATS+100/DEX+30]\nAn ancient bowgun that makes a sound like a beating heart."
+                },
+                {
+                    "key":1361,
+                    "icon":9,
+                    "name":"Ritter Bow",
+                    "max":99,
+                    "description":"[STR+100/RNG+4]\nA standard-issue bowgun in the Septian Church."
+                },
+                {
+                    "key":1377,
+                    "icon":9,
+                    "name":"Septenary Bow",
+                    "max":99,
+                    "description":"[STR+1500/RNG+8/ATS+60/ADF+60/DEX+35]\nA bow made of strange ore that can fire unlimited arrows."
+                },
+                {
+                    "key":1368,
+                    "icon":9,
+                    "name":"Sherwood",
+                    "max":99,
+                    "description":"[STR+800/RNG+6]\nA bow made from a great tree's wood. Arrows fly a unique way."
+                },
+                {
+                    "key":1364,
+                    "icon":9,
+                    "name":"Soliste Bow",
+                    "max":99,
+                    "description":"[STR+400/RNG+5]\nA bowgun designed for solo warriors. Excels at firing fast."
+                }
+            ],
+            "Special":[
+                {
+                    "key":1466,
+                    "icon":28,
+                    "name":"The Recluse",
+                    "max":99,
+                    "description":"[STR+9999/RNG+3]\nThe world's strongest templar sword."
+                },
+                {
+                    "key":1407,
+                    "icon":11,
+                    "name":"Amagumo",
+                    "max":99,
+                    "description":"[STR+650]\nA mass-market katana made in Calvard. Very good quality."
+                },
+                {
+                    "key":1420,
+                    "icon":11,
+                    "name":"Fencer+1",
+                    "max":99,
+                    "description":"[STR+100]\nA training sword critical for learning the basics."
+                },
+                {
+                    "key":1421,
+                    "icon":11,
+                    "name":"Fencer+2",
+                    "max":99,
+                    "description":"[STR+200]\nA training sword critical for learning the basics."
+                },
+                {
+                    "key":1413,
+                    "icon":11,
+                    "name":"Hakuryuu",
+                    "max":99,
+                    "description":"[STR+1250]\nSaid to be an avatar of an ancient holy beast."
+                },
+                {
+                    "key":1415,
+                    "icon":11,
+                    "name":"Hotarukiri",
+                    "max":99,
+                    "description":"[STR+1000/DEF/ATS/ADF/DEX/AGL+10/SPD+5]\nOnce a traveler's. Its blade attracts fireflies."
+                },
+                {
+                    "key":1416,
+                    "icon":11,
+                    "name":"Hotarukiri+1",
+                    "max":99,
+                    "description":"[STR+1300/DEF/ATS/ADF/DEX/AGL+15/SPD+10]\nOnce a traveler's. Its blade attracts fireflies."
+                },
+                {
+                    "key":1417,
+                    "icon":11,
+                    "name":"Houkiboshi",
+                    "max":99,
+                    "description":"[STR+1550/DEF/ATS/ADF/DEX/AGL+20/SPD+15]\nKatana made of a strange ore. You'll only see its afterimage."
+                },
+                {
+                    "key":1424,
+                    "icon":11,
+                    "name":"Jinu",
+                    "max":99,
+                    "description":"[STR+1000/ATS/ADF+50/DEX+25/AGL/SPD+5/Anelace Only]\nAn old blade for training that once belonged to Cassius."
+                },
+                {
+                    "key":1425,
+                    "icon":11,
+                    "name":"Jinu",
+                    "max":99,
+                    "description":"[STR+1600/ATS/ADF+150/DEX+100/AGL/SPD+25/Anelace Only]\nAn old blade for training that once belonged to Cassius."
+                },
+                {
+                    "key":1412,
+                    "icon":11,
+                    "name":"Kagutsuchi",
+                    "max":99,
+                    "description":"[STR+1150]\nA blade forged by an ancient swordsmith with a flame design."
+                },
+                {
+                    "key":1411,
+                    "icon":11,
+                    "name":"Mumei Jittetsu",
+                    "max":99,
+                    "description":"[STR+1050]\nA boorish katana made with a 'strength over all' philosophy."
+                },
+                {
+                    "key":1541,
+                    "icon":31,
+                    "name":"Stun Rod",
+                    "max":99,
+                    "description":"[STR+100]\nA deadly weapon for delinquents that vitalizes the user."
+                },
+                {
+                    "key":1408,
+                    "icon":11,
+                    "name":"Subaru",
+                    "max":99,
+                    "description":"[STR+750]\nA katana made of meteoric iron. Gives off a pale light."
+                },
+                {
+                    "key":1406,
+                    "icon":11,
+                    "name":"Tatara",
+                    "max":99,
+                    "description":"[STR+450]\nA military katana ideal for close-range combat."
+                },
+                {
+                    "key":1409,
+                    "icon":11,
+                    "name":"Ugetsu Zanshin",
+                    "max":99,
+                    "description":"[STR+850]\nUnique blade with small holes made by a katana in its edges."
+                },
+                {
+                    "key":1410,
+                    "icon":11,
+                    "name":"Yaegaki",
+                    "max":99,
+                    "description":"[STR+950]\nProduces haze in the air when drawn. Smells of alcohol."
+                }
+            ],
+            "Templar Swords":[
+                {
+                    "key":1462,
+                    "icon":28,
+                    "name":"Agnus Dei",
+                    "max":99,
+                    "description":"[STR+1200/RNG+3/ATS+250]\nThe Goddess' templar sword. Illuminates the way forward."
+                },
+                {
+                    "key":1458,
+                    "icon":28,
+                    "name":"Ceremonial Sword",
+                    "max":99,
+                    "description":"[STR+800/RNG+2]\nA sword from Arteria used for ceremonial purposes."
+                },
+                {
+                    "key":1459,
+                    "icon":28,
+                    "name":"Giardino",
+                    "max":99,
+                    "description":"[STR+900/RNG+3/ATS+150]\nA templar sword that only specially chosen knights can use."
+                },
+                {
+                    "key":1454,
+                    "icon":28,
+                    "name":"Holy Choir",
+                    "max":99,
+                    "description":"[STR+400/RNG+2]\nA sword dedicated to the church. Sounds like song when swung."
+                },
+                {
+                    "key":1452,
+                    "icon":28,
+                    "name":"Lunar Anthem",
+                    "max":99,
+                    "description":"[STR+200/RNG+2]\nA compact black templar sword used for assassinations."
+                },
+                {
+                    "key":1464,
+                    "icon":28,
+                    "name":"Morality Sword",
+                    "max":99,
+                    "description":"[STR+1050/RNG+3/DEF/ATS/ADF/DEX+5/AGL/SPD+2]\nOnce a traveler's. Said to have been used to threaten a god."
+                },
+                {
+                    "key":1465,
+                    "icon":28,
+                    "name":"Morality Sword+1",
+                    "max":99,
+                    "description":"[STR+1300/RNG+3/DEF/ATS/ADF/DEX+10/AGL/SPD+5]\nOnce a traveler's. Said to have been used to threaten a god."
+                },
+                {
+                    "key":1457,
+                    "icon":28,
+                    "name":"NON_ITEM",
+                    "max":99,
+                    "description":"[STR+700/RNG+3]\nUnused."
+                },
+                {
+                    "key":1467,
+                    "icon":28,
+                    "name":"Photon Sword",
+                    "max":99,
+                    "description":"[STR+1500/RNG+3/DEF/ATS/ADF/DEX+15/AGL/SPD+10]\nTemplar sword forged from strange ore. Made of light spheres."
+                },
+                {
+                    "key":1451,
+                    "icon":28,
+                    "name":"Plum Edge",
+                    "max":99,
+                    "description":"[STR+100/RNG+2]\nA templar sword supplied by the Septian Church to squires."
+                },
+                {
+                    "key":1456,
+                    "icon":28,
+                    "name":"Roten Himmel",
+                    "max":99,
+                    "description":"[STR+600/RNG+2]\nA forbidden templar sword that slaughters all it touches."
+                },
+                {
+                    "key":1453,
+                    "icon":28,
+                    "name":"Septieme Nuit",
+                    "max":99,
+                    "description":"[STR+300/RNG+2]\nA templar sword that has been baptized. Grants peace to foes."
+                },
+                {
+                    "key":1455,
+                    "icon":28,
+                    "name":"Silvahn",
+                    "max":99,
+                    "description":"[STR+500/RNG+3/ATS+50]\nA well-used, but well-cared-for silver templar sword."
+                },
+                {
+                    "key":1461,
+                    "icon":28,
+                    "name":"Tabernaculum",
+                    "max":99,
+                    "description":"[STR+1100/RNG+2/ATS+200]\nA templar sword unearthed from an ancient tomb."
+                },
+                {
+                    "key":1460,
+                    "icon":28,
+                    "name":"Triptych Loa",
+                    "max":99,
+                    "description":"[STR+1000/RNG+2]\nOnce sealed a devil. Moves like it has a will of its own."
+                }
+            ],
+            "Scythes":[
+                {
+                    "key":1499,
+                    "icon":30,
+                    "name":"Bloody Slaughter",
+                    "max":99,
+                    "description":"[STR+1050]\nA cursed scythe containing the soul of a sadistic killer."
+                },
+                {
+                    "key":1498,
+                    "icon":30,
+                    "name":"Camellia Scythe",
+                    "max":99,
+                    "description":"[STR+950]\nA scythe with multi-layered blades to cause heavy blood loss."
+                },
+                {
+                    "key":1501,
+                    "icon":30,
+                    "name":"Crimson Scythe",
+                    "max":99,
+                    "description":"[STR+1250]\nA scythe with a crimson blade. Its form can be changed."
+                },
+                {
+                    "key":1504,
+                    "icon":30,
+                    "name":"Nemesis Ripper",
+                    "max":99,
+                    "description":"[STR+1450/DEX+100/AGL+25/SPD+10]\nA scythe that emits black light. Made from a strange ore."
+                },
+                {
+                    "key":1496,
+                    "icon":30,
+                    "name":"Nine Lives",
+                    "max":99,
+                    "description":"[STR+750]\nAn Enforcer's scythe. Said to be able to claim nine lives at once."
+                },
+                {
+                    "key":1500,
+                    "icon":30,
+                    "name":"Red Crescent",
+                    "max":99,
+                    "description":"[STR+1150]\nAn ancient scythe resembling a staff with blades on both ends."
+                },
+                {
+                    "key":1497,
+                    "icon":30,
+                    "name":"Rose Ripper",
+                    "max":99,
+                    "description":"[STR+850]\nA giant scythe with saw-like edges across its blade."
+                },
+                {
+                    "key":1503,
+                    "icon":30,
+                    "name":"Stella Machina",
+                    "max":99,
+                    "description":"[STR+1200/DEX+50/AGL+20/SPD+5]\nOnce a traveler's. Makes a sound when blood drips down it."
+                }
+            ],
+            "Armor":[
+                {
+                    "key":1558,
+                    "icon":10,
+                    "name":"Amalgam Guard",
+                    "max":99,
+                    "description":"[DEF+900]\nOrganic armor. Metal gathers where attacked to absorb shock."
+                },
+                {
+                    "key":1557,
+                    "icon":10,
+                    "name":"Battle Surcoat",
+                    "max":99,
+                    "description":"[DEF+800]\nA dignified coat worn by Eastern military commanders."
+                },
+                {
+                    "key":1553,
+                    "icon":10,
+                    "name":"Bestia Coat",
+                    "max":99,
+                    "description":"[DEF+400/ADF+10/AGL+5]\nA coat woven from untouched beast hide."
+                },
+                {
+                    "key":1555,
+                    "icon":10,
+                    "name":"Bracer Coat",
+                    "max":99,
+                    "description":"[DEF+600]\nA coat recommended by the Bracer Guild."
+                },
+                {
+                    "key":1560,
+                    "icon":10,
+                    "name":"Cosmic Gear",
+                    "max":99,
+                    "description":"[DEF+1100]\nA defensive artifact from ancient times. Highly effective."
+                },
+                {
+                    "key":1556,
+                    "icon":10,
+                    "name":"Dragon Tree Jumpsuit",
+                    "max":99,
+                    "description":"[DEF+700/ADF+15/AGL+5]\nClothes with high arts resistance. Made from withered trees."
+                },
+                {
+                    "key":1551,
+                    "icon":10,
+                    "name":"Enhanced Denim",
+                    "max":99,
+                    "description":"[DEF+200]\nVintage clothing that has seen--and survived--many battles."
+                },
+                {
+                    "key":1600,
+                    "icon":10,
+                    "name":"Enhanced Leather",
+                    "max":99,
+                    "description":"[DEF+100]\nA leather vest with extra-thick material used in the chest."
+                },
+                {
+                    "key":1550,
+                    "icon":10,
+                    "name":"Fitted Leather",
+                    "max":99,
+                    "description":"[DEF+100]\nClothes for the active, fitted perfectly to your body shape."
+                },
+                {
+                    "key":1635,
+                    "icon":10,
+                    "name":"Gabriel's Aura",
+                    "max":99,
+                    "description":"[DEF+1100/ATS+25/ADF+25/Women Only]\nAmazing clothes from the Testaments with magical protection."
+                },
+                {
+                    "key":1559,
+                    "icon":10,
+                    "name":"Gargan Armor",
+                    "max":99,
+                    "description":"[DEF+1000/ADF+20/AGL+5]\nGiant body armor taken from a Middle Age noble's mansion."
+                },
+                {
+                    "key":1566,
+                    "icon":10,
+                    "name":"Jagd Armor",
+                    "max":99,
+                    "description":"[DEF+1000/STR+100/ADF-100/DEX-50]\nHeavy battle armor used by first-rate jaegers."
+                },
+                {
+                    "key":1634,
+                    "icon":10,
+                    "name":"Jormungandr",
+                    "max":99,
+                    "description":"[DEF+1600/ADF+300/SPD-5/DEX+50/AGL-50/MOV-1]\nA mobile pillbox for gunners used in a great ancient war."
+                },
+                {
+                    "key":1610,
+                    "icon":10,
+                    "name":"Kaleido Armor",
+                    "max":99,
+                    "description":"[DEF+225/STR+20/ADF+20/SPD+5/Men Only]\nWhole body armor of septium that reflects light beautifully."
+                },
+                {
+                    "key":1611,
+                    "icon":10,
+                    "name":"Kaleido Armor+1",
+                    "max":99,
+                    "description":"[DEF+525/STR+40/ADF+40/SPD+5/Men Only]\nWhole body armor of septium that reflects light beautifully."
+                },
+                {
+                    "key":1612,
+                    "icon":10,
+                    "name":"Kaleido Armor+2",
+                    "max":99,
+                    "description":"[DEF+825/STR+60/ADF+60/SPD+5/Men Only]\nWhole body armor of septium that reflects light beautifully."
+                },
+                {
+                    "key":1613,
+                    "icon":10,
+                    "name":"Kaleido Armor+3",
+                    "max":99,
+                    "description":"[DEF+1155/STR+80/ADF+80/SPD+5/Men Only]\nWhole body armor of septium that reflects light beautifully."
+                },
+                {
+                    "key":1565,
+                    "icon":10,
+                    "name":"Kitty Suit",
+                    "max":99,
+                    "description":"[DEF+750/DEX+10/AGL+10/SPD+30/MOV+1]\nA soft costume that resembles a kitten."
+                },
+                {
+                    "key":1563,
+                    "icon":10,
+                    "name":"Knight Armor",
+                    "max":99,
+                    "description":"[DEF+1500/ADF-600/AGL-50/SPD-5/MOV-1]\nHeavy armor with strong defensive properties."
+                },
+                {
+                    "key":1599,
+                    "icon":10,
+                    "name":"Leather Vest",
+                    "max":99,
+                    "description":"[DEF+5]\nA soft leather vest that feels good to the touch."
+                },
+                {
+                    "key":1562,
+                    "icon":10,
+                    "name":"Ninja Garb",
+                    "max":99,
+                    "description":"[DEF+750/SPD+5/AGL+100]\nA black garb that lets the wearer evade more often."
+                },
+                {
+                    "key":1614,
+                    "icon":10,
+                    "name":"Raphael's Halo",
+                    "max":99,
+                    "description":"[DEF+1100/ADF+25/AGL+5/Men Only]\nMystical armor from the Testaments. Offers protection in combat."
+                },
+                {
+                    "key":1564,
+                    "icon":10,
+                    "name":"Reflective Robe",
+                    "max":99,
+                    "description":"[DEF+650/ADF+1000/MOV-1]\nA holy garment designed to resist arts using mirrors."
+                },
+                {
+                    "key":1630,
+                    "icon":10,
+                    "name":"Schwarz Silk",
+                    "max":99,
+                    "description":"[DEF+225/ATS+50/AGL+15/Women Only]\nGarment made with septium. Radiates distorted light."
+                },
+                {
+                    "key":1631,
+                    "icon":10,
+                    "name":"Schwarz Silk+1",
+                    "max":99,
+                    "description":"[DEF+525/ATS+100/AGL+30/Women Only]\nGarment made with septium. Radiates distorted light."
+                },
+                {
+                    "key":1632,
+                    "icon":10,
+                    "name":"Schwarz Silk+2",
+                    "max":99,
+                    "description":"[DEF+825/ATS+150/AGL+45/Women Only]\nGarment made with septium. Radiates distorted light."
+                },
+                {
+                    "key":1633,
+                    "icon":10,
+                    "name":"Schwarz Silk+3",
+                    "max":99,
+                    "description":"[DEF+1155/ATS+200/AGL+60/Women Only]\nGarment made with septium. Radiates distorted light."
+                },
+                {
+                    "key":1552,
+                    "icon":10,
+                    "name":"Survival Vest",
+                    "max":99,
+                    "description":"[DEF+300]\nA multipurpose vest made of lots of very resistant material."
+                },
+                {
+                    "key":1554,
+                    "icon":10,
+                    "name":"Titanium Suit",
+                    "max":99,
+                    "description":"[DEF+500]\nA suit reinforced with metal alloy for extra strength."
+                }
+            ],
             "Sepith":[
                 {
                     "key":997,
