@@ -1,0 +1,42 @@
+{
+  "name": "SaveEditor-UI",
+  "version": "1.0.0",
+  "description": "UI for SaveEditor via Electron",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist-win": "copyfiles ../public/**/* -e ../public/*.dat -e ../public/*.sav ./out && electron-builder -p never --win portable",
+    "dist-linux": "copyfiles ../public/**/* -e ../public/*.dat -e ../public/*.sav ./out && electron-builder -p never --linux AppImage"
+  },
+  "build": {
+    "appId": "com.studioautomata.saveeditor",
+    "productName": "Save Editor UI",
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "portable"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "files": [
+      "public/**/*",
+      "index.js",
+      "preload.js",
+      "node_modules/**/*",
+      "package.json"
+    ]
+  },
+  "author": "Andrew Cornforth",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "23.1.1",
+    "electron-builder": "^23.3.3"
+  },
+  "dependencies": {
+    "copyfiles": "^2.4.1",
+    "steam-game-path": "^2.2.0"
+  }
+}

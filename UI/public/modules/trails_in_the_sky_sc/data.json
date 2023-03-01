@@ -1,0 +1,4725 @@
+{
+    "name":"Trails In The Sky SC",
+    "version":0.1,
+    "image":"img/trails_in_the_sky_sc.jpg",
+    "refs":
+    {
+        "data":
+        {
+            "mira":         { "offset":"0x2534C", "type":"int" }, 
+            "bp":  { "offset":"0x025D44", "type":"short" },
+            "battles":      { "offset":"0x26722", "type":"struct", "stride":-1, "length":1, "keys":
+                                {
+                                    "count": { "type":"short", "offset":0 },
+                                    "lost": { "type":"short", "offset":2 },
+                                    "won": { "type":"short", "offset":4 },
+                                    "fled": { "type":"short", "offset":6 }
+                                }
+                            },
+            "seriph":       { "offset":"0x25354", "type":"mapArray", "size":4, "maps":[ "earth", "water", "fire", "wind", "time", "space", "mirage" ] },
+            "line_up":      { "offset":"0x01F42C", "type":"mapDataArray", "step":4, "size":4, "map":"name", "ref":"character_id" },
+            "characters":   { "offset":"0x01F44C", "type":"struct", "stride":60, "length":8, "keys":
+                                {
+                                    "name": { "type":"map", "ref":"character_id", "key":"index" },
+                                    "id":   { "type":"index" },
+                                    "level": { "type":"short", "offset":0 },
+                                    "exp":   { "type":"int", "offset":12 }
+                                }
+                            },
+            "inventory_data": { "offset":"0x022ECC", "type":"struct", "stride":4, "length":-1, "max-length":366, "keys":
+                                {
+                                    "key": { "type":"short", "offset":0 },
+                                    "value": { "type":"short", "offset":2 }
+                                }
+                            },
+            "inventory":    {
+                                "offset":"0x022ECC", "type":"group", "data":"inventory_data", "ref":"inventory"
+                            }
+        },
+        "character_id":
+        {
+            "0":"Estelle",
+            "1":"Joshua",
+            "2":"Scherazard",
+            "3":"Olivier",
+            "4":"Kloe",
+            "5":"Agate",
+            "6":"Tita",
+            "7":"Zin",
+            "8":"Kevin",
+            "9":"Anelace",
+            "10":"Josette",
+            "11":"Richard",
+            "12":"Kanone",
+            "13":"Kurt",
+            "14":"Julia",
+            "15":"Mueller",
+            "255":"None"
+        },
+        "inventory":
+        {
+            "Staff":[
+                {
+                    "key":26,
+                    "icon":1,
+                    "name":"Arhat's Staff",
+                    "max":99,
+                    "description":"[STR+335/RNG+1]\nA long staff etched top to bottom with Eastern characters."
+                },
+                {
+                    "key":21,
+                    "icon":1,
+                    "name":"Brave Staff",
+                    "max":99,
+                    "description":"[STR+415/RNG+1]\nAn ancient weapon with earth-shattering power."
+                },
+                {
+                    "key":9,
+                    "icon":1,
+                    "name":"Break Rod",
+                    "max":99,
+                    "description":"[STR+120/RNG+1]\nA training staff. Effective enough for live combat as well."
+                },
+                {
+                    "key":14,
+                    "icon":1,
+                    "name":"Ceramic Rod",
+                    "max":99,
+                    "description":"[STR+220/RNG+1]\nA staff made from durable ceramics that has reinforced tips."
+                },
+                {
+                    "key":24,
+                    "icon":1,
+                    "name":"Diamond Staff",
+                    "max":99,
+                    "description":"[STR+240/RNG+1]\nA tremendously flashy staff with a diamond-studded grip."
+                },
+                {
+                    "key":22,
+                    "icon":1,
+                    "name":"Ebony Staff",
+                    "max":99,
+                    "description":"[STR+136/RNG+1]\nA delicately carved staff made of black wood."
+                },
+                {
+                    "key":15,
+                    "icon":1,
+                    "name":"Edel Staff",
+                    "max":99,
+                    "description":"[STR+270/RNG+1]\nA reinforced metal staff etched with decorative designs."
+                },
+                {
+                    "key":11,
+                    "icon":1,
+                    "name":"Fiber Rod",
+                    "max":99,
+                    "description":"[STR+130/RNG+1]\nA staff made of bark fibers woven in a special manner."
+                },
+                {
+                    "key":23,
+                    "icon":1,
+                    "name":"Five Rings Cane",
+                    "max":99,
+                    "description":"[STR+160/RNG+1]\nA wooden staff carried by Eastern monks."
+                },
+                {
+                    "key":12,
+                    "icon":1,
+                    "name":"Impact Rod",
+                    "max":99,
+                    "description":"[STR+150/RNG+1]\nA wooden staff with widened ends to increase striking power."
+                },
+                {
+                    "key":18,
+                    "icon":1,
+                    "name":"Laundry Pole+",
+                    "max":99,
+                    "description":"[STR+150/RNG+2]\nDeadliest drying pole you ever did see. Ridiculously long."
+                },
+                {
+                    "key":13,
+                    "icon":1,
+                    "name":"Pole Weapon",
+                    "max":99,
+                    "description":"[STR+180/RNG+1]\nA simple, but elegant, slender metal staff."
+                },
+                {
+                    "key":1000,
+                    "icon":1,
+                    "name":"Practice Weapon",
+                    "max":99,
+                    "description":"Lacking in the power department,\nbut better than nothing."
+                },
+                {
+                    "key":27,
+                    "icon":1,
+                    "name":"Qilin Horn",
+                    "max":99,
+                    "description":"[STR+480/RNG+1]\nA mythical glowing staff made from alloying a strange metal."
+                },
+                {
+                    "key":25,
+                    "icon":1,
+                    "name":"Seven Rings Cane",
+                    "max":99,
+                    "description":"[STR+295/RNG+1]\nEastern staff marked w/ the holy symbol of heaven and earth."
+                },
+                {
+                    "key":19,
+                    "icon":1,
+                    "name":"Spiral Rod",
+                    "max":99,
+                    "description":"[STR+320/RNG+1]\nA central factory-made rod with a spiral grip."
+                },
+                {
+                    "key":20,
+                    "icon":1,
+                    "name":"Valkyrie Rod",
+                    "max":99,
+                    "description":"[STR+370/RNG+1]\nA recreated ancient staff polished to a mirror-like shine."
+                }
+            ],
+            "Knives":[
+                {
+                    "key":50,
+                    "icon":2,
+                    "name":"All-Purpose Knife",
+                    "max":99,
+                    "description":"[STR+350/DEX+10]\nA knife with a variety of uses. Small but practical."
+                },
+                {
+                    "key":43,
+                    "icon":2,
+                    "name":"Aura Fencer",
+                    "max":99,
+                    "description":"[STR+415]\nGleaming twin swords said to cut through anything."
+                },
+                {
+                    "key":46,
+                    "icon":2,
+                    "name":"Avenger",
+                    "max":99,
+                    "description":"[STR+330]\nA pair of black swords made from a feather light metal."
+                },
+                {
+                    "key":37,
+                    "icon":2,
+                    "name":"Folder",
+                    "max":99,
+                    "description":"[STR+270]\nA folding combat knife. Small but deadly."
+                },
+                {
+                    "key":38,
+                    "icon":2,
+                    "name":"Karambit",
+                    "max":99,
+                    "description":"[STR+320]\nA small, curved folding blade. So sharp it's hard to handle."
+                },
+                {
+                    "key":49,
+                    "icon":2,
+                    "name":"Phoenix Blades",
+                    "max":99,
+                    "description":"[STR+480]\nMythical glowing swords made from alloying a strange metal."
+                },
+                {
+                    "key":44,
+                    "icon":2,
+                    "name":"Skinner",
+                    "max":99,
+                    "description":"[STR+120]\nA miniature weapon primarily used for assassinations."
+                },
+                {
+                    "key":42,
+                    "icon":2,
+                    "name":"Strider",
+                    "max":99,
+                    "description":"[STR+370]\nSwords made of special metal even down to the hilt."
+                }
+            ],
+            "Whips":[
+                {
+                    "key":69,
+                    "icon":3,
+                    "name":"Air Glaive",
+                    "max":99,
+                    "description":"[STR+150/RNG+2]\nA wide whip with a special pattern. Made for lateral lashes."
+                },
+                {
+                    "key":73,
+                    "icon":3,
+                    "name":"Chain Belt",
+                    "max":99,
+                    "description":"[STR+210/RNG+3]\nA chain link belt that can double as a weapon."
+                },
+                {
+                    "key":70,
+                    "icon":3,
+                    "name":"Chain Gear",
+                    "max":99,
+                    "description":"[STR+180/RNG+2]\nA chain whip with spikes studded across its entire length."
+                },
+                {
+                    "key":75,
+                    "icon":3,
+                    "name":"Dendrobium",
+                    "max":99,
+                    "description":"[STR+370/RNG+2]\nAn adjustable mechanical whip with many fine joints."
+                },
+                {
+                    "key":78,
+                    "icon":3,
+                    "name":"Dragon's Fang Whip",
+                    "max":99,
+                    "description":"[STR+340/RNG+2]\nA whip with the fangs of ancient beasts affixed to the tip."
+                },
+                {
+                    "key":71,
+                    "icon":3,
+                    "name":"Eclair",
+                    "max":99,
+                    "description":"[STR+220/RNG+2]\nA thin whip woven from metal thread."
+                },
+                {
+                    "key":74,
+                    "icon":3,
+                    "name":"Galient Sword",
+                    "max":99,
+                    "description":"[STR+320/RNG+2]\nA segmented sword whip with a wave-shaped braid."
+                },
+                {
+                    "key":68,
+                    "icon":3,
+                    "name":"Python",
+                    "max":99,
+                    "description":"[STR+130/RNG+2]\nA leather whip enhanced with a metal core for extra power."
+                },
+                {
+                    "key":76,
+                    "icon":3,
+                    "name":"Rosenkrantz",
+                    "max":99,
+                    "description":"[STR+415/RNG+2]\nAn ancient weapon made from connected cross-shaped blades."
+                },
+                {
+                    "key":79,
+                    "icon":3,
+                    "name":"Sirius Whip",
+                    "max":99,
+                    "description":"[STR+480/RNG+2]\nA mythical glowing whip made from alloying a strange metal."
+                },
+                {
+                    "key":72,
+                    "icon":3,
+                    "name":"Sturm",
+                    "max":99,
+                    "description":"[STR+270/RNG+2]\nA whip with a metal flange. Has an unpredictable trajectory."
+                },
+                {
+                    "key":77,
+                    "icon":3,
+                    "name":"Wolf's Fang Whip",
+                    "max":99,
+                    "description":"[STR+240/RNG+2]\nA leather whip studded with countless fine metal needles."
+                }
+            ],
+            "Orbal Guns":[
+                {
+                    "key":102,
+                    "icon":4,
+                    "name":"0-Type Orbal Gun",
+                    "max":99,
+                    "description":"[STR+270/RNG+4]\nA new CF model gun loaded with the latest orbal tech."
+                },
+                {
+                    "key":103,
+                    "icon":4,
+                    "name":"0-Type Test Model",
+                    "max":99,
+                    "description":"[STR+95/RNG+3/SPD-2]\nA prototype from the central factory. Hard to control."
+                },
+                {
+                    "key":106,
+                    "icon":4,
+                    "name":"Cyclops",
+                    "max":99,
+                    "description":"[STR+370/RNG+4]\nAn ancient photon weapon. Fires high precision lasers."
+                },
+                {
+                    "key":101,
+                    "icon":4,
+                    "name":"Dragoon",
+                    "max":99,
+                    "description":"[STR+220/RNG+4]\nA Verne Company gun developed for assault cavalry."
+                },
+                {
+                    "key":104,
+                    "icon":4,
+                    "name":"Eternity",
+                    "max":99,
+                    "description":"[STR+480/RNG+4]\nA mythical glowing gun made from alloying a strange metal."
+                },
+                {
+                    "key":99,
+                    "icon":4,
+                    "name":"Gray Wolf",
+                    "max":99,
+                    "description":"[STR+150/RNG+4]\nA sturdy orbal gun from Calvard's Verne Company."
+                },
+                {
+                    "key":97,
+                    "icon":4,
+                    "name":"Phantom",
+                    "max":99,
+                    "description":"[STR+122/RNG+4]\nA Reinford Company orbal gun with superior silencing."
+                },
+                {
+                    "key":110,
+                    "icon":4,
+                    "name":"Phantom II",
+                    "max":99,
+                    "description":"[STR+285/RNG+4]\nA successor to the Phantom. Same shape but increased power."
+                },
+                {
+                    "key":107,
+                    "icon":4,
+                    "name":"Revolter",
+                    "max":99,
+                    "description":"[STR+415/RNG+4]\nAn ancient energy weapon with overwhelming firepower."
+                },
+                {
+                    "key":100,
+                    "icon":4,
+                    "name":"Salamander",
+                    "max":99,
+                    "description":"[STR+180/RNG+4]\nA Verne Company gun with high firepower and a long barrel."
+                },
+                {
+                    "key":108,
+                    "icon":4,
+                    "name":"Stinger II",
+                    "max":99,
+                    "description":"[STR+130/RNG+4]\nAn upgrade on the popular Reinford Company model."
+                },
+                {
+                    "key":109,
+                    "icon":4,
+                    "name":"Trickster",
+                    "max":99,
+                    "description":"[STR+200/RNG+4]\nA palm-sized orbal gun developed by the Reinford Company."
+                }
+            ],
+            "Swords":[
+                {
+                    "key":139,
+                    "icon":5,
+                    "name":"Aerondight",
+                    "max":99,
+                    "description":"[STR+290]\nAn ancient sword said to have belonged to a famous knight."
+                },
+                {
+                    "key":134,
+                    "icon":5,
+                    "name":"Battle Saber",
+                    "max":99,
+                    "description":"[STR+320]\nA modern longsword. Standard equipment for the Royal Guard."
+                },
+                {
+                    "key":140,
+                    "icon":5,
+                    "name":"Caledfwlch",
+                    "max":99,
+                    "description":"[STR+355]\nA legendary sword that was lost for hundreds of years."
+                },
+                {
+                    "key":135,
+                    "icon":5,
+                    "name":"Celestial",
+                    "max":99,
+                    "description":"[STR+370]\nTreasure of the royal family. Forged by a famous blacksmith."
+                },
+                {
+                    "key":130,
+                    "icon":5,
+                    "name":"Long Saber",
+                    "max":99,
+                    "description":"[STR+180]\nAn elongated sword once used in the duels of the nobility."
+                },
+                {
+                    "key":133,
+                    "icon":5,
+                    "name":"Moon Singer",
+                    "max":99,
+                    "description":"[STR+480]\nA mythical glowing sword made from alloying a strange metal."
+                },
+                {
+                    "key":132,
+                    "icon":5,
+                    "name":"Rune Blade",
+                    "max":99,
+                    "description":"[STR+270]\nA longsword with ancient text engraved onto the blade."
+                },
+                {
+                    "key":127,
+                    "icon":5,
+                    "name":"Saber",
+                    "max":99,
+                    "description":"[STR+130]\nA thin, easy to wield sword. Good for slashing or thrusting."
+                },
+                {
+                    "key":136,
+                    "icon":5,
+                    "name":"Seven Star Sword",
+                    "max":99,
+                    "description":"[STR+415]\nA sword with a blade like fire and a Septian 7-pt star hilt."
+                },
+                {
+                    "key":129,
+                    "icon":5,
+                    "name":"Sinclair",
+                    "max":99,
+                    "description":"[STR+150]\nA slender longsword. Light, but strong, and slightly curved."
+                },
+                {
+                    "key":131,
+                    "icon":5,
+                    "name":"Vierge",
+                    "max":99,
+                    "description":"[STR+220]\nNoblewoman's sword adorned w/ silver, the symbol of purity."
+                }
+            ],
+            "Greatswords":[
+                {
+                    "key":161,
+                    "icon":6,
+                    "name":"Blade Gear",
+                    "max":99,
+                    "description":"[STR+230]\nA two-handed sword with a mechanical arm guard on the hilt."
+                },
+                {
+                    "key":158,
+                    "icon":6,
+                    "name":"Claymore",
+                    "max":99,
+                    "description":"[STR+140]\nA two-handed sword w/ a sturdy cross-guard. Large but sharp."
+                },
+                {
+                    "key":163,
+                    "icon":6,
+                    "name":"Cleaver",
+                    "max":99,
+                    "description":"[STR+300/MOV-2/SPD-3]\nAn enormous knife used to butcher meat. Rather heavy."
+                },
+                {
+                    "key":169,
+                    "icon":6,
+                    "name":"Demon Eater",
+                    "max":99,
+                    "description":"[STR+500]\nA mythical glowing sword made from alloying a strange metal."
+                },
+                {
+                    "key":160,
+                    "icon":6,
+                    "name":"Dynast Edge",
+                    "max":99,
+                    "description":"[STR+190]\nA two-handed sword with a weighty end for powerful strikes."
+                },
+                {
+                    "key":164,
+                    "icon":6,
+                    "name":"Grambringer",
+                    "max":99,
+                    "description":"[STR+330]\nA massive two-handed sword. Hard to handle, but destructive."
+                },
+                {
+                    "key":166,
+                    "icon":6,
+                    "name":"Lion King's Sword",
+                    "max":99,
+                    "description":"[STR+435]\nA beautiful greatsword with a lion engraved on the hilt."
+                },
+                {
+                    "key":168,
+                    "icon":6,
+                    "name":"Nohval Blade",
+                    "max":99,
+                    "description":"[STR+345]\nAn enormous two-handed sword treated with black septium."
+                },
+                {
+                    "key":162,
+                    "icon":6,
+                    "name":"Ogre Buster",
+                    "max":99,
+                    "description":"[STR+280]\nA hunk of iron better suited to smashing than cutting."
+                },
+                {
+                    "key":167,
+                    "icon":6,
+                    "name":"Roaring Thunder",
+                    "max":99,
+                    "description":"[STR+240]\nA two-handed sword w/ a thick blade. Cuts the air w/ a roar."
+                },
+                {
+                    "key":159,
+                    "icon":6,
+                    "name":"Schweitzer",
+                    "max":99,
+                    "description":"[STR+160]\nA greatsword w/ a double-edged tip and a single-edged blade."
+                },
+                {
+                    "key":165,
+                    "icon":6,
+                    "name":"Zeno Breaker",
+                    "max":99,
+                    "description":"[STR+380]\nMechanized two-handed sword fitted w/ an oscillating motor."
+                }
+            ],
+            "Special":[
+                {
+                    "key":207,
+                    "icon":11,
+                    "name":"Fencer",
+                    "max":99,
+                    "description":"[STR+120]\nA training sword critical for learning the basics."
+                },
+                {
+                    "key":170,
+                    "icon":26,
+                    "name":"Fujin-Raijin",
+                    "max":99,
+                    "description":"[STR+340/RNG+1]\nAn incredibly long spear engraved w/ icons of Eastern gods."
+                },
+                {
+                    "key":208,
+                    "icon":11,
+                    "name":"Seiryuu Sword",
+                    "max":99,
+                    "description":"[STR+360]\nWide sword w/ a sharp blade. Optimized for overhead swings."
+                }
+            ],
+            "Orbal Cannons":[
+                {
+                    "key":197,
+                    "icon":7,
+                    "name":"Buster Gear",
+                    "max":99,
+                    "description":"[STR+300/RNG+4/Area (S)]\nA long-range orbal cannon made by the Reinford Company."
+                },
+                {
+                    "key":190,
+                    "icon":7,
+                    "name":"G-01",
+                    "max":99,
+                    "description":"[STR+235/RNG+3/Area (S)]\nHigh-grade orbal cannon. Enhanced version of the P series."
+                },
+                {
+                    "key":193,
+                    "icon":7,
+                    "name":"G-02",
+                    "max":99,
+                    "description":"[STR+335/RNG+3/Area (S)]\nA special model G-01 upgraded by Professor Russell."
+                },
+                {
+                    "key":192,
+                    "icon":7,
+                    "name":"Kowloon",
+                    "max":99,
+                    "description":"[STR+500/RNG+3/Area (M)]\nMythical glowing cannon made from alloying a strange metal."
+                },
+                {
+                    "key":196,
+                    "icon":7,
+                    "name":"Machine Planker",
+                    "max":99,
+                    "description":"[STR+175/RNG+3/Area (M)]\nA central factory test model gun developed for area control."
+                },
+                {
+                    "key":194,
+                    "icon":7,
+                    "name":"Meteo Buster",
+                    "max":99,
+                    "description":"[STR+385/RNG+3/Area (S)]\nA restored ancient magnetic weapon. Fires compressed plasma."
+                },
+                {
+                    "key":195,
+                    "icon":7,
+                    "name":"Omega Craft",
+                    "max":99,
+                    "description":"[STR+435/RNG+3/Area (M)]\nA weapon from an ancient culture. Tears open space itself."
+                },
+                {
+                    "key":188,
+                    "icon":7,
+                    "name":"P-07",
+                    "max":99,
+                    "description":"[STR+165/RNG+3/Area (S)]\nA compact orbal cannon developed by the central factory."
+                },
+                {
+                    "key":189,
+                    "icon":7,
+                    "name":"S Launcher",
+                    "max":99,
+                    "description":"[STR+195/RNG+3/Area (S)]\nA new model orbal cannon. Small but very destructive."
+                },
+                {
+                    "key":191,
+                    "icon":7,
+                    "name":"T Launcher",
+                    "max":99,
+                    "description":"[STR+285/RNG+3/Area (S)]\nAn upgraded orbal cannon with an enhanced driver orbment."
+                },
+                {
+                    "key":198,
+                    "icon":7,
+                    "name":"Tempest Cannon",
+                    "max":99,
+                    "description":"[STR+350/RNG+3/Area (M)]\nA weapon made w/ ancient tech. Able to suppress wide areas."
+                }
+            ],
+            "Gauntlets":[
+                {
+                    "key":221,
+                    "icon":8,
+                    "name":"Avalokiteshvara",
+                    "max":99,
+                    "description":"[STR+510]\nMythical gauntlets made from alloying a strange metal."
+                },
+                {
+                    "key":220,
+                    "icon":8,
+                    "name":"Blast Arm",
+                    "max":99,
+                    "description":"[STR+290]\nGauntlets w/ layers of metal plates to boost striking force."
+                },
+                {
+                    "key":224,
+                    "icon":8,
+                    "name":"Briarios",
+                    "max":99,
+                    "description":"[STR+445]\nAncient 'living' gauntlets that merge with the user's arm."
+                },
+                {
+                    "key":226,
+                    "icon":8,
+                    "name":"Byakko's Claws",
+                    "max":99,
+                    "description":"[STR+305]\nGauntlets with armor-shredding claws on the knuckles."
+                },
+                {
+                    "key":227,
+                    "icon":8,
+                    "name":"Genbu Shell",
+                    "max":99,
+                    "description":"[STR+355]\nAncient gauntlets adorned by holy Eastern beast designs."
+                },
+                {
+                    "key":222,
+                    "icon":8,
+                    "name":"Gigant Arm",
+                    "max":99,
+                    "description":"[STR+340]\nThick gloves built only for strength. Inflexible, but tough."
+                },
+                {
+                    "key":218,
+                    "icon":8,
+                    "name":"Heavy Cestus",
+                    "max":99,
+                    "description":"[STR+190]\nCombat gauntlets wrapped in tough beast leather."
+                },
+                {
+                    "key":223,
+                    "icon":8,
+                    "name":"Hecatonchire",
+                    "max":99,
+                    "description":"[STR+395]\nAncient mechanized gauntlets with explosive strike power."
+                },
+                {
+                    "key":219,
+                    "icon":8,
+                    "name":"Knuckle Gear",
+                    "max":99,
+                    "description":"[STR+235]\nGauntlets with a saw-toothed edge on the knuckles."
+                },
+                {
+                    "key":225,
+                    "icon":8,
+                    "name":"Silver Gauntlets",
+                    "max":99,
+                    "description":"[STR+205]\nSilver gauntlets of Eastern origin. Very flexible. "
+                }
+            ],
+            "Bows":[
+                {
+                    "key":233,
+                    "icon":9,
+                    "name":"Air Shooter",
+                    "max":99,
+                    "description":"[STR+180/RNG+4]\nA Verne Company model bow that fires arrows w/ air pressure."
+                },
+                {
+                    "key":234,
+                    "icon":9,
+                    "name":"Arbalest",
+                    "max":99,
+                    "description":"[STR+210/RNG+4]\nLarge bow popular in the middle ages. Also fires stone shot."
+                },
+                {
+                    "key":237,
+                    "icon":9,
+                    "name":"Composite Gear",
+                    "max":99,
+                    "description":"[STR+320/RNG+4]\nA CF model automatic bow made from a composite alloy."
+                },
+                {
+                    "key":230,
+                    "icon":9,
+                    "name":"Cross Gear",
+                    "max":99,
+                    "description":"[STR+110/RNG+3]\nA medium-sized semi-automatic bow that uses a crank reel."
+                },
+                {
+                    "key":239,
+                    "icon":9,
+                    "name":"Dominion",
+                    "max":99,
+                    "description":"[STR+415/RNG+5]\nAn ancient projectile weapon that fires energy blasts."
+                },
+                {
+                    "key":231,
+                    "icon":9,
+                    "name":"Glittering Stars",
+                    "max":99,
+                    "description":"[STR+480/RNG+5]\nMythical glowing bow made from alloying a strange metal."
+                },
+                {
+                    "key":240,
+                    "icon":9,
+                    "name":"Suzaku Bow",
+                    "max":99,
+                    "description":"[STR+345/RNG+5]\nAn ancient bow adorned by holy Eastern beast designs."
+                },
+                {
+                    "key":238,
+                    "icon":9,
+                    "name":"Sylphid",
+                    "max":99,
+                    "description":"[STR+370/RNG+5]\nAn ancient crossbow capable of firing high-speed rounds."
+                },
+                {
+                    "key":235,
+                    "icon":9,
+                    "name":"Windlass",
+                    "max":99,
+                    "description":"[STR+270/RNG+4]\nUsed by the society's assassination squads. Deadly silent."
+                }
+            ],
+            "Armor":[
+                {
+                    "key":366,
+                    "icon":10,
+                    "name":"8 Divinations Garb",
+                    "max":99,
+                    "description":"[DEF+320/ADF+40/SPD+5/DEX+20/AGL+20/Women Only]\nEastern martial arts garb adorned with an esoteric symbol."
+                },
+                {
+                    "key":242,
+                    "icon":10,
+                    "name":"Armor Vest",
+                    "max":99,
+                    "description":"[DEF+10/ADF+2]\nA vest with an iron plate in the chest for more protection."
+                },
+                {
+                    "key":359,
+                    "icon":10,
+                    "name":"Armored Barbarossa",
+                    "max":99,
+                    "description":"[DEF+360/ADF+35/STR+50/ATS-30/DEX+25/AGL+20/Men Only]\nAncient defensive artifact. Specialized for physical combat."
+                },
+                {
+                    "key":369,
+                    "icon":10,
+                    "name":"Armored Sieglinde",
+                    "max":99,
+                    "description":"[DEF+380/ADF+30/STR+50/ATS+30/DEX+20/AGL+15/Women Only]\nAncient defensive artifact that grants mythical power."
+                },
+                {
+                    "key":270,
+                    "icon":10,
+                    "name":"Aura Guard",
+                    "max":99,
+                    "description":"[DEF+555/ADF+50]\nMysterious body armor recovered from ancient ruins."
+                },
+                {
+                    "key":368,
+                    "icon":10,
+                    "name":"Aurelia Dress",
+                    "max":99,
+                    "description":"[DEF+380/ADF+50/STR-30/ATS+100/Women Only]\nPure white ritual garb sewn from glittering thread."
+                },
+                {
+                    "key":249,
+                    "icon":10,
+                    "name":"Battle Suit",
+                    "max":99,
+                    "description":"[DEF+50/ADF+6]\nArmor padded in various places to absorb shock."
+                },
+                {
+                    "key":250,
+                    "icon":10,
+                    "name":"Black Coat",
+                    "max":99,
+                    "description":"[DEF+80/ADF+8]\nA central factory product. Can repel edged weapons."
+                },
+                {
+                    "key":361,
+                    "icon":10,
+                    "name":"Blue Cashmere",
+                    "max":99,
+                    "description":"[DEF+150/ADF+35/Women Only]\nWoven from the wool of blue-coated sheep monsters. Creepy."
+                },
+                {
+                    "key":268,
+                    "icon":10,
+                    "name":"Cat Suit",
+                    "max":99,
+                    "description":"[DEF+5/SPD+5/???]\nA soft and fluffy cat suit with a cute little bell collar."
+                },
+                {
+                    "key":261,
+                    "icon":10,
+                    "name":"Ceram Armor",
+                    "max":99,
+                    "description":"[DEF+310/ADF+12/AGL+10]\nFlexible armor made with overlapping plates of resin."
+                },
+                {
+                    "key":258,
+                    "icon":10,
+                    "name":"Ceram Coat",
+                    "max":99,
+                    "description":"[DEF+200/ADF+6/SPD+5]\nAn Army coat with ceramic plates sewn into the chest."
+                },
+                {
+                    "key":248,
+                    "icon":10,
+                    "name":"Chain Mail",
+                    "max":99,
+                    "description":"[DEF+30/ADF+4]\nSheer protective clothing made of interwoven metal chains."
+                },
+                {
+                    "key":358,
+                    "icon":10,
+                    "name":"Dark Messiah",
+                    "max":99,
+                    "description":"[DEF+385/ADF+50/ATS+30/SPD+5/AGL+5/Men Only]\nAn ancient black cloak infused with powerful magic."
+                },
+                {
+                    "key":262,
+                    "icon":10,
+                    "name":"Dragon Skin Jumpsuit",
+                    "max":99,
+                    "description":"[DEF+350/ADF+50]\nA jumpsuit made from arts-resistant materials."
+                },
+                {
+                    "key":354,
+                    "icon":10,
+                    "name":"Ebony Suit",
+                    "max":99,
+                    "description":"[DEF+260/ADF+35/Men Only]\nA flexible, full-body suit with superior arts defense."
+                },
+                {
+                    "key":352,
+                    "icon":10,
+                    "name":"Edel Armor",
+                    "max":99,
+                    "description":"[DEF+200/ADF+15/ATS+15/Men Only]\nMetal armor with a sharp gleam. Heightens the mind."
+                },
+                {
+                    "key":256,
+                    "icon":10,
+                    "name":"Enhanced Jacket",
+                    "max":99,
+                    "description":"[DEF+140/ADF+2]\nA combat jacket enhanced by woven metal fibers."
+                },
+                {
+                    "key":260,
+                    "icon":10,
+                    "name":"Enhanced Leather",
+                    "max":99,
+                    "description":"[DEF+100]\nA vest using thick leather for extra chest protection."
+                },
+                {
+                    "key":257,
+                    "icon":10,
+                    "name":"Fiber Suit",
+                    "max":99,
+                    "description":"[DEF+160/ADF+4]\nFull-body defensive wear made from special woven fibers."
+                },
+                {
+                    "key":255,
+                    "icon":10,
+                    "name":"Fiber Vest",
+                    "max":99,
+                    "description":"[DEF+125]\nA tough vest made of special woven fibers."
+                },
+                {
+                    "key":264,
+                    "icon":10,
+                    "name":"Gaia Suit",
+                    "max":99,
+                    "description":"[DEF+425/ADF+25/STR+10/ATS+10/DEX+20/AGL+5]\nMiraculous clothes that channel septium power to the wearer."
+                },
+                {
+                    "key":363,
+                    "icon":10,
+                    "name":"Gypsy Queen",
+                    "max":99,
+                    "description":"[DEF+210/ADF+30/SPD+5/AGL+10/Women Only]\nSleeveless upper garment worn by shamans. Light yet tough."
+                },
+                {
+                    "key":247,
+                    "icon":10,
+                    "name":"Hide Jumpsuit",
+                    "max":99,
+                    "description":"[DEF+12/ADF+2]\nA jumpsuit made of inexpensive beast hide."
+                },
+                {
+                    "key":362,
+                    "icon":10,
+                    "name":"Holy Cloth",
+                    "max":99,
+                    "description":"[DEF+155/ADF+50/ATS+50/AGL-10/Women Only]\nCeremonial garb worn by Septian Church nuns."
+                },
+                {
+                    "key":265,
+                    "icon":10,
+                    "name":"Jagd Panzer",
+                    "max":99,
+                    "description":"[DEF+455/ADF+40/AGL-5/MOV-1/SPD-5]\nThirteen Factories-made armor lauded for its total defense."
+                },
+                {
+                    "key":350,
+                    "icon":10,
+                    "name":"Jenis Blazer",
+                    "max":99,
+                    "description":"[DEF+135/ATS+10/ADF+10/Men Only]\nSchool uniform with a tall collar. Instills a dedicated air."
+                },
+                {
+                    "key":360,
+                    "icon":10,
+                    "name":"Jenis Blouse",
+                    "max":99,
+                    "description":"[DEF+125/ADF+5/SPD+5/AGL+5/Women Only]\nSchool uniform popular for its large buttons. Very flexible."
+                },
+                {
+                    "key":370,
+                    "icon":10,
+                    "name":"Jormungandr",
+                    "max":99,
+                    "description":"[DEF+600/ADF+200/SPD-10/DEX+50/AGL-50/MOV-2]\nA mobile bunker once used by cannoneers in ancient wars."
+                },
+                {
+                    "key":243,
+                    "icon":10,
+                    "name":"Leather Jacket",
+                    "max":99,
+                    "description":"[DEF+25/ADF+2]\nA robust, tailored jacket made of thick leather."
+                },
+                {
+                    "key":241,
+                    "icon":10,
+                    "name":"Leather Vest",
+                    "max":99,
+                    "description":"[DEF+5]\nA vest made of nice, soft leather."
+                },
+                {
+                    "key":245,
+                    "icon":10,
+                    "name":"Metal Jacket",
+                    "max":99,
+                    "description":"[DEF+75/ADF+4]\nA protective jacket made of woven metallic fibers."
+                },
+                {
+                    "key":364,
+                    "icon":10,
+                    "name":"Misty Veil",
+                    "max":99,
+                    "description":"[DEF+260/ADF+30/ATS+50/Women Only]\nGrand feathered dress with silver septium woven throughout."
+                },
+                {
+                    "key":259,
+                    "icon":10,
+                    "name":"Protect Gear",
+                    "max":99,
+                    "description":"[DEF+250/ADF+8]\nNew model armor made with shock-absorbent materials."
+                },
+                {
+                    "key":351,
+                    "icon":10,
+                    "name":"Red Jacket",
+                    "max":99,
+                    "description":"[DEF+150/DEX+30/AGL+10/Men Only]\nA comfortable custom-tailored Army jacket."
+                },
+                {
+                    "key":251,
+                    "icon":10,
+                    "name":"Reflector",
+                    "max":99,
+                    "description":"[DEF+105/ADF+10]\nA protective coat reinforced with a special anti-art layer."
+                },
+                {
+                    "key":263,
+                    "icon":10,
+                    "name":"Reflector II",
+                    "max":99,
+                    "description":"[DEF+370/ADF+14]\nA protective coat with superior arts resistance."
+                },
+                {
+                    "key":253,
+                    "icon":10,
+                    "name":"Royal Guard",
+                    "max":99,
+                    "description":"[DEF+120/ADF+10/Men Only]\nArmor worn by knights of old. Lauded for its total defense."
+                },
+                {
+                    "key":246,
+                    "icon":10,
+                    "name":"Shield Coat",
+                    "max":99,
+                    "description":"[DEF+100/ADF+6]\nA protective coat made of a specially processed material."
+                },
+                {
+                    "key":244,
+                    "icon":10,
+                    "name":"Shield Vest",
+                    "max":99,
+                    "description":"[DEF+45/ADF+4]\nA protective vest embedded with numerous small iron plates."
+                },
+                {
+                    "key":353,
+                    "icon":10,
+                    "name":"Survival Vest",
+                    "max":99,
+                    "description":"[DEF+210/ADF+10/SPD+5/AGL+20/Men Only]\nA light, tough vest built for field use."
+                },
+                {
+                    "key":356,
+                    "icon":10,
+                    "name":"Taiji Garb",
+                    "max":99,
+                    "description":"[DEF+320/ADF+20/ATS+20/SPD+5/AGL+20/Men Only]\nEastern martial arts garb adorned w/ the symbol of creation."
+                },
+                {
+                    "key":254,
+                    "icon":10,
+                    "name":"Valkyrie Dress",
+                    "max":99,
+                    "description":"[DEF+120/ADF+10/Women Only]\nA female warrior's gown for battle alongside the knights."
+                },
+                {
+                    "key":252,
+                    "icon":10,
+                    "name":"Work Jumpsuit",
+                    "max":99,
+                    "description":"[DEF+50]\nA thick cloth work suit that doesn't shrink in the wash."
+                }
+            ],
+            "Shoes":[
+                {
+                    "key":284,
+                    "icon":12,
+                    "name":"(Alpha) Strega",
+                    "max":99,
+                    "description":"[DEF+10/MOV+2]\nA pair of test shoes made for Estelle."
+                },
+                {
+                    "key":285,
+                    "icon":12,
+                    "name":"(Beta) Strega",
+                    "max":99,
+                    "description":"[DEF+25/MOV+2]\nThe newest model of upcoming Strega-brand sneakers."
+                },
+                {
+                    "key":376,
+                    "icon":12,
+                    "name":"Accel Gear",
+                    "max":99,
+                    "description":"[DEF+50/MOV+2/SPD+5/Men Only]\nShoes with wheels affixed to the sole. Strega-brand."
+                },
+                {
+                    "key":279,
+                    "icon":12,
+                    "name":"Army Boots",
+                    "max":99,
+                    "description":"[DEF+15/MOV+2]\nThe formal wear of the Royal Army and popular with soldiers."
+                },
+                {
+                    "key":281,
+                    "icon":12,
+                    "name":"Atlas Gear",
+                    "max":99,
+                    "description":"[DEF+35/MOV+3/Men Only]\nBoots made of metallic-fibers which feel nearly weightless."
+                },
+                {
+                    "key":381,
+                    "icon":12,
+                    "name":"Blue Falcons",
+                    "max":99,
+                    "description":"[DEF+155/MOV+2/SPD+5/AGL+35/Men Only]\nShoes bedecked with the feathers of flying monsters."
+                },
+                {
+                    "key":299,
+                    "icon":12,
+                    "name":"Cat Foot Slippers",
+                    "max":99,
+                    "description":"[DEF+1/MOV+2/AGL+2/???]\nFanciful shoes with rubber-balled soles that mimic cat paws."
+                },
+                {
+                    "key":292,
+                    "icon":12,
+                    "name":"Ceramic Spikes",
+                    "max":99,
+                    "description":"[DEF+130/MOV+1]\nCombat shoes reinforced with durable ceramic plating."
+                },
+                {
+                    "key":375,
+                    "icon":12,
+                    "name":"Clog Boots",
+                    "max":99,
+                    "description":"[DEF+45/MOV-1/ATS+30/AGL-5/Men Only]\nFootwear made completely from wood. Very thick."
+                },
+                {
+                    "key":276,
+                    "icon":12,
+                    "name":"Composites",
+                    "max":99,
+                    "description":"[DEF+30/MOV+2]\nProtective boots for professionals. Made of tough materials."
+                },
+                {
+                    "key":296,
+                    "icon":12,
+                    "name":"Composites II",
+                    "max":99,
+                    "description":"[DEF+200/MOV+2]\nFootwear made from cutting-edge materials. Used by pros."
+                },
+                {
+                    "key":275,
+                    "icon":12,
+                    "name":"Craft Shoes",
+                    "max":99,
+                    "description":"[DEF+20/MOV+2]\nA new type of training shoe developed for rigorous workouts."
+                },
+                {
+                    "key":387,
+                    "icon":12,
+                    "name":"Crystal Heels",
+                    "max":99,
+                    "description":"[DEF+70/MOV+2/SPD+5/AGL+10/Women Only]\nStilettos with augmented heels. Hard to walk in."
+                },
+                {
+                    "key":274,
+                    "icon":12,
+                    "name":"Double Spikes",
+                    "max":99,
+                    "description":"[DEF+12/MOV+1]\nA pair of shoes with spiky, non-skid soles."
+                },
+                {
+                    "key":295,
+                    "icon":12,
+                    "name":"Dragon Skin Shoes",
+                    "max":99,
+                    "description":"[DEF+170/MOV+5/SPD+3]\nMysterious shoes plated w/ rippling scales. Enhances speed."
+                },
+                {
+                    "key":388,
+                    "icon":12,
+                    "name":"Duende Slippers",
+                    "max":99,
+                    "description":"[DEF+90/MOV+1/ATS+100/ADF-30/Women Only]\nThin dancing shoes. Heightens the user's mental abilities."
+                },
+                {
+                    "key":379,
+                    "icon":12,
+                    "name":"Ebony Shoes",
+                    "max":99,
+                    "description":"[DEF+135/MOV+1/ATS+30/ADF+30/Men Only]\nMechanical shoes with small orbments affixed to the tips."
+                },
+                {
+                    "key":377,
+                    "icon":12,
+                    "name":"Edel Guarders",
+                    "max":99,
+                    "description":"[DEF+75/MOV+1/Men Only]\nEtched leather shoes reinforced with brackets."
+                },
+                {
+                    "key":289,
+                    "icon":12,
+                    "name":"Fiber Boots",
+                    "max":99,
+                    "description":"[DEF+50/MOV+1]\nSpecially crafted armored shoes. Full foot fortification."
+                },
+                {
+                    "key":386,
+                    "icon":12,
+                    "name":"Gemini Boots",
+                    "max":99,
+                    "description":"[DEF+55/MOV+1/Women Only]\nDecorative shoes prettily armored with star plates."
+                },
+                {
+                    "key":378,
+                    "icon":12,
+                    "name":"Haken Boots",
+                    "max":99,
+                    "description":"[DEF+95/MOV+3/AGL+10/Men Only]\nSpiked shoes with unparalleled grip made for rough terrain."
+                },
+                {
+                    "key":385,
+                    "icon":12,
+                    "name":"Hard Loafers",
+                    "max":99,
+                    "description":"[DEF+45/MOV+2/SPD+2/AGL+2/Women Only]\nBasic shoes made from tough beast leather. Easy to wear."
+                },
+                {
+                    "key":383,
+                    "icon":12,
+                    "name":"Hermes Gear",
+                    "max":99,
+                    "description":"[DEF+200/MOV+4/DEX+50/AGL+15/Men Only]\nAncient defensive footwear. Makes wearer light as a feather."
+                },
+                {
+                    "key":283,
+                    "icon":12,
+                    "name":"Holey Boots",
+                    "max":99,
+                    "description":"[DEF+1/MOV+3]\nOften the catch of the day at fishing spots. Light and airy."
+                },
+                {
+                    "key":298,
+                    "icon":12,
+                    "name":"Jagd Guarders",
+                    "max":99,
+                    "description":"[DEF+180/MOV+5/SPD+5/DEX-10/AGL+5]\nMechanized footwear from the Thirteen Factories. Ups speed."
+                },
+                {
+                    "key":277,
+                    "icon":12,
+                    "name":"Knitted Shoes",
+                    "max":99,
+                    "description":"[DEF+7/MOV+1]\nSimple shoes knitted from natural materials. Light & tough."
+                },
+                {
+                    "key":271,
+                    "icon":12,
+                    "name":"Leather Boots",
+                    "max":99,
+                    "description":"[DEF+2]\nA pair of tanned leather boots. Light and flexible."
+                },
+                {
+                    "key":288,
+                    "icon":12,
+                    "name":"Metal Spikes",
+                    "max":99,
+                    "description":"[DEF+40/MOV+1]\nShoes studded with metal spikes. Sharp outside, soft inside."
+                },
+                {
+                    "key":394,
+                    "icon":12,
+                    "name":"Parthenon Gear",
+                    "max":99,
+                    "description":"[DEF+195/MOV+2/SPD+5/ATS+50/ADF+50/Women Only]\nAncient footwear infused w/ the highest-purity gold septium."
+                },
+                {
+                    "key":393,
+                    "icon":12,
+                    "name":"Persetear",
+                    "max":99,
+                    "description":"[DEF+205/MOV+4/DEX+50/AGL+15/Women Only]\nLeather shoes soled with green septium for gale-like speed."
+                },
+                {
+                    "key":297,
+                    "icon":12,
+                    "name":"Prometheus",
+                    "max":99,
+                    "description":"[DEF+220/MOV+4/SPD+5/ATS+30/ADF+10/AGL+5 ]\nAncient defensive item. Shields legs w/ a protective field."
+                },
+                {
+                    "key":391,
+                    "icon":12,
+                    "name":"Regina Guarder",
+                    "max":99,
+                    "description":"[DEF+150/MOV+2/SPD+5/ATS+20/ADF+50/AGL-5/Women Only]\nMetallic footwear enhanced at the joints for max defense."
+                },
+                {
+                    "key":293,
+                    "icon":12,
+                    "name":"Reinforced Boots",
+                    "max":99,
+                    "description":"[DEF+30/MOV+1]\nLeather boots fortified with armored plates."
+                },
+                {
+                    "key":384,
+                    "icon":12,
+                    "name":"Spiegel Shoes",
+                    "max":99,
+                    "description":"[DEF+215/MOV+2/SPD+5/ATS+10/ADF+30/Men Only]\nAncient footwear made from the purest of silver septium."
+                },
+                {
+                    "key":291,
+                    "icon":12,
+                    "name":"Spike Gear",
+                    "max":99,
+                    "description":"[DEF+90/MOV+1]\nDefensive equipment that buckles snuggly to the legs."
+                },
+                {
+                    "key":272,
+                    "icon":12,
+                    "name":"Spikes",
+                    "max":99,
+                    "description":"[DEF+5]\nA pair of shoes with pointy, non-skid soles."
+                },
+                {
+                    "key":389,
+                    "icon":12,
+                    "name":"Star Rabbits",
+                    "max":99,
+                    "description":"[DEF+95/MOV+4/AGL+15/Women Only]\nMechanical footwear with small springs in the base."
+                },
+                {
+                    "key":287,
+                    "icon":12,
+                    "name":"Steel-Toed Boots",
+                    "max":99,
+                    "description":"[DEF+12]\nHeavy-duty boots great for heavy-duty labor."
+                },
+                {
+                    "key":300,
+                    "icon":12,
+                    "name":"Strega B1",
+                    "max":99,
+                    "description":"[DEF+200/MOV+10]\nHigh-end Strega-brand shoes made especially for bracers."
+                },
+                {
+                    "key":399,
+                    "icon":12,
+                    "name":"Strega MAX",
+                    "max":99,
+                    "description":"[DEF+160/MOV+4]\n50th anniversary commemoration Strega-brand sneakers."
+                },
+                {
+                    "key":290,
+                    "icon":12,
+                    "name":"Strega-F",
+                    "max":99,
+                    "description":"[DEF+60/MOV+1]\nStrega's newest product developed with the central factory."
+                },
+                {
+                    "key":294,
+                    "icon":12,
+                    "name":"Strega-G",
+                    "max":99,
+                    "description":"[DEF+150/MOV+2]\nStrega-brand's top-end model. Creates explosive dash power."
+                },
+                {
+                    "key":286,
+                    "icon":12,
+                    "name":"Strega-J",
+                    "max":99,
+                    "description":"[DEF+6/MOV+1]\nThe junior model of Strega-brand sneakers."
+                },
+                {
+                    "key":278,
+                    "icon":12,
+                    "name":"Strega-R",
+                    "max":99,
+                    "description":"[DEF+10/MOV+1]\nThe regular model of Strega-brand sneakers."
+                },
+                {
+                    "key":282,
+                    "icon":12,
+                    "name":"Sylphen Boots",
+                    "max":99,
+                    "description":"[DEF+35/MOV+3/Women Only]\nMysterious boots that make your feet feel lighter than air."
+                },
+                {
+                    "key":273,
+                    "icon":12,
+                    "name":"Work Boots",
+                    "max":99,
+                    "description":"[DEF+8/MOV+1]\nRugged boots for laborers with top-rated craftsmanship."
+                }
+            ],
+            "Accessories":[
+                {
+                    "key":331,
+                    "icon":13,
+                    "name":"Anti-Cold Helmet",
+                    "max":99,
+                    "description":"[DEF+15/Prevents freeze]\nA helmet for use in cold environments."
+                },
+                {
+                    "key":304,
+                    "icon":13,
+                    "name":"Black Bangle",
+                    "max":99,
+                    "description":"[Prevents sleep]\nA leather wristband that stimulates a pressure point."
+                },
+                {
+                    "key":342,
+                    "icon":13,
+                    "name":"Buzzer",
+                    "max":99,
+                    "description":"[ATS+30/ADF+30/Prevents faint/sleep] An automatic alarm that\ndetects unconsciousness in the user and sounds an alert."
+                },
+                {
+                    "key":317,
+                    "icon":13,
+                    "name":"Cat Ears Band",
+                    "max":99,
+                    "description":"[AGL+2/???]\nA cute headband adorned with decorative cat ears."
+                },
+                {
+                    "key":318,
+                    "icon":13,
+                    "name":"Cat Tail",
+                    "max":99,
+                    "description":"[MOV+2/???]\nA themed accessory. Makes the wearer lighter on their feet."
+                },
+                {
+                    "key":332,
+                    "icon":13,
+                    "name":"Cotton-Stuffed Vest",
+                    "max":99,
+                    "description":"[DEF+15/Prevents petrify]\nA thick vest stuffed to the seams with cotton."
+                },
+                {
+                    "key":312,
+                    "icon":13,
+                    "name":"Crest Charm",
+                    "max":99,
+                    "description":"[Prevents sleep/faint]\nA crescent amulet that protects the wearer's consciousness."
+                },
+                {
+                    "key":348,
+                    "icon":13,
+                    "name":"Crimson Eye",
+                    "max":99,
+                    "description":"[ATS+50/ADF+50/MOV-1/SPD-5/Prevents mute] A blood red gem\nthat focuses the user's consciousness on their orbment."
+                },
+                {
+                    "key":349,
+                    "icon":13,
+                    "name":"Divine Cross",
+                    "max":99,
+                    "description":"[All Abilities Up (Except RNG)]\nA secret treasure hidden away by the Divine Penguin."
+                },
+                {
+                    "key":316,
+                    "icon":13,
+                    "name":"Eisenritter's Medal",
+                    "max":99,
+                    "description":"[DEF+20/Prevents seal/mute]\nIron medal awarded for service to the Empire."
+                },
+                {
+                    "key":324,
+                    "icon":13,
+                    "name":"Emerald Talisman",
+                    "max":99,
+                    "description":"A talisman crafted from a type of septium.\nThe wearer's attack and defense will become wind-based."
+                },
+                {
+                    "key":320,
+                    "icon":13,
+                    "name":"Emergency Puppet",
+                    "max":99,
+                    "description":"Fully revives bearer after K.O. one time, but breaks\nafterwards."
+                },
+                {
+                    "key":309,
+                    "icon":13,
+                    "name":"Feather Brooch",
+                    "max":99,
+                    "description":"[Prevents faint]\nA brooch featuring a vivid blue feather."
+                },
+                {
+                    "key":327,
+                    "icon":13,
+                    "name":"Gladiator Belt",
+                    "max":99,
+                    "description":"[STR+10/DEF-10/Auto-CP Up]\nA motivating belt. CP automatically recovers during battle."
+                },
+                {
+                    "key":326,
+                    "icon":13,
+                    "name":"Gladiator Headband",
+                    "max":99,
+                    "description":"[STR+5/DEF-5/CP Up+10%]\nA motivating headband. CP recovery rate rises in battle."
+                },
+                {
+                    "key":305,
+                    "icon":13,
+                    "name":"Glam Choker",
+                    "max":99,
+                    "description":"[Prevents mute]\nA special necklace that diverts the effects of anti-sept."
+                },
+                {
+                    "key":335,
+                    "icon":13,
+                    "name":"Glove Gear",
+                    "max":99,
+                    "description":"[STR+10/DEF+10]\nA special order guild glove that heightens grip strength."
+                },
+                {
+                    "key":313,
+                    "icon":13,
+                    "name":"Grail Locket",
+                    "max":99,
+                    "description":"[Prevents all abnormal status (except K.O.)]\nAn ornament modeled after a holy Septian artifact."
+                },
+                {
+                    "key":334,
+                    "icon":13,
+                    "name":"Jeweled Ring",
+                    "max":99,
+                    "description":"[DEF+2]\nAn expensive ring fitted with an incandescent gem."
+                },
+                {
+                    "key":346,
+                    "icon":13,
+                    "name":"Lebensborn",
+                    "max":99,
+                    "description":"[Prevents petrification/deathblows]\nA small vial of holy water from Arteria. Famous as a charm."
+                },
+                {
+                    "key":302,
+                    "icon":13,
+                    "name":"Lighter",
+                    "max":99,
+                    "description":"[Prevents freeze]\nA good-luck charm carried by hikers to combat the cold."
+                },
+                {
+                    "key":308,
+                    "icon":13,
+                    "name":"Lily Necklace",
+                    "max":99,
+                    "description":"[Prevents confuse]\nA necklace that gives off a calming floral fragrance."
+                },
+                {
+                    "key":338,
+                    "icon":13,
+                    "name":"Long Barrel",
+                    "max":99,
+                    "description":"[RNG+2]\nIncreases the firing range of guns, cannons, and crossbows."
+                },
+                {
+                    "key":339,
+                    "icon":13,
+                    "name":"Long Barrel II",
+                    "max":99,
+                    "description":"[RNG+3]\nIncreases the firing range of guns, cannons, and crossbows."
+                },
+                {
+                    "key":340,
+                    "icon":13,
+                    "name":"Long Barrel III",
+                    "max":99,
+                    "description":"[RNG+4]\nIncreases the firing range of guns, cannons, and crossbows."
+                },
+                {
+                    "key":343,
+                    "icon":13,
+                    "name":"Master Beads",
+                    "max":99,
+                    "description":"[Prevents sleep/confuse]\nA simple ceremonial tool used widely in the East for prayer."
+                },
+                {
+                    "key":472,
+                    "icon":13,
+                    "name":"Mind Orb",
+                    "max":99,
+                    "description":"[ATS+50/MOV+3/SPD+5]\nMythical jewel that raises speed, mobility, and arts power."
+                },
+                {
+                    "key":303,
+                    "icon":13,
+                    "name":"Mirage Ring",
+                    "max":99,
+                    "description":"[Prevents petrify]\nA ring set with a mysterious rainbow-colored gem."
+                },
+                {
+                    "key":341,
+                    "icon":13,
+                    "name":"Moonglasses",
+                    "max":99,
+                    "description":"[Prevents poison/blind] Glasses from the central factory\nthat for some utterly mysterious reason also block poison."
+                },
+                {
+                    "key":336,
+                    "icon":13,
+                    "name":"Night Goggles",
+                    "max":99,
+                    "description":"Goggles that allow sight in darkness. The lenses have a\nspecial coating that enhance incoming light."
+                },
+                {
+                    "key":307,
+                    "icon":13,
+                    "name":"Pearl Earring",
+                    "max":99,
+                    "description":"[Prevents seal]\nAn earring with a precious pearl imported from the East."
+                },
+                {
+                    "key":470,
+                    "icon":13,
+                    "name":"Power Orb",
+                    "max":99,
+                    "description":"[STR+50/MOV+3/SPD+5]\nMythical jewel that raises speed, mobility, and strength."
+                },
+                {
+                    "key":325,
+                    "icon":13,
+                    "name":"Proxy Puppet",
+                    "max":99,
+                    "description":"[Prevents K.O.]\nDefends against K.O. one time but breaks afterwards."
+                },
+                {
+                    "key":329,
+                    "icon":13,
+                    "name":"Red Scarf",
+                    "max":99,
+                    "description":"[DEF+2]\nGaudy neckwear to accent the collar. Painfully bright."
+                },
+                {
+                    "key":323,
+                    "icon":13,
+                    "name":"Ruby Talisman",
+                    "max":99,
+                    "description":"A talisman crafted from a type of septium.\nThe wearer's attack and defense will become fire-based."
+                },
+                {
+                    "key":322,
+                    "icon":13,
+                    "name":"Sapphire Talisman",
+                    "max":99,
+                    "description":"A talisman crafted from a type of septium.\nThe wearer's attack and defense will become water-based."
+                },
+                {
+                    "key":471,
+                    "icon":13,
+                    "name":"Shield Orb",
+                    "max":99,
+                    "description":"[DEF+50/MOV+3/SPD+5]\nMythical jewel that raises speed, mobility, and defense."
+                },
+                {
+                    "key":315,
+                    "icon":13,
+                    "name":"Shine Sphere",
+                    "max":99,
+                    "description":"[STR+20/Prevents sleep/blind/freeze]\nAccessory set with a rare gem that grants its bearer power."
+                },
+                {
+                    "key":314,
+                    "icon":13,
+                    "name":"Silver Chain",
+                    "max":99,
+                    "description":"[DEF+15/Prevents poison]\nSilver chain blessed by the Goddess Aidios."
+                },
+                {
+                    "key":301,
+                    "icon":13,
+                    "name":"Silver Earring",
+                    "max":99,
+                    "description":"[Prevents poison]\nA silver accessory blessed by the Goddess Aidios."
+                },
+                {
+                    "key":564,
+                    "icon":13,
+                    "name":"Silver Ring",
+                    "max":99,
+                    "description":"[ATS+2/ADF+2]\nA simple silver ring with no particular markings."
+                },
+                {
+                    "key":310,
+                    "icon":13,
+                    "name":"Skull Pendant",
+                    "max":99,
+                    "description":"[Prevents deathblows]\nA bone pendant with a skull carved into its surface."
+                },
+                {
+                    "key":319,
+                    "icon":13,
+                    "name":"Soft Knit Cap",
+                    "max":99,
+                    "description":"[DEF+8/Prevents freeze]\nWarm wool hat. Chases away the cold."
+                },
+                {
+                    "key":473,
+                    "icon":13,
+                    "name":"Soul Orb",
+                    "max":99,
+                    "description":"[ADF+50/MOV+3/SPD+5]\nMythical jewel that raises speed, mobility, and arts DEF."
+                },
+                {
+                    "key":311,
+                    "icon":13,
+                    "name":"T-Anklet",
+                    "max":99,
+                    "description":"[Prevents freeze/petrify]\nAn anklet which repels hindrances to movement."
+                },
+                {
+                    "key":347,
+                    "icon":13,
+                    "name":"Tiger Heart",
+                    "max":99,
+                    "description":"[STR+50/DEF+50/ATS-50/ADF-50/Prevents seal]\nAn ochre gem that focuses the user's consciousness on foes."
+                },
+                {
+                    "key":321,
+                    "icon":13,
+                    "name":"Topaz Talisman",
+                    "max":99,
+                    "description":"A talisman crafted from a type of septium.\nThe wearer's attack and defense will become earth-based."
+                },
+                {
+                    "key":344,
+                    "icon":13,
+                    "name":"Tornado Fan",
+                    "max":99,
+                    "description":"[Prevents poison/freeze]\nSuper-charged fan that creates a protective barrier of air."
+                },
+                {
+                    "key":345,
+                    "icon":13,
+                    "name":"Vajra",
+                    "max":99,
+                    "description":"[Prevents seal/mute] An accessory made from a gold-copper\nalloy. The symbol of evil-purging in the East."
+                },
+                {
+                    "key":306,
+                    "icon":13,
+                    "name":"White Bracelet",
+                    "max":99,
+                    "description":"[Prevents blind]\nA bangle that emits pure white light to prevent blindness."
+                },
+                {
+                    "key":330,
+                    "icon":13,
+                    "name":"Woolly Knit-Hat",
+                    "max":99,
+                    "description":"[DEF+3]\nA cute, fluffy yarn cap. A great gift for a young girl."
+                },
+                {
+                    "key":333,
+                    "icon":13,
+                    "name":"Work Gloves",
+                    "max":99,
+                    "description":"[DEF+3]\nExtra thick gloves. A standard gift for utility workers."
+                },
+                {
+                    "key":328,
+                    "icon":13,
+                    "name":"Work Helmet",
+                    "max":99,
+                    "description":"[DEF+3]\nAn essential piece of headgear for laborers."
+                },
+                {
+                    "key":337,
+                    "icon":13,
+                    "name":"Zero Field Generator",
+                    "max":5,
+                    "description":"An orbal shutdown phenomenon canceler made by Professor\nRussell. Can be worn on the wrist."
+                }
+            ],
+            "Meals":[
+                {
+                    "key":426,
+                    "icon":19,
+                    "name":"100 Victories Steak",
+                    "max":99,
+                    "description":"[HP10000/STR+10%]\nNo. 1 stamina snack for fighters. Replenishes the blood."
+                },
+                {
+                    "key":441,
+                    "icon":19,
+                    "name":"Ambrosial Egg",
+                    "max":99,
+                    "description":"[HP3300/Cures poison/blind/freeze]\nDelicately smoked and spiced soft-boiled egg."
+                },
+                {
+                    "key":419,
+                    "icon":19,
+                    "name":"Anarchy Soup",
+                    "max":99,
+                    "description":"[HP2300/Cures faint/sleep/petrify]\nA radical dish using miso AND cheese. Lunacy!"
+                },
+                {
+                    "key":486,
+                    "icon":22,
+                    "name":"Aurora Ball",
+                    "max":99,
+                    "description":"[STR1000/Random status effect 100%/Area (S)]\nMysterious lights, powerful effects..."
+                },
+                {
+                    "key":410,
+                    "icon":19,
+                    "name":"Azelia Kiss",
+                    "max":99,
+                    "description":"[HP1500/Cures K.O.]\nA cocktail with a lip-tingling hint of Azelia."
+                },
+                {
+                    "key":414,
+                    "icon":19,
+                    "name":"Bone Bouillon",
+                    "max":99,
+                    "description":"[HP1700/STR & DEF+10%]\nSoup filtered several times for a clean, golden broth."
+                },
+                {
+                    "key":402,
+                    "icon":19,
+                    "name":"Corner Castella",
+                    "max":99,
+                    "description":"[HP1500/Cures petrify]\nA fluffy sponge cake cut into clean right angles."
+                },
+                {
+                    "key":427,
+                    "icon":19,
+                    "name":"Crimson Platter",
+                    "max":99,
+                    "description":"[HP1500/Cures faint/sleep/petrify]\nEastern style raw fish. An exotic delicacy."
+                },
+                {
+                    "key":423,
+                    "icon":19,
+                    "name":"Fevered Gaze",
+                    "max":99,
+                    "description":"[HP2600/Cures poison/blind/freeze]\nA manly dish so manly it has...an eyeball in it."
+                },
+                {
+                    "key":416,
+                    "icon":19,
+                    "name":"Flame Tongue Stew",
+                    "max":99,
+                    "description":"[HP2800/Cures seal/mute/confuse]\nA fiery meat soup. Heaven and hell in your mouth."
+                },
+                {
+                    "key":447,
+                    "icon":19,
+                    "name":"Flower Milkshake",
+                    "max":99,
+                    "description":"[HP1600/Cures poison/blind/freeze]\nCreamy treat with a simple, gentle taste."
+                },
+                {
+                    "key":428,
+                    "icon":19,
+                    "name":"Fowl Magma Roast",
+                    "max":99,
+                    "description":"[HP900/STR+20%]\nCrispy outside, juicy inside. The spice crust is perfection."
+                },
+                {
+                    "key":434,
+                    "icon":19,
+                    "name":"Fruit Kingdom",
+                    "max":99,
+                    "description":"[HP800/Cures poison/blind/freeze]\nRegal tart piled high with luscious berries."
+                },
+                {
+                    "key":424,
+                    "icon":19,
+                    "name":"Got Some Spine",
+                    "max":99,
+                    "description":"[HP3800/DEF+20%]\nA hearty bone-in meat dish. The perfect survival food."
+                },
+                {
+                    "key":454,
+                    "icon":19,
+                    "name":"Heavenly Tempura",
+                    "max":99,
+                    "description":"[HP7200/MOV+1/SPD+10%]\nAn Eastern fried food with a delectable crunch. Divine."
+                },
+                {
+                    "key":403,
+                    "icon":19,
+                    "name":"Herb Sandwich",
+                    "max":99,
+                    "description":"[HP700/Cures poison]\nA fresh herb-scented sandwich. Perfect for a light meal."
+                },
+                {
+                    "key":408,
+                    "icon":19,
+                    "name":"Hot-Hot Potato Fry",
+                    "max":99,
+                    "description":"[HP400/Cures freeze]\nGolden tater skewers. Crispy outside, blazing hot inside."
+                },
+                {
+                    "key":495,
+                    "icon":22,
+                    "name":"Knockout Meatball",
+                    "max":99,
+                    "description":"[STR900/Inflicts faint 100%/Area (Line - Penetrate)]\nA chili-packed ball of meat. One bite and lights out."
+                },
+                {
+                    "key":452,
+                    "icon":19,
+                    "name":"Mighty Essence",
+                    "max":99,
+                    "description":"[HP4800/STR & DEF+20%]\nNutrient-packed mixed juice. So rich it's almost chewy."
+                },
+                {
+                    "key":418,
+                    "icon":19,
+                    "name":"Mighty Juice",
+                    "max":99,
+                    "description":"[HP2000/STR & DEF+20%]\nA pungent mixed juice that assaults the taste buds."
+                },
+                {
+                    "key":436,
+                    "icon":19,
+                    "name":"Miso-Stewed Fish",
+                    "max":99,
+                    "description":"[HP1400/Cures seal]\nEastern style fish cooked in miso. Subtly sweet and sour."
+                },
+                {
+                    "key":433,
+                    "icon":19,
+                    "name":"Mobility Popcorn",
+                    "max":99,
+                    "description":"[HP1200/MOV+2]\nA popular snack so airy you'll feel lighter if you eat it."
+                },
+                {
+                    "key":406,
+                    "icon":19,
+                    "name":"Mocking Pie",
+                    "max":99,
+                    "description":"[HP1900/Cures confuse]\nA machine-made pie so delicate that it looks handmade."
+                },
+                {
+                    "key":443,
+                    "icon":19,
+                    "name":"Moonlight Ice",
+                    "max":99,
+                    "description":"[HP2500/DEF+15%]\nHigh-class ice cream using moonlight drenched apples."
+                },
+                {
+                    "key":445,
+                    "icon":19,
+                    "name":"Mystery Crepe",
+                    "max":99,
+                    "description":"[HP3200/Cures seal/mute/confuse]\nLow calorie despite the contents. Truly a mystery."
+                },
+                {
+                    "key":417,
+                    "icon":19,
+                    "name":"Mystery Paste",
+                    "max":99,
+                    "description":"[HP2400/Cures all status ailments]\nThe real mystery is why anyone would eat this."
+                },
+                {
+                    "key":451,
+                    "icon":19,
+                    "name":"Mystery Paste Plus",
+                    "max":99,
+                    "description":"[HP6000/Cures all status ailments]\nMysterious paste. That's right. Paste. Enjoy!"
+                },
+                {
+                    "key":412,
+                    "icon":19,
+                    "name":"Nap Killer",
+                    "max":99,
+                    "description":"[HP1000/Cures sleep]\nJust one sip and...FEEL THE POWER OF CAFFEINE!"
+                },
+                {
+                    "key":489,
+                    "icon":22,
+                    "name":"Naptime Cookie",
+                    "max":99,
+                    "description":"[STR800/Inflicts sleep 100%/Area (S)]\nA sedative soaked baked treat(?). Does drowsy damage."
+                },
+                {
+                    "key":411,
+                    "icon":19,
+                    "name":"Nature's Bounty",
+                    "max":99,
+                    "description":"[HP500/Cures K.O.]\nA refreshing soda infused with extract of scented grasses."
+                },
+                {
+                    "key":457,
+                    "icon":19,
+                    "name":"Nirvana Tea",
+                    "max":99,
+                    "description":"[HP Recovery 100%/Cures all status ailments]\nHerbaceous tea suffused with nutrients."
+                },
+                {
+                    "key":420,
+                    "icon":19,
+                    "name":"Paradise Cooler",
+                    "max":99,
+                    "description":"[HP4200/Cures all status ailments]\nOverflowing with fruit. Truly paradisiacal."
+                },
+                {
+                    "key":431,
+                    "icon":19,
+                    "name":"Passion Omelet",
+                    "max":99,
+                    "description":"[HP2200/Cures blind]\nEgg dish with intense flavor. Excites the eye nerves."
+                },
+                {
+                    "key":413,
+                    "icon":19,
+                    "name":"Pepper Pottage",
+                    "max":99,
+                    "description":"[HP4000/Cures K.O.]\nStew recipe using piquant spices to enhance appetite."
+                },
+                {
+                    "key":492,
+                    "icon":22,
+                    "name":"Perilous Meatballs",
+                    "max":99,
+                    "description":"[STR600/Area (Line - Penetrate)]\nA meatball so spicy one bite'll make you breathe fire."
+                },
+                {
+                    "key":415,
+                    "icon":19,
+                    "name":"Premium Herb Tea",
+                    "max":99,
+                    "description":"[HP4500/Cures seal/mute/confuse]\nTea brimming with nourishing extracts."
+                },
+                {
+                    "key":439,
+                    "icon":19,
+                    "name":"Prime Salmon Grill",
+                    "max":99,
+                    "description":"[HP1800]\nA luxurious dish of premium fish steaks, drizzled in oil."
+                },
+                {
+                    "key":483,
+                    "icon":22,
+                    "name":"Rainbow Surprise",
+                    "max":99,
+                    "description":"[STR700/Random status effect 50% chance/Area (S)]\nMysterious lights, mysterious effects..."
+                },
+                {
+                    "key":438,
+                    "icon":19,
+                    "name":"Rampage Fish",
+                    "max":99,
+                    "description":"[HP3400/SPD+20%]\nCampfire grilled fish on a stick. Simple and satisfying."
+                },
+                {
+                    "key":430,
+                    "icon":19,
+                    "name":"Refresh Jelly",
+                    "max":99,
+                    "description":"[HP5400/Cures K.O.]\nHas a clean aftertaste that energizes and restores."
+                },
+                {
+                    "key":456,
+                    "icon":19,
+                    "name":"Resurrect Jelly",
+                    "max":99,
+                    "description":"[HP15000/Cures K.O.]\nRevolutionary new jelly that disappears on the tongue."
+                },
+                {
+                    "key":437,
+                    "icon":19,
+                    "name":"Roast Fish",
+                    "max":99,
+                    "description":"[HP600/Cures faint/sleep/petrify]\nEastern style grilled fish. Lavishly salted."
+                },
+                {
+                    "key":407,
+                    "icon":19,
+                    "name":"Royal Gelato",
+                    "max":99,
+                    "description":"[HP1700/Cures sleep]\nA classy dessert with subtle sweetness and velvety texture."
+                },
+                {
+                    "key":453,
+                    "icon":19,
+                    "name":"Rustic Bone",
+                    "max":99,
+                    "description":"[HP12000/DEF+20%]\nThe ultimate bone-in meat. A battle just to eat."
+                },
+                {
+                    "key":404,
+                    "icon":19,
+                    "name":"Salt-Roasted Fish",
+                    "max":99,
+                    "description":"[HP1100/DEF+10%]\nA small fish cooked to moist perfection in a crust of salt."
+                },
+                {
+                    "key":432,
+                    "icon":19,
+                    "name":"Sea 'Bubbles'",
+                    "max":99,
+                    "description":"[HP2100/Cures faint]\nRare fish egg dish with an irresistible popping texture."
+                },
+                {
+                    "key":440,
+                    "icon":19,
+                    "name":"Seafood Jelly",
+                    "max":99,
+                    "description":"[HP3600/Cures seal/mute/confuse]\nSeafood encased in gelatin. Jiggles fetchingly."
+                },
+                {
+                    "key":425,
+                    "icon":19,
+                    "name":"Shellful Dish",
+                    "max":99,
+                    "description":"[HP5000/DEF+20%]\nA dish utilizing even flavor extracts from the shell."
+                },
+                {
+                    "key":422,
+                    "icon":19,
+                    "name":"Spiral Noodles",
+                    "max":99,
+                    "description":"[HP2700/STR & DEF+5%]\nA fresh pasta using herbs that invoke a sense of spring."
+                },
+                {
+                    "key":442,
+                    "icon":19,
+                    "name":"Sunshine Ice",
+                    "max":99,
+                    "description":"[HP2500/STR+15%]\nHigh-class ice cream made with sun soaked oranges."
+                },
+                {
+                    "key":480,
+                    "icon":22,
+                    "name":"Surprise Cookie",
+                    "max":99,
+                    "description":"[STR500/Area (S)]\nA rock hard ballistic biscuit. Who baked this thing?!"
+                },
+                {
+                    "key":444,
+                    "icon":19,
+                    "name":"Sweeeeet Crepe",
+                    "max":99,
+                    "description":"[HP1300/MOV+1/SPD+10%]\nA saccharine dessert brimming with cream."
+                },
+                {
+                    "key":405,
+                    "icon":19,
+                    "name":"Ten-Stack Crepe",
+                    "max":99,
+                    "description":"[HP3000]\nA decadent cake of alternating crepe and cream layers."
+                },
+                {
+                    "key":409,
+                    "icon":19,
+                    "name":"Tomatrio Sandwich",
+                    "max":99,
+                    "description":"[HP500/CP50] Stuffed with 3 slices of acerbic tomato.\nThe epitome of bitter."
+                },
+                {
+                    "key":435,
+                    "icon":19,
+                    "name":"Turnin' Tempura",
+                    "max":99,
+                    "description":"[HP2000/MOV+1/SPD+10%]\nAn Eastern style fried fish with a light, flaky coating."
+                },
+                {
+                    "key":446,
+                    "icon":19,
+                    "name":"Ultima Ice Cream",
+                    "max":99,
+                    "description":"[HP2200/CP20]\nThe ultimate ice cream: three flavors singing in harmony."
+                },
+                {
+                    "key":455,
+                    "icon":19,
+                    "name":"Worldly Stew",
+                    "max":99,
+                    "description":"[HP9000/CP60]\nBitter, spicy, beast stew that galvanizes the whole body."
+                }
+            ],
+            "Healing":[
+                {
+                    "key":509,
+                    "icon":14,
+                    "name":"Celestial Balm",
+                    "max":99,
+                    "description":"[Cures K.O./Heals all HP]\nA salve which cures K.O. and heals all HP."
+                },
+                {
+                    "key":507,
+                    "icon":14,
+                    "name":"Curia Balm",
+                    "max":99,
+                    "description":"[Heals 100HP/Cures abnormal status]\nA salve which cures all status abnormalities except K.O."
+                },
+                {
+                    "key":510,
+                    "icon":14,
+                    "name":"EP Charge",
+                    "max":99,
+                    "description":"[Restores 100EP]\nAn orbal energy-filled capsule."
+                },
+                {
+                    "key":511,
+                    "icon":14,
+                    "name":"EP Charge II",
+                    "max":99,
+                    "description":"[Restores 300EP]\nAn enhanced orbal energy-filled capsule."
+                },
+                {
+                    "key":513,
+                    "icon":14,
+                    "name":"EP Charge III",
+                    "max":99,
+                    "description":"[Restores 500EP]\nAn ultra-enhanced orbal energy-filled capsule."
+                },
+                {
+                    "key":506,
+                    "icon":14,
+                    "name":"Insulating Tape",
+                    "max":99,
+                    "description":"[Heals 100HP/Cures mute]\nQuick-fix tape to repair a neutralized orbment."
+                },
+                {
+                    "key":504,
+                    "icon":14,
+                    "name":"Purging Balm",
+                    "max":99,
+                    "description":"[Heals 100HP/Cures poison/seal/blind]\nA salve from the Septian Church to treat abnormalities."
+                },
+                {
+                    "key":508,
+                    "icon":14,
+                    "name":"Reviving Balm",
+                    "max":99,
+                    "description":"[Cures K.O./Heals 1000HP]\nA salve which cures K.O. and heals 1000HP."
+                },
+                {
+                    "key":512,
+                    "icon":14,
+                    "name":"Smelling Salts",
+                    "max":99,
+                    "description":"[Heals 100HP/Cures confuse/sleep/faint]\nA compound from the Septian Church to stimulate the senses."
+                },
+                {
+                    "key":505,
+                    "icon":14,
+                    "name":"Softening Balm",
+                    "max":99,
+                    "description":"[Heals 100HP/Cures freeze/petrify]\nA salve from the Septian Church to repair movement."
+                },
+                {
+                    "key":518,
+                    "icon":14,
+                    "name":"S-Tablet",
+                    "max":99,
+                    "description":"[Cures lowered statuses/Heals 500HP]\nPill that restores lowered statuses to their normal levels."
+                },
+                {
+                    "key":503,
+                    "icon":14,
+                    "name":"Tear All Balm",
+                    "max":99,
+                    "description":"[Heals all HP]\nA healing salve formulated by the Septian Church."
+                },
+                {
+                    "key":501,
+                    "icon":14,
+                    "name":"Tear Balm",
+                    "max":99,
+                    "description":"[Heals 800HP]\nA healing salve formulated by the Septian Church."
+                },
+                {
+                    "key":502,
+                    "icon":14,
+                    "name":"Teara Balm",
+                    "max":99,
+                    "description":"[Heals 2000HP]\nA healing salve formulated by the Septian Church."
+                },
+                {
+                    "key":514,
+                    "icon":14,
+                    "name":"Tearal Balm",
+                    "max":99,
+                    "description":"[Heals 5000HP]\nA healing salve formulated by the Septian Church."
+                },
+                {
+                    "key":516,
+                    "icon":14,
+                    "name":"Zeram Capsule",
+                    "max":99,
+                    "description":"[Cures K.O./Heals all HP/Restores 200CP]\nA curative pill that revives and restores HP and CP."
+                },
+                {
+                    "key":517,
+                    "icon":14,
+                    "name":"Zeram Powder",
+                    "max":99,
+                    "description":"[Cures K.O./Heals all HP/Restores 100CP]\nA mixture that revives and restores 100CP and all HP."
+                }
+            ],
+            "Books":[
+                {
+                    "key":837,
+                    "icon":21,
+                    "name":"31 Cypress Trees",
+                    "max":99,
+                    "description":"A book found behind a barrel on the 3rd floor of the\nSanktheim Gate. From the Zeiss Central Factory Archives."
+                },
+                {
+                    "key":522,
+                    "icon":21,
+                    "name":"Bracer Notebook",
+                    "max":1,
+                    "description":"A notebook given to all bracers for investigative purposes.\nKeeping detailed records is an important part of the job."
+                },
+                {
+                    "key":530,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 1",
+                    "max":99,
+                    "description":"[The Imperial Chronicle]\nPart 1 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":539,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 10",
+                    "max":99,
+                    "description":"[The Last Stand]\nPart 10 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":531,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 2",
+                    "max":99,
+                    "description":"[The Train Station]\nPart 2 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":532,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 3",
+                    "max":99,
+                    "description":"[Representative of the Septian Church]\nPart 3 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":533,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 4",
+                    "max":99,
+                    "description":"[Human Fodder]\nPart 4 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":534,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 5",
+                    "max":99,
+                    "description":"[Emissary of the Sabbath]\nPart 5 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":535,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 6",
+                    "max":99,
+                    "description":"[Ascertaining the Inner Workings]\nPart 6 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":536,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 7",
+                    "max":99,
+                    "description":"[The Death of a Friend]\nPart 7 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":537,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 8",
+                    "max":99,
+                    "description":"[In the Bowels of the Imperial City]\nPart 8 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":538,
+                    "icon":21,
+                    "name":"Carnelia - Chapter 9",
+                    "max":99,
+                    "description":"[Carnelia]\nPart 9 of a fictional novel published in Liberl."
+                },
+                {
+                    "key":540,
+                    "icon":21,
+                    "name":"Carnelia - Finale",
+                    "max":99,
+                    "description":"[A Legacy Never to be Forgotten]\nThe finale to a fictional novel published in Liberl."
+                },
+                {
+                    "key":526,
+                    "icon":21,
+                    "name":"Fishing Book",
+                    "max":1,
+                    "description":"A notebook used to record information on fish caught."
+                },
+                {
+                    "key":570,
+                    "icon":21,
+                    "name":"Gambler Jack - Vol.1",
+                    "max":99,
+                    "description":"[Chapter 1 - The Girl]\nVolume 1 of a mainstream fiction novel published in Liberl."
+                },
+                {
+                    "key":579,
+                    "icon":21,
+                    "name":"Gambler Jack - Vol.10",
+                    "max":99,
+                    "description":"[Chapter 10 - The Match]\nVolume 10 of a mainstream fiction novel published in Liberl."
+                },
+                {
+                    "key":580,
+                    "icon":21,
+                    "name":"Gambler Jack - Vol.11",
+                    "max":99,
+                    "description":"[Chapter 11 - The Decisive Moment]\nVolume 11 of a mainstream fiction novel published in Liberl."
+                },
+                {
+                    "key":581,
+                    "icon":21,
+                    "name":"Gambler Jack - Vol.12",
+                    "max":99,
+                    "description":"[Chapter 12 - The Truth]\nVolume 12 of a mainstream fiction novel published in Liberl."
+                },
+                {
+                    "key":582,
+                    "icon":21,
+                    "name":"Gambler Jack - Vol.13",
+                    "max":99,
+                    "description":"[Chapter 13 - The Sense]\nVolume 13 of a mainstream fiction novel published in Liberl."
+                },
+                {
+                    "key":583,
+                    "icon":21,
+                    "name":"Gambler Jack - Vol.14",
+                    "max":99,
+                    "description":"[Final Chapter - To Each Their Own Wish] Final volume of a\nmainstream fiction novel published in Liberl."
+                },
+                {
+                    "key":571,
+                    "icon":21,
+                    "name":"Gambler Jack - Vol.2",
+                    "max":99,
+                    "description":"[Chapter 2 - The Offer]\nVolume 2 of a mainstream fiction novel published in Liberl."
+                },
+                {
+                    "key":572,
+                    "icon":21,
+                    "name":"Gambler Jack - Vol.3",
+                    "max":99,
+                    "description":"[Chapter 3 - Challenge at High Noon]\nVolume 3 of a mainstream fiction novel published in Liberl."
+                },
+                {
+                    "key":573,
+                    "icon":21,
+                    "name":"Gambler Jack - Vol.4",
+                    "max":99,
+                    "description":"[Chapter 4 - The Daughter]\nVolume 4 of a mainstream fiction novel published in Liberl."
+                },
+                {
+                    "key":574,
+                    "icon":21,
+                    "name":"Gambler Jack - Vol.5",
+                    "max":99,
+                    "description":"[Chapter 5 - The Invitation]\nVolume 5 of a mainstream fiction novel published in Liberl."
+                },
+                {
+                    "key":575,
+                    "icon":21,
+                    "name":"Gambler Jack - Vol.6",
+                    "max":99,
+                    "description":"[Chapter 6 - The King]\nVolume 6 of a mainstream fiction novel published in Liberl."
+                },
+                {
+                    "key":576,
+                    "icon":21,
+                    "name":"Gambler Jack - Vol.7",
+                    "max":99,
+                    "description":"[Chapter 7 - The Banquet of Darkness]\nVolume 7 of a mainstream fiction novel published in Liberl."
+                },
+                {
+                    "key":577,
+                    "icon":21,
+                    "name":"Gambler Jack - Vol.8",
+                    "max":99,
+                    "description":"[Chapter 8 - Halle]\nVolume 8 of a mainstream fiction novel published in Liberl."
+                },
+                {
+                    "key":578,
+                    "icon":21,
+                    "name":"Gambler Jack - Vol.9",
+                    "max":99,
+                    "description":"[Chapter 9 - Nostalgia]\nVolume 9 of a mainstream fiction novel published in Liberl."
+                },
+                {
+                    "key":855,
+                    "icon":21,
+                    "name":"Grancel Sewer Map",
+                    "max":99,
+                    "description":"A blueprint of the sewers running beneath the Royal City of\nGrancel."
+                },
+                {
+                    "key":884,
+                    "icon":21,
+                    "name":"Hertz's Adventure",
+                    "max":99,
+                    "description":"A book which can be read in the central factory Material\nArchives but not taken."
+                },
+                {
+                    "key":836,
+                    "icon":21,
+                    "name":"Hertz's Adventure II",
+                    "max":99,
+                    "description":"A book found near the strange stone pillars on Tratt Plains\nRoad. From the Zeiss Central Factory Material Archives."
+                },
+                {
+                    "key":817,
+                    "icon":21,
+                    "name":"Hundred Days War",
+                    "max":99,
+                    "description":"A book about the hidden truth behind the Hundred Days War\ncampaign."
+                },
+                {
+                    "key":520,
+                    "icon":21,
+                    "name":"Junior Bracer Book",
+                    "max":1,
+                    "description":"A notebook given to all bracers for investigative purposes.\nKeeping detailed records is an important part of the job."
+                },
+                {
+                    "key":832,
+                    "icon":21,
+                    "name":"Kitty-Talk for Dummies",
+                    "max":99,
+                    "description":"A book taken from the Material Archives at Zeiss Central\nFactory. Contains candid kitty conversations. Meow."
+                },
+                {
+                    "key":857,
+                    "icon":21,
+                    "name":"Leiston Fortress Map",
+                    "max":99,
+                    "description":"The schematics for Leiston Fortress.\n(Obtained by secret means.)"
+                },
+                {
+                    "key":858,
+                    "icon":21,
+                    "name":"Leiston Fortress Map",
+                    "max":99,
+                    "description":"The schematics for Leiston Fortress.\n(Obtained by secret means.)"
+                },
+                {
+                    "key":863,
+                    "icon":21,
+                    "name":"Liberl Kingdom Map",
+                    "max":99,
+                    "description":"A map of the Liberl Kingdom.\nIt can be used to confirm one's current whereabouts."
+                },
+                {
+                    "key":541,
+                    "icon":21,
+                    "name":"Liberl News - Issue 1",
+                    "max":99,
+                    "description":"[Rebuilding the Army]\nPost-Coup D'etat Reorganization Commences!"
+                },
+                {
+                    "key":551,
+                    "icon":21,
+                    "name":"Liberl News - Issue 10",
+                    "max":99,
+                    "description":"[The Kingdom Under Fire!]\nInfo On the Abnormalities Occurring Across the Country!"
+                },
+                {
+                    "key":552,
+                    "icon":21,
+                    "name":"Liberl News - Issue 11",
+                    "max":99,
+                    "description":"[City Under Siege - Crimson Soldiers Invade!]\nUp-to-date Info on the Fighting Inside!"
+                },
+                {
+                    "key":542,
+                    "icon":21,
+                    "name":"Liberl News - Issue 2",
+                    "max":99,
+                    "description":"[Ruan Mayoral Election Special]\nThe Contest Heats Up! Details Inside!"
+                },
+                {
+                    "key":543,
+                    "icon":21,
+                    "name":"Liberl News - Issue 3",
+                    "max":99,
+                    "description":"[Ruan Election - Clash of Candidates]\nA Riot on the Bridge?! Exclusive Photos Inside!"
+                },
+                {
+                    "key":544,
+                    "icon":21,
+                    "name":"Liberl News - Issue 4",
+                    "max":99,
+                    "description":"[Earthquakes Over]\nCentral Factory Declares Zeiss Safe! Is the Danger Over?"
+                },
+                {
+                    "key":545,
+                    "icon":21,
+                    "name":"Liberl News - Issue 5",
+                    "max":99,
+                    "description":"[Ruan's New Mayor Decided!]\nThe Election is Over! Who did the People Choose?"
+                },
+                {
+                    "key":546,
+                    "icon":21,
+                    "name":"Liberl News - Issue 6",
+                    "max":99,
+                    "description":"[The Intelligence Division Resurfaces!]\nShocking Developments in the Capital! Resolution Inside!"
+                },
+                {
+                    "key":547,
+                    "icon":21,
+                    "name":"Liberl News - Issue 7",
+                    "max":99,
+                    "description":"[Non-Aggression Pact Signed]\nExclusive Details from inside the Erbe Royal Villa!"
+                },
+                {
+                    "key":549,
+                    "icon":21,
+                    "name":"Liberl News - Issue 8",
+                    "max":99,
+                    "description":"[Operation: Dragon Capture]\nThe Liberl News is on the Mission! Full Details Inside!"
+                },
+                {
+                    "key":550,
+                    "icon":21,
+                    "name":"Liberl News - Issue 9",
+                    "max":99,
+                    "description":"[The Royal Army Reborn]\nThe Royal Army Transforms! Organizational Updates Inside!"
+                },
+                {
+                    "key":548,
+                    "icon":21,
+                    "name":"Liberl News - Special",
+                    "max":99,
+                    "description":"[Ancient Dragon Appears!!]\nBose Market Flattened by Legend!"
+                },
+                {
+                    "key":561,
+                    "icon":21,
+                    "name":"Lighthouse Manual",
+                    "max":99,
+                    "description":"Book can be read but not taken."
+                },
+                {
+                    "key":886,
+                    "icon":21,
+                    "name":"Luke's Journal",
+                    "max":99,
+                    "description":"An account of Luke's day to day life as a bracer.\nShocking twist ending! Sadly, it can't be taken."
+                },
+                {
+                    "key":867,
+                    "icon":21,
+                    "name":"Map of Le Locle",
+                    "max":99,
+                    "description":"Overview map of the Bracer Guild training grounds in Leman."
+                },
+                {
+                    "key":527,
+                    "icon":21,
+                    "name":"Monster Guide",
+                    "max":1,
+                    "description":"A notebook used to record information gathered from enemy\nencounters."
+                },
+                {
+                    "key":525,
+                    "icon":21,
+                    "name":"Recipe Book",
+                    "max":1,
+                    "description":"A book used to record the recipes of eaten food. Food can\nalso be made from recipes if you have the right ingredients."
+                },
+                {
+                    "key":566,
+                    "icon":21,
+                    "name":"Recipe Copy",
+                    "max":99,
+                    "description":"Copy of Old Miss Bloom's recipe from Rhett's house.\nOutlines the steps to make a traditional Rolent dish."
+                },
+                {
+                    "key":829,
+                    "icon":21,
+                    "name":"Ruan Economics I",
+                    "max":99,
+                    "description":"A book taken from the Material Archives at the royal\nacademy. The 1st volume in a trilogy."
+                },
+                {
+                    "key":830,
+                    "icon":21,
+                    "name":"Ruan Economics II",
+                    "max":99,
+                    "description":"A book taken from the Material Archives at the royal\nacademy. The 2nd volume in a trilogy."
+                },
+                {
+                    "key":831,
+                    "icon":21,
+                    "name":"Ruan Economics III",
+                    "max":99,
+                    "description":"A book taken from the Material Archives at the royal\nacademy. The 3rd volume in a trilogy."
+                },
+                {
+                    "key":834,
+                    "icon":21,
+                    "name":"Septium Optic Annals",
+                    "max":99,
+                    "description":"A book taken from the Material Archives at Zeiss Central\nFactory. Collections of these are routinely published."
+                },
+                {
+                    "key":835,
+                    "icon":21,
+                    "name":"The Erbe Woodpecker",
+                    "max":99,
+                    "description":"A book found inside the stone lantern in the pond at Elmo\nVillage. From the Zeiss Central Factory Material Archives."
+                },
+                {
+                    "key":833,
+                    "icon":21,
+                    "name":"Tomorrow's Cooking",
+                    "max":99,
+                    "description":"A book taken from the Material Archives at Zeiss Central\nFactory. It mainly speculates about the future of cooking."
+                }
+            ],
+            "Items":[
+                {
+                    "key":814,
+                    "icon":16,
+                    "name":"Abandoned Mine Key",
+                    "max":1,
+                    "description":"A key for the abandoned mine borrowed from Reisen,\nthe elder of Ravennue Village."
+                },
+                {
+                    "key":870,
+                    "icon":16,
+                    "name":"Arve Sovereign Serum",
+                    "max":99,
+                    "description":"A remedy formulated from Zemuria moss.\nIt boosts the immune system to fight off toxic agents."
+                },
+                {
+                    "key":864,
+                    "icon":16,
+                    "name":"Attn. Factory Chief",
+                    "max":99,
+                    "description":"A referral from the guild addressed to the head of\nthe central factory."
+                },
+                {
+                    "key":1011,
+                    "icon":16,
+                    "name":"Back Gate Key",
+                    "max":1,
+                    "description":"A key to the back gate of the royal academy that Hans\nborrowed from a teacher."
+                },
+                {
+                    "key":854,
+                    "icon":16,
+                    "name":"Back Room Key",
+                    "max":99,
+                    "description":"A key found in the Factory Chief's office of the Zeiss\nCentral Factory."
+                },
+                {
+                    "key":824,
+                    "icon":16,
+                    "name":"Black Notebook",
+                    "max":1,
+                    "description":"A notebook found inside a vacuum in the sky bandits'\nhideout. Nonsensical rows of numbers are written inside."
+                },
+                {
+                    "key":859,
+                    "icon":16,
+                    "name":"Black Orbment",
+                    "max":99,
+                    "description":"An obsidian-black orbment found in a package addressed to\nCassius."
+                },
+                {
+                    "key":1020,
+                    "icon":16,
+                    "name":"Blue Cardkey",
+                    "max":1,
+                    "description":"A cardkey found in the Lakeside Laboratory.\nHas a blue line running across the surface."
+                },
+                {
+                    "key":1010,
+                    "icon":16,
+                    "name":"Boarding Pass",
+                    "max":2,
+                    "description":"A ticket for the airliner and a reserved seat to Ruan."
+                },
+                {
+                    "key":880,
+                    "icon":16,
+                    "name":"Boarding Pass",
+                    "max":99,
+                    "description":"A ticket for the airliner and a reserved seat to the Royal\nCity of Grancel."
+                },
+                {
+                    "key":874,
+                    "icon":16,
+                    "name":"Boarding Pass",
+                    "max":99,
+                    "description":"A ticket for the airliner and a reserved seat to the Royal\nCity of Grancel."
+                },
+                {
+                    "key":1014,
+                    "icon":16,
+                    "name":"Bobcat Ignition Key",
+                    "max":1,
+                    "description":"A key to start the Bobcat's engine."
+                },
+                {
+                    "key":823,
+                    "icon":16,
+                    "name":"Bouquet",
+                    "max":1,
+                    "description":"A standard present."
+                },
+                {
+                    "key":861,
+                    "icon":16,
+                    "name":"Bracer Emblem",
+                    "max":99,
+                    "description":"An emblem verifying bracer status awarded by the guild.\nHas the official Bracer Guild symbol on its surface."
+                },
+                {
+                    "key":1037,
+                    "icon":16,
+                    "name":"Combustion Engine",
+                    "max":1,
+                    "description":"A complex machine which changes thermal energy into kinetic\nenergy by burning fuel inside a metallic pipe."
+                },
+                {
+                    "key":872,
+                    "icon":16,
+                    "name":"Combustion Engine",
+                    "max":99,
+                    "description":"A complex machine which changes thermal energy into kinetic\nenergy by burning fuel inside a metallic pipe."
+                },
+                {
+                    "key":1015,
+                    "icon":16,
+                    "name":"Dark Chocolate",
+                    "max":3,
+                    "description":"Chocolate bought as a gift. Isn't too sweet, so even those\nthat don't like desserts can enjoy it."
+                },
+                {
+                    "key":1021,
+                    "icon":16,
+                    "name":"Data Crystal 0",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Esmelas Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1022,
+                    "icon":16,
+                    "name":"Data Crystal 1",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Esmelas Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1031,
+                    "icon":16,
+                    "name":"Data Crystal 10",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Sapphirl Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1032,
+                    "icon":16,
+                    "name":"Data Crystal 11",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Sapphirl Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1033,
+                    "icon":16,
+                    "name":"Data Crystal 12",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Amberl Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1042,
+                    "icon":16,
+                    "name":"Data Crystal 13",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Amberl Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1043,
+                    "icon":16,
+                    "name":"Data Crystal 14",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Amberl Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1044,
+                    "icon":16,
+                    "name":"Data Crystal 15",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Amberl Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1023,
+                    "icon":16,
+                    "name":"Data Crystal 2",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Esmelas Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1024,
+                    "icon":16,
+                    "name":"Data Crystal 3",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Esmelas Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1025,
+                    "icon":16,
+                    "name":"Data Crystal 4",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Carnelia Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1026,
+                    "icon":16,
+                    "name":"Data Crystal 5",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Carnelia Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1027,
+                    "icon":16,
+                    "name":"Data Crystal 6",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Carnelia Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1028,
+                    "icon":16,
+                    "name":"Data Crystal 7",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Carnelia Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1029,
+                    "icon":16,
+                    "name":"Data Crystal 8",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Sapphirl Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1030,
+                    "icon":16,
+                    "name":"Data Crystal 9",
+                    "max":1,
+                    "description":"Long, pillar-like crystal found at the Sapphirl Tower. Seems\nto have information, but is damaged and can't be viewed."
+                },
+                {
+                    "key":1048,
+                    "icon":16,
+                    "name":"Data Crystal Z",
+                    "max":1,
+                    "description":"Crystal received from a terminal in the Residential Block.\nResponds to the Zemurian Ore you possess."
+                },
+                {
+                    "key":866,
+                    "icon":16,
+                    "name":"Detector Jammer",
+                    "max":99,
+                    "description":"A device invented by Professor Russell.\nCapable of jamming detection sensors."
+                },
+                {
+                    "key":856,
+                    "icon":16,
+                    "name":"Dorothy's Photograph",
+                    "max":99,
+                    "description":"A picture Dorothy took of Leiston Fortress."
+                },
+                {
+                    "key":838,
+                    "icon":16,
+                    "name":"Drive Orbment",
+                    "max":1,
+                    "description":"A drive orbment which could be said to be the heart of a\nhaulage vehicle."
+                },
+                {
+                    "key":802,
+                    "icon":16,
+                    "name":"Elevator Key",
+                    "max":1,
+                    "description":"A key borrowed from one of the mine workers at the\nMalga Mine to activate the elevator."
+                },
+                {
+                    "key":809,
+                    "icon":16,
+                    "name":"Father Divine's Letter",
+                    "max":1,
+                    "description":"A letter from Father Divine addressed to Father Holstein\nin Bose."
+                },
+                {
+                    "key":871,
+                    "icon":16,
+                    "name":"Gasoline Tank",
+                    "max":99,
+                    "description":"A tank filled with combustible liquid produced by the\nRepublic."
+                },
+                {
+                    "key":1036,
+                    "icon":16,
+                    "name":"Gasoline Tank",
+                    "max":3,
+                    "description":"A tank filled with combustible liquid produced by the\nRepublic."
+                },
+                {
+                    "key":815,
+                    "icon":16,
+                    "name":"Gate Pass",
+                    "max":1,
+                    "description":"A pass to enter the Bose region."
+                },
+                {
+                    "key":877,
+                    "icon":16,
+                    "name":"Grancel Sewer Key A",
+                    "max":99,
+                    "description":"A key to the sewer entrance in Grancel's west block."
+                },
+                {
+                    "key":878,
+                    "icon":16,
+                    "name":"Grancel Sewer Key B",
+                    "max":99,
+                    "description":"A key to the sewer entrance in Grancel's east block."
+                },
+                {
+                    "key":875,
+                    "icon":16,
+                    "name":"Grand Arena Ticket",
+                    "max":99,
+                    "description":"A spectator ticket for the Martial Arts Competition."
+                },
+                {
+                    "key":1019,
+                    "icon":16,
+                    "name":"Green Cardkey",
+                    "max":1,
+                    "description":"A cardkey found in the Lakeside Laboratory.\nHas a green line running across the surface."
+                },
+                {
+                    "key":804,
+                    "icon":16,
+                    "name":"Guild Referral",
+                    "max":1,
+                    "description":"A referral from the guild addressed to a Liberl News\nreporter."
+                },
+                {
+                    "key":800,
+                    "icon":16,
+                    "name":"Guild Referral",
+                    "max":1,
+                    "description":"A referral from the guild addressed to the owner of the\nPerzel Farm."
+                },
+                {
+                    "key":1017,
+                    "icon":15,
+                    "name":"Harmonica",
+                    "max":1,
+                    "description":"Harmonica found in the storage room in the Bright house."
+                },
+                {
+                    "key":1038,
+                    "icon":16,
+                    "name":"Hostage List",
+                    "max":1,
+                    "description":"A list of people being held hostage at the royal academy\ncompiled by Jill and Hans."
+                },
+                {
+                    "key":1046,
+                    "icon":15,
+                    "name":"ID Unit",
+                    "max":1,
+                    "description":"Mysterious equipment found at Grimsel Fortress.\nIt seems it's an orbal device of some kind, but..."
+                },
+                {
+                    "key":881,
+                    "icon":16,
+                    "name":"Invitation",
+                    "max":99,
+                    "description":"An invitation to the royal banquet awarded by Duke von\nAuslese as a prize for winning the Martial Arts Competition."
+                },
+                {
+                    "key":1041,
+                    "icon":16,
+                    "name":"Joshua's Harmonica",
+                    "max":1,
+                    "description":"Harmonica received from Joshua."
+                },
+                {
+                    "key":876,
+                    "icon":16,
+                    "name":"Julia's Letter",
+                    "max":99,
+                    "description":"A letter from Lieutenant Schwarz addressed to Hilda,\nthe head maid at Grancel Castle."
+                },
+                {
+                    "key":860,
+                    "icon":16,
+                    "name":"Junior Bracer Emblem",
+                    "max":99,
+                    "description":"A junior bracer emblem awarded by the guild.\nIdentification of one's junior bracer status."
+                },
+                {
+                    "key":822,
+                    "icon":16,
+                    "name":"Letter to Cassius",
+                    "max":1,
+                    "description":"A letter received from the guild addressed to Cassius Bright.\n"
+                },
+                {
+                    "key":862,
+                    "icon":16,
+                    "name":"Letter to Faye",
+                    "max":99,
+                    "description":"A letter received from Private Brahm at the Wolf Fort\nwritten with words of equivocal love."
+                },
+                {
+                    "key":806,
+                    "icon":16,
+                    "name":"Maintenance Kit",
+                    "max":1,
+                    "description":"A case of tools used to service lighthouses.\nInside is a complete set of tools and replacement parts."
+                },
+                {
+                    "key":1045,
+                    "icon":16,
+                    "name":"Master Fisher Card",
+                    "max":1,
+                    "description":"Accreditation of Master Fisher rank from the Fisherman's\nGuild. Present to their guildhouse for an amazing service."
+                },
+                {
+                    "key":801,
+                    "icon":16,
+                    "name":"Mayor's Referral",
+                    "max":1,
+                    "description":"A referral from Mayor Klaus addressed to the mine chief at\nthe Malga Mine."
+                },
+                {
+                    "key":898,
+                    "icon":15,
+                    "name":"Metal Detector",
+                    "max":1,
+                    "description":"A metal detector that will only respond to certain metals.\nUse to search for orbment parts."
+                },
+                {
+                    "key":1035,
+                    "icon":16,
+                    "name":"Murdock's Letter",
+                    "max":1,
+                    "description":"An introductory letter to the Ruan harbor master from\nFactory Chief Murdock."
+                },
+                {
+                    "key":868,
+                    "icon":16,
+                    "name":"Orbal Calculator",
+                    "max":99,
+                    "description":"The orbal calculator, Capel, which was stolen from the\ncentral factory."
+                },
+                {
+                    "key":562,
+                    "icon":15,
+                    "name":"Orbal Camera",
+                    "max":1,
+                    "description":"Camera borrowed from Researcher Santos with the History\nMuseum. High-end model for taking archive photographs."
+                },
+                {
+                    "key":807,
+                    "icon":16,
+                    "name":"Orbment Light",
+                    "max":1,
+                    "description":"A large orbment light used to replace burned out ones in\nroad lamps."
+                },
+                {
+                    "key":563,
+                    "icon":16,
+                    "name":"Orbment Parts",
+                    "max":99,
+                    "description":"Light yet tough metal orbment parts. Crafted with precision."
+                },
+                {
+                    "key":1039,
+                    "icon":15,
+                    "name":"Original Gospel",
+                    "max":1,
+                    "description":"Original version of the Gospel gained in the floating city.\nThe society is believed to be using replicas of this."
+                },
+                {
+                    "key":1049,
+                    "icon":16,
+                    "name":"Overnight Ticket",
+                    "max":1,
+                    "description":"Ticket for a night at the lakeside Kingfisher Inn.\nOne ticket covers the entire party."
+                },
+                {
+                    "key":1050,
+                    "icon":16,
+                    "name":"Photo of Joshua",
+                    "max":1,
+                    "description":"A photograph taken at the old sky bandit hideout by Dorothy.\nHas someone who looks like Joshua in it."
+                },
+                {
+                    "key":897,
+                    "icon":15,
+                    "name":"Photograph of Raini",
+                    "max":1,
+                    "description":"Photograph of Corna's niece who went missing ten years ago.\nBorrowed for the investigation."
+                },
+                {
+                    "key":1051,
+                    "icon":16,
+                    "name":"Photograph of Raini",
+                    "max":1,
+                    "description":"Photograph of Corna's niece who went missing ten years ago.\nBorrowed for the investigation."
+                },
+                {
+                    "key":818,
+                    "icon":16,
+                    "name":"Progressive Rod",
+                    "max":1,
+                    "description":"A normal fishing pole which can be found anywhere."
+                },
+                {
+                    "key":873,
+                    "icon":16,
+                    "name":"Pump Shed Key",
+                    "max":99,
+                    "description":"A key borrowed from Mrs. Mao to the pump shed in Elmo\nVillage."
+                },
+                {
+                    "key":1034,
+                    "icon":16,
+                    "name":"Pump Shed Key",
+                    "max":1,
+                    "description":"A key borrowed from Mrs. Mao to the pump shed in Elmo\nVillage."
+                },
+                {
+                    "key":805,
+                    "icon":16,
+                    "name":"Quartz Fragment",
+                    "max":1,
+                    "description":"A broken piece of quartz.\nIt glows just like a nonfunctional piece of sepith."
+                },
+                {
+                    "key":827,
+                    "icon":16,
+                    "name":"Recommendation",
+                    "max":1,
+                    "description":"A document awarded by the Grancel Bracer Guild recommending\nadvancement to bracer status."
+                },
+                {
+                    "key":825,
+                    "icon":16,
+                    "name":"Recommendation",
+                    "max":1,
+                    "description":"A document awarded by the Ruan Bracer Guild recommending\nadvancement to bracer status."
+                },
+                {
+                    "key":826,
+                    "icon":16,
+                    "name":"Recommendation",
+                    "max":1,
+                    "description":"A document awarded by the Zeiss Bracer Guild recommending\nadvancement to bracer status."
+                },
+                {
+                    "key":819,
+                    "icon":16,
+                    "name":"Recommendation",
+                    "max":1,
+                    "description":"A document awarded by the Bose Bracer Guild recommending\nadvancement to bracer status."
+                },
+                {
+                    "key":816,
+                    "icon":16,
+                    "name":"Recommendation",
+                    "max":1,
+                    "description":"A document awarded by the Rolent Bracer Guild recommending\nadvancement to bracer status."
+                },
+                {
+                    "key":1018,
+                    "icon":16,
+                    "name":"Red Cardkey",
+                    "max":1,
+                    "description":"A cardkey found in the Lakeside Laboratory.\nHas a red line running across the surface."
+                },
+                {
+                    "key":882,
+                    "icon":16,
+                    "name":"Registry Card",
+                    "max":99,
+                    "description":"A card indicating participation in the Martial Arts\nCompetition."
+                },
+                {
+                    "key":885,
+                    "icon":16,
+                    "name":"Room 202 Key",
+                    "max":99,
+                    "description":"A key to room 202 at Hotel Roenbaum."
+                },
+                {
+                    "key":565,
+                    "icon":16,
+                    "name":"Rusted Key",
+                    "max":99,
+                    "description":"A key found together with a card.\nApparently opens 'The unopening door'...?"
+                },
+                {
+                    "key":1012,
+                    "icon":16,
+                    "name":"Rusted Key",
+                    "max":1,
+                    "description":"A key found in the Old Schoolhouse of the royal academy."
+                },
+                {
+                    "key":1040,
+                    "icon":16,
+                    "name":"Security Card",
+                    "max":1,
+                    "description":"Latest security card gained aboard the Glorious."
+                },
+                {
+                    "key":803,
+                    "icon":16,
+                    "name":"Septium Crystal",
+                    "max":1,
+                    "description":"A septium crystal received from the mine chief."
+                },
+                {
+                    "key":810,
+                    "icon":16,
+                    "name":"Servais Leaf",
+                    "max":99,
+                    "description":"A tree leaf found in the attic of the mayor's residence."
+                },
+                {
+                    "key":883,
+                    "icon":16,
+                    "name":"Small Box",
+                    "max":99,
+                    "description":"The item required to complete bracer practical training.\nIt is tightly sealed."
+                },
+                {
+                    "key":879,
+                    "icon":16,
+                    "name":"Spare Key",
+                    "max":99,
+                    "description":"A key to the main hall hidden in the gallery of the Erbe Royal Villa."
+                },
+                {
+                    "key":828,
+                    "icon":16,
+                    "name":"Special Boxed Lunch",
+                    "max":1,
+                    "description":"A sandwich and paella set with a free herbal tea included.\n"
+                },
+                {
+                    "key":1016,
+                    "icon":16,
+                    "name":"Storage Room Key",
+                    "max":1,
+                    "description":"Key to unlock the storage room in the Bright house."
+                },
+                {
+                    "key":813,
+                    "icon":16,
+                    "name":"The Mayor's Letter",
+                    "max":1,
+                    "description":"A letter from Mayor Maybelle addressed to General Morgan\nat the Haken Gate."
+                },
+                {
+                    "key":821,
+                    "icon":16,
+                    "name":"Torn Map",
+                    "max":1,
+                    "description":"A piece of an old sea chart found in a barrel washed up on\nthe beach of the Gull Seaside Way."
+                },
+                {
+                    "key":820,
+                    "icon":16,
+                    "name":"Warehouse Key",
+                    "max":1,
+                    "description":"A key found in Ruan's south block."
+                },
+                {
+                    "key":1013,
+                    "icon":16,
+                    "name":"Wooden Gate Key",
+                    "max":1,
+                    "description":"A key borrowed from old Mrs. Mao to unlock the back gate in\nElmo Village."
+                },
+                {
+                    "key":869,
+                    "icon":16,
+                    "name":"Zemuria Moss",
+                    "max":99,
+                    "description":"A glowing moss gathered from the Kaldia Limestone Cave. It's\nneeded to make a remedy developed by the Septian Church."
+                },
+                {
+                    "key":1047,
+                    "icon":16,
+                    "name":"Zemurian Ore",
+                    "max":99,
+                    "description":"Mass of ore with a glittering countenance.\nSo hard that there's no clear way to process it."
+                }
+            ],
+            "Fishing Rods":[
+                {
+                    "key":596,
+                    "icon":25,
+                    "name":"Aqua Master",
+                    "max":99,
+                    "description":"Miraculous tackle believed to be of Zemurian origin.\nA piece of gear any fisher would trade their fortune for."
+                },
+                {
+                    "key":590,
+                    "icon":25,
+                    "name":"Bamboo Fishing Rod",
+                    "max":99,
+                    "description":"The most basic rod and tackle. Limits the usable types of\nbait, but can sometimes catch surprisingly big fish."
+                },
+                {
+                    "key":593,
+                    "icon":25,
+                    "name":"Lakelord II",
+                    "max":99,
+                    "description":"Next-generation tackle for serious fishers. Its fields of\nuse are limited, but it can handle the biggest catches."
+                },
+                {
+                    "key":594,
+                    "icon":25,
+                    "name":"Marine Star",
+                    "max":99,
+                    "description":"The standard tackle for saltwater fishing.\nA must-have for aspiring fishermen and women."
+                },
+                {
+                    "key":595,
+                    "icon":25,
+                    "name":"Metal Rod Trident",
+                    "max":99,
+                    "description":"Heavy tackle created exclusively to catch big fish. A\nmasterpiece of design in the pursuit of giant fishy foes."
+                },
+                {
+                    "key":592,
+                    "icon":25,
+                    "name":"Piscis Heart",
+                    "max":99,
+                    "description":"Lightweight tackle made for delicate fishing work.\nThe best set for fishing up small to medium sized fish."
+                },
+                {
+                    "key":591,
+                    "icon":25,
+                    "name":"Progress Rod",
+                    "max":99,
+                    "description":"Average rod and tackle that can be used in a variety of\nfields. The standard for the Fisherman's Guild."
+                }
+            ],
+            "Ingredients":[
+                {
+                    "key":901,
+                    "icon":20,
+                    "name":"Acerbic Tomato",
+                    "max":99,
+                    "description":"A new species that arose as a byproduct of experimentation.\nIt is unimaginably bitter."
+                },
+                {
+                    "key":904,
+                    "icon":20,
+                    "name":"Aged Miso",
+                    "max":99,
+                    "description":"An Eastern seasoning made by fermenting steamed grains.\nHas a pungent flavor and is great for health."
+                },
+                {
+                    "key":911,
+                    "icon":20,
+                    "name":"Azelia Fruit",
+                    "max":99,
+                    "description":"A fruit with a tough rind indigenous to the Ruan region.\nIt is mainly enjoyed in the form of juice."
+                },
+                {
+                    "key":902,
+                    "icon":20,
+                    "name":"Bear Claw",
+                    "max":99,
+                    "description":"A thorny medicinal herb that looks like a bear's claw.\nOften used in food and medicine."
+                },
+                {
+                    "key":933,
+                    "icon":20,
+                    "name":"Beast Flesh",
+                    "max":99,
+                    "description":"Monster flesh with a slight odor.\nThe more you chew it, the better it tastes."
+                },
+                {
+                    "key":937,
+                    "icon":20,
+                    "name":"Bird Egg",
+                    "max":99,
+                    "description":"A giant egg the size of a child's head.\nPrized in the East as a revitalizing agent."
+                },
+                {
+                    "key":924,
+                    "icon":20,
+                    "name":"Black Pepper",
+                    "max":99,
+                    "description":"Whole black pepper.\nAn essential spice in meat dishes."
+                },
+                {
+                    "key":936,
+                    "icon":20,
+                    "name":"Clear Gelatin",
+                    "max":99,
+                    "description":"A tasteless, scentless gelatinous strand.\nIt melts in the mouth like a smooth froth."
+                },
+                {
+                    "key":916,
+                    "icon":20,
+                    "name":"Crisp Onion",
+                    "max":99,
+                    "description":"A large onion with a nice crunchy texture.\nWith almost no acrid taste, it can be eaten like an apple."
+                },
+                {
+                    "key":926,
+                    "icon":20,
+                    "name":"Curative Horn",
+                    "max":99,
+                    "description":"A health food full of minerals.\nFiguring out how to eat it requires some ingenuity."
+                },
+                {
+                    "key":917,
+                    "icon":20,
+                    "name":"Dirty Carrot",
+                    "max":99,
+                    "description":"A sweet carrot great for cooking.\nThe dirt is used to keep it fresh."
+                },
+                {
+                    "key":922,
+                    "icon":20,
+                    "name":"Dragon Beans",
+                    "max":99,
+                    "description":"Flavorful coffee beans native to Liberl.\nThe raw beans are used as a condiment."
+                },
+                {
+                    "key":900,
+                    "icon":20,
+                    "name":"Firefly Fungus",
+                    "max":99,
+                    "description":"A suspiciously green, glowing mushroom.\nIt is rumored to be delectable if prepared right."
+                },
+                {
+                    "key":938,
+                    "icon":20,
+                    "name":"Fish Egg",
+                    "max":99,
+                    "description":"A fun food that pops in the mouth.\nIt is a popular ingredient in Eastern cooking."
+                },
+                {
+                    "key":934,
+                    "icon":20,
+                    "name":"Fish Fillet",
+                    "max":99,
+                    "description":"Fish with a rather sinewy texture.\nIt's quite tough to chew for being light white meat."
+                },
+                {
+                    "key":915,
+                    "icon":20,
+                    "name":"Flaky Potato",
+                    "max":99,
+                    "description":"A small succulent potato.\nGreat in boiled foods since it keeps its firmness."
+                },
+                {
+                    "key":907,
+                    "icon":20,
+                    "name":"Fresh Eggs",
+                    "max":99,
+                    "description":"Newly laid eggs from free-range chickens.\nA basic ingredient essential for cooking."
+                },
+                {
+                    "key":921,
+                    "icon":20,
+                    "name":"Fresh Herb",
+                    "max":99,
+                    "description":"A sweet herb with a pleasant fragrance.\nIts use varies from tea to even ridding meats of odors."
+                },
+                {
+                    "key":906,
+                    "icon":20,
+                    "name":"Fresh Milk",
+                    "max":99,
+                    "description":"Freshly drawn milk delivered daily from the farm.\nRolent's local brand is said to be especially tasty."
+                },
+                {
+                    "key":930,
+                    "icon":20,
+                    "name":"Gummy Eyeball",
+                    "max":99,
+                    "description":"A large gelatinous ball of...meat.\nA healthy food most people wouldn't poke with a stick."
+                },
+                {
+                    "key":913,
+                    "icon":20,
+                    "name":"Ironbone Fish",
+                    "max":99,
+                    "description":"A small fish with extremely tough bones. If the bones aren't\nremoved before eating, you've got a recipe for broken teeth."
+                },
+                {
+                    "key":929,
+                    "icon":20,
+                    "name":"Juicy Bone",
+                    "max":99,
+                    "description":"An essential ingredient for soup broth.\nIt is used in numerous dishes."
+                },
+                {
+                    "key":919,
+                    "icon":20,
+                    "name":"Kibbled Salt",
+                    "max":99,
+                    "description":"Coarsely ground rock salt.\nRich in minerals, it carries a profound flavor."
+                },
+                {
+                    "key":928,
+                    "icon":20,
+                    "name":"Leathery Tail",
+                    "max":99,
+                    "description":"A well-developed muscular tail.\nThough troublesome to cook, it has an excellent flavor."
+                },
+                {
+                    "key":931,
+                    "icon":20,
+                    "name":"Lucky Fang",
+                    "max":99,
+                    "description":"A sharp, jagged, saw-like fang. Once ground into a fine\npowder, it is used to spice up dishes."
+                },
+                {
+                    "key":909,
+                    "icon":20,
+                    "name":"Luscious Orange",
+                    "max":99,
+                    "description":"A hand-picked fruit from a farming village.\nVivid orange like the setting sun."
+                },
+                {
+                    "key":918,
+                    "icon":20,
+                    "name":"Maple Sugar",
+                    "max":99,
+                    "description":"A natural sweetener made from boiled-down tree sap.\nIts faint aroma can be used as an accent for foods."
+                },
+                {
+                    "key":914,
+                    "icon":20,
+                    "name":"Marbled Steak",
+                    "max":99,
+                    "description":"A mouthwatering cut of meat, tender and marbled with fat.\nGreat in dishes from stew to steak."
+                },
+                {
+                    "key":912,
+                    "icon":20,
+                    "name":"Milled Flour",
+                    "max":99,
+                    "description":"The most basic of ingredients.\nNeither pasta nor bread can be made without it."
+                },
+                {
+                    "key":932,
+                    "icon":20,
+                    "name":"Monster Carapace",
+                    "max":99,
+                    "description":"The tender meat inside the shell is a real prize.\nBeing quite lean, the flesh has a light taste."
+                },
+                {
+                    "key":920,
+                    "icon":20,
+                    "name":"Olive Oil",
+                    "max":99,
+                    "description":"Oil taken from the olives of a tree laden with fruit.\nEssential to give that special touch to dishes."
+                },
+                {
+                    "key":939,
+                    "icon":20,
+                    "name":"Prickly Seed",
+                    "max":99,
+                    "description":"A seed covered by a host of tiny thorns.\nSauteing it in a frying pan really brings out the flavor."
+                },
+                {
+                    "key":925,
+                    "icon":20,
+                    "name":"Red Pepper",
+                    "max":99,
+                    "description":"A discernibly red hot pepper.\nDried ones are often ground into powder."
+                },
+                {
+                    "key":910,
+                    "icon":20,
+                    "name":"Ripe Apple",
+                    "max":99,
+                    "description":"A succulent treat harvested after it has grown to maturity.\nFrom the famous fruit orchards of the Village of Ravennue."
+                },
+                {
+                    "key":923,
+                    "icon":20,
+                    "name":"Royal Leaf",
+                    "max":99,
+                    "description":"A popular tree leaf used as an extract since old times.\nIt's even used to flavor candy."
+                },
+                {
+                    "key":927,
+                    "icon":20,
+                    "name":"Savory Pinion",
+                    "max":99,
+                    "description":"A thin, clear membranous wing.\nIt is mainly used to flavor dishes."
+                },
+                {
+                    "key":908,
+                    "icon":20,
+                    "name":"Sharp Cheese",
+                    "max":99,
+                    "description":"Ripened cheese made from freshly drawn milk."
+                },
+                {
+                    "key":935,
+                    "icon":20,
+                    "name":"Tender Poultry",
+                    "max":99,
+                    "description":"Monster meat with a rather ordinary flavor. Its leanness\nmakes it a popular ingredient among women, however."
+                },
+                {
+                    "key":940,
+                    "icon":20,
+                    "name":"Tender Whitefish",
+                    "max":99,
+                    "description":"Delicate cuts of white fish flesh. Can be eaten grilled,\nlightly seared, or (if fresh enough) raw."
+                },
+                {
+                    "key":903,
+                    "icon":20,
+                    "name":"Tri-Colored Rice",
+                    "max":99,
+                    "description":"A blend of red, yellow, and black husked rice.\nDelightfully crunchy and often used in dishes in Liberl."
+                },
+                {
+                    "key":905,
+                    "icon":20,
+                    "name":"Vintage Wine",
+                    "max":99,
+                    "description":"A thoroughly aged, potent liquor.\nIt is highly regarded as a cooking wine for its rich aroma."
+                }
+            ],
+            "Fish":[
+                {
+                    "key":969,
+                    "icon":24,
+                    "name":"Blue Marlin",
+                    "max":99,
+                    "description":"[Value: 2500] Also called the Blue\nNoble. A fish whose sea-colored scales glimmer like jewels."
+                },
+                {
+                    "key":962,
+                    "icon":24,
+                    "name":"Carp",
+                    "max":99,
+                    "description":"[Bait, Value: 150] A long-lived fish, with\ngreat vigor. Lives an average of 15-20 years."
+                },
+                {
+                    "key":973,
+                    "icon":24,
+                    "name":"Claudine",
+                    "max":99,
+                    "description":"[Value: 450] A large fish with pitch-\nblack scales. Famous for its sequential hermaphroditism."
+                },
+                {
+                    "key":972,
+                    "icon":24,
+                    "name":"Crab",
+                    "max":99,
+                    "description":"[Bait, Value: 20] Crab that likes rock\nshadows. Used as bait, will sometimes catch really big fish."
+                },
+                {
+                    "key":955,
+                    "icon":24,
+                    "name":"Dace",
+                    "max":99,
+                    "description":"[Bait, Value: 25] Small fish very tolerant\nto changes in its environment. Found throughout Liberl."
+                },
+                {
+                    "key":982,
+                    "icon":23,
+                    "name":"Dumplings",
+                    "max":99,
+                    "description":"Fishing bait used for lakes and rivers made out of plants\nand vegetables ground to powder, then molded into a paste."
+                },
+                {
+                    "key":975,
+                    "icon":24,
+                    "name":"Dynatrad",
+                    "max":99,
+                    "description":"[Value: 10000] A fish that has broken\nmany challengers before. The fabled Guardian of Valleria Lake."
+                },
+                {
+                    "key":980,
+                    "icon":23,
+                    "name":"Earthworm",
+                    "max":99,
+                    "description":"Fishing bait used mainly for lakes and rivers. Squiggles and\nsquirms grotesquely, but fish love them."
+                },
+                {
+                    "key":961,
+                    "icon":24,
+                    "name":"Eel",
+                    "max":99,
+                    "description":"[Bait, Value: 300] A fish valued in the\nEast for imbuing vim and vigor into the consumer."
+                },
+                {
+                    "key":985,
+                    "icon":23,
+                    "name":"Frog",
+                    "max":99,
+                    "description":"Fishing bait used for lakes and rivers. Loved by aggressive\nfish, but normal fish won't usually bite."
+                },
+                {
+                    "key":959,
+                    "icon":24,
+                    "name":"Garvelze",
+                    "max":99,
+                    "description":"[Value: 1500] Large fish that likes\nmuddy water bottoms. Also called the Lakebottom Brawler."
+                },
+                {
+                    "key":974,
+                    "icon":24,
+                    "name":"Gigangora",
+                    "max":99,
+                    "description":"[Value: 1750] A giant fish that\ninhabits the bottom of Azelia Bay. Grotesque in appearance."
+                },
+                {
+                    "key":965,
+                    "icon":24,
+                    "name":"Gold Angelfish",
+                    "max":99,
+                    "description":"[Value: 100] Small fish that inhabits\nthe Azelia Bay. Has a bright, blindingly gold body."
+                },
+                {
+                    "key":964,
+                    "icon":24,
+                    "name":"Granakor",
+                    "max":99,
+                    "description":"[Value: 1250] A gigantic crab, over\n2 arge in length with both claws spread."
+                },
+                {
+                    "key":971,
+                    "icon":24,
+                    "name":"Great Blackfish",
+                    "max":99,
+                    "description":"[Value: 125] Amongst fishers,\nthis fish is considered the standard for surf fishing."
+                },
+                {
+                    "key":970,
+                    "icon":24,
+                    "name":"Kasago",
+                    "max":99,
+                    "description":"[Bait, Value: 100] A fish that inhabits\nsmall, complex areas like rocky waterbeds."
+                },
+                {
+                    "key":960,
+                    "icon":24,
+                    "name":"Liberl Carp",
+                    "max":99,
+                    "description":"[Value: 50] River fish characterized\nby its tiny beard. Found in just about all freshwater areas."
+                },
+                {
+                    "key":967,
+                    "icon":24,
+                    "name":"Mahi-mahi",
+                    "max":99,
+                    "description":"[Value: 625]\nA monstrously large fish over 1.5 arge in length."
+                },
+                {
+                    "key":966,
+                    "icon":24,
+                    "name":"Octopus",
+                    "max":99,
+                    "description":"[Value: 175] A mollusk that inhabits\nportions of the Azelia Bay. Has a monstrous appearance."
+                },
+                {
+                    "key":954,
+                    "icon":24,
+                    "name":"Pearlglass",
+                    "max":99,
+                    "description":"[Value: 1000] Large freshwater fish\nwith a body that shines like silver. Calm and quiet."
+                },
+                {
+                    "key":987,
+                    "icon":23,
+                    "name":"Polychaete",
+                    "max":99,
+                    "description":"Fishing bait used for sea fishing. A worm that lives in the\ncoastal sand and other areas. Comes in a variety of sizes."
+                },
+                {
+                    "key":952,
+                    "icon":24,
+                    "name":"Rainbow Trout",
+                    "max":99,
+                    "description":"[Value: 80] Medium-sized fish with\nrainbow-streaked scales. Loves sepith."
+                },
+                {
+                    "key":986,
+                    "icon":23,
+                    "name":"Red Flies",
+                    "max":99,
+                    "description":"Fishing bait used for lakes and rivers. Insect larvae\npainted red to stand out. Loved by small fish."
+                },
+                {
+                    "key":981,
+                    "icon":23,
+                    "name":"River Bug",
+                    "max":99,
+                    "description":"Fishing bait used mainly for lakes and rivers. They start\nunder riverside rocks and eventually grow wings."
+                },
+                {
+                    "key":984,
+                    "icon":23,
+                    "name":"River Snail",
+                    "max":99,
+                    "description":"Fishing bait used for lakes and rivers. A type of shelled\ncreature normally considered a pest by farmers."
+                },
+                {
+                    "key":950,
+                    "icon":24,
+                    "name":"Rockeater",
+                    "max":99,
+                    "description":"[Value: 100] Medium-sized fish that\nhides in the shadow of rocky overhangs. Extremely cautious."
+                },
+                {
+                    "key":983,
+                    "icon":23,
+                    "name":"Roe",
+                    "max":99,
+                    "description":"Fishing bait used for lakes and rivers. Salmon eggs.\nValued as food in the East."
+                },
+                {
+                    "key":963,
+                    "icon":24,
+                    "name":"Salmon",
+                    "max":99,
+                    "description":"[Bait, Value: 350]\nA river fish that swims upstream during mating season."
+                },
+                {
+                    "key":968,
+                    "icon":24,
+                    "name":"Sea Bass",
+                    "max":99,
+                    "description":"[Bait, Value: 125] A fish that has multiple\nnames as it ages. Goes from Seib to a Sea Bass to a Sea Vic."
+                },
+                {
+                    "key":988,
+                    "icon":23,
+                    "name":"Shrimplet",
+                    "max":99,
+                    "description":"Fishing bait mostly used for sea fishing. Extremely easy to\nhandle, and attracts a variety of fish."
+                },
+                {
+                    "key":958,
+                    "icon":24,
+                    "name":"Snakehead",
+                    "max":99,
+                    "description":"[Value: 250] Ferocious fish that\nprefers stagnant water. Has an undulating gait."
+                },
+                {
+                    "key":953,
+                    "icon":24,
+                    "name":"Tiger Rockfish",
+                    "max":99,
+                    "description":"[Value: 300]\nA variety of rockfish. Has a beautiful orange abdomen."
+                },
+                {
+                    "key":956,
+                    "icon":24,
+                    "name":"Trout",
+                    "max":99,
+                    "description":"[Bait, Value: 150] A landlocked offshoot of\nthe Salmon. Known for its tight steel blue flesh."
+                },
+                {
+                    "key":957,
+                    "icon":24,
+                    "name":"Valleria Bass",
+                    "max":99,
+                    "description":"[Value: 10] Bad-tasting fish that\ninhabits the lake bed. Eats everything and anything."
+                },
+                {
+                    "key":951,
+                    "icon":24,
+                    "name":"Yamany",
+                    "max":99,
+                    "description":"[Bait, Value: 50] Small river fish that\nloves clear streams. Known for its spotted pattern."
+                }
+            ],
+            "Quartz":[
+                {
+                    "key":728,
+                    "icon":92,
+                    "name":"Absorb",
+                    "max":99,
+                    "description":"Recover 2% of user's max HP when defeating an enemy."
+                },
+                {
+                    "key":627,
+                    "icon":93,
+                    "name":"Action 1",
+                    "max":99,
+                    "description":"SPD+10%"
+                },
+                {
+                    "key":628,
+                    "icon":93,
+                    "name":"Action 2",
+                    "max":99,
+                    "description":"SPD+20%"
+                },
+                {
+                    "key":629,
+                    "icon":93,
+                    "name":"Action 3",
+                    "max":99,
+                    "description":"SPD+30%"
+                },
+                {
+                    "key":678,
+                    "icon":93,
+                    "name":"Action 4",
+                    "max":99,
+                    "description":"?@SPD+40%/MOV-1"
+                },
+                {
+                    "key":606,
+                    "icon":91,
+                    "name":"Attack 1",
+                    "max":99,
+                    "description":"STR+3%/DEF-1%"
+                },
+                {
+                    "key":607,
+                    "icon":91,
+                    "name":"Attack 2",
+                    "max":99,
+                    "description":"STR+6%/DEF-3%"
+                },
+                {
+                    "key":608,
+                    "icon":91,
+                    "name":"Attack 3",
+                    "max":99,
+                    "description":"STR+9%/DEF-5%"
+                },
+                {
+                    "key":664,
+                    "icon":91,
+                    "name":"Attack 4",
+                    "max":99,
+                    "description":"STR+12%/DEF-7%"
+                },
+                {
+                    "key":642,
+                    "icon":93,
+                    "name":"Blind",
+                    "max":99,
+                    "description":"Blind enemy with 10% success."
+                },
+                {
+                    "key":736,
+                    "icon":93,
+                    "name":"Blind 2",
+                    "max":99,
+                    "description":"Blind enemy with 20% success."
+                },
+                {
+                    "key":710,
+                    "icon":93,
+                    "name":"Cast 1",
+                    "max":99,
+                    "description":"Time to cast arts is cut."
+                },
+                {
+                    "key":711,
+                    "icon":93,
+                    "name":"Cast 2",
+                    "max":99,
+                    "description":"Time to cast arts is greatly cut."
+                },
+                {
+                    "key":723,
+                    "icon":95,
+                    "name":"Cloak",
+                    "max":99,
+                    "description":"No encounters."
+                },
+                {
+                    "key":644,
+                    "icon":95,
+                    "name":"Confuse",
+                    "max":99,
+                    "description":"Confuse enemy with 10% success."
+                },
+                {
+                    "key":738,
+                    "icon":95,
+                    "name":"Confuse 2",
+                    "max":99,
+                    "description":"Confuse enemy with 20% success."
+                },
+                {
+                    "key":740,
+                    "icon":93,
+                    "name":"Death",
+                    "max":99,
+                    "description":"Kill enemy with 20% success."
+                },
+                {
+                    "key":646,
+                    "icon":93,
+                    "name":"Deathblow 1",
+                    "max":99,
+                    "description":"Kill enemy with 10% success."
+                },
+                {
+                    "key":647,
+                    "icon":93,
+                    "name":"Deathblow 2",
+                    "max":99,
+                    "description":"100% kills enemy but quartz breaks."
+                },
+                {
+                    "key":609,
+                    "icon":89,
+                    "name":"Defense 1",
+                    "max":99,
+                    "description":"DEF+3%/STR-1%"
+                },
+                {
+                    "key":610,
+                    "icon":89,
+                    "name":"Defense 2",
+                    "max":99,
+                    "description":"DEF+6%/STR-3%"
+                },
+                {
+                    "key":611,
+                    "icon":89,
+                    "name":"Defense 3",
+                    "max":99,
+                    "description":"DEF+9%/STR-5%"
+                },
+                {
+                    "key":666,
+                    "icon":89,
+                    "name":"Defense 4",
+                    "max":99,
+                    "description":"DEF+12%/STR-7%"
+                },
+                {
+                    "key":721,
+                    "icon":94,
+                    "name":"Eagle Eye",
+                    "max":99,
+                    "description":"Can see enemies from a distance."
+                },
+                {
+                    "key":671,
+                    "icon":92,
+                    "name":"Emerald Gem",
+                    "max":99,
+                    "description":"ADF+150/ATS-9% (#92IShield 5)"
+                },
+                {
+                    "key":603,
+                    "icon":95,
+                    "name":"EP 1",
+                    "max":99,
+                    "description":"Max EP+3%"
+                },
+                {
+                    "key":604,
+                    "icon":95,
+                    "name":"EP 2",
+                    "max":99,
+                    "description":"Max EP+6%"
+                },
+                {
+                    "key":605,
+                    "icon":95,
+                    "name":"EP 3",
+                    "max":99,
+                    "description":"Max EP+9%"
+                },
+                {
+                    "key":662,
+                    "icon":95,
+                    "name":"EP 4",
+                    "max":99,
+                    "description":"Max EP+12%"
+                },
+                {
+                    "key":712,
+                    "icon":94,
+                    "name":"EP Cut 1",
+                    "max":99,
+                    "description":"Arts' EP cost-10%."
+                },
+                {
+                    "key":713,
+                    "icon":94,
+                    "name":"EP Cut 2",
+                    "max":99,
+                    "description":"Arts' EP cost-20%."
+                },
+                {
+                    "key":714,
+                    "icon":94,
+                    "name":"EP Cut 3",
+                    "max":99,
+                    "description":"Arts' EP cost-30%."
+                },
+                {
+                    "key":715,
+                    "icon":94,
+                    "name":"EP Cut 4",
+                    "max":99,
+                    "description":"Arts' EP cost-40%."
+                },
+                {
+                    "key":621,
+                    "icon":92,
+                    "name":"Evade 1",
+                    "max":99,
+                    "description":"AGL+1"
+                },
+                {
+                    "key":622,
+                    "icon":92,
+                    "name":"Evade 2",
+                    "max":99,
+                    "description":"AGL+2"
+                },
+                {
+                    "key":623,
+                    "icon":92,
+                    "name":"Evade 3",
+                    "max":99,
+                    "description":"AGL+3"
+                },
+                {
+                    "key":674,
+                    "icon":92,
+                    "name":"Evade 4",
+                    "max":99,
+                    "description":"AGL+4"
+                },
+                {
+                    "key":638,
+                    "icon":90,
+                    "name":"Freeze",
+                    "max":99,
+                    "description":"Freeze enemy with 10% success."
+                },
+                {
+                    "key":732,
+                    "icon":90,
+                    "name":"Freeze 2",
+                    "max":99,
+                    "description":"Freeze enemy with 20% success."
+                },
+                {
+                    "key":716,
+                    "icon":94,
+                    "name":"Gold Gem",
+                    "max":99,
+                    "description":"Arts' EP cost-50%. (#94IEP Cut 5)"
+                },
+                {
+                    "key":722,
+                    "icon":95,
+                    "name":"Haze",
+                    "max":99,
+                    "description":"Enemies become unaware of presence."
+                },
+                {
+                    "key":724,
+                    "icon":90,
+                    "name":"Heal",
+                    "max":99,
+                    "description":"HP slowly recovers by walking."
+                },
+                {
+                    "key":726,
+                    "icon":94,
+                    "name":"Heaven's Eye",
+                    "max":99,
+                    "description":"Combine the effects of Eagle Eye and Information."
+                },
+                {
+                    "key":618,
+                    "icon":95,
+                    "name":"Hit 1",
+                    "max":99,
+                    "description":"DEX+5/AGL-1"
+                },
+                {
+                    "key":619,
+                    "icon":95,
+                    "name":"Hit 2",
+                    "max":99,
+                    "description":"DEX+10/AGL-2"
+                },
+                {
+                    "key":620,
+                    "icon":95,
+                    "name":"Hit 3",
+                    "max":99,
+                    "description":"DEX+15/AGL-3"
+                },
+                {
+                    "key":672,
+                    "icon":95,
+                    "name":"Hit 4",
+                    "max":99,
+                    "description":"DEX+20/AGL-4"
+                },
+                {
+                    "key":600,
+                    "icon":90,
+                    "name":"HP 1",
+                    "max":99,
+                    "description":"Max HP+3%"
+                },
+                {
+                    "key":601,
+                    "icon":90,
+                    "name":"HP 2",
+                    "max":99,
+                    "description":"Max HP+6%"
+                },
+                {
+                    "key":602,
+                    "icon":90,
+                    "name":"HP 3",
+                    "max":99,
+                    "description":"Max HP+9%"
+                },
+                {
+                    "key":660,
+                    "icon":90,
+                    "name":"HP 4",
+                    "max":99,
+                    "description":"Max HP+12%"
+                },
+                {
+                    "key":705,
+                    "icon":92,
+                    "name":"Impede 1",
+                    "max":99,
+                    "description":"Prevent enemy arts and crafts with 10% success rate."
+                },
+                {
+                    "key":706,
+                    "icon":92,
+                    "name":"Impede 2",
+                    "max":99,
+                    "description":"Prevent enemy arts and crafts with 15% success rate."
+                },
+                {
+                    "key":707,
+                    "icon":92,
+                    "name":"Impede 3",
+                    "max":99,
+                    "description":"Prevent enemy arts and crafts with 20% success rate."
+                },
+                {
+                    "key":708,
+                    "icon":92,
+                    "name":"Impede 4",
+                    "max":99,
+                    "description":"Prevent enemy arts and crafts with 25% success rate."
+                },
+                {
+                    "key":657,
+                    "icon":95,
+                    "name":"Information",
+                    "max":99,
+                    "description":"Be able to perceive enemy status."
+                },
+                {
+                    "key":730,
+                    "icon":91,
+                    "name":"Ingenuity",
+                    "max":99,
+                    "description":"Recover small amounts of EP while walking."
+                },
+                {
+                    "key":729,
+                    "icon":93,
+                    "name":"Luck",
+                    "max":99,
+                    "description":"Increases enemy item drop rate by 30%."
+                },
+                {
+                    "key":612,
+                    "icon":90,
+                    "name":"Mind 1",
+                    "max":99,
+                    "description":"ATS+3%/ADF-1"
+                },
+                {
+                    "key":613,
+                    "icon":90,
+                    "name":"Mind 2",
+                    "max":99,
+                    "description":"ATS+6%/ADF-2"
+                },
+                {
+                    "key":614,
+                    "icon":90,
+                    "name":"Mind 3",
+                    "max":99,
+                    "description":"ATS+9%/ADF-3"
+                },
+                {
+                    "key":668,
+                    "icon":90,
+                    "name":"Mind 4",
+                    "max":99,
+                    "description":"ATS+12%/ADF-4"
+                },
+                {
+                    "key":673,
+                    "icon":95,
+                    "name":"Mirage Gem",
+                    "max":99,
+                    "description":"DEX+25/AGL-5 (#95IHit 5)"
+                },
+                {
+                    "key":624,
+                    "icon":94,
+                    "name":"Move 1",
+                    "max":99,
+                    "description":"MOV+1"
+                },
+                {
+                    "key":625,
+                    "icon":94,
+                    "name":"Move 2",
+                    "max":99,
+                    "description":"MOV+2"
+                },
+                {
+                    "key":626,
+                    "icon":94,
+                    "name":"Move 3",
+                    "max":99,
+                    "description":"MOV+3"
+                },
+                {
+                    "key":641,
+                    "icon":89,
+                    "name":"Mute",
+                    "max":99,
+                    "description":"Mute enemy with 10% success."
+                },
+                {
+                    "key":735,
+                    "icon":89,
+                    "name":"Mute 2",
+                    "max":99,
+                    "description":"Mute enemy with 20% success."
+                },
+                {
+                    "key":679,
+                    "icon":93,
+                    "name":"Onyx Gem",
+                    "max":99,
+                    "description":"?@SPD+50%/MOV-2 (#93IAction 5)"
+                },
+                {
+                    "key":639,
+                    "icon":89,
+                    "name":"Petrify",
+                    "max":99,
+                    "description":"Petrify enemy with 10% success."
+                },
+                {
+                    "key":733,
+                    "icon":89,
+                    "name":"Petrify 2",
+                    "max":99,
+                    "description":"Petrify enemy with 20% success."
+                },
+                {
+                    "key":637,
+                    "icon":89,
+                    "name":"Poison",
+                    "max":99,
+                    "description":"Poison enemy with 10% success."
+                },
+                {
+                    "key":731,
+                    "icon":89,
+                    "name":"Poison 2",
+                    "max":99,
+                    "description":"Poison enemy with 20% success."
+                },
+                {
+                    "key":630,
+                    "icon":94,
+                    "name":"Range 1",
+                    "max":99,
+                    "description":"Arts' effect range+1"
+                },
+                {
+                    "key":665,
+                    "icon":91,
+                    "name":"Ruby Gem",
+                    "max":99,
+                    "description":"STR+15%/DEF-9% (#91IAttack 5)"
+                },
+                {
+                    "key":669,
+                    "icon":90,
+                    "name":"Sapphire Gem",
+                    "max":99,
+                    "description":"ATS+15%/ADF-5 (#90IMind 5)"
+                },
+                {
+                    "key":720,
+                    "icon":92,
+                    "name":"Scent",
+                    "max":99,
+                    "description":"Enemies become aware of presence."
+                },
+                {
+                    "key":643,
+                    "icon":91,
+                    "name":"Seal",
+                    "max":99,
+                    "description":"Seal enemy crafts with 10% success."
+                },
+                {
+                    "key":737,
+                    "icon":91,
+                    "name":"Seal 2",
+                    "max":99,
+                    "description":"Seal enemy crafts with 20% success."
+                },
+                {
+                    "key":725,
+                    "icon":89,
+                    "name":"Septium Vein",
+                    "max":99,
+                    "description":"Increase all types of sepith dropped by monsters by 1-2."
+                },
+                {
+                    "key":615,
+                    "icon":92,
+                    "name":"Shield 1",
+                    "max":99,
+                    "description":"ADF+30/ATS-1%"
+                },
+                {
+                    "key":616,
+                    "icon":92,
+                    "name":"Shield 2",
+                    "max":99,
+                    "description":"ADF+40/ATS-3%"
+                },
+                {
+                    "key":617,
+                    "icon":92,
+                    "name":"Shield 3",
+                    "max":99,
+                    "description":"ADF+50/ATS-5%"
+                },
+                {
+                    "key":670,
+                    "icon":92,
+                    "name":"Shield 4",
+                    "max":99,
+                    "description":"ADF+75/ATS-7%"
+                },
+                {
+                    "key":663,
+                    "icon":95,
+                    "name":"Silver Gem",
+                    "max":99,
+                    "description":"Max EP+15% (#95IEP 5)"
+                },
+                {
+                    "key":640,
+                    "icon":92,
+                    "name":"Sleep",
+                    "max":99,
+                    "description":"Put enemy to sleep with 10% success."
+                },
+                {
+                    "key":734,
+                    "icon":92,
+                    "name":"Sleep 2",
+                    "max":99,
+                    "description":"Put enemy to sleep with 20% success."
+                },
+                {
+                    "key":645,
+                    "icon":94,
+                    "name":"Strike",
+                    "max":99,
+                    "description":"Critically strike with 10% success."
+                },
+                {
+                    "key":739,
+                    "icon":94,
+                    "name":"Strike 2",
+                    "max":99,
+                    "description":"Critically strike with 20% success."
+                },
+                {
+                    "key":717,
+                    "icon":93,
+                    "name":"Time Gem",
+                    "max":99,
+                    "description":"STR-14%, DEF-14%, ATS-14% (#93ICast 3)"
+                },
+                {
+                    "key":667,
+                    "icon":89,
+                    "name":"Topaz Gem",
+                    "max":99,
+                    "description":"DEF+15%/STR-9% (#89IDefense 5)"
+                },
+                {
+                    "key":661,
+                    "icon":90,
+                    "name":"Water Gem",
+                    "max":99,
+                    "description":"Max HP+15% (#90IHP 5)"
+                },
+                {
+                    "key":675,
+                    "icon":92,
+                    "name":"Wind Gem",
+                    "max":99,
+                    "description":"AGL+5 (#92IEvade 5)"
+                },
+                {
+                    "key":709,
+                    "icon":92,
+                    "name":"Wood Gem",
+                    "max":99,
+                    "description":"Prevent enemy arts and crafts with 30% success rate. (#92IImpede 5)"
+                },
+                {
+                    "key":727,
+                    "icon":90,
+                    "name":"Yin-Yang",
+                    "max":99,
+                    "description":"Combine the effects of Haze and Heal."
+                }
+            ]	
+        }
+    }
+}

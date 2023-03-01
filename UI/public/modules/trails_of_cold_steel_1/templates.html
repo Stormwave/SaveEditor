@@ -1,0 +1,229 @@
+<main>
+    <div class="topbar"><label onclick="javascript:location.hash='games'">Save Editor</label></div>
+    <div class="container">
+        <div class="ui sidebar inverted visible vertical menu">
+            <div class='label'>{{ name }}</div>
+            <a class="item active" onclick="active_game.changeTab(event)" tab="0">
+            General
+            </a>
+            <a class="item" onclick="active_game.changeTab(event)" tab="1">
+            Characters
+            </a>
+            <a class="item" onclick="active_game.changeTab(event)" tab="2">
+            Inventory
+            </a>
+            <button class="ui button" style="margin-top:10px;margin-left:10px;" onclick="active_game.save()">Save</button>
+        </div>
+        <div class="game-panel tab" tab="0">
+            <div class="ui inverted form">
+                <form class="ui inverted form">
+                    <h4 class="ui inverted dividing header">Stats</h4>
+                    <div class="field">
+                        <div class="seven fields">
+                            <div class="field">
+                                <label>Mira</label>
+                                <input type="text" placeholder="Mira" key="mira">
+                            </div>
+                            <div class="field">
+                                <label>New Game</label>
+                                <input type="text" placeholder="New Game" key="new_game">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="seven fields">
+                            <div class="field">
+                                <label>Battles</label>
+                                <input type="text" placeholder="Battles" key="battles.count">
+                            </div>
+                            <div class="field">
+                                <label>Battles Lost</label>
+                                <input type="text" placeholder="Battles Lost" key="battles.lost">
+                            </div>
+                            <div class="field">
+                                <label>Battles Won</label>
+                                <input type="text" placeholder="Battles Won" key="battles.won">
+                            </div>
+                            <div class="field">
+                                <label>Battles Fled</label>
+                                <input type="text" placeholder="Battles Fled" key="battles.fled">
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="ui inverted dividing header">Seriph</h4>
+                    <div class="field">
+                        <div class="seven fields">
+                            <div class="field">
+                                <label><img src="./modules/trails_in_the_sky_sc/item_icons.png" class="game_icon input_prefix" style="object-position:-144px -176px;"/>Earth</label>
+                                <input class="input_prefix" type="text" placeholder="Earth" key="seriph.earth">
+                            </div>
+                            <div class="field">
+                                <label><img src="./modules/trails_in_the_sky_sc/item_icons.png" class="game_icon input_prefix" style="object-position:-160px -176px;"/>Water</label>
+                                <input class="input_prefix" type="text" placeholder="Water" key="seriph.water">
+                            </div>
+                            <div class="field">
+                                <label><img src="./modules/trails_in_the_sky_sc/item_icons.png" class="game_icon input_prefix" style="object-position:-176px -176px;"/>Fire</label>
+                                <input class="input_prefix" type="text" placeholder="Fire" key="seriph.fire">
+                            </div>
+                            <div class="field">
+                                <label><img src="./modules/trails_in_the_sky_sc/item_icons.png" class="game_icon input_prefix" style="object-position:-192px -176px;"/>Wind</label>
+                                <input class="input_prefix" type="text" placeholder="Wind" key="seriph.wind">
+                            </div>
+                            <div class="field">
+                                <label><img src="./modules/trails_in_the_sky_sc/item_icons.png" class="game_icon input_prefix" style="object-position:-208px -176px;"/>Time</label>
+                                <input class="input_prefix" type="text" placeholder="Time" key="seriph.time">
+                            </div>
+                            <div class="field">
+                                <label><img src="./modules/trails_in_the_sky_sc/item_icons.png" class="game_icon input_prefix" style="object-position:-224px -176px;"/>Space</label>
+                                <input class="input_prefix" type="text" placeholder="Space" key="seriph.space">
+                            </div>
+                            <div class="field">
+                                <label><img src="./modules/trails_in_the_sky_sc/item_icons.png" class="game_icon input_prefix" style="object-position:-240px -176px;"/>Mirage</label>
+                                <input class="input_prefix" type="text" placeholder="Mirage" key="seriph.mirage">
+                            </div>
+                            <div class="field">
+                                <label><img src="./modules/trails_in_the_sky_sc/item_icons.png" class="game_icon input_prefix" style="object-position:-240px -176px;"/>Mass</label>
+                                <input class="input_prefix" type="text" placeholder="Mass" key="seriph.mass">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>            
+        </div>
+        <div class="game-panel tab" tab="1">
+            {{ template.characters }}
+        </div>
+        <div class="game-panel tab" tab="2">
+            {{ template.inventory }}
+        </div>
+    </div>
+</main>
+
+<characters>
+    <form class="ui inverted form">
+        <h4 class="ui inverted dividing header">Line-up</h4>
+        <div class="field">
+            <div class="seven fields">
+                {{ custom.character-selector }}
+            </div>
+        </div>
+        <div>
+            {{ custom.character-panel }}
+        </div>
+    </form>
+</characters>
+
+<character-selector class="field">
+    <label>Party Member {{ eval.index+1 }}</label>
+    <select class="ui dropdown" key="line_up[{{ index }}]">
+        <option value="65535" selected>None</option>
+        {{ custom.character-dropdown }}
+    </select>
+</character-selector>
+
+<character-dropdown>
+    <option if="id!=65535" value="{{ id }}" selected>{{ name }}</option>
+</character-dropdown>
+
+<character-panel>
+    <div class="ui inverted accordion">
+        <div class="title">
+            <i class="dropdown icon"></i>
+            {{ name }}
+        </div>
+        <div class="content field-panel">
+            <div class="transition visible" style="display: block !important;">
+                <div class="field">
+                    <div class="nine fields">
+                        {{ custom.character-field.level }}
+                        {{ custom.character-field.exp }}
+                    </div>
+                </div>
+                <h4 class="ui inverted dividing header"></h4>
+                <div class="field">
+                    <div class="nine fields">
+                        {{ custom.character-field.hp }}
+                        {{ custom.character-field.hp_max }}
+                        {{ custom.character-field.ep }}
+                        {{ custom.character-field.ep_max }}
+                        {{ custom.character-field.cp }}
+                        {{ custom.character-field.cp_max }}
+                    </div>
+                </div>
+                <h4 class="ui inverted dividing header"></h4>
+                <div class="field">
+                    <div class="nine fields">
+                        {{ custom.character-field.str }}
+                        {{ custom.character-field.def }}
+                        {{ custom.character-field.ats }}
+                        {{ custom.character-field.adf }}
+                        {{ custom.character-field.spd }}
+                        {{ custom.character-field.dex }}
+                        {{ custom.character-field.agl }}
+                        {{ custom.character-field.mov }}
+                        {{ custom.character-field.rng }}
+                    </div>
+                </div>
+                <h4 class="ui inverted dividing header">Links</h4>
+                <div class="field">
+                    <div class="nine fields">
+                        {{ custom.character-link.0 }}
+                        {{ custom.character-link.1 }}
+                        {{ custom.character-link.2 }}
+                        {{ custom.character-link.3 }}
+                        {{ custom.character-link.4 }}
+                        {{ custom.character-link.5 }}
+                        {{ custom.character-link.6 }}
+                        {{ custom.character-link.7 }}
+                        {{ custom.character-link.8 }}
+                        {{ custom.character-link.9 }}
+                        {{ custom.character-link.10 }}
+                        {{ custom.character-link.11 }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</character-panel>
+
+<character-field class="field">
+    <label>{{ title }}</label>
+    <input type="text" key="characters.values[{{ id }}].{{ name }}"/>
+</character-field>
+
+<character-link class="field">
+    <label>{{ title }}</label>
+    <input type="text" key="links.values[{{ index_1 }}].link[{{ index_2 }}]"/>
+</character-link>
+
+<inventory class="ui form">
+    <form class="ui inverted form">
+        <h4 class="ui inverted dividing header">Inventory</h4>
+        {{ custom.category-tabs }}
+    </form>
+</inventory>
+
+<category-tabs inner="true">
+    <div class="ui inverted accordion">
+        <div class="title">
+            <i class="dropdown icon"></i>
+            {{ name }}
+        </div>
+        <div class="content">
+            <div class="transition visible" style="display: block !important;">
+                <div class="field">
+                    <div class="eight fields" style='flex-wrap: wrap;padding:20px;'>
+                        {{ custom.category-item }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</category-tabs>
+
+<category-item class="field" style="margin-bottom:10px;">
+    <div class="field">
+        <label>{{ name }}</label>
+        <input class="input_prefix" category="inventory" key="inventory_data" key-id="{{ key }}" type="text" placeholder="Quantity..." value="{{ count }}" max="{{ max }}">
+    </div>
+</category-item>
