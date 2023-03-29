@@ -1,5 +1,7 @@
 # GameSaveEditor
 
+![GameSaveEditor](app.png)
+
 ## Concept
 
 This app is a generic JavaScript platform to aid in development of client-side save editors. Currently supported natively:
@@ -46,4 +48,5 @@ python3 -m http.server 9000
 ## Credits
 
 Original repo: https://github.com/Stormwave/SaveEditor
+
 Original hosted version: https://save-editor.stormwave.uk
