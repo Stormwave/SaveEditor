@@ -132,8 +132,8 @@ function loadPage()
                     let main_tpl = templates.find("game-list");
                     let tpl = templates.find("game-item");
                     let out = "";
-                    games.sort((a, b)=>{ a.details.sort_name.localeCompare(b.details.sort_name); });
-                    games.sort((a, b)=>{ a.details.group.localeCompare(b.details.group); });
+                    //games.sort((a, b)=>{ a.details.sort_name.localeCompare(b.details.sort_name); });
+                    //games.sort((a, b)=>{ a.details.group.localeCompare(b.details.group); });
                     let last_group = null;
                     games.forEach(game=>
                         {
@@ -243,10 +243,11 @@ function handleFiles(files, e)
         let reader = new FileReader();
         reader.onload = (evt)=>
         {
+            console.log(file.name);
             active_game = games.filter(e=>e.details.name==game)[0];
             active_game.load().then(()=>
             {
-                active_game.loadData(evt.currentTarget.result);
+                active_game.loadData(evt.target.result);
                 hexviewer.load(active_game.data.file_data);
                 location.hash = game.replace(/ /g, "");
             });
