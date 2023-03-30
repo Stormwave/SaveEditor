@@ -243,11 +243,10 @@ function handleFiles(files, e)
         let reader = new FileReader();
         reader.onload = (evt)=>
         {
-            console.log(file.name);
             active_game = games.filter(e=>e.details.name==game)[0];
             active_game.load().then(()=>
             {
-                active_game.loadData(evt.target.result);
+                active_game.loadData(evt.target.result, file.name);
                 hexviewer.load(active_game.data.file_data);
                 location.hash = game.replace(/ /g, "");
             });
